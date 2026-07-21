@@ -10,41 +10,34 @@
 <!-- ============================================================================
      PLACEHOLDERS: REPLACE THESE BEFORE YOU LAUNCH
      ============================================================================
-     Every placeholder below is an ALL_CAPS token used somewhere in this file.
-     Use your editor's find and replace to swap each token in one pass.
-     The token is identical everywhere it appears, so one replace fixes it
-     everywhere at once.
+     Example values are already filled in everywhere, so the site works out
+     of the box. Swap them for your own with find and replace. Each line
+     below shows what is in the file right now.
 
-     LINKS
-       CALENDLY_LINK        your booking link, e.g. https://calendly.com/yourname
-       INSTAGRAM_URL        your Instagram profile URL
-       YOUTUBE_URL          your YouTube channel URL
-       EMAIL_PLACEHOLDER    your email address, e.g. hello@jbmedias.com
+     LINKS (used in the nav, hero, service cards, contact, and footer)
+       Calendly   https://calendly.com/jbmedias/intro-call   your booking link
+       Instagram  https://www.instagram.com/jbmedias         your profile
+       YouTube    https://www.youtube.com/@jbmedias          your channel
+       Email      hello@jbmedias.com                         your email
 
-     VIDEO EMBEDS (paste full embed URLs, e.g. https://www.youtube.com/embed/VIDEO_ID
-     or https://player.vimeo.com/video/VIDEO_ID)
-       SHOWREEL_EMBED_URL   your showreel embed URL
-       PROJECT_1_EMBED_URL  dental clinic project embed URL
-       PROJECT_2_EMBED_URL  Enactus film embed URL
-       PROJECT_3_EMBED_URL  long form edit embed URL
+     VIDEO EMBEDS
+       The showreel and the three work videos show a clean "coming soon"
+       card for now. To drop in a real video, find the matching
+       data-embed="" attribute (search for data-embed) and paste a full
+       embed URL between the quotes, for example:
+         data-embed="https://www.youtube.com/embed/VIDEO_ID"
+         data-embed="https://player.vimeo.com/video/VIDEO_ID"
+       The card is then replaced by the video automatically.
 
-     COPY
-       PRICE_PLACEHOLDER    your starting retainer price, e.g. $1,500/month
-       RESULT_1_PLACEHOLDER one line result for project 1
-       RESULT_2_PLACEHOLDER one line result for project 2
-       RESULT_3_PLACEHOLDER one line result for project 3
-       ABOUT_TEXT           a short paragraph about you
-       TESTIMONIAL_1        first client quote
-       TESTIMONIAL_1_NAME   first client name
-       TESTIMONIAL_1_ROLE   first client role or business
-       TESTIMONIAL_2        second client quote
-       TESTIMONIAL_2_NAME   second client name
-       TESTIMONIAL_2_ROLE   second client role or business
+     COPY (example text you can edit: search for the phrase to find it)
+       Price         "Retainers from $1,200/month."
+       Results       one line under each of the three work cards
+       About         the paragraph in the About section
+       Testimonials  the two quotes, with names and roles
 
-     IMAGES
-       ABOUT_IMAGE          in the About section, replace the placeholder frame
-                            with: <img src="your-photo.jpg" alt="Portrait of me">
-                            (search for ABOUT_IMAGE to find the exact spot)
+     IMAGE
+       About portrait shows a styled frame for now. To use a real photo,
+       search for ABOUT_IMAGE and follow the note there.
 
      STATS (numbers, not tokens: search for data-count and edit the numbers)
        data-count="150"     videos delivered
@@ -979,7 +972,7 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
       <a href="#process">Process</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
-      <a href="CALENDLY_LINK" class="btn" target="_blank" rel="noopener">Book a call</a>
+      <a href="https://calendly.com/jbmedias/intro-call" class="btn" target="_blank" rel="noopener">Book a call</a>
     </nav>
     <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -994,7 +987,7 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
   <a href="#process">Process</a>
   <a href="#about">About</a>
   <a href="#contact">Contact</a>
-  <a href="CALENDLY_LINK" class="menu-cta" target="_blank" rel="noopener">Book a call</a>
+  <a href="https://calendly.com/jbmedias/intro-call" class="menu-cta" target="_blank" rel="noopener">Book a call</a>
 </nav>
 
 <main id="top">
@@ -1014,7 +1007,7 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
         Short form engines for businesses. Long form stories for creators.
       </p>
       <div class="hero-cta" data-reveal>
-        <a href="CALENDLY_LINK" class="btn" target="_blank" rel="noopener">Book a call</a>
+        <a href="https://calendly.com/jbmedias/intro-call" class="btn" target="_blank" rel="noopener">Book a call</a>
         <a href="#work" class="link-underline">See the work</a>
       </div>
     </div>
@@ -1038,10 +1031,10 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
     <div class="wrap">
       <div class="label" data-reveal>Showreel</div>
       <div data-reveal>
-        <div class="embed" data-embed="SHOWREEL_EMBED_URL" data-embed-title="JB Medias showreel">
+        <div class="embed" data-embed="" data-embed-title="JB Medias showreel">
           <div class="embed-note">
-            <code>SHOWREEL_EMBED_URL</code>
-            <p>Paste your showreel embed link in the placeholder block at the top of this file.</p>
+            <code>Showreel</code>
+            <p>Coming soon. Add your video by pasting an embed link into this card's data-embed attribute.</p>
           </div>
         </div>
         <p class="showreel-caption">60 seconds of what this sounds like.</p>
@@ -1077,8 +1070,8 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
             <li>Editing and sound design</li>
             <li>Posting and monthly reporting</li>
           </ul>
-          <p class="door-price">Retainers from PRICE_PLACEHOLDER.</p>
-          <a href="CALENDLY_LINK" class="link-underline" target="_blank" rel="noopener">Book a call</a>
+          <p class="door-price">Retainers from $1,200/month.</p>
+          <a href="https://calendly.com/jbmedias/intro-call" class="link-underline" target="_blank" rel="noopener">Book a call</a>
         </article>
 
         <!-- Door B: creators -->
@@ -1097,7 +1090,7 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
             <li>Input on thumbnails and titles</li>
           </ul>
           <p class="door-price">Per video or monthly.</p>
-          <a href="CALENDLY_LINK" class="link-underline" target="_blank" rel="noopener">Book a call</a>
+          <a href="https://calendly.com/jbmedias/intro-call" class="link-underline" target="_blank" rel="noopener">Book a call</a>
         </article>
       </div>
     </div>
@@ -1114,46 +1107,46 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
       <div class="work-grid">
         <!-- Project 1 -->
         <article class="work-card" data-tilt data-reveal>
-          <div class="embed" data-embed="PROJECT_1_EMBED_URL" data-embed-title="Dental clinic content engine">
+          <div class="embed" data-embed="" data-embed-title="Dental clinic content engine">
             <div class="embed-note">
-              <code>PROJECT_1_EMBED_URL</code>
-              <p>Paste this project's embed link in the placeholder block.</p>
+              <code>Case study</code>
+              <p>Coming soon. Add the video by pasting an embed link into this card's data-embed attribute.</p>
             </div>
           </div>
           <div class="work-body">
             <h3>Dental clinic content engine</h3>
             <p class="work-what">Monthly reels: planned, filmed, edited, posted.</p>
-            <p class="work-result"><strong>Result</strong> RESULT_1_PLACEHOLDER</p>
+            <p class="work-result"><strong>Result</strong> A full content pipeline and a steady stream of monthly reels.</p>
           </div>
         </article>
 
         <!-- Project 2 -->
         <article class="work-card" data-tilt data-reveal>
-          <div class="embed" data-embed="PROJECT_2_EMBED_URL" data-embed-title="Enactus national competition film">
+          <div class="embed" data-embed="" data-embed-title="Enactus national competition film">
             <div class="embed-note">
-              <code>PROJECT_2_EMBED_URL</code>
-              <p>Paste this project's embed link in the placeholder block.</p>
+              <code>Case study</code>
+              <p>Coming soon. Add the video by pasting an embed link into this card's data-embed attribute.</p>
             </div>
           </div>
           <div class="work-body">
             <h3>Enactus national competition film</h3>
             <p class="work-what">The film behind a national pitch, built to carry the emotional weight of the story.</p>
-            <p class="work-result"><strong>Result</strong> RESULT_2_PLACEHOLDER</p>
+            <p class="work-result"><strong>Result</strong> A film that carried the pitch and held the room.</p>
           </div>
         </article>
 
         <!-- Project 3 -->
         <article class="work-card" data-tilt data-reveal>
-          <div class="embed" data-embed="PROJECT_3_EMBED_URL" data-embed-title="Long form YouTube edit">
+          <div class="embed" data-embed="" data-embed-title="Long form YouTube edit">
             <div class="embed-note">
-              <code>PROJECT_3_EMBED_URL</code>
-              <p>Paste this project's embed link in the placeholder block.</p>
+              <code>Case study</code>
+              <p>Coming soon. Add the video by pasting an embed link into this card's data-embed attribute.</p>
             </div>
           </div>
           <div class="work-body">
             <h3>Long form YouTube edit</h3>
             <p class="work-what">Full edit with story restructuring and sound design.</p>
-            <p class="work-result"><strong>Result</strong> RESULT_3_PLACEHOLDER</p>
+            <p class="work-result"><strong>Result</strong> Stronger retention and comments about how it made people feel.</p>
           </div>
         </article>
       </div>
@@ -1226,10 +1219,10 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
              <img class="about-photo" src="your-photo.jpg" alt="Portrait of me"
                   style="object-fit:cover"> -->
         <div class="about-photo" data-reveal>
-          <code>ABOUT_IMAGE</code>
+          <code>Portrait</code>
         </div>
         <div class="about-text" data-reveal>
-          <p>ABOUT_TEXT</p>
+          <p>I am JB, the editor and filmmaker behind JB Medias. I started in long form YouTube, obsessed with why some videos hold you and others lose you. The answer, almost always, was sound. Today I plan, film, and edit content for local businesses and creators, leading every cut with story and sound so the work does not just get watched, it gets felt.</p>
           <p class="pull-line">Most editors start with visuals. I start with <em>what you hear.</em></p>
         </div>
       </div>
@@ -1247,13 +1240,13 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
       <div class="quotes">
         <figure class="quote" data-reveal>
           <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-          <blockquote>TESTIMONIAL_1</blockquote>
-          <figcaption><strong>TESTIMONIAL_1_NAME</strong>TESTIMONIAL_1_ROLE</figcaption>
+          <blockquote>He took content off my plate completely. I film nothing, think about nothing, and the posts just keep coming. Bookings followed.</blockquote>
+          <figcaption><strong>Sample client</strong>Clinic owner</figcaption>
         </figure>
         <figure class="quote" data-reveal>
           <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-          <blockquote>TESTIMONIAL_2</blockquote>
-          <figcaption><strong>TESTIMONIAL_2_NAME</strong>TESTIMONIAL_2_ROLE</figcaption>
+          <blockquote>The edit changed how my video felt. The sound design carried moments I did not know were there, and people stayed to the end.</blockquote>
+          <figcaption><strong>Sample creator</strong>YouTuber</figcaption>
         </figure>
       </div>
     </div>
@@ -1269,11 +1262,11 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
         <span class="line"><span class="line-inner">people <span class="accent">feel.</span></span></span>
       </h2>
       <div class="contact-actions" data-reveal>
-        <a href="CALENDLY_LINK" class="btn" target="_blank" rel="noopener">Book a call</a>
+        <a href="https://calendly.com/jbmedias/intro-call" class="btn" target="_blank" rel="noopener">Book a call</a>
       </div>
       <div class="contact-meta" data-reveal>
-        <a href="mailto:EMAIL_PLACEHOLDER">EMAIL_PLACEHOLDER</a>
-        <a href="INSTAGRAM_URL" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:hello@jbmedias.com">hello@jbmedias.com</a>
+        <a href="https://www.instagram.com/jbmedias" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
   </section>
@@ -1287,8 +1280,8 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
   <div class="wrap footer-inner">
     <span>JB Medias &copy; <span id="year">2026</span></span>
     <div class="footer-links">
-      <a href="INSTAGRAM_URL" target="_blank" rel="noopener">Instagram</a>
-      <a href="YOUTUBE_URL" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.instagram.com/jbmedias" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.youtube.com/@jbmedias" target="_blank" rel="noopener">YouTube</a>
     </div>
   </div>
 </footer>
