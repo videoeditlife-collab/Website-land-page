@@ -1,0 +1,1869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JB Medias, stories you hear before you see</title>
+<meta name="description" content="JB Medias plans, films, and edits content built on story and sound. Short form engines for businesses. Long form stories for creators.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='10' fill='%23E8A33D'/%3E%3C/svg%3E">
+
+<!-- ============================================================================
+     PLACEHOLDERS: REPLACE THESE BEFORE YOU LAUNCH
+     ============================================================================
+     Every placeholder below is an ALL_CAPS token used somewhere in this file.
+     Use your editor's find and replace to swap each token in one pass.
+     The token is identical everywhere it appears, so one replace fixes it
+     everywhere at once.
+
+     LINKS
+       CALENDLY_LINK        your booking link, e.g. https://calendly.com/yourname
+       INSTAGRAM_URL        your Instagram profile URL
+       YOUTUBE_URL          your YouTube channel URL
+       EMAIL_PLACEHOLDER    your email address, e.g. hello@jbmedias.com
+
+     VIDEO EMBEDS (paste full embed URLs, e.g. https://www.youtube.com/embed/VIDEO_ID
+     or https://player.vimeo.com/video/VIDEO_ID)
+       SHOWREEL_EMBED_URL   your showreel embed URL
+       PROJECT_1_EMBED_URL  dental clinic project embed URL
+       PROJECT_2_EMBED_URL  Enactus film embed URL
+       PROJECT_3_EMBED_URL  long form edit embed URL
+
+     COPY
+       PRICE_PLACEHOLDER    your starting retainer price, e.g. $1,500/month
+       RESULT_1_PLACEHOLDER one line result for project 1
+       RESULT_2_PLACEHOLDER one line result for project 2
+       RESULT_3_PLACEHOLDER one line result for project 3
+       ABOUT_TEXT           a short paragraph about you
+       TESTIMONIAL_1        first client quote
+       TESTIMONIAL_1_NAME   first client name
+       TESTIMONIAL_1_ROLE   first client role or business
+       TESTIMONIAL_2        second client quote
+       TESTIMONIAL_2_NAME   second client name
+       TESTIMONIAL_2_ROLE   second client role or business
+
+     IMAGES
+       ABOUT_IMAGE          in the About section, replace the placeholder frame
+                            with: <img src="your-photo.jpg" alt="Portrait of me">
+                            (search for ABOUT_IMAGE to find the exact spot)
+
+     STATS (numbers, not tokens: search for data-count and edit the numbers)
+       data-count="150"     videos delivered
+       data-count="2000000" views on work I edited
+       data-count="12"      clients served
+     ============================================================================ -->
+
+<!-- Google Fonts: Space Grotesk for headings, Inter for body -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Adds a "js" class immediately so JS-only elements (preloader, cursor)
+     never appear when JavaScript is disabled -->
+<script>document.documentElement.classList.add('js');</script>
+
+<style>
+/* ============================================================================
+   1. DESIGN TOKENS AND RESET
+   ============================================================================ */
+:root{
+  --bg: #0A0A0A;
+  --text: #F5F2EB;
+  --muted: #9A948A;
+  --accent: #E8A33D;
+  --line: rgba(245, 242, 235, 0.12);      /* thin 1px dividers */
+  --radius: 8px;                           /* max corner rounding */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --nav-h: 76px;
+}
+
+*, *::before, *::after{ margin:0; padding:0; box-sizing:border-box; }
+
+html{
+  background: var(--bg);
+  color-scheme: dark;
+  scroll-padding-top: var(--nav-h);
+}
+@media (prefers-reduced-motion: no-preference){
+  html{ scroll-behavior: smooth; }
+}
+
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img, iframe, canvas{ max-width: 100%; display: block; }
+a{ color: inherit; text-decoration: none; }
+ul{ list-style: none; }
+button{ font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+
+::selection{ background: var(--accent); color: #0A0A0A; }
+
+h1, h2, h3, .display{
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+/* ============================================================================
+   2. SHARED LAYOUT HELPERS
+   ============================================================================ */
+.wrap{
+  width: min(1240px, 100% - 3rem);
+  margin-inline: auto;
+}
+section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
+.divider{ border: none; border-top: 1px solid var(--line); }
+
+/* Small overline label above each section heading */
+.label{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+.label::before{
+  content: "";
+  width: 22px; height: 1px;
+  background: var(--accent);
+}
+
+.section-title{
+  font-size: clamp(2rem, 4.6vw, 3.6rem);
+  max-width: 18ch;
+  margin-bottom: 1.2rem;
+}
+.section-intro{
+  color: var(--muted);
+  max-width: 56ch;
+}
+
+/* Buttons and text links */
+.btn{
+  display: inline-block;
+  background: var(--accent);
+  color: #0A0A0A;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.95rem 1.9rem;
+  border-radius: var(--radius);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 34px rgba(232, 163, 61, 0.28);
+  background: #f0b355;
+}
+.link-underline{
+  position: relative;
+  font-weight: 500;
+  padding-bottom: 3px;
+}
+.link-underline::after{
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%; height: 1px;
+  background: var(--accent);
+  transform-origin: right;
+  transition: transform 0.35s ease;
+}
+.link-underline:hover::after{
+  transform: scaleX(0.35);
+  transform-origin: left;
+}
+
+/* Masked line reveals: each .line clips its child so GSAP can slide it up */
+.line{ display: block; overflow: hidden; }
+.line-inner{ display: block; will-change: transform; }
+
+/* ============================================================================
+   3. FILM GRAIN AND VIGNETTE OVERLAYS
+   ============================================================================ */
+.grain{
+  position: fixed;
+  inset: -60%;
+  width: 220%;
+  height: 220%;
+  pointer-events: none;
+  z-index: 9990;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@media (prefers-reduced-motion: no-preference){
+  .grain{ animation: grain-shift 1.2s steps(4) infinite; }
+}
+@keyframes grain-shift{
+  0%{ transform: translate(0, 0); }
+  25%{ transform: translate(-2%, 1.5%); }
+  50%{ transform: translate(1.5%, -2%); }
+  75%{ transform: translate(-1%, -1%); }
+  100%{ transform: translate(0, 0); }
+}
+.vignette{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9989;
+  background: radial-gradient(ellipse 90% 80% at 50% 45%, transparent 55%, rgba(0,0,0,0.5) 100%);
+}
+
+/* ============================================================================
+   4. CUSTOM CURSOR (desktop with a fine pointer only)
+   ============================================================================ */
+.cursor{ display: none; }
+@media (hover: hover) and (pointer: fine){
+  .js .cursor{
+    display: block;
+    position: fixed;
+    top: 0; left: 0;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--text);
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transform: translate(-100px, -100px);
+  }
+}
+@media (prefers-reduced-motion: reduce){
+  .cursor{ display: none !important; }
+}
+
+/* ============================================================================
+   5. PRELOADER
+   ============================================================================ */
+.preloader{ display: none; }
+.js .preloader{
+  display: flex;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: var(--bg);
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 2rem 2.4rem;
+}
+.preloader-brand{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.preloader-count{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(3rem, 9vw, 7rem);
+  line-height: 1;
+  color: var(--text);
+}
+.preloader-count em{ font-style: normal; color: var(--accent); }
+@media (prefers-reduced-motion: reduce){
+  .preloader{ display: none !important; }
+}
+
+/* ============================================================================
+   6. NAVIGATION
+   ============================================================================ */
+.nav{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 300;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  transition: background 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+  border-bottom: 1px solid transparent;
+}
+.nav.scrolled{
+  background: rgba(10, 10, 10, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom-color: var(--line);
+}
+.nav-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+.wordmark{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+}
+.wordmark span{ color: var(--accent); }
+.nav-links{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-links a:not(.btn){
+  font-size: 0.95rem;
+  color: var(--muted);
+  transition: color 0.25s ease;
+}
+.nav-links a:not(.btn):hover{ color: var(--text); }
+.nav-links .btn{ padding: 0.6rem 1.3rem; font-size: 0.92rem; }
+
+/* Hamburger, shown on mobile only */
+.menu-btn{
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 4px;
+  z-index: 320;
+}
+.menu-btn span{
+  width: 26px; height: 2px;
+  background: var(--text);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+.menu-open .menu-btn span:nth-child(1){ transform: translateY(8px) rotate(45deg); }
+.menu-open .menu-btn span:nth-child(2){ opacity: 0; }
+.menu-open .menu-btn span:nth-child(3){ transform: translateY(-8px) rotate(-45deg); }
+
+/* Full screen overlay menu on mobile */
+.menu-overlay{
+  position: fixed;
+  inset: 0;
+  z-index: 310;
+  background: rgba(10, 10, 10, 0.97);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.menu-open .menu-overlay{ opacity: 1; visibility: visible; }
+.menu-overlay a{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.2rem, 9vw, 3.4rem);
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--line);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.menu-open .menu-overlay a{ transform: translateY(0); opacity: 1; }
+.menu-overlay a:nth-child(2){ transition-delay: 0.05s; }
+.menu-overlay a:nth-child(3){ transition-delay: 0.1s; }
+.menu-overlay a:nth-child(4){ transition-delay: 0.15s; }
+.menu-overlay a:nth-child(5){ transition-delay: 0.2s; }
+.menu-overlay a:nth-child(6){ transition-delay: 0.25s; }
+.menu-overlay .menu-cta{ color: var(--accent); border-bottom: none; }
+
+@media (max-width: 860px){
+  .nav-links{ display: none; }
+  .menu-btn{ display: flex; }
+}
+
+/* ============================================================================
+   7. HERO
+   ============================================================================ */
+.hero{
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--nav-h) + 2rem) 0 4rem;
+  overflow: hidden;
+  /* Warm gradient glow sits behind the WebGL canvas. If WebGL fails or
+     reduced motion is on, this is the fallback hero background. */
+  background:
+    radial-gradient(ellipse 70% 45% at 50% 72%, rgba(232, 163, 61, 0.13), transparent 70%),
+    radial-gradient(ellipse 55% 40% at 50% 55%, rgba(245, 242, 235, 0.05), transparent 70%);
+}
+.hero-canvas{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.hero-content{
+  position: relative;
+  z-index: 2;
+}
+.hero-title{
+  font-size: clamp(2.9rem, 9vw, 9.8rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin-bottom: 2rem;
+  max-width: 12ch;
+}
+.hero-title .accent{ color: var(--accent); }
+.hero-sub{
+  color: var(--muted);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  max-width: 52ch;
+  margin-bottom: 2.4rem;
+}
+.hero-cta{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.scroll-hint{
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.scroll-hint::after{
+  content: "";
+  width: 1px;
+  height: 44px;
+  background: linear-gradient(var(--accent), transparent);
+}
+@media (prefers-reduced-motion: no-preference){
+  .scroll-hint::after{ animation: hint-drop 2s ease-in-out infinite; }
+}
+@keyframes hint-drop{
+  0%{ transform: scaleY(0); transform-origin: top; }
+  45%{ transform: scaleY(1); transform-origin: top; }
+  55%{ transform: scaleY(1); transform-origin: bottom; }
+  100%{ transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* ============================================================================
+   8. MARQUEE STRIP
+   ============================================================================ */
+.marquee{
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+  padding: 1.4rem 0;
+  background: var(--bg);
+  position: relative;
+  z-index: 2;
+}
+.marquee-track{
+  display: flex;
+  width: max-content;
+  gap: 2.6rem;
+  padding-right: 2.6rem;
+}
+@media (prefers-reduced-motion: no-preference){
+  .marquee-track{ animation: marquee-scroll 28s linear infinite; }
+}
+@keyframes marquee-scroll{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+.marquee-track span{
+  display: inline-flex;
+  align-items: center;
+  gap: 2.6rem;
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--muted);
+  text-transform: lowercase;
+}
+.marquee-track span::after{
+  content: "";
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* ============================================================================
+   9. VIDEO EMBED FRAMES (showreel and work cards)
+   ============================================================================ */
+.embed{
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #101010;
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+.embed:hover{
+  border-color: rgba(232, 163, 61, 0.45);
+  box-shadow: 0 0 44px rgba(232, 163, 61, 0.12);
+}
+.embed iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+/* Shown until a real embed URL is pasted into the placeholder */
+.embed-note{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  text-align: center;
+  padding: 1.5rem;
+}
+.embed-note::before{
+  content: "";
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  border: 1px solid var(--accent);
+  background:
+    linear-gradient(var(--bg), var(--bg)) padding-box,
+    conic-gradient(from 90deg, transparent, rgba(232,163,61,0.25)) border-box;
+  /* play triangle */
+  -webkit-mask: none;
+  position: relative;
+}
+.embed-note::after{
+  content: "";
+  position: absolute;
+  width: 0; height: 0;
+  border-left: 12px solid var(--accent);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  transform: translate(2px, -21px);
+}
+.embed-note code{
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+.embed-note p{
+  color: var(--muted);
+  font-size: 0.85rem;
+  max-width: 34ch;
+}
+
+/* ============================================================================
+   10. SHOWREEL
+   ============================================================================ */
+.showreel-caption{
+  margin-top: 1.1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.showreel-caption::before{
+  content: "";
+  width: 26px; height: 1px;
+  background: var(--accent);
+}
+
+/* ============================================================================
+   11. TWO DOORS (SERVICES)
+   ============================================================================ */
+.doors{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.door{
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(1.8rem, 3.4vw, 3rem);
+  background: rgba(245, 242, 235, 0.02);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.4s ease, background 0.4s ease, transform 0.4s ease;
+}
+.door:hover{
+  border-color: rgba(232, 163, 61, 0.4);
+  background: rgba(245, 242, 235, 0.035);
+  transform: translateY(-4px);
+}
+.door-tag{
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.4rem;
+}
+.door h3{
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  margin-bottom: 1rem;
+}
+.door > p{
+  color: var(--muted);
+  margin-bottom: 1.6rem;
+}
+.door ul{
+  margin-bottom: 1.8rem;
+  display: flex;
+  flex-direction: column;
+}
+.door li{
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--line);
+  color: var(--text);
+  font-size: 0.98rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+}
+.door li::before{
+  content: "";
+  flex: none;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+.door-price{
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.6rem;
+}
+.door .link-underline{ margin-top: auto; align-self: flex-start; color: var(--accent); }
+@media (max-width: 860px){
+  .doors{ grid-template-columns: 1fr; }
+}
+
+/* ============================================================================
+   12. SELECTED WORK
+   ============================================================================ */
+.work-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.work-card{
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(245, 242, 235, 0.02);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: box-shadow 0.35s ease;
+}
+.work-card:hover{
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55), 0 0 40px rgba(232, 163, 61, 0.07);
+}
+.work-card .embed{
+  border: none;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+}
+.work-card .embed:hover{ box-shadow: none; }
+.work-body{ padding: 1.5rem; }
+.work-body h3{
+  font-size: 1.25rem;
+  margin-bottom: 0.7rem;
+}
+.work-what{
+  color: var(--muted);
+  font-size: 0.93rem;
+  margin-bottom: 0.9rem;
+}
+.work-result{
+  font-size: 0.93rem;
+  color: var(--text);
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+}
+.work-result strong{
+  color: var(--accent);
+  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+@media (max-width: 1020px){
+  .work-grid{ grid-template-columns: 1fr; max-width: 640px; }
+}
+
+/* ============================================================================
+   13. STATS ROW
+   ============================================================================ */
+.stats{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.stat{
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+.stat + .stat{ border-left: 1px solid var(--line); }
+.stat-num{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+  line-height: 1;
+  color: var(--text);
+}
+.stat-num em{ font-style: normal; color: var(--accent); }
+.stat-label{
+  display: block;
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+@media (max-width: 700px){
+  .stats{ grid-template-columns: 1fr; }
+  .stat + .stat{ border-left: none; border-top: 1px solid var(--line); }
+  .stat{ padding: 2.2rem 1rem; }
+}
+
+/* ============================================================================
+   14. PROCESS
+   ============================================================================ */
+.process-wrap{ position: relative; }
+.shape-canvas{
+  position: absolute;
+  right: -4%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(560px, 60vw);
+  height: min(560px, 60vw);
+  z-index: 0;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.steps{
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.step{
+  border-top: 1px solid var(--line);
+  padding-top: 1.6rem;
+}
+.step-num{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+.step h3{
+  font-size: 1.5rem;
+  margin: 0.9rem 0 0.8rem;
+}
+.step p{
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+@media (max-width: 860px){
+  .steps{ grid-template-columns: 1fr; }
+}
+
+/* ============================================================================
+   15. ABOUT
+   ============================================================================ */
+.about-grid{
+  display: grid;
+  grid-template-columns: minmax(260px, 420px) 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: center;
+  margin-top: 3rem;
+}
+.about-photo{
+  aspect-ratio: 4 / 5;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(232, 163, 61, 0.1), transparent 70%),
+    #101010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+.about-photo code{
+  font-family: var(--font-display);
+  color: var(--accent);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+.about-text p{ color: var(--muted); margin-bottom: 1.4rem; }
+.pull-line{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.6rem, 3.4vw, 2.6rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-top: 1.8rem;
+}
+.pull-line em{ font-style: normal; color: var(--accent); }
+@media (max-width: 860px){
+  .about-grid{ grid-template-columns: 1fr; }
+  .about-photo{ max-width: 380px; }
+}
+
+/* ============================================================================
+   16. TESTIMONIALS
+   ============================================================================ */
+.quotes{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.quote{
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(1.8rem, 3vw, 2.8rem);
+  background: rgba(245, 242, 235, 0.02);
+  display: flex;
+  flex-direction: column;
+}
+.quote-mark{
+  font-family: var(--font-display);
+  font-size: 3.6rem;
+  line-height: 1;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.quote blockquote{
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  line-height: 1.4;
+  margin-bottom: 1.8rem;
+}
+.quote figcaption{
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.quote figcaption strong{
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+}
+@media (max-width: 860px){
+  .quotes{ grid-template-columns: 1fr; }
+}
+
+/* ============================================================================
+   17. CONTACT
+   ============================================================================ */
+.contact{
+  min-height: 92svh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background:
+    radial-gradient(ellipse 60% 45% at 50% 60%, rgba(232, 163, 61, 0.14), transparent 70%);
+}
+.contact-title{
+  font-size: clamp(2.6rem, 8vw, 7.6rem);
+  letter-spacing: -0.03em;
+  max-width: 14ch;
+  margin: 0 auto 2.6rem;
+}
+.contact-title .accent{ color: var(--accent); }
+.contact-actions{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.2rem;
+}
+.contact-meta{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.contact-meta a:hover{ color: var(--text); }
+
+/* ============================================================================
+   18. FOOTER
+   ============================================================================ */
+.footer{
+  border-top: 1px solid var(--line);
+  padding: 2rem 0;
+}
+.footer-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+.footer-links{ display: flex; gap: 1.6rem; }
+.footer-links a:hover{ color: var(--text); }
+
+/* ============================================================================
+   19. REDUCED MOTION: kill every animation, keep everything readable
+   ============================================================================ */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation: none !important;
+    transition: none !important;
+  }
+  .hero-canvas, .shape-canvas{ display: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==========================================================================
+     FILM OVERLAYS: grain + vignette across the whole page
+     ========================================================================== -->
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- ==========================================================================
+     CUSTOM CURSOR (desktop only, driven by JS)
+     ========================================================================== -->
+<div class="cursor" aria-hidden="true"></div>
+
+<!-- ==========================================================================
+     PRELOADER: brand in the corner, count to 100, wipe into the hero
+     ========================================================================== -->
+<div class="preloader" aria-hidden="true">
+  <div class="preloader-brand">JB Medias</div>
+  <div class="preloader-count"><span id="preloader-num">0</span><em>%</em></div>
+</div>
+
+<!-- ==========================================================================
+     NAVIGATION
+     ========================================================================== -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="wordmark">JB Medias<span>.</span></a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="CALENDLY_LINK" class="btn" target="_blank" rel="noopener">Book a call</a>
+    </nav>
+    <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Full screen menu for mobile -->
+<nav class="menu-overlay" id="menu-overlay" aria-label="Mobile">
+  <a href="#work">Work</a>
+  <a href="#services">Services</a>
+  <a href="#process">Process</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <a href="CALENDLY_LINK" class="menu-cta" target="_blank" rel="noopener">Book a call</a>
+</nav>
+
+<main id="top">
+
+  <!-- ========================================================================
+       HERO: 3D audio waveform behind, headline in front
+       ======================================================================== -->
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="wrap hero-content">
+      <h1 class="hero-title" id="hero-title">
+        <span class="line"><span class="line-inner">Stories you <em class="accent" style="font-style:normal">hear</em></span></span>
+        <span class="line"><span class="line-inner">before you see.</span></span>
+      </h1>
+      <p class="hero-sub" data-reveal>
+        JB Medias plans, films, and edits content built on story and sound.
+        Short form engines for businesses. Long form stories for creators.
+      </p>
+      <div class="hero-cta" data-reveal>
+        <a href="CALENDLY_LINK" class="btn" target="_blank" rel="noopener">Book a call</a>
+        <a href="#work" class="link-underline">See the work</a>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- ========================================================================
+       MARQUEE: skills strip, duplicated once for a seamless loop
+       ======================================================================== -->
+  <div class="marquee" aria-label="Skills">
+    <div class="marquee-track">
+      <span>storytelling</span><span>sound design</span><span>content strategy</span><span>filming</span><span>long form editing</span><span>short form systems</span><span>pacing</span><span>color</span>
+      <span aria-hidden="true">storytelling</span><span aria-hidden="true">sound design</span><span aria-hidden="true">content strategy</span><span aria-hidden="true">filming</span><span aria-hidden="true">long form editing</span><span aria-hidden="true">short form systems</span><span aria-hidden="true">pacing</span><span aria-hidden="true">color</span>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SHOWREEL
+       ======================================================================== -->
+  <section id="showreel">
+    <div class="wrap">
+      <div class="label" data-reveal>Showreel</div>
+      <div data-reveal>
+        <div class="embed" data-embed="SHOWREEL_EMBED_URL" data-embed-title="JB Medias showreel">
+          <div class="embed-note">
+            <code>SHOWREEL_EMBED_URL</code>
+            <p>Paste your showreel embed link in the placeholder block at the top of this file.</p>
+          </div>
+        </div>
+        <p class="showreel-caption">60 seconds of what this sounds like.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       TWO DOORS (SERVICES)
+       ======================================================================== -->
+  <section id="services">
+    <div class="wrap">
+      <div class="label" data-reveal>Services</div>
+      <h2 class="section-title reveal-lines">Two doors. One way of working.</h2>
+      <p class="section-intro" data-reveal>
+        Whether you run a business or a channel, the craft is the same:
+        story first, sound first, everything in service of attention that converts.
+      </p>
+
+      <div class="doors">
+        <!-- Door A: businesses -->
+        <article class="door" data-reveal>
+          <div class="door-tag">For businesses</div>
+          <h3>A content engine you never have to think about.</h3>
+          <p>
+            I handle strategy, filming, editing, and posting on a monthly retainer.
+            You keep running your business. The content runs itself, built to turn
+            attention into bookings.
+          </p>
+          <ul>
+            <li>Content strategy and planning</li>
+            <li>On location filming</li>
+            <li>Editing and sound design</li>
+            <li>Posting and monthly reporting</li>
+          </ul>
+          <p class="door-price">Retainers from PRICE_PLACEHOLDER.</p>
+          <a href="CALENDLY_LINK" class="link-underline" target="_blank" rel="noopener">Book a call</a>
+        </article>
+
+        <!-- Door B: creators -->
+        <article class="door" data-reveal>
+          <div class="door-tag">For creators</div>
+          <h3>Long form editing that holds attention.</h3>
+          <p>
+            Story first structure, pacing, and sound design for YouTube.
+            Viewers stay because they feel something, not because something
+            flashes every two seconds.
+          </p>
+          <ul>
+            <li>Story structure and pacing</li>
+            <li>Sound design and music selection</li>
+            <li>Motion graphics only where they serve the story</li>
+            <li>Input on thumbnails and titles</li>
+          </ul>
+          <p class="door-price">Per video or monthly.</p>
+          <a href="CALENDLY_LINK" class="link-underline" target="_blank" rel="noopener">Book a call</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SELECTED WORK
+       ======================================================================== -->
+  <section id="work">
+    <div class="wrap">
+      <div class="label" data-reveal>Selected work</div>
+      <h2 class="section-title reveal-lines">Work that earned its keep.</h2>
+
+      <div class="work-grid">
+        <!-- Project 1 -->
+        <article class="work-card" data-tilt data-reveal>
+          <div class="embed" data-embed="PROJECT_1_EMBED_URL" data-embed-title="Dental clinic content engine">
+            <div class="embed-note">
+              <code>PROJECT_1_EMBED_URL</code>
+              <p>Paste this project's embed link in the placeholder block.</p>
+            </div>
+          </div>
+          <div class="work-body">
+            <h3>Dental clinic content engine</h3>
+            <p class="work-what">Monthly reels: planned, filmed, edited, posted.</p>
+            <p class="work-result"><strong>Result</strong> RESULT_1_PLACEHOLDER</p>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="work-card" data-tilt data-reveal>
+          <div class="embed" data-embed="PROJECT_2_EMBED_URL" data-embed-title="Enactus national competition film">
+            <div class="embed-note">
+              <code>PROJECT_2_EMBED_URL</code>
+              <p>Paste this project's embed link in the placeholder block.</p>
+            </div>
+          </div>
+          <div class="work-body">
+            <h3>Enactus national competition film</h3>
+            <p class="work-what">The film behind a national pitch, built to carry the emotional weight of the story.</p>
+            <p class="work-result"><strong>Result</strong> RESULT_2_PLACEHOLDER</p>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="work-card" data-tilt data-reveal>
+          <div class="embed" data-embed="PROJECT_3_EMBED_URL" data-embed-title="Long form YouTube edit">
+            <div class="embed-note">
+              <code>PROJECT_3_EMBED_URL</code>
+              <p>Paste this project's embed link in the placeholder block.</p>
+            </div>
+          </div>
+          <div class="work-body">
+            <h3>Long form YouTube edit</h3>
+            <p class="work-what">Full edit with story restructuring and sound design.</p>
+            <p class="work-result"><strong>Result</strong> RESULT_3_PLACEHOLDER</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       STATS ROW: numbers count up on scroll.
+       Edit the data-count values (and labels) to your real numbers,
+       or delete this whole section if you prefer.
+       ======================================================================== -->
+  <section id="stats" style="padding-top:0">
+    <div class="wrap">
+      <div class="stats" data-reveal>
+        <div class="stat">
+          <span class="stat-num"><span data-count="150">150</span><em>+</em></span>
+          <span class="stat-label">Videos delivered</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num"><span data-count="2000000">2,000,000</span><em>+</em></span>
+          <span class="stat-label">Views on work I edited</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num"><span data-count="12">12</span></span>
+          <span class="stat-label">Clients served</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PROCESS: three steps, with a slow wireframe shape floating behind
+       ======================================================================== -->
+  <section id="process">
+    <div class="wrap process-wrap">
+      <canvas class="shape-canvas" id="shape-canvas" aria-hidden="true"></canvas>
+      <div class="label" data-reveal>Process</div>
+      <h2 class="section-title reveal-lines">How it works.</h2>
+
+      <div class="steps">
+        <div class="step" data-reveal>
+          <span class="step-num">01</span>
+          <h3>Talk</h3>
+          <p>A free call about your goals, your audience, and what working together actually looks like.</p>
+        </div>
+        <div class="step" data-reveal>
+          <span class="step-num">02</span>
+          <h3>Make</h3>
+          <p>I plan, film, and edit, with sound and story leading every choice.</p>
+        </div>
+        <div class="step" data-reveal>
+          <span class="step-num">03</span>
+          <h3>Refine</h3>
+          <p>Revisions, posting, and reporting, so the content keeps earning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       ABOUT
+       ======================================================================== -->
+  <section id="about">
+    <div class="wrap">
+      <div class="label" data-reveal>About</div>
+      <h2 class="section-title reveal-lines">The person behind the sound.</h2>
+
+      <div class="about-grid">
+        <!-- ABOUT_IMAGE: replace this whole div with your portrait, e.g.
+             <img class="about-photo" src="your-photo.jpg" alt="Portrait of me"
+                  style="object-fit:cover"> -->
+        <div class="about-photo" data-reveal>
+          <code>ABOUT_IMAGE</code>
+        </div>
+        <div class="about-text" data-reveal>
+          <p>ABOUT_TEXT</p>
+          <p class="pull-line">Most editors start with visuals. I start with <em>what you hear.</em></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       TESTIMONIALS
+       ======================================================================== -->
+  <section id="testimonials">
+    <div class="wrap">
+      <div class="label" data-reveal>Kind words</div>
+      <h2 class="section-title reveal-lines">What clients say.</h2>
+
+      <div class="quotes">
+        <figure class="quote" data-reveal>
+          <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+          <blockquote>TESTIMONIAL_1</blockquote>
+          <figcaption><strong>TESTIMONIAL_1_NAME</strong>TESTIMONIAL_1_ROLE</figcaption>
+        </figure>
+        <figure class="quote" data-reveal>
+          <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+          <blockquote>TESTIMONIAL_2</blockquote>
+          <figcaption><strong>TESTIMONIAL_2_NAME</strong>TESTIMONIAL_2_ROLE</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CONTACT
+       ======================================================================== -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2 class="contact-title reveal-lines">
+        <span class="line"><span class="line-inner">Let's make something</span></span>
+        <span class="line"><span class="line-inner">people <span class="accent">feel.</span></span></span>
+      </h2>
+      <div class="contact-actions" data-reveal>
+        <a href="CALENDLY_LINK" class="btn" target="_blank" rel="noopener">Book a call</a>
+      </div>
+      <div class="contact-meta" data-reveal>
+        <a href="mailto:EMAIL_PLACEHOLDER">EMAIL_PLACEHOLDER</a>
+        <a href="INSTAGRAM_URL" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==========================================================================
+     FOOTER
+     ========================================================================== -->
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>JB Medias &copy; <span id="year">2026</span></span>
+    <div class="footer-links">
+      <a href="INSTAGRAM_URL" target="_blank" rel="noopener">Instagram</a>
+      <a href="YOUTUBE_URL" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ==========================================================================
+     LIBRARIES FROM CDN
+     Three.js (3D scenes), GSAP + ScrollTrigger (scroll animation),
+     Lenis (smooth scrolling). All optional: the page still reads fine
+     if any of them fail to load.
+     ========================================================================== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+
+<script>
+/* ============================================================================
+   MAIN SCRIPT
+   Sections:
+     A. Setup and feature flags
+     B. Video embed placeholders
+     C. Footer year
+     D. Preloader
+     E. Smooth scrolling (Lenis)
+     F. Navigation (scrolled state, mobile menu, anchor links)
+     G. Custom cursor
+     H. Scroll reveals + stat count up (GSAP ScrollTrigger)
+     I. Work card 3D tilt
+     J. Hero 3D waveform (Three.js)
+     K. Wireframe shape behind the process section (Three.js)
+   Everything is wrapped in guards so a missing library or a WebGL failure
+   never breaks the page or logs errors.
+   ============================================================================ */
+(function(){
+"use strict";
+
+/* --------------------------------------------------------------------------
+   A. SETUP AND FEATURE FLAGS
+   -------------------------------------------------------------------------- */
+var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+var finePointer  = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+var isMobile     = window.matchMedia("(max-width: 860px)").matches;
+var hasGSAP      = typeof window.gsap !== "undefined";
+var hasST        = hasGSAP && typeof window.ScrollTrigger !== "undefined";
+var hasThree     = typeof window.THREE !== "undefined";
+var hasLenis     = typeof window.Lenis !== "undefined";
+
+if (hasST) gsap.registerPlugin(ScrollTrigger);
+
+var ACCENT = 0xE8A33D;
+var CREAM  = 0xF5F2EB;
+
+/* --------------------------------------------------------------------------
+   B. VIDEO EMBED PLACEHOLDERS
+   When a data-embed value has been replaced with a real URL, swap the
+   placeholder card for the actual iframe. Until then the styled
+   placeholder stays, so nothing ever looks broken.
+   -------------------------------------------------------------------------- */
+document.querySelectorAll("[data-embed]").forEach(function(box){
+  var url = box.getAttribute("data-embed") || "";
+  if (url.indexOf("http") === 0){
+    var iframe = document.createElement("iframe");
+    iframe.src = url;
+    iframe.title = box.getAttribute("data-embed-title") || "Video";
+    iframe.loading = "lazy";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    iframe.allowFullscreen = true;
+    box.innerHTML = "";
+    box.appendChild(iframe);
+  }
+});
+
+/* --------------------------------------------------------------------------
+   C. FOOTER YEAR
+   -------------------------------------------------------------------------- */
+var yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+/* --------------------------------------------------------------------------
+   D. PRELOADER
+   Counts 0 to 100 in about 1.4 seconds, then wipes up to reveal the hero.
+   Skipped entirely for reduced motion (CSS hides it) or if GSAP failed.
+   -------------------------------------------------------------------------- */
+var preloader = document.querySelector(".preloader");
+var heroIntroPlayed = false;
+
+function playHeroIntro(){
+  if (heroIntroPlayed || !hasGSAP || reduceMotion) return;
+  heroIntroPlayed = true;
+  var tl = gsap.timeline();
+  tl.to("#hero-title .line-inner", { yPercent: 0, duration: 1.1, stagger: 0.12, ease: "power4.out" }, 0)
+    .to("#hero [data-reveal]", { opacity: 1, y: 0, duration: 0.9, stagger: 0.12, ease: "power3.out" }, 0.45)
+    .from("#nav", { opacity: 0, y: -14, duration: 0.7, ease: "power2.out" }, 0.5)
+    .from(".scroll-hint", { opacity: 0, duration: 0.7 }, 0.9);
+}
+
+if (!hasGSAP || reduceMotion){
+  if (preloader) preloader.style.display = "none";
+} else {
+  // Hide hero elements only now (with JS confirmed working), so a JS
+  // failure can never leave the page blank.
+  gsap.set("#hero-title .line-inner", { yPercent: 110 });
+  gsap.set("#hero [data-reveal]", { opacity: 0, y: 24 });
+
+  var counter = { n: 0 };
+  var numEl = document.getElementById("preloader-num");
+  gsap.timeline({ onComplete: playHeroIntro })
+    .to(counter, {
+      n: 100, duration: 1.4, ease: "power2.inOut",
+      onUpdate: function(){ if (numEl) numEl.textContent = Math.round(counter.n); }
+    })
+    .to(preloader, {
+      yPercent: -100, duration: 0.8, ease: "power4.inOut",
+      onComplete: function(){ if (preloader) preloader.style.display = "none"; }
+    }, "+=0.1");
+}
+
+/* --------------------------------------------------------------------------
+   E. SMOOTH SCROLLING (LENIS)
+   Lenis drives the scroll, GSAP's ticker drives Lenis, and ScrollTrigger
+   listens to Lenis so everything stays in sync.
+   -------------------------------------------------------------------------- */
+var lenis = null;
+if (hasLenis && hasGSAP && !reduceMotion){
+  lenis = new Lenis({ lerp: 0.1, wheelMultiplier: 1 });
+  lenis.on("scroll", function(){ if (hasST) ScrollTrigger.update(); });
+  gsap.ticker.add(function(time){ lenis.raf(time * 1000); });
+  gsap.ticker.lagSmoothing(0);
+}
+
+/* --------------------------------------------------------------------------
+   F. NAVIGATION
+   -------------------------------------------------------------------------- */
+var nav = document.getElementById("nav");
+function onScrollNav(){
+  if (nav) nav.classList.toggle("scrolled", window.scrollY > 40);
+}
+window.addEventListener("scroll", onScrollNav, { passive: true });
+onScrollNav();
+
+// Mobile menu open and close
+var menuBtn = document.getElementById("menu-btn");
+var menuOverlay = document.getElementById("menu-overlay");
+function closeMenu(){
+  document.body.classList.remove("menu-open");
+  if (menuBtn) menuBtn.setAttribute("aria-expanded", "false");
+  if (lenis) lenis.start();
+}
+if (menuBtn){
+  menuBtn.addEventListener("click", function(){
+    var open = document.body.classList.toggle("menu-open");
+    menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    if (lenis) open ? lenis.stop() : lenis.start();
+  });
+}
+
+// Smooth scroll for every in-page anchor (menu links close the menu first)
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener("click", function(e){
+    var target = document.querySelector(a.getAttribute("href"));
+    if (!target) return;
+    e.preventDefault();
+    closeMenu();
+    if (lenis){
+      lenis.scrollTo(target, { offset: -20, duration: 1.4 });
+    } else {
+      target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
+    }
+  });
+});
+
+/* --------------------------------------------------------------------------
+   G. CUSTOM CURSOR
+   A small dot lerps toward the mouse and scales up over anything clickable.
+   Only runs on devices with a fine pointer, never with reduced motion.
+   -------------------------------------------------------------------------- */
+var cursorEl = document.querySelector(".cursor");
+if (cursorEl && finePointer && !reduceMotion){
+  var cx = -100, cy = -100, tx = -100, ty = -100, cScale = 1, tScale = 1;
+  window.addEventListener("pointermove", function(e){ tx = e.clientX; ty = e.clientY; }, { passive: true });
+  document.addEventListener("pointerover", function(e){
+    tScale = e.target.closest("a, button, .work-card, .door, .embed") ? 2.6 : 1;
+  });
+  (function cursorLoop(){
+    cx += (tx - cx) * 0.18;
+    cy += (ty - cy) * 0.18;
+    cScale += (tScale - cScale) * 0.15;
+    cursorEl.style.transform =
+      "translate(" + (cx - 6) + "px," + (cy - 6) + "px) scale(" + cScale.toFixed(3) + ")";
+    requestAnimationFrame(cursorLoop);
+  })();
+} else if (cursorEl){
+  cursorEl.style.display = "none";
+}
+
+/* --------------------------------------------------------------------------
+   H. SCROLL REVEALS AND STAT COUNT UP
+   -------------------------------------------------------------------------- */
+if (hasST && !reduceMotion){
+
+  // Fade and rise for everything tagged data-reveal (outside the hero,
+  // which is handled by the preloader intro timeline)
+  document.querySelectorAll("[data-reveal]").forEach(function(el){
+    if (el.closest("#hero")) return;
+    gsap.fromTo(el,
+      { opacity: 0, y: 36 },
+      {
+        opacity: 1, y: 0, duration: 1, ease: "power3.out",
+        scrollTrigger: { trigger: el, start: "top 88%", once: true }
+      });
+  });
+
+  // Headline line masks: wrap each .reveal-lines heading's text in mask
+  // spans, then slide the lines up with a stagger
+  document.querySelectorAll(".reveal-lines").forEach(function(h){
+    var lines = h.querySelectorAll(".line-inner");
+    // Headings without pre-split lines get wrapped as one line
+    if (!lines.length){
+      h.innerHTML = '<span class="line"><span class="line-inner">' + h.innerHTML + "</span></span>";
+      lines = h.querySelectorAll(".line-inner");
+    }
+    gsap.fromTo(lines,
+      { yPercent: 110 },
+      {
+        yPercent: 0, duration: 1.1, stagger: 0.12, ease: "power4.out",
+        scrollTrigger: { trigger: h, start: "top 86%", once: true }
+      });
+  });
+
+  // Stats count up once when the row scrolls into view
+  document.querySelectorAll("[data-count]").forEach(function(el){
+    var end = parseFloat(el.getAttribute("data-count")) || 0;
+    var obj = { n: 0 };
+    gsap.to(obj, {
+      n: end, duration: 2, ease: "power2.out",
+      scrollTrigger: { trigger: el, start: "top 90%", once: true },
+      onUpdate: function(){ el.textContent = Math.round(obj.n).toLocaleString("en-US"); }
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   I. WORK CARD 3D TILT
+   Each card tilts toward the cursor with a soft lift, then eases back.
+   -------------------------------------------------------------------------- */
+if (finePointer && !reduceMotion){
+  document.querySelectorAll("[data-tilt]").forEach(function(card){
+    var raf = null;
+    card.addEventListener("pointermove", function(e){
+      if (raf) return;
+      raf = requestAnimationFrame(function(){
+        raf = null;
+        var r = card.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;   // -0.5 .. 0.5
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        card.style.transition = "transform 0.1s ease-out";
+        card.style.transform =
+          "perspective(900px) rotateX(" + (-py * 7).toFixed(2) + "deg)" +
+          " rotateY(" + (px * 9).toFixed(2) + "deg) translateY(-4px)";
+      });
+    });
+    card.addEventListener("pointerleave", function(){
+      card.style.transition = "transform 0.6s cubic-bezier(0.22, 1, 0.36, 1)";
+      card.style.transform = "perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0)";
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   J. HERO 3D WAVEFORM (THREE.JS)
+   A wide ribbon of particles undulating like a soundwave in slow motion.
+   Particles near the cursor lift and ease back. On scroll the camera
+   pulls back and the ribbon sinks and fades. The render loop pauses
+   when the hero is off screen or the tab is hidden.
+   -------------------------------------------------------------------------- */
+function initHeroScene(){
+  if (!hasThree || reduceMotion) return;
+  var canvas = document.getElementById("hero-canvas");
+  if (!canvas) return;
+
+  var renderer;
+  try{
+    renderer = new THREE.WebGLRenderer({
+      canvas: canvas, alpha: true, antialias: false, powerPreference: "high-performance"
+    });
+  } catch(err){
+    canvas.style.display = "none";  // CSS gradient hero takes over
+    return;
+  }
+
+  var DPR = Math.min(window.devicePixelRatio || 1, 2);
+  renderer.setPixelRatio(DPR);
+  renderer.setClearColor(0x000000, 0);
+
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(55, 1, 0.1, 100);
+  var CAM_BASE = { x: 0, y: 2.3, z: 9 };
+  camera.position.set(CAM_BASE.x, CAM_BASE.y, CAM_BASE.z);
+
+  // --- Particle ribbon -----------------------------------------------------
+  // Roughly 3,500 particles on desktop, about half on mobile.
+  var COLS = isMobile ? 130 : 240;
+  var ROWS = isMobile ? 11 : 15;
+  var COUNT = COLS * ROWS;
+  var WIDTH = 30, DEPTH = 3.4;
+
+  var positions = new Float32Array(COUNT * 3);
+  var colors = new Float32Array(COUNT * 3);
+  var baseX = new Float32Array(COUNT);
+  var baseZ = new Float32Array(COUNT);
+  var env = new Float32Array(COUNT);      // amplitude envelope per particle
+  var push = new Float32Array(COUNT);     // cursor ripple offset
+
+  var accent = new THREE.Color(ACCENT);
+  var cream = new THREE.Color(CREAM);
+  var tmp = new THREE.Color();
+
+  var i, c, r, x, z, t;
+  i = 0;
+  for (c = 0; c < COLS; c++){
+    for (r = 0; r < ROWS; r++){
+      x = (c / (COLS - 1) - 0.5) * WIDTH;
+      z = (r / (ROWS - 1) - 0.5) * DEPTH;
+      baseX[i] = x;
+      baseZ[i] = z;
+      // Bell curve: tall in the middle of the ribbon, quiet at the edges,
+      // like a waveform with a loud center
+      env[i] = 0.25 + Math.exp(-Math.pow(x / (WIDTH * 0.28), 2)) * 1.1;
+      positions[i * 3] = x;
+      positions[i * 3 + 1] = 0;
+      positions[i * 3 + 2] = z;
+      // Mostly warm accent with off white sparks mixed in
+      t = Math.random();
+      tmp.copy(accent).lerp(cream, t < 0.75 ? t * 0.35 : 0.9);
+      colors[i * 3] = tmp.r;
+      colors[i * 3 + 1] = tmp.g;
+      colors[i * 3 + 2] = tmp.b;
+      i++;
+    }
+  }
+
+  var geo = new THREE.BufferGeometry();
+  geo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+  geo.setAttribute("color", new THREE.BufferAttribute(colors, 3));
+  var posAttr = geo.getAttribute("position");
+
+  // Soft round sprite so particles glow instead of rendering as squares
+  var spriteCanvas = document.createElement("canvas");
+  spriteCanvas.width = spriteCanvas.height = 64;
+  var ctx = spriteCanvas.getContext("2d");
+  var grad = ctx.createRadialGradient(32, 32, 0, 32, 32, 32);
+  grad.addColorStop(0, "rgba(255,255,255,1)");
+  grad.addColorStop(0.35, "rgba(255,255,255,0.5)");
+  grad.addColorStop(1, "rgba(255,255,255,0)");
+  ctx.fillStyle = grad;
+  ctx.fillRect(0, 0, 64, 64);
+  var sprite = new THREE.CanvasTexture(spriteCanvas);
+
+  var mat = new THREE.PointsMaterial({
+    size: isMobile ? 0.09 : 0.075,
+    map: sprite,
+    vertexColors: true,
+    transparent: true,
+    opacity: 0.9,
+    depthWrite: false,
+    blending: THREE.AdditiveBlending,
+    sizeAttenuation: true
+  });
+
+  var points = new THREE.Points(geo, mat);
+  var group = new THREE.Group();
+  group.add(points);
+  scene.add(group);
+
+  // --- Mouse ripple --------------------------------------------------------
+  var raycaster = new THREE.Raycaster();
+  var ndc = new THREE.Vector2(-10, -10);
+  var plane = new THREE.Plane(new THREE.Vector3(0, 1, 0), 0);
+  var hit = new THREE.Vector3();
+  var hasPointer = false;
+  var parallax = { x: 0, y: 0 };
+
+  window.addEventListener("pointermove", function(e){
+    ndc.x = (e.clientX / window.innerWidth) * 2 - 1;
+    ndc.y = -(e.clientY / window.innerHeight) * 2 + 1;
+    parallax.x = ndc.x;
+    parallax.y = ndc.y;
+    hasPointer = true;
+  }, { passive: true });
+
+  // --- Scroll: pull back, sink, fade (driven by ScrollTrigger) -------------
+  var scrollP = { p: 0 };
+  if (hasST){
+    ScrollTrigger.create({
+      trigger: "#hero",
+      start: "top top",
+      end: "bottom top",
+      scrub: true,
+      onUpdate: function(self){
+        scrollP.p = self.progress;
+        canvas.style.opacity = String(1 - self.progress * 0.9);
+      }
+    });
+  }
+
+  // --- Resize --------------------------------------------------------------
+  function resize(){
+    var w = canvas.clientWidth || window.innerWidth;
+    var h = canvas.clientHeight || window.innerHeight;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+  window.addEventListener("resize", resize);
+  resize();
+
+  // --- Render loop with pause when off screen or tab hidden ----------------
+  var running = false;
+  var rafId = null;
+  var heroVisible = true;
+  var RIPPLE_R2 = 7.5;    // squared radius of the cursor ripple
+
+  function frame(now){
+    rafId = null;
+    if (!running) return;
+    var time = now * 0.001;
+    var p = scrollP.p;
+
+    // Cursor position projected onto the ribbon plane
+    var px = 999, pz = 999;
+    if (hasPointer && p < 0.85){
+      raycaster.setFromCamera(ndc, camera);
+      if (raycaster.ray.intersectPlane(plane, hit)){
+        px = hit.x - group.position.x;
+        pz = hit.z;
+      }
+    }
+
+    // Animate every particle: layered sine waves plus the cursor ripple
+    var arr = posAttr.array;
+    var n, bx, bz, wave, dx, dz, d2, target;
+    for (n = 0; n < COUNT; n++){
+      bx = baseX[n];
+      bz = baseZ[n];
+      wave = env[n] * (
+        Math.sin(bx * 0.5 + time * 1.05) * 0.8 +
+        Math.sin(bx * 1.3 - time * 0.65 + bz * 0.9) * 0.42 +
+        Math.sin(bx * 3.1 + time * 1.9 + bz * 2.0) * 0.14
+      );
+      target = 0;
+      dx = px - bx;
+      dz = pz - bz;
+      d2 = dx * dx + dz * dz;
+      if (d2 < RIPPLE_R2){
+        target = (1 - d2 / RIPPLE_R2);
+        target = target * target * 1.6;
+      }
+      // Rise quickly toward the cursor, ease back down slowly
+      push[n] += (target - push[n]) * (target > push[n] ? 0.16 : 0.045);
+      arr[n * 3 + 1] = wave + push[n];
+    }
+    posAttr.needsUpdate = true;
+
+    // Gentle idle drift plus mouse parallax; scroll pulls the camera back
+    // and sinks the ribbon
+    camera.position.x = CAM_BASE.x + Math.sin(time * 0.12) * 0.55 + parallax.x * 0.5;
+    camera.position.y = CAM_BASE.y + Math.sin(time * 0.09) * 0.22 + parallax.y * 0.3 + p * 1.6;
+    camera.position.z = CAM_BASE.z + p * 6.5;
+    group.position.y = -p * 4.2;
+    group.rotation.z = Math.sin(time * 0.05) * 0.02;
+    mat.opacity = 0.9 * (1 - p * 0.85);
+    camera.lookAt(0, group.position.y * 0.5, 0);
+
+    renderer.render(scene, camera);
+    rafId = requestAnimationFrame(frame);
+  }
+
+  function updateRunning(){
+    var shouldRun = heroVisible && !document.hidden;
+    if (shouldRun && !running){
+      running = true;
+      rafId = requestAnimationFrame(frame);
+    } else if (!shouldRun){
+      running = false;
+      if (rafId){ cancelAnimationFrame(rafId); rafId = null; }
+    }
+  }
+
+  new IntersectionObserver(function(entries){
+    heroVisible = entries[0].isIntersecting;
+    updateRunning();
+  }, { threshold: 0 }).observe(canvas);
+
+  document.addEventListener("visibilitychange", updateRunning);
+  updateRunning();
+}
+initHeroScene();
+
+/* --------------------------------------------------------------------------
+   K. WIREFRAME SHAPE BEHIND THE PROCESS SECTION (THREE.JS)
+   A quiet, slowly rotating torus knot at low opacity. Pauses when
+   off screen or when the tab is hidden.
+   -------------------------------------------------------------------------- */
+function initShapeScene(){
+  if (!hasThree || reduceMotion) return;
+  var canvas = document.getElementById("shape-canvas");
+  if (!canvas) return;
+
+  var renderer;
+  try{
+    renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
+  } catch(err){
+    canvas.style.display = "none";
+    return;
+  }
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.setClearColor(0x000000, 0);
+
+  var scene = new THREE.Scene();
+  var camera = new THREE.PerspectiveCamera(45, 1, 0.1, 50);
+  camera.position.z = 7;
+
+  var detail = isMobile ? [90, 10] : [160, 18];
+  var mesh = new THREE.Mesh(
+    new THREE.TorusKnotGeometry(2, 0.55, detail[0], detail[1]),
+    new THREE.MeshBasicMaterial({
+      color: ACCENT, wireframe: true, transparent: true, opacity: 0.14
+    })
+  );
+  scene.add(mesh);
+
+  function resize(){
+    var w = canvas.clientWidth || 300;
+    var h = canvas.clientHeight || 300;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+  window.addEventListener("resize", resize);
+  resize();
+
+  var running = false, rafId = null, visible = false;
+
+  function frame(now){
+    rafId = null;
+    if (!running) return;
+    var time = now * 0.001;
+    mesh.rotation.x = time * 0.12;
+    mesh.rotation.y = time * 0.16;
+    mesh.position.y = Math.sin(time * 0.4) * 0.25;
+    renderer.render(scene, camera);
+    rafId = requestAnimationFrame(frame);
+  }
+
+  function updateRunning(){
+    var shouldRun = visible && !document.hidden;
+    if (shouldRun && !running){
+      running = true;
+      rafId = requestAnimationFrame(frame);
+    } else if (!shouldRun){
+      running = false;
+      if (rafId){ cancelAnimationFrame(rafId); rafId = null; }
+    }
+  }
+
+  new IntersectionObserver(function(entries){
+    visible = entries[0].isIntersecting;
+    updateRunning();
+  }, { threshold: 0 }).observe(canvas);
+
+  document.addEventListener("visibilitychange", updateRunning);
+}
+initShapeScene();
+
+})();
+</script>
+</body>
+</html>
