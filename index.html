@@ -931,6 +931,12 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
   flex-wrap: wrap;
   margin-bottom: 2.2rem;
 }
+.contact-lead{
+  color: var(--muted);
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  max-width: 46ch;
+  margin: 0 auto 2.6rem;
+}
 .contact-meta{
   display: flex;
   align-items: center;
@@ -941,6 +947,81 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
   font-size: 0.95rem;
 }
 .contact-meta a:hover{ color: var(--text); }
+
+/* Contact form: centered card, left aligned fields */
+.contact-form{
+  max-width: 560px;
+  margin: 0 auto 1.8rem;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(245, 242, 235, 0.02);
+  padding: clamp(1.5rem, 3vw, 2.4rem);
+}
+.hidden-field{ display: none; }
+.field{ margin-bottom: 1.1rem; }
+.field label{
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+.field input,
+.field select,
+.field textarea{
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text);
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.8rem 0.95rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.field textarea{ resize: vertical; min-height: 110px; }
+.field input::placeholder,
+.field textarea::placeholder{ color: rgba(154, 148, 138, 0.6); }
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(232, 163, 61, 0.15);
+}
+/* Style the select dropdown arrow to match the dark theme */
+.field select{
+  appearance: none;
+  -webkit-appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+    linear-gradient(135deg, var(--muted) 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1.15rem),
+    calc(100% - 15px) calc(1.15rem);
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+  padding-right: 2.5rem;
+}
+.contact-form .btn{ width: 100%; text-align: center; border: none; cursor: pointer; }
+.contact-form.sent .field,
+.contact-form.sent .btn{ display: none; }
+.form-status{
+  margin-top: 1.1rem;
+  font-size: 0.95rem;
+  min-height: 1.2em;
+  text-align: center;
+}
+.form-status.ok{ color: var(--accent); font-size: 1.05rem; }
+.form-status.err{ color: #e88a4d; }
+.contact-alt{
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 1.4rem;
+}
+.contact-alt a{ color: var(--accent); }
 
 /* ============================================================================
    18. FOOTER
@@ -1385,9 +1466,51 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
         <span class="line"><span class="line-inner">Let's make something</span></span>
         <span class="line"><span class="line-inner">people <span class="accent">feel.</span></span></span>
       </h2>
-      <div class="contact-actions" data-reveal>
-        <a href="https://calendly.com/jbmedias/intro-call" class="btn" target="_blank" rel="noopener">Book a call</a>
-      </div>
+      <p class="contact-lead" data-reveal>Tell me about your project below, or book a call. Either works, and the first call is free.</p>
+
+      <!-- ------------------------------------------------------------------
+           CONTACT FORM (Netlify Forms, no backend needed)
+           How it works once deployed to Netlify:
+           - data-netlify="true" tells Netlify to capture submissions.
+           - You will see messages in your Netlify dashboard under "Forms".
+           - To get emailed on every submission: Netlify dashboard,
+             Forms, Form notifications, add an email notification.
+           The JavaScript below shows a thank you message without a page
+           reload. If JavaScript is off, the form still submits normally.
+           ------------------------------------------------------------------ -->
+      <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-reveal>
+        <!-- Netlify needs this hidden field to match the submission -->
+        <input type="hidden" name="form-name" value="contact">
+        <!-- Honeypot: hidden from people, quietly catches spam bots -->
+        <p class="hidden-field" aria-hidden="true">
+          <label>Do not fill this out if you are human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+        </p>
+
+        <div class="field">
+          <label for="cf-name">Name</label>
+          <input id="cf-name" name="name" type="text" autocomplete="name" required placeholder="Your name">
+        </div>
+        <div class="field">
+          <label for="cf-email">Email</label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" required placeholder="you@email.com">
+        </div>
+        <div class="field">
+          <label for="cf-service">What do you need?</label>
+          <select id="cf-service" name="service">
+            <option>Content for my business</option>
+            <option>Long form editing for my channel</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="4" required placeholder="What are you working on?"></textarea>
+        </div>
+        <button type="submit" class="btn">Send message</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="contact-alt" data-reveal>Prefer to talk first? <a href="https://calendly.com/jbmedias/intro-call" class="link-underline" target="_blank" rel="noopener">Book a call</a></p>
       <div class="contact-meta" data-reveal>
         <a href="mailto:hello@jbmedias.com">hello@jbmedias.com</a>
         <a href="https://www.instagram.com/jbmedias" target="_blank" rel="noopener">Instagram</a>
@@ -1495,6 +1618,52 @@ document.querySelectorAll("[data-embed]").forEach(function(box){
    -------------------------------------------------------------------------- */
 var yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+/* --------------------------------------------------------------------------
+   C2. CONTACT FORM (progressive enhancement over Netlify Forms)
+   Sends the form with fetch so the visitor gets a thank you without a page
+   reload. If anything fails, we point them to email. With JavaScript off,
+   this handler never runs and the form submits the normal way to Netlify.
+   -------------------------------------------------------------------------- */
+var contactForm = document.querySelector(".contact-form");
+var formStatus = document.getElementById("form-status");
+if (contactForm && formStatus){
+  contactForm.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    // Encode the fields the way Netlify Forms expects
+    var data = new FormData(contactForm);
+    var encoded = new URLSearchParams(data).toString();
+
+    formStatus.className = "form-status";
+    formStatus.textContent = "Sending...";
+
+    // Local preview (opening the file directly) cannot post anywhere, and
+    // trying would log a network error. Show a friendly note instead.
+    if (location.protocol === "file:"){
+      contactForm.classList.add("sent");
+      formStatus.className = "form-status ok";
+      formStatus.textContent = "Looks good. This form sends for real once the site is live on Netlify.";
+      return;
+    }
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encoded
+    })
+    .then(function(res){
+      if (!res.ok) throw new Error("bad status");
+      contactForm.classList.add("sent");
+      formStatus.className = "form-status ok";
+      formStatus.textContent = "Thanks. Your message is in, I will reply within a day.";
+    })
+    .catch(function(){
+      formStatus.className = "form-status err";
+      formStatus.textContent = "Something went wrong. Please email hello@jbmedias.com.";
+    });
+  });
+}
 
 /* --------------------------------------------------------------------------
    D. PRELOADER
