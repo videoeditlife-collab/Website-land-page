@@ -415,6 +415,40 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
   gap: 2rem;
   flex-wrap: wrap;
 }
+/* Small availability badge above the hero headline */
+.hero-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.45rem 0.95rem;
+  margin-bottom: 1.8rem;
+}
+.hero-badge-dot{
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 0 rgba(232, 163, 61, 0.55);
+}
+@media (prefers-reduced-motion: no-preference){
+  .hero-badge-dot{ animation: pulse-dot 2.2s ease-out infinite; }
+}
+@keyframes pulse-dot{
+  0%{ box-shadow: 0 0 0 0 rgba(232, 163, 61, 0.5); }
+  70%{ box-shadow: 0 0 0 8px rgba(232, 163, 61, 0); }
+  100%{ box-shadow: 0 0 0 0 rgba(232, 163, 61, 0); }
+}
+/* Micro trust line under the hero buttons */
+.hero-trust{
+  margin-top: 1.6rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
 .scroll-hint{
   position: absolute;
   bottom: 2rem;
@@ -928,6 +962,69 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
 .footer-links a:hover{ color: var(--text); }
 
 /* ============================================================================
+   18b. WHY IT WORKS (benefits strip)
+   ============================================================================ */
+.benefits{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.benefit{
+  border-top: 1px solid var(--line);
+  padding-top: 1.6rem;
+}
+.benefit-num{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+.benefit h3{
+  font-size: 1.35rem;
+  margin: 0.9rem 0 0.7rem;
+}
+.benefit p{ color: var(--muted); font-size: 0.96rem; }
+@media (max-width: 860px){
+  .benefits{ grid-template-columns: 1fr; }
+}
+
+/* ============================================================================
+   18c. STICKY CALL TO ACTION BAR
+   ============================================================================ */
+.sticky-cta{
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 280;
+  background: rgba(10, 10, 10, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid var(--line);
+  transform: translateY(120%);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+.sticky-cta.visible{ transform: translateY(0); }
+.sticky-cta-inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  padding: 0.85rem 0;
+}
+.sticky-cta-text{
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text);
+}
+.sticky-cta .btn{ padding: 0.7rem 1.5rem; font-size: 0.92rem; flex: none; }
+@media (max-width: 560px){
+  .sticky-cta-text{ font-size: 0.9rem; }
+  .sticky-cta .btn{ padding: 0.65rem 1.1rem; }
+}
+
+/* ============================================================================
    19. REDUCED MOTION: kill every animation, keep everything readable
    ============================================================================ */
 @media (prefers-reduced-motion: reduce){
@@ -998,6 +1095,7 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
   <section class="hero" id="hero">
     <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
     <div class="wrap hero-content">
+      <div class="hero-badge" data-reveal><span class="hero-badge-dot"></span> Taking on new clients this month</div>
       <h1 class="hero-title" id="hero-title">
         <span class="line"><span class="line-inner">Stories you <em class="accent" style="font-style:normal">hear</em></span></span>
         <span class="line"><span class="line-inner">before you see.</span></span>
@@ -1010,6 +1108,7 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
         <a href="https://calendly.com/jbmedias/intro-call" class="btn" target="_blank" rel="noopener">Book a call</a>
         <a href="#work" class="link-underline">See the work</a>
       </div>
+      <p class="hero-trust" data-reveal>Sound first editing for local businesses and creators. Free intro call, no pressure.</p>
     </div>
     <div class="scroll-hint" aria-hidden="true">Scroll</div>
   </section>
@@ -1038,6 +1137,31 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
           </div>
         </div>
         <p class="showreel-caption">60 seconds of what this sounds like.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       WHY IT WORKS: three outcome-focused benefits, landing page style
+       ======================================================================== -->
+  <section id="why" style="padding-top:0">
+    <div class="wrap">
+      <div class="benefits">
+        <div class="benefit" data-reveal>
+          <span class="benefit-num">01</span>
+          <h3>Attention that converts</h3>
+          <p>Content built to turn views into bookings and sales, not just likes. Every post has a job.</p>
+        </div>
+        <div class="benefit" data-reveal>
+          <span class="benefit-num">02</span>
+          <h3>Sound that makes people feel</h3>
+          <p>Music, silence, and sound design drive the emotion, so the work lands and holds attention.</p>
+        </div>
+        <div class="benefit" data-reveal>
+          <span class="benefit-num">03</span>
+          <h3>Handled for you</h3>
+          <p>I plan, film, edit, and post. You show up when it matters, the rest is off your plate.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -1287,6 +1411,18 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
 </footer>
 
 <!-- ==========================================================================
+     STICKY CALL TO ACTION
+     Slides up after the visitor scrolls past the hero, and tucks away
+     again over the contact section so it never covers the main CTA.
+     ========================================================================== -->
+<div class="sticky-cta" id="sticky-cta" aria-hidden="true">
+  <div class="wrap sticky-cta-inner">
+    <span class="sticky-cta-text">Ready to make content people feel?</span>
+    <a href="https://calendly.com/jbmedias/intro-call" class="btn" target="_blank" rel="noopener">Book a call</a>
+  </div>
+</div>
+
+<!-- ==========================================================================
      LIBRARIES FROM CDN
      Three.js (3D scenes), GSAP + ScrollTrigger (scroll animation),
      Lenis (smooth scrolling). All optional: the page still reads fine
@@ -1416,10 +1552,25 @@ if (hasLenis && hasGSAP && !reduceMotion){
    F. NAVIGATION
    -------------------------------------------------------------------------- */
 var nav = document.getElementById("nav");
+var stickyCta = document.getElementById("sticky-cta");
+var heroEl = document.getElementById("hero");
+var contactEl = document.getElementById("contact");
 function onScrollNav(){
-  if (nav) nav.classList.toggle("scrolled", window.scrollY > 40);
+  var y = window.scrollY;
+  if (nav) nav.classList.toggle("scrolled", y > 40);
+
+  // Sticky CTA: appears once the hero is scrolled past, and hides again
+  // when the contact section (which has its own big CTA) reaches the screen.
+  if (stickyCta){
+    var pastHero = heroEl ? y > heroEl.offsetHeight * 0.75 : y > 600;
+    var contactClose = contactEl
+      ? contactEl.getBoundingClientRect().top < window.innerHeight * 0.9
+      : false;
+    stickyCta.classList.toggle("visible", pastHero && !contactClose);
+  }
 }
 window.addEventListener("scroll", onScrollNav, { passive: true });
+window.addEventListener("resize", onScrollNav, { passive: true });
 onScrollNav();
 
 // Mobile menu open and close
