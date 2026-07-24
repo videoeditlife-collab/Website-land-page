@@ -1,0 +1,11 @@
+{
+  "name": "cross-post-scheduler",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Compose once, publish/schedule to TikTok + Instagram. Static front end + Netlify Functions backend.",
+  "dependencies": {
+    "@netlify/blobs": "^8.1.0",
+    "@netlify/functions": "^2.8.1",
+    "@supabase/supabase-js": "^2.45.0"
+  }
+}

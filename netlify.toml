@@ -1,0 +1,32 @@
+# ============================================================================
+#  Netlify config for the Cross-Post Scheduler backend
+#  Static site + serverless functions + a cron scheduler, all on the free tier.
+# ============================================================================
+
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+# The scheduler wakes up every minute and publishes any post that is due.
+[functions."scheduler"]
+  schedule = "* * * * *"
+
+# Friendly /api/* URLs -> functions.  The front end's "Backend base URL" is
+# therefore just  https://YOURSITE.netlify.app/api
+[[redirects]]
+  from = "/api/oauth/start"
+  to = "/.netlify/functions/oauth-start"
+  status = 200
+
+[[redirects]]
+  from = "/api/oauth/callback"
+  to = "/.netlify/functions/oauth-callback"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200

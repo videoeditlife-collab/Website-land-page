@@ -183,6 +183,11 @@ textarea{resize:vertical;min-height:90px}
     small backend (the platforms require it). <button class="link" id="howBtn">How to make it post for real →</button>
   </div>
 
+  <div class="notice" id="connectPanel" style="display:none;border-left-color:var(--ok);background:linear-gradient(180deg,#101a13,#141414);border-color:#1e3d2b">
+    <b style="color:var(--ok)">Backend connected.</b> Link each account once, then posts go out for real.
+    <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap" id="connectBtns"></div>
+  </div>
+
   <div class="grid">
 
     <!-- ============================ COMPOSER ============================ -->
@@ -294,17 +299,19 @@ textarea{resize:vertical;min-height:90px}
       <code>instagram_content_publish</code> permission.</li>
     </ul>
 
-    <h3>2 · Run the tiny backend</h3>
-    <p>A ~150-line Node/serverless service that this page calls. It does three jobs: hold the OAuth
-    tokens, expose <code>POST /publish</code>, and run a scheduler that fires due posts. This front end
-    already speaks to it — set the URL below and it flips out of simulation mode.</p>
-    <p style="color:var(--muted)">Ask me (Claude) to <b>"build the scheduler backend"</b> and I'll generate it — Netlify
-    Functions + a queue, or a small Express server, your call.</p>
+    <h3>2 · The backend is already in this repo</h3>
+    <p>Netlify Functions + a cron scheduler live in <code>/netlify/functions</code>. On Netlify, set the
+    environment variables from <code>.env.example</code> (the two app keys/secrets + free Supabase Storage
+    for media) and deploy. Full walkthrough in <code>scheduler/README.md</code>.</p>
+    <p style="color:var(--muted)">Add <code>{yoursite}/api/oauth/callback</code> as the redirect URI in
+    both the TikTok and Meta apps.</p>
 
     <h3>3 · Connect this page</h3>
+    <p>Set the backend URL below (your site + <code>/api</code>). A green panel appears with
+    <b>Connect TikTok</b> / <b>Connect Instagram</b> buttons — click each once to link the accounts.</p>
     <label class="fld">
       <span class="lbl">Backend base URL</span>
-      <input type="url" id="backendUrl" placeholder="https://your-backend.netlify.app/api">
+      <input type="url" id="backendUrl" placeholder="https://yoursite.netlify.app/api">
     </label>
     <label class="fld">
       <span class="lbl">API key (optional, sent as x-api-key)</span>
@@ -335,9 +342,11 @@ textarea{resize:vertical;min-height:90px}
   /* ---- state ------------------------------------------------------------- */
   var posts = load(LS_POSTS, []);
   var conn  = load(LS_CONN, {url:"", key:""});
-  var media = null;            // {name,type,size,dataUrl?} for the post being composed
+  var media = null;            // {name,type,size,dataUrl?,file} for the post being composed
   var whenMode = "now";
   var qFilter = "upcoming";
+  var mediaFiles = {};         // postId -> File (session only; can't persist a File)
+  var uploaded = {};           // postId -> {url,type} once uploaded to storage
 
   /* ---- helpers ----------------------------------------------------------- */
   function load(k,f){try{var v=JSON.parse(localStorage.getItem(k));return v==null?f:v;}catch(e){return f;}}
@@ -402,7 +411,7 @@ textarea{resize:vertical;min-height:90px}
   function handleFile(f){
     var isImg=/^image\//.test(f.type), isVid=/^video\//.test(f.type);
     if(!isImg && !isVid){ toast("Choose a video or image file"); return; }
-    media={name:f.name,type:f.type,size:f.size,dataUrl:null};
+    media={name:f.name,type:f.type,size:f.size,dataUrl:null,file:f};
     // Store a data URL for images that are reasonably small so the queue can show a
     // thumbnail and persist it. Big videos are kept as metadata only (localStorage is ~5MB).
     if(isImg && f.size < 900*1024){
@@ -487,6 +496,7 @@ textarea{resize:vertical;min-height:90px}
       targets:targets
     };
     posts.unshift(post); savePosts();
+    if(media && media.file) mediaFiles[post.id]=media.file;   // session-only, for real upload
 
     // reset composer (keep platform selection)
     $("#composer").reset();
@@ -496,10 +506,17 @@ textarea{resize:vertical;min-height:90px}
     $all("#whenSeg button").forEach(function(x){x.classList.toggle("active",x.dataset.mode==="now");});
     $("#schedAt").style.display="none"; whenMode="now"; refreshComposer();
 
-    if(!scheduledAt){ runPost(post.id); toast("Posting to "+plats.map(function(p){return PLAT_NAME[p];}).join(" + ")+"…"); }
-    else { toast("Scheduled for "+fmtWhen(scheduledAt)); }
-    qFilter = scheduledAt ? "upcoming" : "upcoming";
-    setQTab(qFilter); renderQueue();
+    if(conn.url){
+      // backend connected: the server decides now-vs-later and owns scheduling
+      runPost(post.id);
+      toast(scheduledAt ? "Handed to server — posts "+fmtWhen(scheduledAt) : "Posting to "+plats.map(function(p){return PLAT_NAME[p];}).join(" + ")+"…");
+    } else if(!scheduledAt){
+      runPost(post.id);
+      toast("Posting to "+plats.map(function(p){return PLAT_NAME[p];}).join(" + ")+"… (simulated)");
+    } else {
+      toast("Scheduled for "+fmtWhen(scheduledAt)+" (simulated)");
+    }
+    setQTab("upcoming"); renderQueue();
   });
 
   /* ======================================================================
@@ -507,60 +524,103 @@ textarea{resize:vertical;min-height:90px}
      ====================================================================== */
   function runPost(id){
     var post=find(id); if(!post) return;
-    Object.keys(post.targets).forEach(function(p){
-      var t=post.targets[p];
-      if(t.status==="posted") return;
-      t.status="publishing"; t.log.push(stamp("Publishing…"));
-      savePosts(); renderQueue();
-      publish(post,p).then(function(res){
-        t.status="posted"; t.postedAt=new Date().toISOString();
-        t.log.push(stamp((conn.url?"Published":"Simulated")+(res&&res.url?(" — "+res.url):"")));
-        if(res&&res.url) t.url=res.url;
+    // Upload media once (real mode), then publish each platform.
+    ensureMedia(post).then(function(){
+      Object.keys(post.targets).forEach(function(p){
+        var t=post.targets[p];
+        if(t.status==="posted") return;
+        t.status="publishing"; t.log.push(stamp("Publishing…"));
         savePosts(); renderQueue();
-      }).catch(function(err){
-        t.status="failed"; t.log.push(stamp("Failed: "+(err&&err.message||err)));
-        savePosts(); renderQueue();
+        publish(post,p).then(function(res){
+          if(res && res.queued){
+            t.status="scheduled"; t.serverScheduled=true;
+            t.log.push(stamp("Scheduled on server for "+fmtWhen(post.scheduledAt)));
+          } else {
+            t.status="posted"; t.postedAt=new Date().toISOString();
+            if(res&&res.url) t.url=res.url;
+            t.log.push(stamp((conn.url?"Published":"Simulated")+(res&&res.url?(" — "+res.url):"")));
+          }
+          savePosts(); renderQueue();
+        }).catch(function(err){
+          t.status="failed"; t.log.push(stamp("Failed: "+(err&&err.message||err)));
+          savePosts(); renderQueue();
+        });
       });
+    }).catch(function(err){
+      Object.keys(post.targets).forEach(function(p){
+        var t=post.targets[p]; if(t.status==="posted") return;
+        t.status="failed"; t.log.push(stamp("Upload failed: "+(err&&err.message||err)));
+      });
+      savePosts(); renderQueue();
     });
+  }
+
+  /* Upload the post's media to storage (real mode only) and cache the URL.
+     No backend, or no media -> resolves immediately. */
+  function ensureMedia(post){
+    if(!conn.url || !post.media) return Promise.resolve();
+    if(uploaded[post.id]) return Promise.resolve();
+    var file=mediaFiles[post.id];
+    if(!file) return Promise.reject(new Error("media not attached in this session — re-open the post and re-attach the file"));
+    var headers={"Content-Type":"application/json"};
+    if(conn.key) headers["x-api-key"]=conn.key;
+    return fetch(base()+"/upload-url",{method:"POST",headers:headers,body:JSON.stringify({name:file.name,type:file.type})})
+      .then(function(r){ return r.json(); })
+      .then(function(j){
+        if(!j.ok) throw new Error(j.error||"could not get upload url");
+        return fetch(j.signedUrl,{method:"PUT",headers:{"Content-Type":file.type},body:file}).then(function(pr){
+          if(!pr.ok) throw new Error("storage upload "+pr.status);
+          uploaded[post.id]={url:j.publicUrl,type:file.type};
+        });
+      });
   }
 
   /* publish() — the ONE integration point.
      - No backend set  -> simulate (resolves after a short delay).
-     - Backend set     -> POST {url}/publish  with the post + platform.
-       Expected 200 JSON: { ok:true, url:"https://..." }  (url optional)
+     - Backend set     -> POST {url}/publish.
+       200 JSON: { ok:true, url:"…" } posted, or { ok:true, queued:true } scheduled.
   */
   function publish(post, platform){
     if(!conn.url){
       return new Promise(function(res,rej){
-        setTimeout(function(){ Math.random()<0.97 ? res({url:null}) : rej(new Error("simulated network error")); }, 1100+Math.random()*900);
+        setTimeout(function(){
+          if(post.scheduledAt && new Date(post.scheduledAt)>new Date()) return rej(new Error("not due"));
+          Math.random()<0.97 ? res({url:null}) : rej(new Error("simulated network error"));
+        }, 1100+Math.random()*900);
       });
     }
     var headers={"Content-Type":"application/json"};
     if(conn.key) headers["x-api-key"]=conn.key;
-    return fetch(conn.url.replace(/\/$/,"")+"/publish",{
+    var up=uploaded[post.id];
+    return fetch(base()+"/publish",{
       method:"POST", headers:headers,
       body:JSON.stringify({
+        id: post.id+"-"+platform,
         platform:platform,
         caption:post.targets[platform].caption,
         scheduledAt:post.scheduledAt,
-        media:post.media ? {name:post.media.name,type:post.media.type} : null
+        mediaUrl: up?up.url:null,
+        mediaType: up?up.type:(post.media?post.media.type:null)
       })
     }).then(function(r){
-      if(!r.ok) throw new Error("backend "+r.status);
-      return r.json().catch(function(){return {ok:true};});
-    }).then(function(j){
-      if(j && j.ok===false) throw new Error(j.error||"backend rejected");
-      return j||{};
+      return r.json().catch(function(){return {ok:r.ok};}).then(function(j){
+        if(!r.ok || (j&&j.ok===false)) throw new Error((j&&j.error)||("backend "+r.status));
+        return j||{};
+      });
     });
   }
 
+  function base(){ return conn.url.replace(/\/$/,""); }
   function stamp(msg){return {t:new Date().toISOString(),msg:msg};}
   function find(id){return posts.filter(function(p){return p.id===id;})[0];}
 
   /* ======================================================================
-     SCHEDULER TICK — fires due scheduled posts (while the tab is open)
+     SCHEDULER
+     - Simulation: a client tick fires due posts while the tab is open.
+     - Connected:  the SERVER owns scheduling; we just sync statuses back.
      ====================================================================== */
   function tick(){
+    if(conn.url) return;               // server owns scheduling when connected
     var now=Date.now();
     posts.forEach(function(p){
       if(!p.scheduledAt) return;
@@ -571,6 +631,32 @@ textarea{resize:vertical;min-height:90px}
   }
   setInterval(tick, 15000);
   tick();
+
+  /* Pull server-side queue statuses and merge them into our local posts. */
+  function syncFromServer(){
+    if(!conn.url) return;
+    var headers={}; if(conn.key) headers["x-api-key"]=conn.key;
+    fetch(base()+"/queue",{headers:headers}).then(function(r){return r.json();}).then(function(j){
+      if(!j||!j.items) return;
+      var byId={}; j.items.forEach(function(it){ byId[it.id]=it; });
+      var changed=false;
+      posts.forEach(function(p){
+        Object.keys(p.targets).forEach(function(pl){
+          var it=byId[p.id+"-"+pl]; if(!it) return;
+          var t=p.targets[pl];
+          if(t.status!==it.status){
+            t.status=it.status;
+            if(it.url) t.url=it.url;
+            if(it.status==="posted") t.postedAt=it.postedAt||new Date().toISOString();
+            if(it.error) t.log.push(stamp("Server: "+it.error));
+            changed=true;
+          }
+        });
+      });
+      if(changed){ savePosts(); renderQueue(); }
+    }).catch(function(){});
+  }
+  setInterval(function(){ if(conn.url) syncFromServer(); }, 30000);
 
   /* ======================================================================
      QUEUE RENDER
@@ -652,6 +738,7 @@ textarea{resize:vertical;min-height:90px}
       conn.url=$("#backendUrl").value.trim(); conn.key=$("#backendKey").value.trim();
       save(LS_CONN,conn); refreshConn(); closeModal();
       toast(conn.url?"Connected — real posting on":"Back to simulation mode");
+      if(conn.url){ refreshStatus(); syncFromServer(); } else { $("#connectPanel").style.display="none"; }
     }
   });
   function closeModal(){ $all(".modal-bg").forEach(function(m){m.classList.remove("open");}); restoreModal(); }
@@ -659,6 +746,41 @@ textarea{resize:vertical;min-height:90px}
     var live=!!conn.url; $("#connBtn").classList.toggle("live",live);
     $("#connLabel").textContent = live ? "Connected" : "Simulation mode";
   }
+
+  /* Ask the backend which accounts are linked; render connect buttons. */
+  function refreshStatus(){
+    if(!conn.url){ $("#connectPanel").style.display="none"; return; }
+    var headers={}; if(conn.key) headers["x-api-key"]=conn.key;
+    fetch(base()+"/status",{headers:headers}).then(function(r){return r.json();}).then(function(j){
+      var panel=$("#connectPanel"), box=$("#connectBtns");
+      panel.style.display="block";
+      var c=(j&&j.connected)||{};
+      box.innerHTML=["tiktok","instagram"].map(function(p){
+        var on=c[p];
+        var color=p==="tiktok"?"var(--tiktok)":"var(--instagram)";
+        return '<a href="'+base()+'/oauth/start?platform='+p+'" '+
+          'style="text-decoration:none;display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:10px;font-size:.85rem;font-weight:600;'+
+          (on?'background:transparent;color:var(--ok);border:1px solid #1e3d2b"':'background:'+color+';color:#0A0A0A;border:1px solid '+color+'"')+'>'+
+          (on?'✓ '+PLAT_NAME[p]+' linked':'Connect '+PLAT_NAME[p])+'</a>';
+      }).join("");
+      if(j && j.mediaConfigured===false){
+        box.innerHTML+='<span style="font-size:.8rem;color:var(--warn);align-self:center">⚠ media storage not configured — video/image posts will fail until SUPABASE_* env vars are set</span>';
+      }
+    }).catch(function(){
+      $("#connectPanel").style.display="block";
+      $("#connectBtns").innerHTML='<span style="font-size:.82rem;color:var(--bad)">Could not reach backend — check the URL in the connection panel.</span>';
+    });
+  }
+
+  /* After an OAuth redirect the backend sends us back with ?connected=... */
+  (function handleOAuthReturn(){
+    var q=new URLSearchParams(location.search);
+    if(q.has("connected")){
+      var p=q.get("connected");
+      toast(q.get("error") ? (PLAT_NAME[p]||p)+" connect failed: "+q.get("error") : (PLAT_NAME[p]||p)+" linked ✓");
+      history.replaceState({},"",location.pathname);
+    }
+  })();
 
   // reusable modal for arbitrary HTML (log view) — reuse the howModal shell
   var savedModalHTML=null;
@@ -684,6 +806,7 @@ textarea{resize:vertical;min-height:90px}
 
   /* ---- boot -------------------------------------------------------------- */
   refreshConn(); refreshComposer(); renderQueue();
+  if(conn.url){ refreshStatus(); syncFromServer(); }
 })();
 </script>
 </body>
