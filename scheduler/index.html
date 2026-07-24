@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cross-Post Scheduler — TikTok + Instagram</title>
+<meta name="description" content="Compose one post, publish or schedule to TikTok and Instagram at the same time.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='10' fill='%23E8A33D'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================================
+   DESIGN TOKENS  (matched to the JB Medias landing page)
+   ============================================================================ */
+:root{
+  --bg:#0A0A0A;
+  --panel:#141414;
+  --panel-2:#1c1c1c;
+  --line:#2a2a2a;
+  --ink:#F5F1E8;
+  --muted:#9a958c;
+  --accent:#E8A33D;
+  --tiktok:#25F4EE;
+  --instagram:#E1306C;
+  --ok:#5FD08A;
+  --warn:#E8C33D;
+  --bad:#E86A6A;
+  --font-display:"Space Grotesk",sans-serif;
+  --font-body:"Inter",sans-serif;
+  --r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink);font-family:var(--font-body);-webkit-font-smoothing:antialiased;line-height:1.55}
+::selection{background:var(--accent);color:#0A0A0A}
+a{color:var(--accent)}
+h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:1.15}
+button{font-family:inherit;cursor:pointer}
+input,textarea,select{font-family:inherit}
+
+.wrap{max-width:1120px;margin:0 auto;padding:24px 20px 96px}
+
+/* ---- Top bar --------------------------------------------------------------*/
+header.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .dot{width:14px;height:14px;border-radius:50%;background:var(--accent)}
+.brand b{font-family:var(--font-display);font-weight:600;font-size:1.05rem;letter-spacing:.2px}
+.brand small{color:var(--muted);font-size:.8rem;display:block;margin-top:-2px}
+.top-actions{display:flex;gap:10px;align-items:center}
+
+.conn{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--muted);background:var(--panel);border:1px solid var(--line);padding:7px 12px;border-radius:999px}
+.conn .pip{width:8px;height:8px;border-radius:50%;background:var(--warn)}
+.conn.live .pip{background:var(--ok)}
+
+/* ---- Honesty banner -------------------------------------------------------*/
+.notice{background:linear-gradient(180deg,#1a1710,#141414);border:1px solid #3a2f16;border-left:4px solid var(--accent);border-radius:var(--r);padding:14px 16px;margin-bottom:22px;font-size:.9rem;color:#e9e2d3}
+.notice b{color:var(--accent)}
+.notice button.link{background:none;border:none;color:var(--accent);text-decoration:underline;padding:0;font-size:.9rem}
+
+/* ---- Layout grid ----------------------------------------------------------*/
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:22px;align-items:start}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.card h2{font-size:1.1rem;margin-bottom:4px}
+.card .sub{color:var(--muted);font-size:.85rem;margin-bottom:16px}
+
+/* ---- Form -----------------------------------------------------------------*/
+label.fld{display:block;margin-bottom:16px}
+label.fld > span.lbl{display:block;font-size:.8rem;color:var(--muted);margin-bottom:6px;letter-spacing:.3px;text-transform:uppercase}
+textarea,input[type=text],input[type=datetime-local],input[type=url]{
+  width:100%;background:var(--panel-2);border:1px solid var(--line);color:var(--ink);
+  border-radius:10px;padding:11px 12px;font-size:.95rem;transition:border-color .15s}
+textarea:focus,input:focus{outline:none;border-color:var(--accent)}
+textarea{resize:vertical;min-height:90px}
+.count{float:right;font-size:.72rem;color:var(--muted)}
+.count.over{color:var(--bad)}
+
+/* ---- Platform toggles -----------------------------------------------------*/
+.platforms{display:flex;gap:12px;margin-bottom:6px}
+.ptoggle{flex:1;position:relative;border:1px solid var(--line);background:var(--panel-2);border-radius:12px;padding:12px 14px;cursor:pointer;transition:.15s;display:flex;align-items:center;gap:10px}
+.ptoggle input{position:absolute;opacity:0;pointer-events:none}
+.ptoggle .ic{width:26px;height:26px;flex:0 0 26px}
+.ptoggle .pname{font-family:var(--font-display);font-weight:500;font-size:.95rem}
+.ptoggle .chk{margin-left:auto;width:20px;height:20px;border-radius:6px;border:1.5px solid var(--line);display:grid;place-items:center;color:var(--bg);font-size:.7rem}
+.ptoggle.on{border-color:var(--accent)}
+.ptoggle.on[data-p=tiktok]{border-color:var(--tiktok)}
+.ptoggle.on[data-p=instagram]{border-color:var(--instagram)}
+.ptoggle.on .chk{background:var(--accent);border-color:var(--accent)}
+.ptoggle.on[data-p=tiktok] .chk{background:var(--tiktok);border-color:var(--tiktok)}
+.ptoggle.on[data-p=instagram] .chk{background:var(--instagram);border-color:var(--instagram)}
+
+/* ---- Media dropzone -------------------------------------------------------*/
+.drop{border:1.5px dashed var(--line);border-radius:12px;padding:22px;text-align:center;color:var(--muted);cursor:pointer;transition:.15s;background:var(--panel-2)}
+.drop.drag{border-color:var(--accent);color:var(--ink)}
+.drop b{color:var(--ink);font-weight:500}
+.media-prev{display:flex;gap:12px;align-items:center;margin-top:12px;background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:10px}
+.media-prev img,.media-prev video{width:64px;height:64px;object-fit:cover;border-radius:8px;flex:0 0 64px;background:#000}
+.media-prev .mmeta{font-size:.82rem;min-width:0}
+.media-prev .mmeta .mn{color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:220px}
+.media-prev .mmeta .ms{color:var(--muted)}
+.media-prev button{margin-left:auto;background:none;border:1px solid var(--line);color:var(--muted);border-radius:8px;padding:6px 9px;font-size:.78rem}
+
+/* ---- Schedule row ---------------------------------------------------------*/
+.when{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.seg button{background:var(--panel-2);border:none;color:var(--muted);padding:10px 16px;font-size:.9rem}
+.seg button.active{background:var(--accent);color:#0A0A0A;font-weight:600}
+.when input[type=datetime-local]{flex:1;min-width:180px}
+.hint{font-size:.78rem;color:var(--muted);margin-top:6px}
+
+/* ---- Submit ---------------------------------------------------------------*/
+.submit{width:100%;margin-top:8px;background:var(--accent);color:#0A0A0A;border:none;border-radius:12px;padding:15px;font-family:var(--font-display);font-weight:600;font-size:1rem;transition:.15s;display:flex;align-items:center;justify-content:center;gap:10px}
+.submit:hover{filter:brightness(1.06)}
+.submit:disabled{opacity:.45;cursor:not-allowed}
+
+/* ---- Queue ----------------------------------------------------------------*/
+.qhead{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.qtabs{display:flex;gap:6px}
+.qtabs button{background:var(--panel-2);border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:6px 13px;font-size:.82rem}
+.qtabs button.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.empty{color:var(--muted);text-align:center;padding:40px 10px;font-size:.9rem}
+.item{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:var(--panel-2)}
+.item .irow{display:flex;gap:12px}
+.item .ithumb{width:52px;height:52px;border-radius:8px;object-fit:cover;flex:0 0 52px;background:#000;display:grid;place-items:center;color:var(--muted);font-size:1.2rem}
+.item .ibody{min-width:0;flex:1}
+.item .icap{font-size:.9rem;color:var(--ink);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.item .imeta{font-size:.78rem;color:var(--muted);margin-top:5px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;padding:3px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.badge .b-ic{width:13px;height:13px}
+.badge.scheduled{color:var(--warn);border-color:#463c17}
+.badge.publishing{color:var(--accent);border-color:#463c17}
+.badge.posted{color:var(--ok);border-color:#1e3d2b}
+.badge.failed{color:var(--bad);border-color:#4a2020}
+.item .iactions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.item .iactions button{background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:7px 12px;font-size:.8rem}
+.item .iactions button.danger{color:var(--bad)}
+.item .iactions button.go{background:var(--accent);color:#0A0A0A;border-color:var(--accent);font-weight:600}
+
+/* ---- Modal ----------------------------------------------------------------*/
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;place-items:center;padding:20px;z-index:50}
+.modal-bg.open{display:grid}
+.modal{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);max-width:640px;width:100%;max-height:85vh;overflow:auto;padding:26px}
+.modal h2{margin-bottom:14px}
+.modal h3{font-size:.95rem;margin:18px 0 6px;color:var(--accent)}
+.modal p,.modal li{font-size:.9rem;color:#ddd6c8;margin-bottom:8px}
+.modal ul,.modal ol{padding-left:20px}
+.modal code{background:var(--panel-2);border:1px solid var(--line);border-radius:5px;padding:1px 6px;font-size:.85em}
+.modal .close{position:sticky;top:0;float:right;background:none;border:1px solid var(--line);color:var(--muted);border-radius:8px;width:32px;height:32px;font-size:1rem}
+.modal label.fld{margin-top:6px}
+.modal .save{background:var(--accent);color:#0A0A0A;border:none;border-radius:10px;padding:11px 18px;font-weight:600;font-family:var(--font-display);margin-top:8px}
+
+/* ---- Toast ----------------------------------------------------------------*/
+#toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:12px 20px;border-radius:10px;font-size:.9rem;font-weight:500;opacity:0;pointer-events:none;transition:.25s;z-index:60;max-width:90vw;text-align:center}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.footnote{color:var(--muted);font-size:.8rem;text-align:center;margin-top:40px}
+.footnote a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand">
+      <span class="dot"></span>
+      <div>
+        <b>Cross-Post Scheduler</b>
+        <small>One compose. TikTok + Instagram together.</small>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button class="conn" id="connBtn" title="Backend connection">
+        <span class="pip"></span><span id="connLabel">Simulation mode</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="notice">
+    <b>Heads up — this is the working front end.</b> Right now it runs in
+    <b>simulation mode</b>: composing, the one-click fan-out, and scheduling all work and are saved
+    in your browser, but nothing is sent to TikTok or Instagram yet. To publish for real you connect a
+    small backend (the platforms require it). <button class="link" id="howBtn">How to make it post for real →</button>
+  </div>
+
+  <div class="grid">
+
+    <!-- ============================ COMPOSER ============================ -->
+    <section class="card" aria-label="Composer">
+      <h2>New post</h2>
+      <p class="sub">Write it once, choose where it goes, then post now or pick a time.</p>
+
+      <form id="composer">
+        <span class="lbl" style="display:block;font-size:.8rem;color:var(--muted);margin-bottom:6px;letter-spacing:.3px;text-transform:uppercase">Post to</span>
+        <div class="platforms">
+          <label class="ptoggle on" data-p="tiktok">
+            <input type="checkbox" name="tiktok" checked>
+            <svg class="ic" viewBox="0 0 32 32" aria-hidden="true"><path fill="#25F4EE" d="M22 4c.5 3.2 2.6 5.2 5.7 5.6v3.8c-1.9.2-3.6-.4-5.6-1.6v7.1c0 6.9-7.5 9-11 4.5-2.3-3-1.2-8.2 4.6-8.4v3.9c-.9.1-1.8.5-2.3 1.2-1.4 2 .1 4.4 2.3 4 .8-.1 1.7-.8 1.7-2.4V4H22z"/></svg>
+            <span class="pname">TikTok</span>
+            <span class="chk">✓</span>
+          </label>
+          <label class="ptoggle on" data-p="instagram">
+            <input type="checkbox" name="instagram" checked>
+            <svg class="ic" viewBox="0 0 32 32" aria-hidden="true"><rect x="6" y="6" width="20" height="20" rx="6" fill="none" stroke="#E1306C" stroke-width="2.4"/><circle cx="16" cy="16" r="5" fill="none" stroke="#E1306C" stroke-width="2.4"/><circle cx="22.2" cy="9.8" r="1.5" fill="#E1306C"/></svg>
+            <span class="pname">Instagram</span>
+            <span class="chk">✓</span>
+          </label>
+        </div>
+        <p class="hint" id="platWarn" style="margin-bottom:16px"></p>
+
+        <label class="fld">
+          <span class="lbl">Media (video or image)</span>
+          <div class="drop" id="drop">
+            <b>Drop a file here</b> or click to choose<br>
+            <span style="font-size:.8rem">MP4 / MOV for Reels &amp; TikTok · JPG / PNG for feed</span>
+          </div>
+          <input type="file" id="file" accept="video/*,image/*" hidden>
+          <div id="mediaPrev"></div>
+        </label>
+
+        <label class="fld">
+          <span class="lbl">Caption <span class="count" id="capCount">0</span></span>
+          <textarea id="caption" placeholder="Write your caption… e.g. 5 signs it's time for a dental check-up 🦷"></textarea>
+        </label>
+
+        <label class="fld" style="margin-bottom:10px">
+          <span class="lbl">Hashtags</span>
+          <input type="text" id="tags" placeholder="#dentist #smilemakeover #oralcare">
+        </label>
+        <label style="display:flex;align-items:center;gap:8px;font-size:.85rem;color:var(--muted);margin-bottom:18px;cursor:pointer">
+          <input type="checkbox" id="perPlatform"> Different caption per platform
+        </label>
+
+        <div id="perPlatformFields" style="display:none">
+          <label class="fld"><span class="lbl">TikTok caption override</span><textarea id="capTiktok" placeholder="Leave blank to use the caption above"></textarea></label>
+          <label class="fld"><span class="lbl">Instagram caption override</span><textarea id="capInstagram" placeholder="Leave blank to use the caption above"></textarea></label>
+        </div>
+
+        <label class="fld">
+          <span class="lbl">When</span>
+          <div class="when">
+            <div class="seg" id="whenSeg">
+              <button type="button" data-mode="now" class="active">Post now</button>
+              <button type="button" data-mode="later">Schedule</button>
+            </div>
+            <input type="datetime-local" id="schedAt" style="display:none">
+          </div>
+          <p class="hint" id="whenHint">Fans out to every selected platform at the same moment.</p>
+        </label>
+
+        <button type="submit" class="submit" id="submitBtn">
+          <span id="submitLabel">Post to both now</span>
+        </button>
+      </form>
+    </section>
+
+    <!-- ============================ QUEUE ============================ -->
+    <section class="card" aria-label="Queue">
+      <div class="qhead">
+        <div>
+          <h2>Queue</h2>
+        </div>
+        <div class="qtabs" id="qtabs">
+          <button data-f="upcoming" class="active">Upcoming</button>
+          <button data-f="posted">Posted</button>
+          <button data-f="all">All</button>
+        </div>
+      </div>
+      <div id="queue"></div>
+    </section>
+
+  </div>
+
+  <p class="footnote">
+    Saved in this browser only · <a href="../">← Back to site</a> ·
+    <button class="link" id="exportBtn" style="background:none;border:none;color:var(--muted);text-decoration:underline;cursor:pointer;font-size:.8rem">Export queue</button>
+  </p>
+</div>
+
+<!-- ===================== HOW-TO / BACKEND MODAL ===================== -->
+<div class="modal-bg" id="howModal">
+  <div class="modal">
+    <button class="close" data-close>✕</button>
+    <h2>Make it post for real</h2>
+    <p>TikTok and Instagram don't allow a web page to post to them directly — a
+    server has to hold your login and talk to their official APIs. Here's the shortest path.</p>
+
+    <h3>1 · Create the two developer apps (free)</h3>
+    <ul>
+      <li><b>TikTok</b> — developers.tiktok.com → new app → add the <b>Content Posting API</b>.
+      Until TikTok audits the app it can only push to your <b>drafts</b> (you tap "post" in the TikTok app). After audit it posts directly.</li>
+      <li><b>Instagram</b> — the account must be a <b>Professional (Business/Creator)</b> account linked to a Facebook Page.
+      Create a Meta app at developers.facebook.com, add the <b>Instagram Graph API</b> and request the
+      <code>instagram_content_publish</code> permission.</li>
+    </ul>
+
+    <h3>2 · Run the tiny backend</h3>
+    <p>A ~150-line Node/serverless service that this page calls. It does three jobs: hold the OAuth
+    tokens, expose <code>POST /publish</code>, and run a scheduler that fires due posts. This front end
+    already speaks to it — set the URL below and it flips out of simulation mode.</p>
+    <p style="color:var(--muted)">Ask me (Claude) to <b>"build the scheduler backend"</b> and I'll generate it — Netlify
+    Functions + a queue, or a small Express server, your call.</p>
+
+    <h3>3 · Connect this page</h3>
+    <label class="fld">
+      <span class="lbl">Backend base URL</span>
+      <input type="url" id="backendUrl" placeholder="https://your-backend.netlify.app/api">
+    </label>
+    <label class="fld">
+      <span class="lbl">API key (optional, sent as x-api-key)</span>
+      <input type="text" id="backendKey" placeholder="Leave blank if none">
+    </label>
+    <p class="hint">When a URL is set, <b>Post</b> and the scheduler send
+    <code>POST {url}/publish</code> instead of simulating. Clear it to go back to simulation.</p>
+    <button class="save" data-close-save>Save connection</button>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+/* ============================================================================
+   Cross-Post Scheduler — front end
+   ----------------------------------------------------------------------------
+   Everything is stored in localStorage. In SIMULATION mode publishing is faked
+   so you can see the whole flow. Set a backend URL (the "connection" button /
+   how-to modal) and publish() switches to real POST {backend}/publish calls.
+   The posting contract is documented in scheduler/README.md.
+   ============================================================================ */
+(function(){
+  "use strict";
+  var LS_POSTS="xps.posts.v1", LS_CONN="xps.conn.v1";
+  var CAP_LIMIT={tiktok:2200, instagram:2200}; // platform caption soft limits
+
+  /* ---- state ------------------------------------------------------------- */
+  var posts = load(LS_POSTS, []);
+  var conn  = load(LS_CONN, {url:"", key:""});
+  var media = null;            // {name,type,size,dataUrl?} for the post being composed
+  var whenMode = "now";
+  var qFilter = "upcoming";
+
+  /* ---- helpers ----------------------------------------------------------- */
+  function load(k,f){try{var v=JSON.parse(localStorage.getItem(k));return v==null?f:v;}catch(e){return f;}}
+  function save(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){toast("Storage full — try smaller media");}}
+  function savePosts(){save(LS_POSTS,posts);}
+  function uid(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7);}
+  function $(s,r){return (r||document).querySelector(s);}
+  function $all(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));}
+  function esc(s){return (s||"").replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  function fmtSize(b){if(!b)return"";var u=["B","KB","MB","GB"],i=0;while(b>=1024&&i<3){b/=1024;i++;}return b.toFixed(b<10&&i>0?1:0)+u[i];}
+  function fmtWhen(iso){
+    if(!iso) return "now";
+    var d=new Date(iso), now=new Date();
+    var opt={month:"short",day:"numeric",hour:"numeric",minute:"2-digit"};
+    var s=d.toLocaleString(undefined,opt);
+    var diff=d-now;
+    if(diff>0 && diff<86400000){ var h=Math.floor(diff/3600000),m=Math.round(diff%3600000/60000);
+      s+=" · in "+(h?h+"h ":"")+m+"m"; }
+    return s;
+  }
+  var toastT;
+  function toast(msg){var t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove("show");},2600);}
+
+  var PLAT_ICON={
+    tiktok:'<svg class="b-ic" viewBox="0 0 32 32"><path fill="currentColor" d="M22 4c.5 3.2 2.6 5.2 5.7 5.6v3.8c-1.9.2-3.6-.4-5.6-1.6v7.1c0 6.9-7.5 9-11 4.5-2.3-3-1.2-8.2 4.6-8.4v3.9c-.9.1-1.8.5-2.3 1.2-1.4 2 .1 4.4 2.3 4 .8-.1 1.7-.8 1.7-2.4V4H22z"/></svg>',
+    instagram:'<svg class="b-ic" viewBox="0 0 32 32"><rect x="6" y="6" width="20" height="20" rx="6" fill="none" stroke="currentColor" stroke-width="2.6"/><circle cx="16" cy="16" r="5" fill="none" stroke="currentColor" stroke-width="2.6"/><circle cx="22.2" cy="9.8" r="1.6" fill="currentColor"/></svg>'
+  };
+  var PLAT_NAME={tiktok:"TikTok",instagram:"Instagram"};
+
+  /* ======================================================================
+     COMPOSER
+     ====================================================================== */
+  // platform toggles
+  $all(".ptoggle").forEach(function(el){
+    var input=$("input",el);
+    el.addEventListener("click",function(e){
+      if(e.target.tagName!=="INPUT"){ input.checked=!input.checked; }
+      el.classList.toggle("on",input.checked);
+      refreshComposer();
+    });
+  });
+
+  // per-platform captions
+  $("#perPlatform").addEventListener("change",function(){
+    $("#perPlatformFields").style.display=this.checked?"block":"none";
+  });
+
+  // caption counter
+  $("#caption").addEventListener("input",function(){
+    var n=this.value.length; var c=$("#capCount"); c.textContent=n;
+    c.classList.toggle("over", n>2200);
+  });
+
+  // media: dropzone + file input
+  var drop=$("#drop"), fileInput=$("#file");
+  drop.addEventListener("click",function(){fileInput.click();});
+  ["dragenter","dragover"].forEach(function(ev){drop.addEventListener(ev,function(e){e.preventDefault();drop.classList.add("drag");});});
+  ["dragleave","drop"].forEach(function(ev){drop.addEventListener(ev,function(e){e.preventDefault();drop.classList.remove("drag");});});
+  drop.addEventListener("drop",function(e){ if(e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]); });
+  fileInput.addEventListener("change",function(){ if(this.files[0]) handleFile(this.files[0]); });
+
+  function handleFile(f){
+    var isImg=/^image\//.test(f.type), isVid=/^video\//.test(f.type);
+    if(!isImg && !isVid){ toast("Choose a video or image file"); return; }
+    media={name:f.name,type:f.type,size:f.size,dataUrl:null};
+    // Store a data URL for images that are reasonably small so the queue can show a
+    // thumbnail and persist it. Big videos are kept as metadata only (localStorage is ~5MB).
+    if(isImg && f.size < 900*1024){
+      var r=new FileReader();
+      r.onload=function(){ media.dataUrl=r.result; renderMediaPrev(); };
+      r.readAsDataURL(f);
+    } else if(isVid){
+      media.objectUrl=URL.createObjectURL(f); // session-only preview
+    }
+    renderMediaPrev();
+    refreshComposer();
+  }
+  function renderMediaPrev(){
+    var el=$("#mediaPrev");
+    if(!media){ el.innerHTML=""; return; }
+    var thumb = media.dataUrl ? '<img src="'+media.dataUrl+'" alt="">'
+      : media.objectUrl ? '<video src="'+media.objectUrl+'" muted></video>'
+      : '<div style="width:64px;height:64px;border-radius:8px;background:#000;display:grid;place-items:center;flex:0 0 64px;font-size:1.4rem">🎬</div>';
+    el.innerHTML='<div class="media-prev">'+thumb+
+      '<div class="mmeta"><div class="mn">'+esc(media.name)+'</div><div class="ms">'+fmtSize(media.size)+(/^video/.test(media.type)?' · video':' · image')+'</div></div>'+
+      '<button type="button" id="rmMedia">Remove</button></div>';
+    $("#rmMedia").addEventListener("click",function(){ media=null; renderMediaPrev(); refreshComposer(); });
+  }
+
+  // when: now / later
+  $all("#whenSeg button").forEach(function(b){
+    b.addEventListener("click",function(){
+      $all("#whenSeg button").forEach(function(x){x.classList.remove("active");});
+      b.classList.add("active"); whenMode=b.dataset.mode;
+      var at=$("#schedAt");
+      at.style.display=whenMode==="later"?"block":"none";
+      if(whenMode==="later" && !at.value){
+        var d=new Date(Date.now()+3600000); d.setSeconds(0,0);
+        at.value=new Date(d-d.getTimezoneOffset()*60000).toISOString().slice(0,16);
+      }
+      refreshComposer();
+    });
+  });
+
+  function selectedPlatforms(){
+    return $all(".ptoggle").filter(function(el){return $("input",el).checked;}).map(function(el){return el.dataset.p;});
+  }
+  function refreshComposer(){
+    var plats=selectedPlatforms();
+    var label=$("#submitLabel"), btn=$("#submitBtn"), warn=$("#platWarn");
+    btn.disabled = plats.length===0;
+    warn.textContent = plats.length===0 ? "Pick at least one platform." : "";
+    var dest = plats.length===2 ? "both" : (PLAT_NAME[plats[0]]||"…");
+    label.textContent = whenMode==="now" ? "Post to "+dest+" now" : "Schedule for "+dest;
+    $("#whenHint").textContent = whenMode==="now"
+      ? "Fans out to every selected platform at the same moment."
+      : "The scheduler posts to every selected platform at the chosen time (this tab must be open in simulation mode).";
+  }
+
+  // submit
+  $("#composer").addEventListener("submit",function(e){
+    e.preventDefault();
+    var plats=selectedPlatforms();
+    if(!plats.length) return;
+    var baseCap=$("#caption").value.trim();
+    var tags=$("#tags").value.trim();
+    var per=$("#perPlatform").checked;
+    var scheduledAt=null;
+    if(whenMode==="later"){
+      var v=$("#schedAt").value;
+      if(!v){ toast("Pick a date and time"); return; }
+      scheduledAt=new Date(v).toISOString();
+      if(new Date(scheduledAt) < new Date()){ toast("That time is in the past"); return; }
+    }
+    function capFor(p){
+      var override = per ? $("#cap"+p.charAt(0).toUpperCase()+p.slice(1)).value.trim() : "";
+      var body = override || baseCap;
+      return (body + (tags?("\n\n"+tags):"")).trim();
+    }
+    var targets={};
+    plats.forEach(function(p){ targets[p]={caption:capFor(p), status:"scheduled", log:[]}; });
+
+    var post={
+      id:uid(), createdAt:new Date().toISOString(),
+      scheduledAt:scheduledAt,                  // null => now
+      media: media ? {name:media.name,type:media.type,size:media.size,dataUrl:media.dataUrl||null} : null,
+      targets:targets
+    };
+    posts.unshift(post); savePosts();
+
+    // reset composer (keep platform selection)
+    $("#composer").reset();
+    $all(".ptoggle").forEach(function(el){$("input",el).checked=true;el.classList.add("on");});
+    $("#perPlatformFields").style.display="none";
+    media=null; renderMediaPrev(); $("#capCount").textContent="0";
+    $all("#whenSeg button").forEach(function(x){x.classList.toggle("active",x.dataset.mode==="now");});
+    $("#schedAt").style.display="none"; whenMode="now"; refreshComposer();
+
+    if(!scheduledAt){ runPost(post.id); toast("Posting to "+plats.map(function(p){return PLAT_NAME[p];}).join(" + ")+"…"); }
+    else { toast("Scheduled for "+fmtWhen(scheduledAt)); }
+    qFilter = scheduledAt ? "upcoming" : "upcoming";
+    setQTab(qFilter); renderQueue();
+  });
+
+  /* ======================================================================
+     PUBLISHING  (simulation OR real backend)
+     ====================================================================== */
+  function runPost(id){
+    var post=find(id); if(!post) return;
+    Object.keys(post.targets).forEach(function(p){
+      var t=post.targets[p];
+      if(t.status==="posted") return;
+      t.status="publishing"; t.log.push(stamp("Publishing…"));
+      savePosts(); renderQueue();
+      publish(post,p).then(function(res){
+        t.status="posted"; t.postedAt=new Date().toISOString();
+        t.log.push(stamp((conn.url?"Published":"Simulated")+(res&&res.url?(" — "+res.url):"")));
+        if(res&&res.url) t.url=res.url;
+        savePosts(); renderQueue();
+      }).catch(function(err){
+        t.status="failed"; t.log.push(stamp("Failed: "+(err&&err.message||err)));
+        savePosts(); renderQueue();
+      });
+    });
+  }
+
+  /* publish() — the ONE integration point.
+     - No backend set  -> simulate (resolves after a short delay).
+     - Backend set     -> POST {url}/publish  with the post + platform.
+       Expected 200 JSON: { ok:true, url:"https://..." }  (url optional)
+  */
+  function publish(post, platform){
+    if(!conn.url){
+      return new Promise(function(res,rej){
+        setTimeout(function(){ Math.random()<0.97 ? res({url:null}) : rej(new Error("simulated network error")); }, 1100+Math.random()*900);
+      });
+    }
+    var headers={"Content-Type":"application/json"};
+    if(conn.key) headers["x-api-key"]=conn.key;
+    return fetch(conn.url.replace(/\/$/,"")+"/publish",{
+      method:"POST", headers:headers,
+      body:JSON.stringify({
+        platform:platform,
+        caption:post.targets[platform].caption,
+        scheduledAt:post.scheduledAt,
+        media:post.media ? {name:post.media.name,type:post.media.type} : null
+      })
+    }).then(function(r){
+      if(!r.ok) throw new Error("backend "+r.status);
+      return r.json().catch(function(){return {ok:true};});
+    }).then(function(j){
+      if(j && j.ok===false) throw new Error(j.error||"backend rejected");
+      return j||{};
+    });
+  }
+
+  function stamp(msg){return {t:new Date().toISOString(),msg:msg};}
+  function find(id){return posts.filter(function(p){return p.id===id;})[0];}
+
+  /* ======================================================================
+     SCHEDULER TICK — fires due scheduled posts (while the tab is open)
+     ====================================================================== */
+  function tick(){
+    var now=Date.now();
+    posts.forEach(function(p){
+      if(!p.scheduledAt) return;
+      var due = new Date(p.scheduledAt).getTime() <= now;
+      var pending = Object.keys(p.targets).some(function(k){return p.targets[k].status==="scheduled";});
+      if(due && pending) runPost(p.id);
+    });
+  }
+  setInterval(tick, 15000);
+  tick();
+
+  /* ======================================================================
+     QUEUE RENDER
+     ====================================================================== */
+  $("#qtabs").addEventListener("click",function(e){
+    var b=e.target.closest("button"); if(!b) return;
+    setQTab(b.dataset.f); renderQueue();
+  });
+  function setQTab(f){ qFilter=f; $all("#qtabs button").forEach(function(x){x.classList.toggle("active",x.dataset.f===f);}); }
+
+  function overallStatus(p){
+    var st=Object.keys(p.targets).map(function(k){return p.targets[k].status;});
+    if(st.indexOf("publishing")>=0) return "publishing";
+    if(st.every(function(s){return s==="posted";})) return "posted";
+    if(st.indexOf("failed")>=0) return "failed";
+    return "scheduled";
+  }
+  function renderQueue(){
+    var el=$("#queue");
+    var list=posts.filter(function(p){
+      var o=overallStatus(p);
+      if(qFilter==="upcoming") return o==="scheduled"||o==="publishing"||o==="failed";
+      if(qFilter==="posted")   return o==="posted";
+      return true;
+    });
+    if(!list.length){
+      el.innerHTML='<div class="empty">'+(qFilter==="posted"?"Nothing posted yet.":qFilter==="upcoming"?"No upcoming posts. Compose one on the left →":"Your queue is empty.")+'</div>';
+      return;
+    }
+    el.innerHTML=list.map(function(p){
+      var m=p.media;
+      var thumb = m&&m.dataUrl ? '<img class="ithumb" src="'+m.dataUrl+'" alt="">'
+        : '<div class="ithumb">'+(m?(/^video/.test(m.type)?'🎬':'🖼️'):'📝')+'</div>';
+      var cap = Object.keys(p.targets).map(function(k){return p.targets[k].caption;})[0] || "(no caption)";
+      var badges = Object.keys(p.targets).map(function(k){
+        var t=p.targets[k];
+        return '<span class="badge '+t.status+'" title="'+k+': '+t.status+'">'+PLAT_ICON[k]+' '+
+               (t.status==="scheduled"?"queued":t.status)+'</span>';
+      }).join("");
+      var o=overallStatus(p);
+      var actions='';
+      if(o==="scheduled"||o==="failed") actions+='<button class="go" data-act="post" data-id="'+p.id+'">'+(o==="failed"?"Retry now":"Post now")+'</button>';
+      actions+='<button data-act="log" data-id="'+p.id+'">Details</button>';
+      actions+='<button class="danger" data-act="del" data-id="'+p.id+'">Delete</button>';
+      return '<div class="item"><div class="irow">'+thumb+
+        '<div class="ibody"><div class="icap">'+esc(cap)+'</div>'+
+        '<div class="imeta"><span>'+ (p.scheduledAt? "🕑 "+fmtWhen(p.scheduledAt) : "⚡ immediate") +'</span>'+badges+'</div>'+
+        '</div></div><div class="iactions">'+actions+'</div></div>';
+    }).join("");
+  }
+
+  $("#queue").addEventListener("click",function(e){
+    var b=e.target.closest("button[data-act]"); if(!b) return;
+    var p=find(b.dataset.id); if(!p) return;
+    if(b.dataset.act==="post"){ Object.keys(p.targets).forEach(function(k){if(p.targets[k].status!=="posted")p.targets[k].status="scheduled";}); p.scheduledAt=null; savePosts(); runPost(p.id); toast("Posting…"); }
+    if(b.dataset.act==="del"){ posts=posts.filter(function(x){return x.id!==p.id;}); savePosts(); renderQueue(); toast("Deleted"); }
+    if(b.dataset.act==="log"){ showLog(p); }
+  });
+
+  function showLog(p){
+    var lines=Object.keys(p.targets).map(function(k){
+      var t=p.targets[k];
+      var log=(t.log||[]).map(function(l){return '<div style="color:var(--muted);font-size:.8rem">'+new Date(l.t).toLocaleTimeString()+' — '+esc(l.msg)+'</div>';}).join("");
+      return '<h3>'+PLAT_NAME[k]+' · '+t.status+'</h3><p style="white-space:pre-wrap;background:var(--panel-2);border:1px solid var(--line);border-radius:8px;padding:10px">'+esc(t.caption||"(no caption)")+'</p>'+log;
+    }).join("");
+    openModalHTML('<h2>Post details</h2>'+lines);
+  }
+
+  /* ======================================================================
+     CONNECTION / HOW-TO MODAL
+     ====================================================================== */
+  var howModal=$("#howModal");
+  function openHow(){ $("#backendUrl").value=conn.url||""; $("#backendKey").value=conn.key||""; howModal.classList.add("open"); }
+  $("#howBtn").addEventListener("click",openHow);
+  $("#connBtn").addEventListener("click",openHow);
+  howModal.addEventListener("click",function(e){
+    if(e.target===howModal || e.target.hasAttribute("data-close")) closeModal();
+    if(e.target.hasAttribute("data-close-save")){
+      conn.url=$("#backendUrl").value.trim(); conn.key=$("#backendKey").value.trim();
+      save(LS_CONN,conn); refreshConn(); closeModal();
+      toast(conn.url?"Connected — real posting on":"Back to simulation mode");
+    }
+  });
+  function closeModal(){ $all(".modal-bg").forEach(function(m){m.classList.remove("open");}); restoreModal(); }
+  function refreshConn(){
+    var live=!!conn.url; $("#connBtn").classList.toggle("live",live);
+    $("#connLabel").textContent = live ? "Connected" : "Simulation mode";
+  }
+
+  // reusable modal for arbitrary HTML (log view) — reuse the howModal shell
+  var savedModalHTML=null;
+  function openModalHTML(html){
+    var modal=$(".modal",howModal); savedModalHTML=modal.innerHTML;
+    modal.innerHTML='<button class="close" data-close>✕</button>'+html;
+    modal.querySelector("[data-close]").addEventListener("click",closeModal);
+    howModal.classList.add("open");
+  }
+  function restoreModal(){ if(savedModalHTML!=null){ $(".modal",howModal).innerHTML=savedModalHTML; savedModalHTML=null; bindModalButtons(); } }
+  function bindModalButtons(){
+    // re-bind the connection form buttons after restore (delegation on howModal covers clicks)
+  }
+
+  /* ======================================================================
+     EXPORT
+     ====================================================================== */
+  $("#exportBtn").addEventListener("click",function(){
+    var blob=new Blob([JSON.stringify(posts,null,2)],{type:"application/json"});
+    var a=document.createElement("a"); a.href=URL.createObjectURL(blob);
+    a.download="cross-post-queue.json"; a.click();
+  });
+
+  /* ---- boot -------------------------------------------------------------- */
+  refreshConn(); refreshComposer(); renderQueue();
+})();
+</script>
+</body>
+</html>
