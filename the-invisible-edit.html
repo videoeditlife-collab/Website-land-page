@@ -330,6 +330,27 @@ h1 em{
 }
 .form-status.ok .ok-body{ color: var(--muted); font-size: 0.95rem; }
 .form-status.ok a{ color: var(--accent); border-bottom: 1px solid var(--accent); }
+
+/* Post-signup handoff to the main site */
+.form-status.ok .ok-next{
+  display: block;
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.form-status.ok .ok-next b{ color: var(--accent); font-weight: 600; }
+.form-status.ok .ok-next a,
+.form-status.ok .ok-next .stay{
+  color: var(--muted);
+  border-bottom: 1px solid var(--line);
+  font: inherit;
+  padding: 0;
+  cursor: pointer;
+}
+.form-status.ok .ok-next a:hover,
+.form-status.ok .ok-next .stay:hover{ color: var(--text); border-bottom-color: var(--muted); }
 .form-status.err{ color: #e88a4d; }
 .form-status.working{ color: var(--muted); }
 
@@ -801,6 +822,12 @@ footer p{ font-size: 0.85rem; color: var(--muted); }
      -------------------------------------------------------------------------- */
   var PDF_PATH = "assets/the-invisible-edit.pdf";
 
+  /* Where converted visitors go next, and how long they get to read the
+     confirmation first. This page is the front door, so the main site is the
+     reward for opting in rather than something to navigate to beforehand. */
+  var HOME_URL = "index.html";
+  var REDIRECT_SECONDS = 9;
+
   function showSuccess(form, status, name){
     form.classList.add("sent");
     status.className = "form-status ok";
@@ -808,7 +835,35 @@ footer p{ font-size: 0.85rem; color: var(--muted); }
       '<span class="ok-title">' + (name ? "Thanks, " + name + "." : "You're in.") + ' Check your inbox.</span>' +
       '<span class="ok-body">The Invisible Edit is on its way. If it has not arrived in a couple of minutes, ' +
       'look in spam or promotions. You can also ' +
-      '<a href="' + PDF_PATH + '" download>download it directly here</a>.</span>';
+      '<a class="dl" href="' + PDF_PATH + '" download>download it directly here</a>.</span>' +
+      '<span class="ok-next">Taking you to the JB Medias site in <b class="count">' + REDIRECT_SECONDS + '</b>s' +
+      ' &nbsp;·&nbsp; <a class="go" href="' + HOME_URL + '">go now</a>' +
+      ' &nbsp;·&nbsp; <button type="button" class="stay">stay here</button></span>';
+
+    var nextLine = status.querySelector(".ok-next");
+    var countEl = status.querySelector(".count");
+    var left = REDIRECT_SECONDS;
+
+    var timer = setInterval(function(){
+      left -= 1;
+      if (countEl) countEl.textContent = left;
+      if (left <= 0){
+        clearInterval(timer);
+        window.location.href = HOME_URL;
+      }
+    }, 1000);
+
+    function cancelRedirect(){
+      clearInterval(timer);
+      nextLine.innerHTML = 'Head over to the <a href="' + HOME_URL + '">JB Medias site</a> whenever you are ready.';
+    }
+
+    // Being yanked to another page mid-download would lose them the file, and
+    // anyone asking to stay has said what they want.
+    var dl = status.querySelector(".dl");
+    if (dl) dl.addEventListener("click", cancelRedirect);
+    var stay = status.querySelector(".stay");
+    if (stay) stay.addEventListener("click", cancelRedirect);
   }
 
   // Escape anything we echo back into innerHTML, so a name can never inject markup.
