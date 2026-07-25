@@ -362,11 +362,28 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
 .menu-overlay a:nth-child(4){ transition-delay: 0.15s; }
 .menu-overlay a:nth-child(5){ transition-delay: 0.2s; }
 .menu-overlay a:nth-child(6){ transition-delay: 0.25s; }
+.menu-overlay a:nth-child(7){ transition-delay: 0.3s; }
 .menu-overlay .menu-cta{ color: var(--accent); border-bottom: none; }
+
+/* The free guide is a lead magnet, not a section of this page, so it gets a
+   small marker to set it apart from the anchor links around it. */
+.nav-links .nav-guide::before{
+  content: "";
+  display: inline-block;
+  width: 5px; height: 5px;
+  margin-right: 0.5rem;
+  vertical-align: 1px;
+  border-radius: 50%;
+  background: var(--accent);
+}
 
 @media (max-width: 860px){
   .nav-links{ display: none; }
   .menu-btn{ display: flex; }
+}
+/* Six links plus a button gets tight before the mobile breakpoint */
+@media (max-width: 1080px){
+  .nav-links{ gap: 1.4rem; }
 }
 
 /* ============================================================================
@@ -1150,6 +1167,7 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
       <a href="#process">Process</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
+      <a href="the-invisible-edit.html" class="nav-guide">Free guide</a>
       <a href="https://calendly.com/jbmedias/intro-call" class="btn" target="_blank" rel="noopener">Book a call</a>
     </nav>
     <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
@@ -1165,6 +1183,7 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
   <a href="#process">Process</a>
   <a href="#about">About</a>
   <a href="#contact">Contact</a>
+  <a href="the-invisible-edit.html">Free guide</a>
   <a href="https://calendly.com/jbmedias/intro-call" class="menu-cta" target="_blank" rel="noopener">Book a call</a>
 </nav>
 
@@ -1527,6 +1546,7 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
   <div class="wrap footer-inner">
     <span>JB Medias &copy; <span id="year">2026</span></span>
     <div class="footer-links">
+      <a href="the-invisible-edit.html">Free guide</a>
       <a href="https://www.instagram.com/jbmedias" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.youtube.com/@jbmedias" target="_blank" rel="noopener">YouTube</a>
     </div>
