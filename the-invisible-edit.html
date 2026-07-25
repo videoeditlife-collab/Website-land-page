@@ -1,0 +1,889 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Invisible Edit — A Free Field Guide for Video Editors | JB Medias</title>
+<meta name="description" content="A free 25-page field guide on story-first editing: why the best editors disappear into the story, and how to become one.">
+
+<!-- Opt-in pages should not be indexed as thin content competing with the main
+     site. Remove this line if you want the page to rank on its own. -->
+<meta name="robots" content="noindex, follow">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23E8A33D' stroke-width='2'/%3E%3C/svg%3E">
+
+<!-- ============================================================================
+     BEFORE THIS PAGE GOES LIVE — swap these placeholders
+     ============================================================================
+     1. KIT_FORM_ID  (appears twice below, in the two form action URLs)
+        Kit dashboard -> Grow -> Landing Pages & Forms -> your form -> Embed.
+        The form ID is the number in the embed URL, e.g. 1234567.
+
+     2. In Kit, set the form's Incentive Email to deliver the guide:
+        Form Settings -> Incentive email -> attach or link
+        assets/the-invisible-edit.pdf. Nothing in this file sends the PDF —
+        Kit does. This page only collects the name and email.
+
+     3. assets/the-invisible-edit.pdf currently still contains the template
+        placeholder on its last page ("ADD YOUR OFFER HERE"). Replace the file
+        with the finished export before driving traffic. Same filename means
+        no code change needed.
+
+     4. Social proof is deliberately absent. If you have real testimonials or a
+        real subscriber count, add them — do not invent numbers.
+     ============================================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================================
+   1. DESIGN TOKENS  (shared with index.html so the two pages feel like one brand)
+   ============================================================================ */
+:root{
+  --bg: #0A0A0A;
+  --text: #F5F2EB;
+  --muted: #9A948A;
+  --accent: #E8A33D;
+  --line: rgba(245, 242, 235, 0.12);
+  --radius: 8px;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+*, *::before, *::after{ margin:0; padding:0; box-sizing:border-box; }
+
+html{ background: var(--bg); color-scheme: dark; }
+@media (prefers-reduced-motion: no-preference){
+  html{ scroll-behavior: smooth; }
+}
+
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img{ max-width: 100%; height: auto; display: block; }
+a{ color: inherit; text-decoration: none; }
+ul{ list-style: none; }
+button{ font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+::selection{ background: var(--accent); color: #0A0A0A; }
+
+h1, h2, h3{
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.wrap{ width: min(1240px, 100% - 3rem); margin-inline: auto; }
+
+/* Overline label */
+.label{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.1rem;
+}
+.label::before{ content:""; width: 22px; height: 1px; background: var(--accent); }
+.label.accent{ color: var(--accent); }
+
+.btn{
+  display: inline-block;
+  background: var(--accent);
+  color: #0A0A0A;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.95rem 1.9rem;
+  border-radius: var(--radius);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 34px rgba(232, 163, 61, 0.28);
+  background: #f0b355;
+}
+
+/* ============================================================================
+   2. FILM GRAIN AND VIGNETTE  (same treatment as index.html)
+   ============================================================================ */
+.grain{
+  position: fixed;
+  inset: -60%;
+  width: 220%; height: 220%;
+  pointer-events: none;
+  z-index: 9990;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@media (prefers-reduced-motion: no-preference){
+  .grain{ animation: grain-shift 1.2s steps(4) infinite; }
+}
+@keyframes grain-shift{
+  0%{ transform: translate(0, 0); }
+  25%{ transform: translate(-2%, 1.5%); }
+  50%{ transform: translate(1.5%, -2%); }
+  75%{ transform: translate(-1%, -1%); }
+  100%{ transform: translate(0, 0); }
+}
+.vignette{
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9989;
+  background: radial-gradient(ellipse 90% 80% at 50% 45%, transparent 55%, rgba(0,0,0,0.5) 100%);
+}
+
+/* ============================================================================
+   3. TOP BAR
+   Wordmark only. An opt-in page has one job, so there is deliberately no nav
+   and no outbound link that could carry a visitor away before they convert.
+   ============================================================================ */
+.topbar{
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.topbar .wrap{ display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.wordmark{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+}
+.wordmark span{ color: var(--accent); }
+.topbar-note{
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ============================================================================
+   4. HERO
+   Suby's diagrammed layout: headline, subheadline, fascination bullets and the
+   form stacked on the left; a visual of the guide on the right.
+   ============================================================================ */
+.hero{
+  position: relative;
+  padding: clamp(2rem, 4.5vh, 3.25rem) 0 clamp(3.5rem, 8vh, 6rem);
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 0%, rgba(232, 163, 61, 0.10), transparent 70%),
+    radial-gradient(ellipse 60% 60% at 90% 20%, rgba(232, 163, 61, 0.05), transparent 70%);
+}
+.hero-grid{
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: start;
+}
+@media (max-width: 940px){
+  .hero-grid{ grid-template-columns: 1fr; gap: 2.75rem; }
+  /* On narrow screens show the guide before the form: people need to see what
+     they are getting before they are asked for anything. */
+  .hero-visual{ order: -1; }
+}
+
+h1{
+  font-size: clamp(1.95rem, 3.8vw, 2.8rem);
+  margin-bottom: 1rem;
+}
+h1 em{
+  font-style: normal;
+  color: var(--accent);
+}
+.subhead{
+  color: var(--muted);
+  font-size: clamp(1rem, 1.5vw, 1.08rem);
+  line-height: 1.55;
+  max-width: 56ch;
+  margin-bottom: 1.5rem;
+}
+.subhead strong{ color: var(--text); font-weight: 500; }
+
+/* Fascination bullets */
+.fascinations{
+  display: grid;
+  gap: 0.6rem;
+  margin-bottom: 1.6rem;
+}
+.fascinations li{
+  position: relative;
+  padding-left: 1.75rem;
+  font-size: 0.97rem;
+  line-height: 1.5;
+}
+.fascinations li::before{
+  content: "";
+  position: absolute;
+  left: 0; top: 0.62em;
+  width: 11px; height: 11px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+}
+.fascinations li::after{
+  content: "";
+  position: absolute;
+  left: 3px; top: calc(0.62em + 3px);
+  width: 5px; height: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+.fascinations b{ font-weight: 600; color: #fff; }
+
+/* ============================================================================
+   5. THE OPT-IN FORM
+   Two fields only. Suby: the less you ask for, the higher the conversion rate,
+   and all we need is for them to raise their hand.
+   ============================================================================ */
+.optin-card{
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(245, 242, 235, 0.025);
+  padding: clamp(1.4rem, 3vw, 2rem);
+  max-width: 34rem;
+}
+.optin-card .tell{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+}
+/* Two fields side by side where there is room, so the button stays high on the
+   page. Stacks automatically on narrow screens. */
+.field-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+@media (max-width: 520px){
+  .field-row{ grid-template-columns: 1fr; gap: 0; }
+}
+.field{ margin-bottom: 1rem; }
+.field label{
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-bottom: 0.45rem;
+}
+.field input{
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text);
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.8rem 0.95rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.field input::placeholder{ color: rgba(154, 148, 138, 0.6); }
+.field input:focus{
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(232, 163, 61, 0.15);
+}
+.optin-form .btn{
+  width: 100%;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  font-size: 1.02rem;
+  letter-spacing: 0.01em;
+}
+.reassure{
+  margin-top: 0.9rem;
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Success state: the form is replaced, not just appended to. */
+.optin-form.sent .field,
+.optin-form.sent .btn,
+.optin-form.sent .reassure,
+.optin-form.sent .tell{ display: none; }
+.form-status{
+  font-size: 0.95rem;
+  min-height: 1.2em;
+  text-align: center;
+}
+.form-status:empty{ display: none; }
+.form-status.ok{ color: var(--text); text-align: left; }
+.form-status.ok .ok-title{
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.form-status.ok .ok-body{ color: var(--muted); font-size: 0.95rem; }
+.form-status.ok a{ color: var(--accent); border-bottom: 1px solid var(--accent); }
+.form-status.err{ color: #e88a4d; }
+.form-status.working{ color: var(--muted); }
+
+/* ============================================================================
+   6. THE GUIDE VISUAL  ("Show, Don't Tell")
+   Suby: it is not enough to tell people what they get. A polished mock-up
+   raises perceived value, the same way product photos do for a shopper.
+   Built in CSS from a render of the PDF's real cover — no stock mockup needed.
+   ============================================================================ */
+.hero-visual{ display: flex; flex-direction: column; align-items: center; gap: 1.5rem; }
+.book{
+  perspective: 1500px;
+  width: min(100%, 24rem);
+}
+/* Stacked layout shows the cover first, so keep it small enough that the
+   headline is still on the first screen. */
+@media (max-width: 940px){
+  .book{ width: min(100%, 14rem); }
+  .hero-visual{ gap: 1rem; }
+}
+.book-inner{
+  position: relative;
+  border-radius: 3px 7px 7px 3px;
+  transform: rotateY(-13deg) rotateX(1.5deg);
+  box-shadow:
+    26px 34px 70px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(245, 242, 235, 0.08);
+  transition: transform 0.5s ease;
+}
+@media (prefers-reduced-motion: no-preference){
+  .book-inner:hover{ transform: rotateY(-6deg) rotateX(0.5deg); }
+}
+.book-inner img{ border-radius: 3px 7px 7px 3px; }
+/* Spine shading down the bound edge */
+.book-inner::before{
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+  width: 24px;
+  border-radius: 3px 0 0 3px;
+  background: linear-gradient(90deg,
+    rgba(0,0,0,0.55) 0%,
+    rgba(255,255,255,0.06) 42%,
+    rgba(0,0,0,0.30) 100%);
+  pointer-events: none;
+}
+/* Stacked page edges on the open side */
+.book-inner::after{
+  content: "";
+  position: absolute;
+  top: 5px; bottom: 5px; right: -6px;
+  width: 7px;
+  border-radius: 0 3px 3px 0;
+  background: repeating-linear-gradient(180deg,
+    #cfcabe 0px, #cfcabe 1px,
+    #8f8a80 1px, #8f8a80 2px);
+  opacity: 0.85;
+}
+.book-caption{
+  text-align: center;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.book-caption b{ color: var(--text); font-weight: 600; }
+
+/* ============================================================================
+   7. CONTENT SECTIONS
+   ============================================================================ */
+section{ position: relative; padding: clamp(4rem, 9vh, 7rem) 0; }
+.divider{ border: none; border-top: 1px solid var(--line); }
+
+.section-title{
+  font-size: clamp(1.85rem, 4.2vw, 3rem);
+  max-width: 22ch;
+  margin-bottom: 1.2rem;
+}
+.section-intro{ color: var(--muted); max-width: 58ch; }
+
+/* The problem */
+.problem-grid{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+@media (max-width: 860px){ .problem-grid{ grid-template-columns: 1fr; } }
+.problem-body p{ margin-bottom: 1.15rem; color: var(--muted); }
+.problem-body p:last-child{ margin-bottom: 0; }
+.problem-body strong{ color: var(--text); font-weight: 500; }
+.pullquote{
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.6vw, 1.9rem);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  border-left: 2px solid var(--accent);
+  padding-left: clamp(1.1rem, 2.5vw, 1.75rem);
+  color: var(--text);
+}
+.pullquote span{ display: block; margin-top: 1rem; font-family: var(--font-body); font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+/* What's inside — the nine chapters */
+/* Separate bordered cards rather than one connected grid: with nine chapters
+   an auto-fit grid leaves empty cells on the last row at most widths, and a
+   shared background makes those gaps look like broken tiles. */
+.chapters{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16.5rem, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.chapter{
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(245, 242, 235, 0.02);
+  padding: clamp(1.4rem, 2.6vw, 1.75rem);
+}
+.chapter-num{
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin-bottom: 0.9rem;
+}
+.chapter h3{ font-size: 1.15rem; margin-bottom: 0.6rem; }
+.chapter p{ color: var(--muted); font-size: 0.95rem; line-height: 1.55; }
+
+/* Who it's for */
+.for-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.for-col h3{
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+.for-col li{
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.7rem;
+  color: var(--muted);
+  font-size: 0.97rem;
+}
+.for-col li::before{
+  content: "";
+  position: absolute;
+  left: 0; top: 0.65em;
+  width: 8px; height: 1px;
+  background: var(--accent);
+}
+.for-col.not li::before{ background: var(--muted); }
+
+/* Closing opt-in */
+.close{
+  background:
+    radial-gradient(ellipse 60% 70% at 50% 100%, rgba(232, 163, 61, 0.10), transparent 70%);
+  text-align: center;
+}
+.close .section-title{ max-width: 26ch; margin-inline: auto; }
+.close .section-intro{ margin-inline: auto; margin-bottom: 2.5rem; }
+.close .optin-card{ margin-inline: auto; text-align: left; }
+
+/* Footer */
+footer{
+  border-top: 1px solid var(--line);
+  padding: 2.25rem 0;
+}
+footer .wrap{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+footer p{ font-size: 0.85rem; color: var(--muted); }
+</style>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="wordmark">JB Medias<span>.</span></div>
+    <div class="topbar-note">Free field guide</div>
+  </div>
+</header>
+
+<!-- ============================================================================
+     HERO — the five required elements
+     ============================================================================ -->
+<div class="hero">
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy">
+      <div class="label accent">A free field guide for video editors</div>
+
+      <h1>The 9 story-first principles that make viewers <em>feel</em> your edits instead of noticing them.</h1>
+
+      <p class="subhead">
+        Get <strong>The Invisible Edit</strong> free — <strong>25 pages</strong>, <strong>9 chapters</strong>,
+        on what separates editors who decorate from editors who direct. Enter your name and email
+        below and the PDF is sent straight to your inbox.
+      </p>
+
+      <ul class="fascinations">
+        <li>The <b>100-year-old experiment</b> with a single expressionless face that proves emotion is created by your cut — not by your footage.</li>
+        <li>Piling on effects shows a client you worked hard, right? <b>Wrong.</b> What it actually signals to the person watching.</li>
+        <li>The <b>four — and only four — honest reasons</b> to make a cut. If none of them is true, you should not be cutting yet.</li>
+        <li>Where the best moment in your project is usually hiding: it is <b>the clip you were about to delete.</b></li>
+      </ul>
+
+      <!-- ------------------------------------------------------------------
+           OPT-IN FORM 1 (hero)
+           Posts to Kit. Replace KIT_FORM_ID. Without JavaScript this submits
+           normally to Kit's own hosted confirmation page, so it still works.
+           ------------------------------------------------------------------ -->
+      <div class="optin-card">
+        <form class="optin-form"
+              action="https://app.kit.com/forms/KIT_FORM_ID/subscriptions"
+              method="post"
+              novalidate>
+          <p class="tell">Enter your name and email to get the guide.</p>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="name-1">First name</label>
+              <input id="name-1" type="text" name="fields[first_name]"
+                     autocomplete="given-name" placeholder="Jordan" required>
+            </div>
+
+            <div class="field">
+              <label for="email-1">Email address</label>
+              <input id="email-1" type="email" name="email_address"
+                     autocomplete="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+
+          <button type="submit" class="btn">Send me the free guide</button>
+          <p class="reassure">No spam, and no sharing your details. Unsubscribe any time.</p>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Show, don't tell: the actual cover, presented as a book -->
+    <div class="hero-visual">
+      <div class="book">
+        <div class="book-inner">
+          <img src="assets/invisible-edit-cover.png"
+               width="1548" height="2189"
+               alt="Cover of The Invisible Edit, a free field guide for editors">
+        </div>
+      </div>
+      <p class="book-caption"><b>25 pages</b> &nbsp;·&nbsp; 9 chapters &nbsp;·&nbsp; PDF</p>
+    </div>
+
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ============================================================================
+     THE PROBLEM — voice the pain before offering the fix
+     ============================================================================ -->
+<section>
+  <div class="wrap">
+    <div class="label">Somewhere we lost the plot</div>
+    <div class="problem-grid">
+      <div class="problem-body">
+        <h2 class="section-title">You didn't fall in love with editing because of a transition pack.</h2>
+        <p>
+          You fell in love because something you watched made you <strong>feel</strong> something.
+          A scene, a montage, a film that hit you in the chest and would not let go. You watched it
+          again and thought: I want to do that.
+        </p>
+        <p>
+          Then look at what the craft turned into. Graphics flying in every three seconds. A whoosh
+          on every subtitle. Sound design that pops so hard it stops sounding like anything real.
+          Cuts so fast that nothing is allowed to land, let alone <strong>breathe</strong>.
+        </p>
+        <p>
+          And everyone is doing it. That look stopped being a differentiator a long time ago — it
+          became the default, and the market for it is <strong>saturated</strong>. When every editor
+          is competing on who can decorate hardest, decoration is worth nothing.
+        </p>
+        <p>
+          Meanwhile the editors who quietly get paid the most are not doing any of it. They are doing
+          the thing you originally fell for: <strong>letting a story unfold.</strong> This guide is
+          how they think.
+        </p>
+      </div>
+      <div class="pullquote">
+        No one walks out of a great film talking about the cuts. They talk about how it made them feel. That is the whole job.
+        <span>From chapter one</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============================================================================
+     WHAT'S INSIDE — the nine chapters
+     ============================================================================ -->
+<section>
+  <div class="wrap">
+    <div class="label">What's inside</div>
+    <h2 class="section-title">Nine chapters, front to back, from the first cut to the final mix.</h2>
+    <p class="section-intro">
+      No effect tutorials. No preset packs. This is the way of thinking that separates editors who
+      decorate from editors who direct — written to be read with a project open.
+    </p>
+
+    <div class="chapters">
+      <div class="chapter">
+        <div class="chapter-num">01</div>
+        <h3>The truth we forgot</h3>
+        <p>Editing is storytelling, and the proof is a hundred years old. The experiment every editor should know cold.</p>
+      </div>
+      <div class="chapter">
+        <div class="chapter-num">02</div>
+        <h3>The decoration habit</h3>
+        <p>Why adding more makes the work look smaller — and what high-paying clients are actually buying instead.</p>
+      </div>
+      <div class="chapter">
+        <div class="chapter-num">03</div>
+        <h3>Every cut needs a reason</h3>
+        <p>Motivated cuts, the four honest reasons to cut, and the one-word filter that fixes a restless edit.</p>
+      </div>
+      <div class="chapter">
+        <div class="chapter-num">04</div>
+        <h3>Pacing is emotion</h3>
+        <p>Pacing is not speed. It is how you make a person breathe — and the four levers that control it.</p>
+      </div>
+      <div class="chapter">
+        <div class="chapter-num">05</div>
+        <h3>What they hear is what they feel</h3>
+        <p>The three audio layers in priority order, where every sound goes and why, plus J-cuts and L-cuts.</p>
+      </div>
+      <div class="chapter">
+        <div class="chapter-num">06</div>
+        <h3>Choosing music that fits</h3>
+        <p>Start with a feeling, never a genre. Beds versus builds, and the exact build-to-reveal method.</p>
+      </div>
+      <div class="chapter">
+        <div class="chapter-num">07</div>
+        <h3>The order you work in</h3>
+        <p>Make the story work naked, then dress it. The full pass order, and why polish early hides problems.</p>
+      </div>
+      <div class="chapter">
+        <div class="chapter-num">08</div>
+        <h3>The human moments</h3>
+        <p>The clip you were about to delete is often the best one. Mining outtakes, and b-roll that earns its place.</p>
+      </div>
+      <div class="chapter">
+        <div class="chapter-num">09</div>
+        <h3>Train your eye and your ear</h3>
+        <p>You are building taste, and taste is what compounds. Steal structure, not effects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============================================================================
+     WHO IT'S FOR — one avatar, stated plainly
+     ============================================================================ -->
+<section>
+  <div class="wrap">
+    <div class="label">Who this is for</div>
+    <h2 class="section-title">Written for editors, not for people collecting plugins.</h2>
+
+    <div class="for-grid">
+      <div class="for-col">
+        <h3>This is for you if</h3>
+        <ul>
+          <li>You edit video and you want the work to move people, not just impress other editors.</li>
+          <li>Your edits look clean but something about them still feels flat and you cannot name it.</li>
+          <li>You are tired of competing on effects in a feed where everyone has the same effects.</li>
+          <li>You want the reasoning behind the choices, not another list of techniques.</li>
+        </ul>
+      </div>
+      <div class="for-col not">
+        <h3>This is not for you if</h3>
+        <ul>
+          <li>You want a transition pack or a preset library.</li>
+          <li>You are looking for software tutorials or keyboard shortcuts.</li>
+          <li>You think the goal of an edit is for viewers to notice the editing.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ============================================================================
+     CLOSING OPT-IN — the CTA at the point of decision
+     ============================================================================ -->
+<section class="close">
+  <div class="wrap">
+    <div class="label accent" style="justify-content:center">Get the guide</div>
+    <h2 class="section-title">Let the story breathe. Get the guide free.</h2>
+    <p class="section-intro">
+      25 pages, 9 chapters, no cost. Enter your name and email and it lands in your inbox.
+    </p>
+
+    <!-- ------------------------------------------------------------------
+         OPT-IN FORM 2 (closing) — same Kit form, same KIT_FORM_ID
+         ------------------------------------------------------------------ -->
+    <div class="optin-card">
+      <form class="optin-form"
+            action="https://app.kit.com/forms/KIT_FORM_ID/subscriptions"
+            method="post"
+            novalidate>
+        <p class="tell">Enter your name and email to get the guide.</p>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="name-2">First name</label>
+            <input id="name-2" type="text" name="fields[first_name]"
+                   autocomplete="given-name" placeholder="Jordan" required>
+          </div>
+
+          <div class="field">
+            <label for="email-2">Email address</label>
+            <input id="email-2" type="email" name="email_address"
+                   autocomplete="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn">Send me the free guide</button>
+        <p class="reassure">No spam, and no sharing your details. Unsubscribe any time.</p>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="wordmark">JB Medias<span>.</span></div>
+    <p>Felt, never seen. &nbsp;·&nbsp; &copy; <span id="year">2026</span> JB Medias</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* --------------------------------------------------------------------------
+     OPT-IN SUBMIT (progressive enhancement over Kit's own form post)
+     Kit accepts a plain multipart POST to the form's subscriptions endpoint and
+     returns JSON when we ask for it. Sending it with fetch lets us keep the
+     visitor on the page and show the "check your inbox" state immediately.
+
+     With JavaScript disabled this handler never runs and the form posts
+     normally to Kit, which shows its own confirmation page. Either way the
+     lead is captured.
+     -------------------------------------------------------------------------- */
+  var PDF_PATH = "assets/the-invisible-edit.pdf";
+
+  function showSuccess(form, status, name){
+    form.classList.add("sent");
+    status.className = "form-status ok";
+    status.innerHTML =
+      '<span class="ok-title">' + (name ? "Thanks, " + name + "." : "You're in.") + ' Check your inbox.</span>' +
+      '<span class="ok-body">The Invisible Edit is on its way. If it has not arrived in a couple of minutes, ' +
+      'look in spam or promotions. You can also ' +
+      '<a href="' + PDF_PATH + '" download>download it directly here</a>.</span>';
+  }
+
+  // Escape anything we echo back into innerHTML, so a name can never inject markup.
+  function clean(value){
+    return String(value || "").replace(/[&<>"']/g, function(c){
+      return { "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c];
+    }).trim().slice(0, 40);
+  }
+
+  var forms = document.querySelectorAll(".optin-form");
+
+  Array.prototype.forEach.call(forms, function(form){
+    var status = form.querySelector(".form-status");
+    var button = form.querySelector("button[type=submit]");
+    var emailInput = form.querySelector("input[type=email]");
+    var nameInput = form.querySelector("input[type=text]");
+
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+
+      // We set novalidate so we can phrase the messages ourselves rather than
+      // relying on the browser's default bubbles.
+      var name = nameInput.value.trim();
+      var email = emailInput.value.trim();
+
+      if (!name){
+        status.className = "form-status err";
+        status.textContent = "Please add your first name.";
+        nameInput.focus();
+        return;
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){
+        status.className = "form-status err";
+        status.textContent = "That email does not look right. Please check it.";
+        emailInput.focus();
+        return;
+      }
+
+      var friendlyName = clean(name.split(/\s+/)[0]);
+
+      status.className = "form-status working";
+      status.textContent = "Sending the guide...";
+      button.disabled = true;
+
+      // Opening this file straight off disk cannot post anywhere. Show the real
+      // success state so the page can still be reviewed locally.
+      if (location.protocol === "file:"){
+        showSuccess(form, status, friendlyName);
+        return;
+      }
+
+      // A missing form id means the page was deployed before Kit was wired up.
+      // Fail loudly here rather than silently dropping a real lead.
+      if (form.action.indexOf("KIT_FORM_ID") !== -1){
+        status.className = "form-status err";
+        status.textContent = "This form is not connected yet. Please email us instead.";
+        button.disabled = false;
+        return;
+      }
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { "Accept": "application/json" }
+      })
+      .then(function(res){
+        if (!res.ok) throw new Error("bad status " + res.status);
+        showSuccess(form, status, friendlyName);
+      })
+      .catch(function(){
+        status.className = "form-status err";
+        status.textContent = "Something went wrong on our end. Please try again in a moment.";
+        button.disabled = false;
+      });
+    });
+  });
+})();
+</script>
