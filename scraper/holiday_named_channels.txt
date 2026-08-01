@@ -1,0 +1,20 @@
+# Channels named in search results where no channel URL was returned, so the
+# handle could not be confirmed. Feed these to the scraper as search terms and
+# let it resolve them to real channels:
+#
+#   python youtube_scraper.py --search-file holiday_named_channels.txt \
+#       --per-term 3 --min-subscribers 10000 --max-subscribers 200000
+#
+# Use --per-term 3: these are name lookups, not niche sweeps, so the top few
+# results are the ones that matter.
+
+Visit With Us cruise review
+Cruise with Ben and David
+Griff and Alyssa cruise
+La Lido Loca cruise
+Cruise News Today
+The Travel Scouts cruise
+PPMsTV family holiday
+Dan and Mazzy motorhome
+The So-Called Travel Expert
+Ed Chapman all inclusive
