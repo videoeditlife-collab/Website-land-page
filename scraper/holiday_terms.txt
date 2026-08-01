@@ -1,0 +1,73 @@
+# Search terms for "holiday expert" style channels - package holidays, resort
+# and cruise reviews, deal hunting, sit-down holiday guides. This is a different
+# niche from travel_terms.txt, which leans documentary / backpacking / van life.
+#
+#   python youtube_scraper.py --search-file holiday_terms.txt \
+#       --duration long --min-subscribers 10000 --max-subscribers 200000
+#
+# These terms are deliberately long-tail. Broad terms ("travel vlog") return the
+# same handful of million-subscriber channels; specific ones surface the mid-size
+# creators. Pair with --sort-by date to push past the big established channels.
+
+# --- deal hunting / money saving ---
+cheap holiday tips
+holiday deals how to book
+travel money saving tips
+how to book cheap package holiday
+best time to book holiday
+
+# --- package holiday operators ---
+package holiday review
+jet2 holiday review
+tui holiday review
+first choice holiday review
+easyjet holidays review
+
+# --- all inclusive / resort reviews ---
+all inclusive resort review
+all inclusive turkey review
+all inclusive mexico review
+all inclusive egypt review
+hotel room tour review
+family holiday resort review
+adults only hotel review
+
+# --- cruise ---
+cruise ship review
+cruise cabin tour
+p&o cruise vlog
+first time cruise tips
+
+# --- European holiday destinations (UK market) ---
+benidorm holiday vlog
+tenerife holiday vlog
+lanzarote holiday vlog
+costa del sol holiday
+greece holiday vlog
+spain holiday vlog
+portugal algarve holiday
+
+# --- long haul holiday destinations ---
+dubai holiday vlog
+florida holiday vlog
+disney world holiday planning
+bali resort review
+cancun resort review
+
+# --- domestic / staycation ---
+uk staycation vlog
+caravan holiday uk
+holiday park review
+butlins haven review
+
+# --- practical holiday advice ---
+airport tips and hacks
+holiday packing tips
+travel insurance advice
+first time flying tips
+
+# --- Australia / NZ holiday market ---
+gold coast holiday vlog
+queensland holiday vlog
+fiji holiday resort
+new zealand holiday vlog

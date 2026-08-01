@@ -22,16 +22,39 @@ No input list needed — the scraper searches YouTube and scrapes what it finds:
 
 ```bash
 python youtube_scraper.py \
-  --search-file travel_terms.txt \
+  --search-file holiday_terms.txt \
   --duration long \
-  --min-subscribers 10000 \
+  --min-subscribers 10000 --max-subscribers 200000 \
+  --sort-by date \
+  --scrolls 8 \
   --save-discovered channels_found.txt \
-  --output travel_channels.csv
+  --output holiday_channels.csv
 ```
 
-`travel_terms.txt` ships with 35 travel/holiday terms weighted toward the US,
-UK, Canada and Australia. Start with a couple of terms and `--per-term 10` to
-see the shape of the results before running the whole file.
+Two term files ship with the scraper:
+
+- `holiday_terms.txt` — package holidays, resort and cruise reviews, deal
+  hunting, sit-down holiday guides. The "holiday expert" style.
+- `travel_terms.txt` — travel documentary, backpacking, van life, road trips.
+
+Start with a couple of terms and `--per-term 10` to see the shape of the
+results before running a whole file.
+
+### Targeting mid-size channels
+
+YouTube ranks by relevance, which means broad terms return the same handful of
+million-subscriber channels no matter how far you scroll. `--min-subscribers`
+and `--max-subscribers` filter *after* scraping, so they narrow the output but
+do not make search surface smaller creators. Three levers actually do:
+
+- **Long-tail terms.** "jet2 holiday review" reaches mid-size channels that
+  "travel vlog" never will. Both term files are written this way.
+- **`--sort-by date`.** Recency ordering pushes past the established channels
+  that dominate relevance ranking.
+- **More scrolls.** `--scrolls 8` digs further down each result page.
+
+Expect a low hit rate on a first pass — that is the nature of the band. Scrape
+wide, then filter on `Status == ok`.
 
 Single term:
 
@@ -52,6 +75,7 @@ Discovery flags:
 | `--scrolls` | `4` | Result pages loaded per term |
 | `--per-term` | `25` | Max channels kept per term |
 | `--min-subscribers` | `0` | Flags smaller channels rather than dropping them |
+| `--max-subscribers` | `0` | Flags larger channels rather than dropping them |
 | `--save-discovered` | — | Write the discovered URL list to a file |
 
 `--duration long` is the one that matters for long-form: it maps to YouTube's
@@ -123,11 +147,12 @@ python youtube_scraper.py --input youtube_filtered.csv --resume
 `#`, `Display Name`, `Email`, `YT Channel`, `YT Subscribers`, `IG Account`,
 `IG Followers`, `Skool Community`, `Skool Link`, `# of Members`, `Status`
 
-`Status` is `ok`, `below_min_subscribers`, `no_subscriber_count` (page loaded
-but no count found — usually a channel that hides it), or `error: <Type>`.
+`Status` is `ok`, `below_min_subscribers`, `above_max_subscribers`,
+`no_subscriber_count` (page loaded but no count found — usually a channel that
+hides it), or `error: <Type>`.
 
-Rows under `--min-subscribers` are written and flagged rather than dropped, so
-changing the threshold later does not mean scraping everything again. Filter on
+Rows outside the subscriber range are written and flagged rather than dropped,
+so moving the bounds later does not mean scraping everything again. Filter on
 `Status == ok` to get the shortlist.
 
 ## Tests

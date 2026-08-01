@@ -450,7 +450,7 @@ def test_discovery_end_to_end():
     argv = ['--search', 'travel vlog', '--duration', 'long',
             '--output', out_path, '--save-discovered', list_path,
             '--scrolls', '1', '--concurrency', '2', '--delay', '0',
-            '--min-subscribers', '100000',
+            '--min-subscribers', '10000', '--max-subscribers', '200000',
             '--instagram-state', '/nonexistent.json']
     if chrome:
         argv += ['--executable-path', chrome]
@@ -476,12 +476,12 @@ def test_discovery_end_to_end():
     check("discovered names", sorted(by_name),
           ["Plain Creator", "Skool Creator", "Test Creator"])
 
-    # 1.2M clears the 100k bar; 8,432 and 12.5K do not.
-    check("above threshold", by_name['Test Creator']['Status'], "ok")
-    check("below threshold flagged",
+    # The 10k-200k band: 12.5K is in, 8,432 is under, 1.2M is over.
+    check("12.5K in range", by_name['Skool Creator']['Status'], "ok")
+    check("8,432 under range",
           by_name['Plain Creator']['Status'], "below_min_subscribers")
-    check("12.5K below 100k",
-          by_name['Skool Creator']['Status'], "below_min_subscribers")
+    check("1.2M over range",
+          by_name['Test Creator']['Status'], "above_max_subscribers")
 
 
 def main():

@@ -884,7 +884,8 @@ class ResultWriter:
 # MAIN
 # ============================================================================
 
-async def worker(name, queue, writer, browser, instagram_state, delay, min_subscribers=0):
+async def worker(name, queue, writer, browser, instagram_state, delay,
+                 min_subscribers=0, max_subscribers=0):
     """Own a set of pages and drain the shared queue."""
     yt_context = await new_context(browser)
     yt_page = await yt_context.new_page()
@@ -913,12 +914,16 @@ async def worker(name, queue, writer, browser, instagram_state, delay, min_subsc
                 print(f"         Unhandled error: {exc}")
                 result = {'status': f"error: {type(exc).__name__}"}
 
-            # Rows under the threshold are kept but flagged, so raising or
-            # lowering the bar later does not mean scraping everything again.
+            # Rows outside the range are kept but flagged, so moving the bounds
+            # later does not mean scraping everything again.
             count = result.get('subscriber_count')
-            if min_subscribers and count is not None and count < min_subscribers:
-                result['status'] = 'below_min_subscribers'
-                print(f"         Below --min-subscribers ({count} < {min_subscribers})")
+            if count is not None:
+                if min_subscribers and count < min_subscribers:
+                    result['status'] = 'below_min_subscribers'
+                    print(f"         Below range ({count:,} < {min_subscribers:,})")
+                elif max_subscribers and count > max_subscribers:
+                    result['status'] = 'above_max_subscribers'
+                    print(f"         Above range ({count:,} > {max_subscribers:,})")
 
             await writer.write(channel_url, result)
 
@@ -1018,7 +1023,7 @@ async def run(args):
 
         await asyncio.gather(*[
             worker(f"w{i + 1}", queue, writer, browser, instagram_state,
-                   args.delay, args.min_subscribers)
+                   args.delay, args.min_subscribers, args.max_subscribers)
             for i in range(concurrency)
         ])
 
@@ -1069,6 +1074,8 @@ def parse_args(argv=None):
                            help='Also write the discovered channel URLs to this file')
     discovery.add_argument('--min-subscribers', type=int, default=0,
                            help='Flag channels below this count as below_min_subscribers')
+    discovery.add_argument('--max-subscribers', type=int, default=0,
+                           help='Flag channels above this count as above_max_subscribers')
 
     parser.add_argument('--output', default='youtube_scraped_details.csv',
                         help='Where to write results (default: youtube_scraped_details.csv)')
