@@ -13,6 +13,58 @@ playwright install chromium
 
 ## Run
 
+Two ways to get channels: discover them from YouTube search, or scrape a list
+you already have.
+
+### Discover from search
+
+No input list needed — the scraper searches YouTube and scrapes what it finds:
+
+```bash
+python youtube_scraper.py \
+  --search-file travel_terms.txt \
+  --duration long \
+  --min-subscribers 10000 \
+  --save-discovered channels_found.txt \
+  --output travel_channels.csv
+```
+
+`travel_terms.txt` ships with 35 travel/holiday terms weighted toward the US,
+UK, Canada and Australia. Start with a couple of terms and `--per-term 10` to
+see the shape of the results before running the whole file.
+
+Single term:
+
+```bash
+python youtube_scraper.py --search "travel documentary" --duration long
+```
+
+Discovery flags:
+
+| Flag | Default | Notes |
+|---|---|---|
+| `--search TERM` | — | Search term; repeat for several |
+| `--search-file` | — | File of terms, one per line |
+| `--duration` | — | `long` (20 min+), `medium` (4–20), `short` |
+| `--upload-date` | — | `hour`, `today`, `week`, `month`, `year` |
+| `--result-type` | — | `channel` restricts to channel results |
+| `--sort-by` | relevance | `rating`, `date`, `views` |
+| `--scrolls` | `4` | Result pages loaded per term |
+| `--per-term` | `25` | Max channels kept per term |
+| `--min-subscribers` | `0` | Flags smaller channels rather than dropping them |
+| `--save-discovered` | — | Write the discovered URL list to a file |
+
+`--duration long` is the one that matters for long-form: it maps to YouTube's
+own 20-minutes-and-over filter.
+
+Region note: YouTube ranks results by the language and region of the browser
+session. Running from a US/UK/CA/AU IP with an English locale is what biases
+results toward English-speaking creators — the scraper cannot force a country.
+For a specific market, either run from that region or lean on the country terms
+in `travel_terms.txt`.
+
+### Scrape a list you already have
+
 ```bash
 python youtube_scraper.py --input youtube_filtered.csv
 ```
@@ -71,8 +123,12 @@ python youtube_scraper.py --input youtube_filtered.csv --resume
 `#`, `Display Name`, `Email`, `YT Channel`, `YT Subscribers`, `IG Account`,
 `IG Followers`, `Skool Community`, `Skool Link`, `# of Members`, `Status`
 
-`Status` is `ok`, `no_subscriber_count` (page loaded but no count found —
-usually a channel that hides it), or `error: <Type>`.
+`Status` is `ok`, `below_min_subscribers`, `no_subscriber_count` (page loaded
+but no count found — usually a channel that hides it), or `error: <Type>`.
+
+Rows under `--min-subscribers` are written and flagged rather than dropped, so
+changing the threshold later does not mean scraping everything again. Filter on
+`Status == ok` to get the shortlist.
 
 ## Tests
 
@@ -80,8 +136,10 @@ usually a channel that hides it), or `error: <Type>`.
 python test_scraper.py
 ```
 
-Covers the parsing layer and runs the scraper end to end through a real browser
-against a locally served fake About page. No network access required.
+79 assertions covering the parsing layer, the search-filter encoding, and two
+end-to-end runs through a real browser against locally served fixture pages —
+one scraping a URL list, one going search → discovery → scrape. No network
+access required.
 
 ## Notes
 

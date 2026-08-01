@@ -20,7 +20,12 @@ import threading
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
+import youtube_scraper  # noqa: E402
 from youtube_scraper import (  # noqa: E402
+    build_search_filter,
+    channel_urls_from_hrefs,
+    read_terms,
+    search_url,
     channel_about_url,
     extract_json_blob,
     has_business_email,
@@ -228,6 +233,61 @@ def test_profile_regexes():
     check("skool members parsed", parse_members(m.group(0)) if m else None, 2_481)
 
 
+def test_search_filters():
+    print("\nSearch filter encoding")
+    # These are the values YouTube itself puts in the sp= parameter, so they
+    # pin the protobuf encoding to something externally verifiable.
+    check("duration=long", build_search_filter(duration='long'), "EgIYAg==")
+    check("upload_date=year", build_search_filter(upload_date='year'), "EgIIBQ==")
+    check("result_type=channel", build_search_filter(result_type='channel'), "EgIQAg==")
+    check("duration=medium", build_search_filter(duration='medium'), "EgIYAw==")
+    check("year + long", build_search_filter(duration='long', upload_date='year'),
+          "EgQIBRgC")
+    check("sort_by=views", build_search_filter(sort_by='views'), "CAM=")
+    check("sort default omitted", build_search_filter(sort_by='relevance'), None)
+    check("no filters", build_search_filter(), None)
+
+    check("search url",
+          search_url("travel vlog", "EgIYAg=="),
+          "https://www.youtube.com/results?search_query=travel+vlog&sp=EgIYAg%3D%3D")
+    check("search url unfiltered",
+          search_url("van life australia"),
+          "https://www.youtube.com/results?search_query=van+life+australia")
+
+
+def test_channel_hrefs():
+    print("\nChannel link extraction")
+    hrefs = [
+        "/@traveller",
+        "/@traveller/videos",              # same channel, different tab
+        "/channel/UCabcdefghijklmnopqrstuv",
+        "/watch?v=abc123",                 # not a channel
+        "/results?search_query=x",         # not a channel
+        "/@Another_One-1",
+        None,
+        "https://external.example/@nope",  # not a relative YouTube link
+    ]
+    check("extracted", channel_urls_from_hrefs(hrefs), [
+        "https://www.youtube.com/@traveller",
+        "https://www.youtube.com/channel/UCabcdefghijklmnopqrstuv",
+        "https://www.youtube.com/@Another_One-1",
+    ])
+    check("empty input", channel_urls_from_hrefs([]), [])
+
+
+def test_terms():
+    print("\nSearch term input")
+    tmpdir = tempfile.mkdtemp()
+    path = os.path.join(tmpdir, 'terms.txt')
+    with open(path, 'w') as fh:
+        fh.write("# comment\ntravel vlog\n\nvan life\ntravel vlog\n")
+
+    args = parse_args(['--search', 'solo travel', '--search-file', path])
+    check("merged and deduped", read_terms(args),
+          ["solo travel", "travel vlog", "van life"])
+    check("no terms", read_terms(parse_args([])), [])
+
+
 def test_cli():
     print("\nCLI")
     args = parse_args([])
@@ -264,9 +324,20 @@ PAGES = {
 }
 
 
+SEARCH_HTML = """<!DOCTYPE html><html><body>
+<a href="/@testcreator">Test Creator</a>
+<a href="/@testcreator/videos">Test Creator videos</a>
+<a href="/watch?v=abc123">A video</a>
+<a href="/@plaincreator">Plain Creator</a>
+<a href="/results?search_query=other">Related search</a>
+<a href="/@skoolcreator">Skool Creator</a>
+</body></html>"""
+
+
 class Handler(http.server.BaseHTTPRequestHandler):
     def do_GET(self):
-        body = PAGES.get(self.path)
+        path = self.path.split('?')[0]
+        body = SEARCH_HTML if path == '/results' else PAGES.get(path)
         self.send_response(200 if body else 404)
         self.send_header('Content-Type', 'text/html; charset=utf-8')
         self.end_headers()
@@ -358,13 +429,72 @@ def test_end_to_end():
     check("resume added no rows", len(rows_after), 4)
 
 
+def test_discovery_end_to_end():
+    print("\nDiscovery end-to-end (search -> scrape, local fixture server)")
+
+    chrome = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome'
+    if not os.path.exists(chrome):
+        chrome = None
+
+    port = free_port()
+    server = http.server.HTTPServer(('127.0.0.1', port), Handler)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+
+    tmpdir = tempfile.mkdtemp()
+    out_path = os.path.join(tmpdir, 'discovered.csv')
+    list_path = os.path.join(tmpdir, 'channels_found.txt')
+
+    original_base = youtube_scraper.YOUTUBE_BASE
+    youtube_scraper.YOUTUBE_BASE = f"http://127.0.0.1:{port}"
+
+    argv = ['--search', 'travel vlog', '--duration', 'long',
+            '--output', out_path, '--save-discovered', list_path,
+            '--scrolls', '1', '--concurrency', '2', '--delay', '0',
+            '--min-subscribers', '100000',
+            '--instagram-state', '/nonexistent.json']
+    if chrome:
+        argv += ['--executable-path', chrome]
+
+    try:
+        code = asyncio.run(run(parse_args(argv)))
+    finally:
+        youtube_scraper.YOUTUBE_BASE = original_base
+        server.shutdown()
+        server.server_close()
+
+    check("exit code", code, 0)
+
+    with open(list_path) as fh:
+        discovered = [line.strip() for line in fh if line.strip()]
+    check("discovered 3 channels (video/search links ignored)", len(discovered), 3)
+
+    with open(out_path, newline='') as fh:
+        rows = list(csv.DictReader(fh))
+    check("scraped every discovered channel", len(rows), 3)
+
+    by_name = {r['Display Name']: r for r in rows}
+    check("discovered names", sorted(by_name),
+          ["Plain Creator", "Skool Creator", "Test Creator"])
+
+    # 1.2M clears the 100k bar; 8,432 and 12.5K do not.
+    check("above threshold", by_name['Test Creator']['Status'], "ok")
+    check("below threshold flagged",
+          by_name['Plain Creator']['Status'], "below_min_subscribers")
+    check("12.5K below 100k",
+          by_name['Skool Creator']['Status'], "below_min_subscribers")
+
+
 def main():
     test_counts()
     test_urls()
     test_extraction()
     test_profile_regexes()
+    test_search_filters()
+    test_channel_hrefs()
+    test_terms()
     test_cli()
     test_end_to_end()
+    test_discovery_end_to_end()
 
     print("\n" + "=" * 60)
     if FAILURES:

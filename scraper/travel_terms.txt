@@ -1,0 +1,58 @@
+# Search terms for the travel / holiday niche, skewed toward English-speaking
+# markets (US, UK, Canada, Australia, NZ, Ireland).
+#
+#   python youtube_scraper.py --search-file travel_terms.txt --duration long
+#
+# YouTube weights results by the language and region of the session running the
+# browser, so English terms surface English-language channels. Trim this list
+# before a first run - 35 terms at 25 channels each is a long session.
+
+# --- long-form travel formats ---
+travel documentary
+travel film
+solo travel vlog
+backpacking documentary
+budget travel guide
+luxury travel vlog
+family travel vlog
+digital nomad vlog
+expat life vlog
+travel series episode 1
+
+# --- road trip / vehicle-based ---
+van life
+road trip vlog
+overlanding
+caravan travel
+rv living full time
+4wd touring
+
+# --- holiday / resort ---
+holiday vlog
+family holiday vlog
+all inclusive resort review
+cruise vlog
+theme park vlog
+bali holiday vlog
+
+# --- Australia / New Zealand ---
+australia road trip
+australia travel vlog
+outback australia
+new zealand travel vlog
+
+# --- Canada ---
+canada travel vlog
+banff travel guide
+canada road trip
+
+# --- United States ---
+usa road trip vlog
+national parks road trip
+america travel vlog
+
+# --- United Kingdom / Ireland ---
+uk travel vlog
+scotland travel vlog
+ireland road trip
+london travel guide

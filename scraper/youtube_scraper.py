@@ -11,23 +11,29 @@ page, and extracts:
   - Instagram link (+ follower count, if Instagram cookies are supplied)
   - Skool community link (+ name and member count)
 
+Channels come either from a file of URLs (--input) or from YouTube search
+itself (--search), which discovers channels for a niche without needing a
+list up front.
+
 Results stream to the output CSV row by row, so an interrupted run keeps
 everything scraped so far and can be resumed with --resume.
 
 Usage:
     python youtube_scraper.py --input youtube_filtered.csv
-    python youtube_scraper.py --input channels.txt --concurrency 3 --headed
+    python youtube_scraper.py --search "travel vlog" --duration long
+    python youtube_scraper.py --search-file terms.txt --min-subscribers 10000
     python youtube_scraper.py --input in.csv --output out.csv --resume
 """
 
 import argparse
 import asyncio
+import base64
 import csv
 import json
 import os
 import re
 import sys
-from urllib.parse import urlparse, parse_qs, unquote
+from urllib.parse import urlparse, parse_qs, unquote, quote_plus
 
 try:
     from playwright.async_api import async_playwright
@@ -557,6 +563,205 @@ async def scrape_channel(yt_page, ig_page, skool_page, channel_url):
 
 
 # ============================================================================
+# SEARCH DISCOVERY
+#
+# YouTube encodes search filters into the `sp` query parameter as a base64url
+# protobuf. Building it here means filters can be combined freely instead of
+# copying opaque constants around, and it avoids clicking through the filter
+# menu (which was the fragile part of the original implementation).
+#
+#   top level : field 1 = sort order, field 2 = filter submessage
+#   filters   : field 1 = upload date, field 2 = result type, field 3 = duration
+# ============================================================================
+
+UPLOAD_DATE = {'hour': 1, 'today': 2, 'week': 3, 'month': 4, 'year': 5}
+RESULT_TYPE = {'video': 1, 'channel': 2, 'playlist': 3, 'movie': 4}
+DURATION = {'short': 1, 'long': 2, 'medium': 3}
+SORT_BY = {'relevance': 0, 'rating': 1, 'date': 2, 'views': 3}
+
+
+def _varint(value):
+    """Encode an integer as a protobuf varint."""
+    out = bytearray()
+    while True:
+        chunk = value & 0x7F
+        value >>= 7
+        out.append(chunk | (0x80 if value else 0))
+        if not value:
+            return bytes(out)
+
+
+def _tag(field_number, wire_type):
+    return _varint((field_number << 3) | wire_type)
+
+
+def build_search_filter(duration=None, upload_date=None, result_type=None, sort_by=None):
+    """
+    Build the `sp` search-filter parameter.
+
+    Verifiable against YouTube's own values: duration=long alone gives
+    'EgIYAg%3D%3D', upload_date=year gives 'EgIIBQ%3D%3D'.
+    """
+    filters = bytearray()
+
+    if upload_date:
+        filters += _tag(1, 0) + _varint(UPLOAD_DATE[upload_date])
+    if result_type:
+        filters += _tag(2, 0) + _varint(RESULT_TYPE[result_type])
+    if duration:
+        filters += _tag(3, 0) + _varint(DURATION[duration])
+
+    message = bytearray()
+
+    # Sort order is only emitted when it is not the default, matching YouTube.
+    if sort_by and SORT_BY[sort_by]:
+        message += _tag(1, 0) + _varint(SORT_BY[sort_by])
+    if filters:
+        message += _tag(2, 2) + _varint(len(filters)) + filters
+
+    if not message:
+        return None
+
+    return base64.urlsafe_b64encode(bytes(message)).decode()
+
+
+# Overridden by the test suite to point discovery at a local fixture server.
+YOUTUBE_BASE = 'https://www.youtube.com'
+
+
+def search_url(term, search_filter=None):
+    url = f"{YOUTUBE_BASE}/results?search_query={quote_plus(term)}"
+    if search_filter:
+        url += f"&sp={quote_plus(search_filter)}"
+    return url
+
+
+_CHANNEL_HREF_RE = re.compile(r'^/(@[^/?#]+|channel/UC[\w-]{22})')
+
+
+def channel_urls_from_hrefs(hrefs):
+    """Reduce a page's links down to unique canonical channel URLs."""
+    found = []
+    seen = set()
+
+    for href in hrefs:
+        if not href:
+            continue
+
+        match = _CHANNEL_HREF_RE.match(href)
+        if not match:
+            continue
+
+        url = f"{YOUTUBE_BASE}/{match.group(1)}"
+        key = url.lower()
+        if key not in seen:
+            seen.add(key)
+            found.append(url)
+
+    return found
+
+
+async def dismiss_consent(page):
+    """Click through the cookie/consent wall that EU and UK sessions hit."""
+    for selector in (
+        "button[aria-label*='Accept all']",
+        "button[aria-label*='Accept the use of cookies']",
+        "form[action*='consent'] button",
+    ):
+        try:
+            button = await page.query_selector(selector)
+            if button:
+                await button.click()
+                await page.wait_for_timeout(1500)
+                return True
+        except Exception:
+            continue
+    return False
+
+
+async def discover_channels(page, term, search_filter, scrolls, per_term):
+    """Run one YouTube search and collect the channel URLs it surfaces."""
+    url = search_url(term, search_filter)
+    print(f"\n   Searching: {term}")
+    print(f"      {url}")
+
+    try:
+        await page.goto(url, wait_until='domcontentloaded', timeout=30000)
+    except Exception as exc:
+        print(f"      Search failed: {exc}")
+        return []
+
+    await dismiss_consent(page)
+    await page.wait_for_timeout(2000)
+
+    found = []
+
+    for index in range(max(1, scrolls)):
+        try:
+            hrefs = await page.eval_on_selector_all(
+                'a[href]', 'nodes => nodes.map(n => n.getAttribute("href"))'
+            )
+        except Exception as exc:
+            print(f"      Could not read results: {exc}")
+            break
+
+        for candidate in channel_urls_from_hrefs(hrefs):
+            if candidate not in found:
+                found.append(candidate)
+
+        if per_term and len(found) >= per_term:
+            break
+
+        if index < scrolls - 1:
+            try:
+                await page.evaluate(
+                    "window.scrollTo(0, document.documentElement.scrollHeight);"
+                )
+                await page.wait_for_timeout(2000)
+            except Exception:
+                break
+
+    if per_term:
+        found = found[:per_term]
+
+    print(f"      Found {len(found)} channels")
+    return found
+
+
+async def run_discovery(browser, terms, args):
+    """Search every term and return the combined, deduplicated channel list."""
+    context = await new_context(browser)
+    page = await context.new_page()
+
+    search_filter = build_search_filter(
+        duration=args.duration,
+        upload_date=args.upload_date,
+        result_type=args.result_type,
+        sort_by=args.sort_by,
+    )
+    if search_filter:
+        print(f"Search filter: sp={search_filter}")
+
+    all_channels = []
+
+    try:
+        for term in terms:
+            for url in await discover_channels(
+                page, term, search_filter, args.scrolls, args.per_term
+            ):
+                if url not in all_channels:
+                    all_channels.append(url)
+    finally:
+        try:
+            await context.close()
+        except Exception:
+            pass
+
+    print(f"\nDiscovered {len(all_channels)} unique channels across {len(terms)} terms")
+    return all_channels
+
+
+# ============================================================================
 # INPUT / OUTPUT
 # ============================================================================
 
@@ -679,7 +884,7 @@ class ResultWriter:
 # MAIN
 # ============================================================================
 
-async def worker(name, queue, writer, browser, instagram_state, delay):
+async def worker(name, queue, writer, browser, instagram_state, delay, min_subscribers=0):
     """Own a set of pages and drain the shared queue."""
     yt_context = await new_context(browser)
     yt_page = await yt_context.new_page()
@@ -708,6 +913,13 @@ async def worker(name, queue, writer, browser, instagram_state, delay):
                 print(f"         Unhandled error: {exc}")
                 result = {'status': f"error: {type(exc).__name__}"}
 
+            # Rows under the threshold are kept but flagged, so raising or
+            # lowering the bar later does not mean scraping everything again.
+            count = result.get('subscriber_count')
+            if min_subscribers and count is not None and count < min_subscribers:
+                result['status'] = 'below_min_subscribers'
+                print(f"         Below --min-subscribers ({count} < {min_subscribers})")
+
             await writer.write(channel_url, result)
 
             if delay:
@@ -721,11 +933,25 @@ async def worker(name, queue, writer, browser, instagram_state, delay):
                     pass
 
 
-async def run(args):
-    urls = read_input(args.input)
-    if not urls:
-        return 1
+def read_terms(args):
+    """Search terms from --search (repeatable) and/or --search-file."""
+    terms = list(args.search or [])
 
+    if args.search_file:
+        if not os.path.exists(args.search_file):
+            print(f"Search-term file not found: {args.search_file}")
+            return []
+        with open(args.search_file, encoding='utf-8') as handle:
+            for line in handle:
+                line = line.strip()
+                if line and not line.startswith('#') and line not in terms:
+                    terms.append(line)
+
+    return terms
+
+
+def apply_limits(urls, args):
+    """Apply --limit and --resume to a channel list."""
     if args.limit:
         urls = urls[:args.limit]
         print(f"Limited to first {len(urls)} channels")
@@ -737,16 +963,32 @@ async def run(args):
             urls = [u for u in urls if u.rstrip('/').lower() not in done]
             print(f"Resuming: skipping {before - len(urls)} already-scraped channels")
 
-    if not urls:
-        print("Nothing left to scrape.")
-        return 0
+    return urls
+
+
+async def launch_browser(playwright, args):
+    launcher = getattr(playwright, args.browser)
+    launch_kwargs = {'headless': not args.headed}
+    if args.executable_path:
+        launch_kwargs['executable_path'] = args.executable_path
+    browser = await launcher.launch(**launch_kwargs)
+    print(f"Started {args.browser} ({'headed' if args.headed else 'headless'})")
+    return browser
+
+
+async def run(args):
+    terms = read_terms(args)
+
+    # Without search terms the channel list has to come from a file, and it is
+    # worth failing before launching a browser.
+    urls = []
+    if not terms:
+        urls = apply_limits(read_input(args.input), args)
+        if not urls:
+            print("Nothing to scrape.")
+            return 1
 
     instagram_state = load_instagram_state(args.instagram_state)
-
-    queue = asyncio.Queue()
-    for index, url in enumerate(urls, 1):
-        queue.put_nowait((index, len(urls), url))
-
     writer = ResultWriter(args.output, resume=args.resume)
 
     playwright = None
@@ -754,20 +996,29 @@ async def run(args):
 
     try:
         playwright = await async_playwright().start()
-        launcher = getattr(playwright, args.browser)
+        browser = await launch_browser(playwright, args)
 
-        launch_kwargs = {'headless': not args.headed}
-        if args.executable_path:
-            launch_kwargs['executable_path'] = args.executable_path
+        if terms:
+            urls = apply_limits(await run_discovery(browser, terms, args), args)
+            if args.save_discovered:
+                with open(args.save_discovered, 'w', encoding='utf-8') as handle:
+                    handle.write('\n'.join(urls) + '\n')
+                print(f"Saved discovered channel list to {args.save_discovered}")
 
-        browser = await launcher.launch(**launch_kwargs)
-        print(f"Started {args.browser} ({'headed' if args.headed else 'headless'})")
+        if not urls:
+            print("Nothing left to scrape.")
+            return 0
+
+        queue = asyncio.Queue()
+        for index, url in enumerate(urls, 1):
+            queue.put_nowait((index, len(urls), url))
 
         concurrency = max(1, min(args.concurrency, len(urls)))
-        print(f"Scraping {len(urls)} channels with {concurrency} workers\n")
+        print(f"\nScraping {len(urls)} channels with {concurrency} workers\n")
 
         await asyncio.gather(*[
-            worker(f"w{i + 1}", queue, writer, browser, instagram_state, args.delay)
+            worker(f"w{i + 1}", queue, writer, browser, instagram_state,
+                   args.delay, args.min_subscribers)
             for i in range(concurrency)
         ])
 
@@ -790,10 +1041,35 @@ async def run(args):
 
 def parse_args(argv=None):
     parser = argparse.ArgumentParser(
-        description='Scrape YouTube channel details from a list of channel URLs.'
+        description='Scrape YouTube channel details, from a URL list or from search.'
     )
     parser.add_argument('--input', default='youtube_filtered.csv',
-                        help='CSV or .txt file of channel URLs (default: youtube_filtered.csv)')
+                        help='CSV or .txt file of channel URLs (default: youtube_filtered.csv). '
+                             'Ignored when --search or --search-file is given.')
+
+    discovery = parser.add_argument_group('discovery (search instead of a URL list)')
+    discovery.add_argument('--search', action='append', metavar='TERM',
+                           help='Search term to discover channels from. Repeatable.')
+    discovery.add_argument('--search-file', metavar='PATH',
+                           help='File of search terms, one per line')
+    discovery.add_argument('--duration', choices=sorted(DURATION),
+                           help="Video length filter: 'long' is 20+ minutes, "
+                                "'medium' 4-20, 'short' under 4")
+    discovery.add_argument('--upload-date', choices=sorted(UPLOAD_DATE),
+                           help='Only results uploaded within this window')
+    discovery.add_argument('--result-type', choices=sorted(RESULT_TYPE),
+                           help="Restrict results to one type, e.g. 'channel'")
+    discovery.add_argument('--sort-by', choices=sorted(SORT_BY),
+                           help='Search result ordering (default: relevance)')
+    discovery.add_argument('--scrolls', type=int, default=4,
+                           help='Result pages to load per term (default: 4)')
+    discovery.add_argument('--per-term', type=int, default=25,
+                           help='Max channels to keep per search term (default: 25)')
+    discovery.add_argument('--save-discovered', metavar='PATH',
+                           help='Also write the discovered channel URLs to this file')
+    discovery.add_argument('--min-subscribers', type=int, default=0,
+                           help='Flag channels below this count as below_min_subscribers')
+
     parser.add_argument('--output', default='youtube_scraped_details.csv',
                         help='Where to write results (default: youtube_scraped_details.csv)')
     parser.add_argument('--concurrency', type=int, default=3,
