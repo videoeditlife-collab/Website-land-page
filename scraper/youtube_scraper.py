@@ -391,14 +391,60 @@ def _text_of(field):
     return None
 
 
+def _relative_ages_in(node):
+    """Every relative date found anywhere inside `node`, as ages in days."""
+    ages = []
+
+    for obj in walk_objects(node):
+        for value in obj.values():
+            if isinstance(value, str):
+                age = parse_relative_age(value)
+                if age is not None:
+                    ages.append(age)
+            elif isinstance(value, list):
+                for item in value:
+                    if isinstance(item, str):
+                        age = parse_relative_age(item)
+                        if age is not None:
+                            ages.append(age)
+
+    return ages
+
+
 def video_ages_from_data(data):
-    """Ages in days of each video on a channel's Videos tab, newest first."""
+    """
+    Ages in days of each video on a channel's Videos tab, newest first.
+
+    The current Videos tab renders each entry as a lockupViewModel whose date
+    lives in a bare {'content': '3 weeks ago'} node, with no id beside it - so
+    the date has to be found by descending each lockup's own subtree. Older
+    payloads paired videoId with publishedTimeText directly, and that shape is
+    still handled as a fallback.
+    """
     if not data:
         return []
 
     # Keyed by video id so the same entry appearing twice in the payload
     # is not counted as two uploads.
     ages = {}
+
+    for obj in walk_objects(data):
+        lockup = obj.get('lockupViewModel')
+        if not isinstance(lockup, dict):
+            continue
+
+        content_id = lockup.get('contentId')
+        if not isinstance(content_id, str) or content_id in ages:
+            continue
+
+        found = _relative_ages_in(lockup)
+        if found:
+            # One date per entry, but the accessibility label repeats it;
+            # the smallest is the upload date either way.
+            ages[content_id] = min(found)
+
+    if ages:
+        return sorted(ages.values())
 
     for obj in walk_objects(data):
         video_id = obj.get('videoId')

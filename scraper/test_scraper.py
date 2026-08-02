@@ -238,13 +238,32 @@ def test_profile_regexes():
 
 
 def videos_tab_html(ages):
-    """Fake Videos tab. `ages` are relative date strings, newest first."""
+    """
+    Fake Videos tab in the shape YouTube actually serves today: each entry is a
+    lockupViewModel keyed by contentId, with the upload date in a bare
+    {'content': '3 weeks ago'} node and repeated in an accessibility label.
+
+    This mirrors the structure reported by diagnose_videos.py against a live
+    channel. The previous fixture used videoRenderer/publishedTimeText, which
+    the live page no longer emits at all - so the tests passed while the
+    scraper returned nothing.
+    """
     items = [
-        {"richItemRenderer": {"content": {"videoRenderer": {
-            "videoId": f"vid{index:05d}",
-            "title": {"runs": [{"text": f"Video {index}"}]},
-            "publishedTimeText": {"simpleText": age},
-            "viewCountText": {"simpleText": "12,345 views"},
+        {"richItemRenderer": {"content": {"lockupViewModel": {
+            "contentId": f"vid{index:05d}",
+            "contentType": "LOCKUP_CONTENT_TYPE_VIDEO",
+            "metadata": {"lockupMetadataViewModel": {
+                "title": {"content": f"Video {index}"},
+                "metadata": {"contentMetadataViewModel": {"metadataRows": [
+                    {"metadataParts": [
+                        {"text": {"content": "12K views"}},
+                        {"text": {"content": age}},
+                    ]},
+                ]}},
+                "image": {"decoratedAvatarViewModel": {
+                    "accessibilityLabel": f"Video {index} 12K views {age}",
+                }},
+            }},
         }}}}
         for index, age in enumerate(ages)
     ]
@@ -252,6 +271,21 @@ def videos_tab_html(ages):
         "richGridRenderer": {"contents": items}
     }}}]}}
     return (f'<!DOCTYPE html><html><head><title>Videos</title></head><body>'
+            f'<script>var ytInitialData = {json.dumps(data)};</script>'
+            f'</body></html>')
+
+
+def legacy_videos_tab_html(ages):
+    """The older videoRenderer/publishedTimeText shape, kept as a fallback."""
+    items = [
+        {"richItemRenderer": {"content": {"videoRenderer": {
+            "videoId": f"old{index:05d}",
+            "publishedTimeText": {"simpleText": age},
+        }}}}
+        for index, age in enumerate(ages)
+    ]
+    data = {"contents": {"richGridRenderer": {"contents": items}}}
+    return (f'<!DOCTYPE html><html><body>'
             f'<script>var ytInitialData = {json.dumps(data)};</script>'
             f'</body></html>')
 
@@ -266,12 +300,22 @@ def test_upload_cadence():
     check("no date", parse_relative_age("Members only"), None)
     check("empty", parse_relative_age(""), None)
 
-    # Duplicate ids in the payload must not inflate the upload count.
+    # Live shape: lockupViewModel, date repeated in an accessibility label.
     data = extract_json_blob(
         videos_tab_html(["2 days ago", "9 days ago", "16 days ago"]),
         'ytInitialData',
     )
-    check("ages parsed", video_ages_from_data(data), [2.0, 9.0, 16.0])
+    check("lockup ages parsed", video_ages_from_data(data), [2.0, 9.0, 16.0])
+
+    # The repeated label must not be counted as a second upload.
+    check("repeated date not double counted",
+          len(video_ages_from_data(data)), 3)
+
+    # Legacy shape still works via the fallback.
+    legacy = extract_json_blob(
+        legacy_videos_tab_html(["1 day ago", "8 days ago"]), 'ytInitialData')
+    check("legacy ages parsed", video_ages_from_data(legacy), [1.0, 8.0])
+
     check("no data", video_ages_from_data(None), [])
 
     weekly = [float(d) for d in range(2, 92, 7)]      # 13 uploads in 90 days
