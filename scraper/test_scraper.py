@@ -22,6 +22,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import youtube_scraper  # noqa: E402
 from youtube_scraper import (  # noqa: E402
+    classify_cadence,
+    meets_cadence,
+    parse_relative_age,
+    video_ages_from_data,
     build_search_filter,
     channel_urls_from_hrefs,
     read_terms,
@@ -233,6 +237,63 @@ def test_profile_regexes():
     check("skool members parsed", parse_members(m.group(0)) if m else None, 2_481)
 
 
+def videos_tab_html(ages):
+    """Fake Videos tab. `ages` are relative date strings, newest first."""
+    items = [
+        {"richItemRenderer": {"content": {"videoRenderer": {
+            "videoId": f"vid{index:05d}",
+            "title": {"runs": [{"text": f"Video {index}"}]},
+            "publishedTimeText": {"simpleText": age},
+            "viewCountText": {"simpleText": "12,345 views"},
+        }}}}
+        for index, age in enumerate(ages)
+    ]
+    data = {"contents": {"tabs": [{"tabRenderer": {"content": {
+        "richGridRenderer": {"contents": items}
+    }}}]}}
+    return (f'<!DOCTYPE html><html><head><title>Videos</title></head><body>'
+            f'<script>var ytInitialData = {json.dumps(data)};</script>'
+            f'</body></html>')
+
+
+def test_upload_cadence():
+    print("\nUpload cadence")
+    check("3 weeks ago", parse_relative_age("3 weeks ago"), 21.0)
+    check("1 day ago", parse_relative_age("1 day ago"), 1.0)
+    check("Streamed 2 months ago",
+          round(parse_relative_age("Streamed 2 months ago"), 2), 60.88)
+    check("13 hours ago", round(parse_relative_age("13 hours ago"), 3), 0.542)
+    check("no date", parse_relative_age("Members only"), None)
+    check("empty", parse_relative_age(""), None)
+
+    # Duplicate ids in the payload must not inflate the upload count.
+    data = extract_json_blob(
+        videos_tab_html(["2 days ago", "9 days ago", "16 days ago"]),
+        'ytInitialData',
+    )
+    check("ages parsed", video_ages_from_data(data), [2.0, 9.0, 16.0])
+    check("no data", video_ages_from_data(None), [])
+
+    weekly = [float(d) for d in range(2, 92, 7)]      # 13 uploads in 90 days
+    check("weekly", classify_cadence(weekly)[0], "weekly")
+    check("weekly last upload", classify_cadence(weekly)[1], 2)
+    check("weekly count", classify_cadence(weekly)[2], 13)
+
+    check("biweekly", classify_cadence([3.0, 17.0, 31.0, 45.0, 59.0, 73.0])[0],
+          "biweekly")
+    check("monthly", classify_cadence([5.0, 35.0, 65.0])[0], "monthly")
+    check("sporadic", classify_cadence([10.0, 200.0])[0], "sporadic")
+    check("inactive", classify_cadence([120.0, 300.0])[0], "inactive")
+    check("dormant", classify_cadence([400.0])[0], "dormant")
+    check("unknown", classify_cadence([]), ('unknown', None, 0))
+
+    check("weekly meets monthly", meets_cadence('weekly', 'monthly'), True)
+    check("monthly fails weekly", meets_cadence('monthly', 'weekly'), False)
+    check("monthly meets monthly", meets_cadence('monthly', 'monthly'), True)
+    check("dormant fails monthly", meets_cadence('dormant', 'monthly'), False)
+    check("no requirement", meets_cadence('dormant', None), True)
+
+
 def test_search_filters():
     print("\nSearch filter encoding")
     # These are the values YouTube itself puts in the sp= parameter, so they
@@ -321,6 +382,23 @@ PAGES = {
         [("Skool", "skool.com/testcommunity",
           "https://www.youtube.com/redirect?q=https%3A%2F%2Fwww.skool.com%2Ftestcommunity")],
     ),
+    # In the subscriber band but has not posted in over a year.
+    "/@lazycreator/about": youtube_about_html(
+        "Lazy Creator", "45K subscribers", [], email=False
+    ),
+
+    # Videos tabs. 13 uploads over 90 days reads as weekly.
+    "/@testcreator/videos": videos_tab_html(
+        [f"{d} days ago" for d in range(2, 92, 7)]
+    ),
+    "/@plaincreator/videos": videos_tab_html(
+        ["1 month ago", "2 months ago", "3 months ago"]
+    ),
+    "/@nosubs/videos": videos_tab_html(["5 days ago", "1 month ago", "2 months ago"]),
+    "/@skoolcreator/videos": videos_tab_html(
+        [f"{d} days ago" for d in range(1, 90, 6)]
+    ),
+    "/@lazycreator/videos": videos_tab_html(["2 years ago", "3 years ago"]),
 }
 
 
@@ -331,6 +409,7 @@ SEARCH_HTML = """<!DOCTYPE html><html><body>
 <a href="/@plaincreator">Plain Creator</a>
 <a href="/results?search_query=other">Related search</a>
 <a href="/@skoolcreator">Skool Creator</a>
+<a href="/@lazycreator">Lazy Creator</a>
 </body></html>"""
 
 
@@ -451,6 +530,7 @@ def test_discovery_end_to_end():
             '--output', out_path, '--save-discovered', list_path,
             '--scrolls', '1', '--concurrency', '2', '--delay', '0',
             '--min-subscribers', '10000', '--max-subscribers', '200000',
+            '--require-cadence', 'monthly',
             '--instagram-state', '/nonexistent.json']
     if chrome:
         argv += ['--executable-path', chrome]
@@ -466,22 +546,30 @@ def test_discovery_end_to_end():
 
     with open(list_path) as fh:
         discovered = [line.strip() for line in fh if line.strip()]
-    check("discovered 3 channels (video/search links ignored)", len(discovered), 3)
+    check("discovered 4 channels (video/search links ignored)", len(discovered), 4)
 
     with open(out_path, newline='') as fh:
         rows = list(csv.DictReader(fh))
-    check("scraped every discovered channel", len(rows), 3)
+    check("scraped every discovered channel", len(rows), 4)
 
     by_name = {r['Display Name']: r for r in rows}
     check("discovered names", sorted(by_name),
-          ["Plain Creator", "Skool Creator", "Test Creator"])
+          ["Lazy Creator", "Plain Creator", "Skool Creator", "Test Creator"])
 
     # The 10k-200k band: 12.5K is in, 8,432 is under, 1.2M is over.
-    check("12.5K in range", by_name['Skool Creator']['Status'], "ok")
+    check("12.5K in range and active", by_name['Skool Creator']['Status'], "ok")
     check("8,432 under range",
           by_name['Plain Creator']['Status'], "below_min_subscribers")
     check("1.2M over range",
           by_name['Test Creator']['Status'], "above_max_subscribers")
+
+    # In the band, but two years since the last upload.
+    check("dormant channel rejected",
+          by_name['Lazy Creator']['Status'], "cadence_dormant")
+    check("dormant cadence recorded", by_name['Lazy Creator']['Cadence'], "dormant")
+
+    check("weekly cadence recorded", by_name['Skool Creator']['Cadence'], "weekly")
+    check("uploads in 90d", by_name['Skool Creator']['Uploads (90d)'], "15")
 
 
 def main():
@@ -489,6 +577,7 @@ def main():
     test_urls()
     test_extraction()
     test_profile_regexes()
+    test_upload_cadence()
     test_search_filters()
     test_channel_hrefs()
     test_terms()

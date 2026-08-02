@@ -328,6 +328,160 @@ def links_from_page(html, data, keyword):
     return found
 
 
+# ============================================================================
+# UPLOAD CADENCE
+#
+# The Videos tab dates each upload relatively ("3 weeks ago"), so cadence is
+# measured to the nearest bucket rather than to the day. That is precise enough
+# to separate a weekly channel from a dormant one, which is what matters here.
+# ============================================================================
+
+_RELATIVE_AGE_RE = re.compile(
+    r'(\d+)\s*(second|minute|hour|day|week|month|year)s?\s+ago', re.IGNORECASE
+)
+
+_UNIT_DAYS = {
+    'second': 1 / 86400,
+    'minute': 1 / 1440,
+    'hour': 1 / 24,
+    'day': 1.0,
+    'week': 7.0,
+    'month': 30.44,
+    'year': 365.25,
+}
+
+
+def parse_relative_age(text):
+    """'3 weeks ago' -> 21.0 days. Returns None if there is no relative date."""
+    if not text:
+        return None
+
+    match = _RELATIVE_AGE_RE.search(text)
+    if not match:
+        return None
+
+    return int(match.group(1)) * _UNIT_DAYS[match.group(2).lower()]
+
+
+def walk_objects(node):
+    """Yield every dict anywhere inside a nested JSON structure."""
+    stack = [node]
+
+    while stack:
+        value = stack.pop()
+        if isinstance(value, dict):
+            yield value
+            stack.extend(value.values())
+        elif isinstance(value, list):
+            stack.extend(value)
+
+
+def _text_of(field):
+    """Pull the string out of YouTube's simpleText / runs text wrappers."""
+    if isinstance(field, str):
+        return field
+    if isinstance(field, dict):
+        if isinstance(field.get('simpleText'), str):
+            return field['simpleText']
+        runs = field.get('runs')
+        if isinstance(runs, list):
+            return ''.join(
+                run.get('text', '') for run in runs if isinstance(run, dict)
+            )
+    return None
+
+
+def video_ages_from_data(data):
+    """Ages in days of each video on a channel's Videos tab, newest first."""
+    if not data:
+        return []
+
+    # Keyed by video id so the same entry appearing twice in the payload
+    # is not counted as two uploads.
+    ages = {}
+
+    for obj in walk_objects(data):
+        video_id = obj.get('videoId')
+        if not isinstance(video_id, str) or video_id in ages:
+            continue
+
+        age = parse_relative_age(_text_of(obj.get('publishedTimeText')))
+        if age is not None:
+            ages[video_id] = age
+
+    return sorted(ages.values())
+
+
+CADENCE_MIN_UPLOADS = {'weekly': 10, 'biweekly': 5, 'monthly': 2}
+
+
+def classify_cadence(ages):
+    """
+    Describe how consistently a channel uploads.
+
+    Returns (label, last_upload_days, uploads_in_90_days). Counting uploads in a
+    90-day window is used rather than averaging gaps, because the relative dates
+    collapse into coarse buckets and gap averages swing wildly on small samples.
+    """
+    if not ages:
+        return 'unknown', None, 0
+
+    last = ages[0]
+    uploads_90 = sum(1 for age in ages if age <= 90)
+
+    if last > 180:
+        label = 'dormant'
+    elif last > 90:
+        label = 'inactive'
+    elif uploads_90 >= CADENCE_MIN_UPLOADS['weekly']:
+        label = 'weekly'
+    elif uploads_90 >= CADENCE_MIN_UPLOADS['biweekly']:
+        label = 'biweekly'
+    elif uploads_90 >= CADENCE_MIN_UPLOADS['monthly']:
+        label = 'monthly'
+    else:
+        label = 'sporadic'
+
+    return label, round(last), uploads_90
+
+
+CADENCE_RANK = {
+    'weekly': 4, 'biweekly': 3, 'monthly': 2,
+    'sporadic': 1, 'inactive': 0, 'dormant': 0, 'unknown': 0,
+}
+
+
+def meets_cadence(label, required):
+    """Is `label` at least as consistent as `required`?"""
+    if not required:
+        return True
+    return CADENCE_RANK.get(label, 0) >= CADENCE_RANK.get(required, 0)
+
+
+async def scrape_uploads(page, channel_url):
+    """Load a channel's Videos tab and measure its upload cadence."""
+    videos_url = channel_about_url(channel_url).rsplit('/about', 1)[0] + '/videos'
+
+    try:
+        await page.goto(videos_url, wait_until='domcontentloaded', timeout=25000)
+        html = await page.content()
+    except Exception as exc:
+        print(f"         Videos tab failed: {exc}")
+        return 'unknown', None, 0, 0
+
+    data = extract_json_blob(html, 'ytInitialData')
+    ages = video_ages_from_data(data)
+    label, last, uploads_90 = classify_cadence(ages)
+
+    if ages:
+        print(f"         Uploads: {label}, last {last}d ago, "
+              f"{uploads_90} in 90d (sampled {len(ages)})")
+    else:
+        print("         Uploads: no dated videos found")
+
+    return label, last, uploads_90, len(ages)
+
+
 _EMAIL_HINTS = (
     'sign in to see email address',
     'sign in to view email address',
@@ -486,9 +640,13 @@ async def scrape_skool(page, skool_url):
     return name, member_count, member_text
 
 
-async def scrape_channel(yt_page, ig_page, skool_page, channel_url):
+async def scrape_channel(yt_page, ig_page, skool_page, channel_url, check_uploads=True):
     """Scrape one YouTube channel's About page and its linked profiles."""
     result = {
+        'cadence': None,
+        'last_upload_days': None,
+        'uploads_90d': None,
+        'videos_sampled': 0,
         'channel_name': None,
         'subscriber_text': None,
         'subscriber_count': None,
@@ -543,6 +701,12 @@ async def scrape_channel(yt_page, ig_page, skool_page, channel_url):
                 result['instagram_followers'] = followers
                 result['instagram_follower_count'] = parse_followers(followers)
                 print(f"         Instagram followers: {followers}")
+
+    # Done with the About page, so the same tab can move to the Videos tab.
+    if check_uploads:
+        (result['cadence'], result['last_upload_days'],
+         result['uploads_90d'], result['videos_sampled']) = await scrape_uploads(
+            yt_page, channel_url)
 
     skool_links = links_from_page(html, data, 'skool.com')
     if skool_links:
@@ -815,6 +979,7 @@ def read_input(path):
 
 CSV_HEADER = [
     '#', 'Display Name', 'Email', 'YT Channel', 'YT Subscribers',
+    'Cadence', 'Last Upload (days)', 'Uploads (90d)',
     'IG Account', 'IG Followers', 'Skool Community', 'Skool Link',
     '# of Members', 'Status',
 ]
@@ -867,6 +1032,10 @@ class ResultWriter:
                 'Email in YouTube Bio' if result.get('has_email') else '',
                 channel_url,
                 result.get('subscriber_count') or '',
+                result.get('cadence') or '',
+                '' if result.get('last_upload_days') is None
+                   else result['last_upload_days'],
+                '' if result.get('uploads_90d') is None else result['uploads_90d'],
                 result.get('instagram') or '',
                 result.get('instagram_follower_count') or '',
                 result.get('skool_name') or '',
@@ -885,7 +1054,8 @@ class ResultWriter:
 # ============================================================================
 
 async def worker(name, queue, writer, browser, instagram_state, delay,
-                 min_subscribers=0, max_subscribers=0):
+                 min_subscribers=0, max_subscribers=0,
+                 check_uploads=True, require_cadence=None):
     """Own a set of pages and drain the shared queue."""
     yt_context = await new_context(browser)
     yt_page = await yt_context.new_page()
@@ -909,7 +1079,8 @@ async def worker(name, queue, writer, browser, instagram_state, delay,
             print(f"   [{name}] ({index}/{total}) {channel_url}")
 
             try:
-                result = await scrape_channel(yt_page, ig_page, skool_page, channel_url)
+                result = await scrape_channel(yt_page, ig_page, skool_page,
+                                              channel_url, check_uploads)
             except Exception as exc:
                 print(f"         Unhandled error: {exc}")
                 result = {'status': f"error: {type(exc).__name__}"}
@@ -924,6 +1095,15 @@ async def worker(name, queue, writer, browser, instagram_state, delay,
                 elif max_subscribers and count > max_subscribers:
                     result['status'] = 'above_max_subscribers'
                     print(f"         Above range ({count:,} > {max_subscribers:,})")
+
+            # Cadence is checked only once a channel has cleared the size band,
+            # so the status column names the first reason it was set aside.
+            if result.get('status') == 'ok' and require_cadence:
+                label = result.get('cadence')
+                if not meets_cadence(label, require_cadence):
+                    result['status'] = f"cadence_{label or 'unknown'}"
+                    print(f"         Cadence '{label}' below required "
+                          f"'{require_cadence}'")
 
             await writer.write(channel_url, result)
 
@@ -1023,7 +1203,8 @@ async def run(args):
 
         await asyncio.gather(*[
             worker(f"w{i + 1}", queue, writer, browser, instagram_state,
-                   args.delay, args.min_subscribers, args.max_subscribers)
+                   args.delay, args.min_subscribers, args.max_subscribers,
+                   not args.skip_uploads, args.require_cadence)
             for i in range(concurrency)
         ])
 
@@ -1079,6 +1260,10 @@ def parse_args(argv=None):
 
     parser.add_argument('--output', default='youtube_scraped_details.csv',
                         help='Where to write results (default: youtube_scraped_details.csv)')
+    parser.add_argument('--require-cadence', choices=['weekly', 'biweekly', 'monthly'],
+                        help='Flag channels that upload less consistently than this')
+    parser.add_argument('--skip-uploads', action='store_true',
+                        help='Do not load the Videos tab (faster, no cadence data)')
     parser.add_argument('--concurrency', type=int, default=3,
                         help='Channels scraped in parallel (default: 3)')
     parser.add_argument('--limit', type=int, default=0,

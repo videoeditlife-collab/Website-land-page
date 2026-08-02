@@ -76,6 +76,7 @@ Discovery flags:
 | `--per-term` | `25` | Max channels kept per term |
 | `--min-subscribers` | `0` | Flags smaller channels rather than dropping them |
 | `--max-subscribers` | `0` | Flags larger channels rather than dropping them |
+| `--require-cadence` | — | `weekly`, `biweekly` or `monthly` upload consistency |
 | `--save-discovered` | — | Write the discovered URL list to a file |
 
 `--duration long` is the one that matters for long-form: it maps to YouTube's
@@ -142,13 +143,45 @@ keeps everything scraped so far:
 python youtube_scraper.py --input youtube_filtered.csv --resume
 ```
 
+## Upload cadence
+
+Every channel's Videos tab is checked so you can tell an active creator from an
+abandoned one. Three columns come out of it: `Cadence`, `Last Upload (days)`
+and `Uploads (90d)`.
+
+| Label | Meaning |
+|---|---|
+| `weekly` | 10+ uploads in the last 90 days |
+| `biweekly` | 5–9 in the last 90 days |
+| `monthly` | 2–4 in the last 90 days |
+| `sporadic` | 1 or fewer in the last 90 days |
+| `inactive` | Nothing for 90–180 days |
+| `dormant` | Nothing for over 180 days |
+| `unknown` | No dated videos found |
+
+`--require-cadence weekly|biweekly|monthly` flags anything less consistent as
+`cadence_<label>`. It's applied after the subscriber band, so `Status` names the
+first reason a channel was set aside.
+
+```bash
+python youtube_scraper.py --input holiday_seed_channels.csv \
+  --min-subscribers 10000 --max-subscribers 200000 \
+  --require-cadence monthly
+```
+
+Two caveats. YouTube dates uploads relatively ("3 weeks ago"), so cadence is
+measured to the nearest bucket, not the day — reliable for separating weekly
+from dormant, not for exact intervals. And this loads a second page per channel;
+`--skip-uploads` turns it off if you want a faster first pass.
+
 ## Output columns
 
-`#`, `Display Name`, `Email`, `YT Channel`, `YT Subscribers`, `IG Account`,
-`IG Followers`, `Skool Community`, `Skool Link`, `# of Members`, `Status`
+`#`, `Display Name`, `Email`, `YT Channel`, `YT Subscribers`, `Cadence`,
+`Last Upload (days)`, `Uploads (90d)`, `IG Account`, `IG Followers`,
+`Skool Community`, `Skool Link`, `# of Members`, `Status`
 
 `Status` is `ok`, `below_min_subscribers`, `above_max_subscribers`,
-`no_subscriber_count` (page loaded but no count found — usually a channel that
+`cadence_<label>`, `no_subscriber_count` (page loaded but no count found — usually a channel that
 hides it), or `error: <Type>`.
 
 Rows outside the subscriber range are written and flagged rather than dropped,
@@ -161,10 +194,10 @@ so moving the bounds later does not mean scraping everything again. Filter on
 python test_scraper.py
 ```
 
-79 assertions covering the parsing layer, the search-filter encoding, and two
-end-to-end runs through a real browser against locally served fixture pages —
-one scraping a URL list, one going search → discovery → scrape. No network
-access required.
+106 assertions covering the parsing layer, cadence classification, the
+search-filter encoding, and two end-to-end runs through a real browser against
+locally served fixture pages — one scraping a URL list, one going search →
+discovery → scrape. No network access required.
 
 ## Notes
 
