@@ -13,10 +13,9 @@ Scraping 14 channels with 2 workers
          Subscribers: 101K subscribers (101000)
          Email listed: yes
          Instagram: https://www.instagram.com/holidayexpert/
-         Uploads: no dated videos found
+         Uploads: inactive, last 122d ago, 0 in 90d (sampled 27)
          Below range (478 < 10,000)
-         Uploads: no dated videos found
-         Cadence 'unknown' below required 'monthly'
+         Uploads: monthly, last 14d ago, 2 in 90d (sampled 30)
    [w2] (3/14) https://www.youtube.com/channel/UCauClR6XOj9ePThlSVWa37A
    [w1] (4/14) https://www.youtube.com/@holidayexpertscrete
          Name: Honest Holiday Review
@@ -25,24 +24,24 @@ Scraping 14 channels with 2 workers
          Name: HOLIDAY EXPERTS
          Subscribers: 3.78K subscribers (3780)
          Email listed: yes
-         Uploads: no dated videos found
-         Below range (3,780 < 10,000)
-         Uploads: no dated videos found
+         Uploads: biweekly, last 0d ago, 8 in 90d (sampled 30)
          Below range (2,250 < 10,000)
-   [w1] (5/14) https://www.youtube.com/channel/UChwu4PBz5szHzZsQe9lPfHw
-   [w2] (6/14) https://www.youtube.com/allinclusivereviews
+         Uploads: weekly, last 1d ago, 14 in 90d (sampled 30)
+         Below range (3,780 < 10,000)
+   [w2] (5/14) https://www.youtube.com/channel/UChwu4PBz5szHzZsQe9lPfHw
+   [w1] (6/14) https://www.youtube.com/allinclusivereviews
          Name: TRAVEL BOX B2B HOLIDAY EXPERT
          Subscribers: 17 subscribers (17)
          Email listed: no
          Name: All Inclusive Reviews
          Subscribers: 14.1K subscribers (14100)
          Email listed: yes
-         Uploads: no dated videos found
+         Uploads: inactive, last 152d ago, 0 in 90d (sampled 6)
          Below range (17 < 10,000)
-         Uploads: no dated videos found
-         Cadence 'unknown' below required 'monthly'
-   [w1] (7/14) https://www.youtube.com/channel/UCm-MbeXbYivVMGFrT8E2oNQ
-   [w2] (8/14) https://www.youtube.com/channel/UCZOL4SHrFofhaBpxhwsJJCw
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 30)
+         Cadence 'sporadic' below required 'monthly'
+   [w2] (7/14) https://www.youtube.com/channel/UCm-MbeXbYivVMGFrT8E2oNQ
+   [w1] (8/14) https://www.youtube.com/channel/UCZOL4SHrFofhaBpxhwsJJCw
          Name: Benidorm Enthusiast
          Subscribers: 80.9K subscribers (80900)
          Email listed: no
@@ -50,47 +49,42 @@ Scraping 14 channels with 2 workers
          Subscribers: 25.8K subscribers (25800)
          Email listed: yes
          Instagram: https://www.instagram.com/benidormbyana/
-         Uploads: no dated videos found
-         Cadence 'unknown' below required 'monthly'
-   [w1] (9/14) https://www.youtube.com/@benidormandbeyond2445
-         Uploads: no dated videos found
-         Cadence 'unknown' below required 'monthly'
-   [w2] (10/14) https://www.youtube.com/channel/UCk-EPn3z3XT7DBrJseqMknQ
+         Uploads: weekly, last 1d ago, 20 in 90d (sampled 30)
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+   [w2] (9/14) https://www.youtube.com/@benidormandbeyond2445
+   [w1] (10/14) https://www.youtube.com/channel/UCk-EPn3z3XT7DBrJseqMknQ
          Name: BENIDORM AND BEYOND
          Subscribers: 12.1K subscribers (12100)
          Email listed: no
-         Uploads: no dated videos found
-         Cadence 'unknown' below required 'monthly'
          Name: Vlog Benidorm
          Subscribers: not found
          Email listed: no
-   [w1] (11/14) https://www.youtube.com/channel/UCVXrSJ-_jr3jkJjsgcZFocw
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
          Uploads: no dated videos found
-   [w2] (12/14) https://www.youtube.com/channel/UCC-y15yM_QugIyqxW2mOIUQ
+   [w2] (11/14) https://www.youtube.com/channel/UCVXrSJ-_jr3jkJjsgcZFocw
+   [w1] (12/14) https://www.youtube.com/channel/UCC-y15yM_QugIyqxW2mOIUQ
          Name: Benidorm Channel
          Subscribers: 10.9K subscribers (10900)
          Email listed: yes
          Instagram: https://www.instagram.com/benidormchannel
-         Uploads: no dated videos found
-         Cadence 'unknown' below required 'monthly'
          Name: BENIDORM TODAY
          Subscribers: 8.9K subscribers (8900)
          Email listed: no
-   [w1] (13/14) https://www.youtube.com/channel/UCpnRH1jL_EKoVv5VWoyiB0A
-         Uploads: no dated videos found
+         Uploads: weekly, last 11d ago, 25 in 90d (sampled 30)
+         Uploads: dormant, last 183d ago, 0 in 90d (sampled 30)
          Below range (8,900 < 10,000)
+   [w2] (13/14) https://www.youtube.com/channel/UCpnRH1jL_EKoVv5VWoyiB0A
+   [w1] (14/14) https://www.youtube.com/c/FamilyTravelVlog
          Name: Paul and Carole Love to Travel
          Subscribers: 33.6K subscribers (33600)
          Email listed: yes
          Instagram: https://www.instagram.com/paulandcarole/
-   [w2] (14/14) https://www.youtube.com/c/FamilyTravelVlog
          Name: Family Travel Vlog
          Subscribers: 1.3K subscribers (1300)
          Email listed: no
          Instagram: https://www.instagram.com/familytravelvlog/
-         Uploads: no dated videos found
-         Cadence 'unknown' below required 'monthly'
-         Uploads: no dated videos found
+         Uploads: weekly, last 2d ago, 21 in 90d (sampled 30)
+         Uploads: inactive, last 152d ago, 0 in 90d (sampled 30)
          Below range (1,300 < 10,000)
 
 Done. Wrote 14 rows to results.csv
