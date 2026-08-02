@@ -1,0 +1,96 @@
+Loaded 14 channels from holiday_seed_channels.csv
+   Instagram state file not found: instagram_storage_state.json - Instagram scraping disabled
+Started chromium (headless)
+
+Scraping 14 channels with 2 workers
+
+   [w1] (1/14) https://www.youtube.com/c/CheapHolidayExpert
+   [w2] (2/14) https://www.youtube.com/channel/UCD6Fz9CH8jS7xlnqvw2Eqdg
+         Name: MMT Holiday Expert
+         Subscribers: 478 subscribers (478)
+         Email listed: no
+         Name: Holiday Expert
+         Subscribers: 101K subscribers (101000)
+         Email listed: yes
+         Instagram: https://www.instagram.com/holidayexpert/
+         Uploads: no dated videos found
+         Below range (478 < 10,000)
+         Uploads: no dated videos found
+         Cadence 'unknown' below required 'monthly'
+   [w2] (3/14) https://www.youtube.com/channel/UCauClR6XOj9ePThlSVWa37A
+   [w1] (4/14) https://www.youtube.com/@holidayexpertscrete
+         Name: Honest Holiday Review
+         Subscribers: 2.25K subscribers (2250)
+         Email listed: no
+         Name: HOLIDAY EXPERTS
+         Subscribers: 3.78K subscribers (3780)
+         Email listed: yes
+         Uploads: no dated videos found
+         Below range (2,250 < 10,000)
+         Uploads: no dated videos found
+         Below range (3,780 < 10,000)
+   [w2] (5/14) https://www.youtube.com/channel/UChwu4PBz5szHzZsQe9lPfHw
+   [w1] (6/14) https://www.youtube.com/allinclusivereviews
+         Name: TRAVEL BOX B2B HOLIDAY EXPERT
+         Subscribers: 17 subscribers (17)
+         Email listed: no
+         Name: All Inclusive Reviews
+         Subscribers: 14.1K subscribers (14100)
+         Email listed: yes
+         Uploads: no dated videos found
+         Below range (17 < 10,000)
+         Uploads: no dated videos found
+         Cadence 'unknown' below required 'monthly'
+   [w2] (7/14) https://www.youtube.com/channel/UCm-MbeXbYivVMGFrT8E2oNQ
+   [w1] (8/14) https://www.youtube.com/channel/UCZOL4SHrFofhaBpxhwsJJCw
+         Name: Benidorm Enthusiast
+         Subscribers: 80.9K subscribers (80900)
+         Email listed: no
+         Name: Benidorm by Ana
+         Subscribers: 25.8K subscribers (25800)
+         Email listed: yes
+         Instagram: https://www.instagram.com/benidormbyana/
+         Uploads: no dated videos found
+         Cadence 'unknown' below required 'monthly'
+   [w2] (9/14) https://www.youtube.com/@benidormandbeyond2445
+         Uploads: no dated videos found
+         Cadence 'unknown' below required 'monthly'
+   [w1] (10/14) https://www.youtube.com/channel/UCk-EPn3z3XT7DBrJseqMknQ
+         Name: BENIDORM AND BEYOND
+         Subscribers: 12.1K subscribers (12100)
+         Email listed: no
+         Uploads: no dated videos found
+         Cadence 'unknown' below required 'monthly'
+         Name: Vlog Benidorm
+         Subscribers: not found
+         Email listed: no
+   [w2] (11/14) https://www.youtube.com/channel/UCVXrSJ-_jr3jkJjsgcZFocw
+         Uploads: no dated videos found
+         Name: Benidorm Channel
+         Subscribers: 10.9K subscribers (10900)
+         Email listed: yes
+         Instagram: https://www.instagram.com/benidormchannel
+   [w1] (12/14) https://www.youtube.com/channel/UCC-y15yM_QugIyqxW2mOIUQ
+         Uploads: no dated videos found
+         Cadence 'unknown' below required 'monthly'
+         Name: BENIDORM TODAY
+         Subscribers: 8.9K subscribers (8900)
+         Email listed: no
+   [w2] (13/14) https://www.youtube.com/channel/UCpnRH1jL_EKoVv5VWoyiB0A
+         Uploads: no dated videos found
+         Below range (8,900 < 10,000)
+         Name: Paul and Carole Love to Travel
+         Subscribers: 33.6K subscribers (33600)
+         Email listed: yes
+         Instagram: https://www.instagram.com/paulandcarole/
+   [w1] (14/14) https://www.youtube.com/c/FamilyTravelVlog
+         Name: Family Travel Vlog
+         Subscribers: 1.3K subscribers (1300)
+         Email listed: no
+         Instagram: https://www.instagram.com/familytravelvlog/
+         Uploads: no dated videos found
+         Cadence 'unknown' below required 'monthly'
+         Uploads: no dated videos found
+         Below range (1,300 < 10,000)
+
+Done. Wrote 14 rows to results.csv
