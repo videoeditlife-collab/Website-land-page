@@ -1,0 +1,43 @@
+Loading https://www.youtube.com/@CheapHolidayExpert/videos
+
+page bytes: 1614422
+  ytInitialData              occurrences in html: 2
+  lockupViewModel            occurrences in html: 31
+  videoRenderer              occurrences in html: 0
+  richItemRenderer           occurrences in html: 31
+  publishedTimeText          occurrences in html: 0
+  contentId                  occurrences in html: 30
+  lockupMetadataViewModel    occurrences in html: 31
+  metadataParts              occurrences in html: 32
+
+ytInitialData parsed: True
+
+keys whose value contains a relative date:
+  accessibilityLabel             30
+  content                        30
+
+id-ish keys present:
+  videoId                        210
+  contentId                      30
+
+sample objects holding a date:
+  key='accessibilityLabel' value='7 years ago'
+    sibling keys: ['accessibilityLabel', 'text']
+  key='content' value='7 years ago'
+    sibling keys: ['content']
+  key='accessibilityLabel' value='6 years ago'
+    sibling keys: ['accessibilityLabel', 'text']
+  key='content' value='6 years ago'
+    sibling keys: ['content']
+  key='accessibilityLabel' value='6 years ago'
+    sibling keys: ['accessibilityLabel', 'text']
+  key='content' value='6 years ago'
+    sibling keys: ['content']
+  key='accessibilityLabel' value='6 years ago'
+    sibling keys: ['accessibilityLabel', 'text']
+  key='content' value='6 years ago'
+    sibling keys: ['content']
+
+most common shapes of objects holding a date:
+    30  ['accessibilityLabel', 'text']
+    30  ['content']
