@@ -97,6 +97,14 @@ jobs:
           # Keep going on failure so a partial CSV is still published.
           python youtube_scraper.py $ARGS 2>&1 | tee run.log || true
 
+      - name: Inspect channels for shared links or affiliates
+        working-directory: scraper
+        continue-on-error: true
+        run: |
+          python inspect_channels.py results/holiday_channels.csv \
+            > inspect.json 2> inspect.err || true
+          tail -40 inspect.err || true
+
       - name: Show results
         working-directory: scraper
         run: |
@@ -112,6 +120,7 @@ jobs:
           cp scraper/results.csv scraper/results/holiday_channels.csv 2>/dev/null || true
           cp scraper/run.log scraper/results/run.log 2>/dev/null || true
           cp scraper/diagnose.log scraper/results/diagnose.log 2>/dev/null || true
+          cp scraper/inspect.json scraper/results/inspect.json 2>/dev/null || true
           cp scraper/discovered.txt scraper/results/discovered.txt 2>/dev/null || true
           git add -f scraper/results/ || true
           if git diff --staged --quiet; then
