@@ -380,6 +380,27 @@ def test_channel_hrefs():
     check("empty input", channel_urls_from_hrefs([]), [])
 
 
+def test_output_roundtrip():
+    print("\nOutput CSV reads back as input")
+    tmpdir = tempfile.mkdtemp()
+    path = os.path.join(tmpdir, 'results.csv')
+
+    from youtube_scraper import CSV_HEADER, read_input
+    with open(path, 'w', newline='') as fh:
+        writer = csv.writer(fh)
+        writer.writerow(CSV_HEADER)
+        row = [''] * len(CSV_HEADER)
+        row[CSV_HEADER.index('YT Channel')] = 'https://www.youtube.com/@one'
+        writer.writerow(row)
+        row2 = [''] * len(CSV_HEADER)
+        row2[CSV_HEADER.index('YT Channel')] = 'https://www.youtube.com/@two'
+        writer.writerow(row2)
+
+    check("results file reads back",
+          read_input(path),
+          ['https://www.youtube.com/@one', 'https://www.youtube.com/@two'])
+
+
 def test_terms():
     print("\nSearch term input")
     tmpdir = tempfile.mkdtemp()
@@ -624,6 +645,7 @@ def main():
     test_upload_cadence()
     test_search_filters()
     test_channel_hrefs()
+    test_output_roundtrip()
     test_terms()
     test_cli()
     test_end_to_end()

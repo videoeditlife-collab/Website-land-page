@@ -975,7 +975,10 @@ async def run_discovery(browser, terms, args):
 # INPUT / OUTPUT
 # ============================================================================
 
-URL_COLUMNS = ('Channel URL', 'channel_url', 'url', 'URL', 'Url', 'channel', 'Channel')
+# 'YT Channel' is this scraper's own output column, so a results file can be fed
+# straight back in as input.
+URL_COLUMNS = ('Channel URL', 'YT Channel', 'channel_url', 'url', 'URL', 'Url',
+               'channel', 'Channel')
 
 
 def read_input(path):
