@@ -1,2 +1,262 @@
-No URL column in results/holiday_channels.csv. Looked for: Channel URL, channel_url, url, URL, Url, channel, Channel
-Columns present: #, Display Name, Email, YT Channel, YT Subscribers, Cadence, Last Upload (days), Uploads (90d), IG Account, IG Followers, Skool Community, Skool Link, # of Members, Status
+Loaded 14 channels from results/holiday_channels.csv
+[
+  {
+    "channel": "https://www.youtube.com/c/CheapHolidayExpert",
+    "name": "Holiday Expert",
+    "country": "United Kingdom",
+    "joined": null,
+    "views": "35,096,621 views",
+    "canonical": "http://www.youtube.com/@CheapHolidayExpert",
+    "description": "My name's Chelsea and I‘m a holiday expert!\n\nSubscribe to my channel for sit down guides and travel vlogs that will showcase amazing destinations, how drunk you can get off the local beer, and help you save money on your next getaway.\n\nAlready I’ve helped thousands of followers discover how to get free hotel upgrades, book flights for under a fiver and even stay in luxury accommodation for absolutely nothing.",
+    "links": [
+      {
+        "title": "",
+        "url": "https://holidayexpertshow.komi.io/"
+      },
+      {
+        "title": "",
+        "url": "http://holidayexpert.com/"
+      },
+      {
+        "title": "",
+        "url": "https://www.facebook.com/holidayexpert/"
+      },
+      {
+        "title": "",
+        "url": "https://twitter.com/cheapholidayexp"
+      },
+      {
+        "title": "",
+        "url": "https://www.instagram.com/holidayexpert/"
+      }
+    ],
+    "affiliate_links": []
+  },
+  {
+    "channel": "https://www.youtube.com/channel/UCauClR6XOj9ePThlSVWa37A",
+    "name": "Honest Holiday Review",
+    "country": "United States",
+    "joined": null,
+    "views": "1,471,809 views",
+    "canonical": "http://www.youtube.com/@honestholidayreview",
+    "description": "This channel is all about helping you make better decisions while picking your next vacation or travel spot. We love vacating and traveling worldwide, and we have been scored a couple of times. We don't want that to happen to you.\n\nWe will only tell the truth about a particular place and you will be able to see the place with a mobile camera, up close with no filters or any other alteration. Here you'll find first-person videos of hotels, restaurants (food), shopping areas, bars, beaches, amusement parks, ancient cities, landmarks, and all sorts of tourist attractions worldwide. \n\nAlso, I will",
+    "links": [],
+    "affiliate_links": []
+  },
+  {
+    "channel": "https://www.youtube.com/channel/UCD6Fz9CH8jS7xlnqvw2Eqdg",
+    "name": "MMT Holiday Expert",
+    "country": null,
+    "joined": null,
+    "views": "64,378 views",
+    "canonical": "http://www.youtube.com/@mmtengagement",
+    "description": "Welcome to our YouTube channel, where we are passionate about travel and helping you discover the world. As the Holiday Pro, we offer practical tips, advice, and reviews of some of the best destinations around the globe also you can be a part of our life at MMT. Whether you are an adventure seeker, luxury traveler, or just looking for some inspiration, our channel is the perfect place to start. Subscribe now to join our community of travel enthusiasts and start exploring the world with us!",
+    "links": [],
+    "affiliate_links": []
+  },
+  {
+    "channel": "https://www.youtube.com/@holidayexpertscrete",
+    "name": "HOLIDAY EXPERTS",
+    "country": "Greece",
+    "joined": null,
+    "views": "3,196,670 views",
+    "canonical": "http://www.youtube.com/@holidayexpertscrete",
+    "description": "CRETE TRAVEL HOLIDAYS TECHNOLOGY\n \nholidayexpertscrete@gmail.com",
+    "links": [
+      {
+        "title": "",
+        "url": "https://www.facebook.com/Holiday-Experts-2285727601693107"
+      }
+    ],
+    "affiliate_links": []
+  },
+  {
+    "channel": "https://www.youtube.com/channel/UChwu4PBz5szHzZsQe9lPfHw",
+    "name": "TRAVEL BOX B2B HOLIDAY EXPERT",
+    "country": null,
+    "joined": null,
+    "views": "351 views",
+    "canonical": "http://www.youtube.com/@travelbox-l9f",
+    "description": "",
+    "links": [],
+    "affiliate_links": []
+  },
+  {
+    "channel": "https://www.youtube.com/allinclusivereviews",
+    "name": "All Inclusive Reviews",
+    "country": "United States",
+    "joined": null,
+    "views": "1,065,358 views",
+    "canonical": "http://www.youtube.com/@AllInclusiveReviews",
+    "description": "Your source for stunning in-depth cinematic reviews of All Inclusive Resorts.  We take the guesswork out of deciding on your next getaway!",
+    "links": [],
+    "affiliate_links": []
+  },
+  {
+    "channel": "https://www.youtube.com/channel/UCm-MbeXbYivVMGFrT8E2oNQ",
+    "name": "Benidorm Enthusiast",
+    "country": null,
+    "joined": null,
+    "views": "30,050,547 views",
+    "canonical": "http://www.youtube.com/@benidormstuff3337",
+    "description": "Benidorm is located on the Costa Blanca, Spain. Famous for it's beaches, bars, restaurants, nightlife, entertainment, hotels, sightseeing, party atmosphere, excursions, tours and sun. It is not only one of the top holiday destinations in Spain but one of the best tourist hotspots in the whole of Europe. British and Irish tourists love to travel to Benidorm, being one of the best resorts for a package holiday, but it is also well loved by many European travellers, and of course the Spanish themselves. It is an all year round holiday resort, the good weather means there is something to offer vis",
+    "links": [],
+    "affiliate_links": []
+  },
+  {
+    "channel": "https://www.youtube.com/channel/UCZOL4SHrFofhaBpxhwsJJCw",
+    "name": "Benidorm by Ana",
+    "country": "Spain",
+    "joined": null,
+    "views": "13,257,640 views",
+    "canonical": "http://www.youtube.com/@BenidormbyAna",
+    "description": "Welcome to Benidorm, Costa Blanca and other popular Holiday Destinations in Spain ☀️\n\nDiscover Hotels, best Bars &amp; Restaurants, Holiday Parks, Cities, News Updates &amp; Informative Walking Tours.\n\nHit the SUBSCRIBE button, share our videos with the rest of the world &amp; welcome to Benidorm by Ana Tours family.\n\nSocial Media LINKS:\nInstagram - @benidormbyana\nTikTok - @benidormbyana\nYoutube Vlogs Channel - @emigrarconanavlogs\n\n🌍Planning on living in Spain?🌍\nVisit our EA Migration Consulting website, we will be happy to help you make your dream come true: www.emigrarconana.com\n\n#benidorm #",
+    "links": [
+      {
+        "title": "",
+        "url": "https://www.benidormbyanatours.com"
+      },
+      {
+        "title": "",
+        "url": "https://www.youtube.com/channel/UC7Mt3CBJCDn6ptaTM10iq7Q"
+      },
+      {
+        "title": "",
+        "url": "https://www.instagram.com/benidormbyana/"
+      }
+    ],
+    "affiliate_links": []
+  },
+  {
+    "channel": "https://www.youtube.com/@benidormandbeyond2445",
+    "name": "BENIDORM AND BEYOND",
+    "country": "Spain",
+    "joined": null,
+    "views": "4,391,344 views",
+    "canonical": "http://www.youtube.com/@benidormandbeyond2445",
+    "description": "Benidorm and Beyond *AN ORIGINAL BENIDORM CHANNEL SINCE 2020! * Bringing you a host of informative, unique &amp; personal vlogs from Benidorm, by an English woman who has lived right here in the resort for over 2 decades!\n\nSubscribe to the channel and join me on info-packed street and beachfront walks, take a &quot;fly on the wall&quot; tour around some of the resort's most popular hotels inside and out, as well as keeping up to date with news &amp; updates, and reviews on local cafes, bars, new businesses and more!\n\nAnd if YOU have somewhere that you would particularly like me to cover, just ",
+    "links": [
+      {
+        "title": "",
+        "url": "https://www.buymeacoffee.com/benidormbeyond"
+      }
+    ],
+    "affiliate_links": []
+  },
+  {
+    "channel": "https://www.youtube.com/channel/UCk-EPn3z3XT7DBrJseqMknQ",
+    "name": "Vlog Benidorm",
+    "country": "Pakistan",
+    "joined": null,
+    "views": "41 views",
+    "canonical": "http://www.youtube.com/@Benidorm56",
+    "description": "hi\nwelcome to my youtube channel❤️\nLateste videos daily Subcribe for more fun and enjoyment😆😎😎😎👍",
+    "links": [
+      {
+        "title": "",
+        "url": "https://studio.youtube.com/channel/UCk-EPn3z3XT7DBrJseqMknQ/editing/details"
+      }
+    ],
+    "affiliate_links": []
+  },
+  {
+    "channel": "https://www.youtube.com/channel/UCVXrSJ-_jr3jkJjsgcZFocw",
+    "name": "Benidorm Channel",
+    "country": "Spain",
+    "joined": null,
+    "views": "2,912,280 views",
+    "canonical": "http://www.youtube.com/@BenidormChannel",
+    "description": "Hi! I’m Michael, a Dutch guy who’s been living in Benidorm for three years now, and I’m here to share the best of this amazing place with you. Welcome to the Benidorm Channel!\n\nFrom Levante Beach to the buzzing Benidorm Strip, I take you along as I explore the city’s hotspots, hidden gems, and everything in between. Whether it’s sunny and 30°C or one of those rare rainy days, I’m out filming real walks, local bars, beach life, events, and more – giving you a real feel of Benidorm, just as it is.\n\nSubscribe and join me on my Benidorm journey!\n",
+    "links": [
+      {
+        "title": "",
+        "url": "https://www.tiktok.com/@benidormchannel"
+      },
+      {
+        "title": "",
+        "url": "https://www.instagram.com/benidormchannel"
+      },
+      {
+        "title": "",
+        "url": "https://www.facebook.com/BenidormByMichael"
+      }
+    ],
+    "affiliate_links": []
+  },
+  {
+    "channel": "https://www.youtube.com/channel/UCC-y15yM_QugIyqxW2mOIUQ",
+    "name": "BENIDORM TODAY",
+    "country": null,
+    "joined": null,
+    "views": "6,736,018 views",
+    "canonical": "http://www.youtube.com/@benidormtoday",
+    "description": "Helo Friends! Greetings from Benidorm in Spain! \nEnjoy my walking tour for you from best city in Costa Blanca!\nI try to show for you best places in Benidorm city and nearly.\n\n\nPLEASE SUBSCRIBE, LIKE AND SHARE MY VIDEO\n",
+    "links": [
+      {
+        "title": "",
+        "url": "https://www.buymeacoffee.com/benidormtoday"
+      },
+      {
+        "title": "",
+        "url": "https://cutt.ly/Rg8cMxL"
+      }
+    ],
+    "affiliate_links": []
+  },
+  {
+    "channel": "https://www.youtube.com/channel/UCpnRH1jL_EKoVv5VWoyiB0A",
+    "name": "Paul and Carole Love to Travel",
+    "country": "United Kingdom",
+    "joined": null,
+    "views": "11,131,557 views",
+    "canonical": "http://www.youtube.com/@PaulandCaroleLovetoTravel",
+    "description": "We are a fun loving married couple who love to travel. With 65 countries and 68 cruises completed, our YouTube Channel  is dedicated to inspiring first-time cruisers and seasoned travellers to try something new by publishing new videos every week. Do get in touch at paulandcarolelovetotravel@gmail.com if you would like to work with us.\n\nWe have cruised 68 times, and on our channel, we discuss our ocean and river cruising experiences, produce fun vlogs, informative videos, and show you around the cruise ships and cabins. \n\nAfter visiting 65 countries and staying in diverse types of accommodatio",
+    "links": [
+      {
+        "title": "",
+        "url": "https://www.cameo.com/paulandcarole"
+      },
+      {
+        "title": "",
+        "url": "https://twitter.com/paulandcarole"
+      },
+      {
+        "title": "",
+        "url": "https://www.instagram.com/paulandcarole/"
+      },
+      {
+        "title": "",
+        "url": "https://www.facebook.com/paulandcarolelovetotravel/"
+      },
+      {
+        "title": "",
+        "url": "https://paulandcarolelovetotravel.com"
+      },
+      {
+        "title": "",
+        "url": "https://www.patreon.com/paulandcarolelovetotravel"
+      }
+    ],
+    "affiliate_links": []
+  },
+  {
+    "channel": "https://www.youtube.com/c/FamilyTravelVlog",
+    "name": "Family Travel Vlog",
+    "country": "Australia",
+    "joined": null,
+    "views": "202,158 views",
+    "canonical": "http://www.youtube.com/@FamilyTravelVlog",
+    "description": "Hi and welcome to our channel!  We are the family behind Family Travel Vlog, Dale (aka Dad), Natasha (aka Mum) and our three beautiful, noisy, adventurous girls, Skylar, Kiara and baby Summer.  We are starting this channel as a way to record and share our adventures.  On our channel you will find travel inspiration, family moments and lots of tips based on my experiences.  \n\nThank you to everyone who watches my videos, I would love for you to subscribe and join us as we exploring the world near and far.\n\nS O C I A L   M E D I A \nBLOG http://familytravelvlog.com\nINSTAGRAM https://www.instagram.",
+    "links": [
+      {
+        "title": "",
+        "url": "https://www.pinterest.com.au/familytravelvlog/"
+      },
+      {
+        "title": "",
+        "url": "https://www.instagram.com/familytravelvlog/"
+      }
+    ],
+    "affiliate_links": []
+  }
+]
