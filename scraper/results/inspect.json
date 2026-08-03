@@ -1,5 +1,15 @@
-Loaded 14 channels from results/holiday_channels.csv
 [
+  {
+    "channel": "https://www.youtube.com/channel/UCD6Fz9CH8jS7xlnqvw2Eqdg",
+    "name": "MMT Holiday Expert",
+    "country": null,
+    "joined": null,
+    "views": "64,378 views",
+    "canonical": "http://www.youtube.com/@mmtengagement",
+    "description": "Welcome to our YouTube channel, where we are passionate about travel and helping you discover the world. As the Holiday Pro, we offer practical tips, advice, and reviews of some of the best destinations around the globe also you can be a part of our life at MMT. Whether you are an adventure seeker, luxury traveler, or just looking for some inspiration, our channel is the perfect place to start. Subscribe now to join our community of travel enthusiasts and start exploring the world with us!",
+    "links": [],
+    "affiliate_links": []
+  },
   {
     "channel": "https://www.youtube.com/c/CheapHolidayExpert",
     "name": "Holiday Expert",
@@ -40,17 +50,6 @@ Loaded 14 channels from results/holiday_channels.csv
     "views": "1,471,809 views",
     "canonical": "http://www.youtube.com/@honestholidayreview",
     "description": "This channel is all about helping you make better decisions while picking your next vacation or travel spot. We love vacating and traveling worldwide, and we have been scored a couple of times. We don't want that to happen to you.\n\nWe will only tell the truth about a particular place and you will be able to see the place with a mobile camera, up close with no filters or any other alteration. Here you'll find first-person videos of hotels, restaurants (food), shopping areas, bars, beaches, amusement parks, ancient cities, landmarks, and all sorts of tourist attractions worldwide. \n\nAlso, I will",
-    "links": [],
-    "affiliate_links": []
-  },
-  {
-    "channel": "https://www.youtube.com/channel/UCD6Fz9CH8jS7xlnqvw2Eqdg",
-    "name": "MMT Holiday Expert",
-    "country": null,
-    "joined": null,
-    "views": "64,378 views",
-    "canonical": "http://www.youtube.com/@mmtengagement",
-    "description": "Welcome to our YouTube channel, where we are passionate about travel and helping you discover the world. As the Holiday Pro, we offer practical tips, advice, and reviews of some of the best destinations around the globe also you can be a part of our life at MMT. Whether you are an adventure seeker, luxury traveler, or just looking for some inspiration, our channel is the perfect place to start. Subscribe now to join our community of travel enthusiasts and start exploring the world with us!",
     "links": [],
     "affiliate_links": []
   },

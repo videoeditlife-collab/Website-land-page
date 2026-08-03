@@ -1,15 +1,15 @@
-#,Display Name,Email,YT Channel,YT Subscribers,Cadence,Last Upload (days),Uploads (90d),IG Account,IG Followers,Skool Community,Skool Link,# of Members,Status
-1,MMT Holiday Expert,,https://www.youtube.com/channel/UCD6Fz9CH8jS7xlnqvw2Eqdg,478,inactive,122,0,,,,,,below_min_subscribers
-2,Holiday Expert,Email in YouTube Bio,https://www.youtube.com/c/CheapHolidayExpert,102000,monthly,21,2,https://www.instagram.com/holidayexpert/,,,,,ok
-3,Honest Holiday Review,,https://www.youtube.com/channel/UCauClR6XOj9ePThlSVWa37A,2250,biweekly,1,8,,,,,,below_min_subscribers
-4,HOLIDAY EXPERTS,Email in YouTube Bio,https://www.youtube.com/@holidayexpertscrete,3790,weekly,2,14,,,,,,below_min_subscribers
-5,TRAVEL BOX B2B HOLIDAY EXPERT,,https://www.youtube.com/channel/UChwu4PBz5szHzZsQe9lPfHw,17,inactive,152,0,,,,,,below_min_subscribers
-6,All Inclusive Reviews,Email in YouTube Bio,https://www.youtube.com/allinclusivereviews,14100,sporadic,61,1,,,,,,cadence_sporadic
-7,Benidorm Enthusiast,,https://www.youtube.com/channel/UCm-MbeXbYivVMGFrT8E2oNQ,81000,weekly,2,20,,,,,,ok
-8,Benidorm by Ana,Email in YouTube Bio,https://www.youtube.com/channel/UCZOL4SHrFofhaBpxhwsJJCw,25800,weekly,0,30,https://www.instagram.com/benidormbyana/,,,,,ok
-9,BENIDORM AND BEYOND,,https://www.youtube.com/@benidormandbeyond2445,12100,weekly,1,30,,,,,,ok
-10,Vlog Benidorm,,https://www.youtube.com/channel/UCk-EPn3z3XT7DBrJseqMknQ,,unknown,,0,,,,,,no_subscriber_count
-11,Benidorm Channel,Email in YouTube Bio,https://www.youtube.com/channel/UCVXrSJ-_jr3jkJjsgcZFocw,10900,weekly,12,24,https://www.instagram.com/benidormchannel,,,,,ok
-12,BENIDORM TODAY,,https://www.youtube.com/channel/UCC-y15yM_QugIyqxW2mOIUQ,8900,dormant,183,0,,,,,,below_min_subscribers
-13,Paul and Carole Love to Travel,Email in YouTube Bio,https://www.youtube.com/channel/UCpnRH1jL_EKoVv5VWoyiB0A,33600,weekly,3,21,https://www.instagram.com/paulandcarole/,,,,,ok
-14,Family Travel Vlog,,https://www.youtube.com/c/FamilyTravelVlog,1300,inactive,152,0,https://www.instagram.com/familytravelvlog/,,,,,below_min_subscribers
+#,Display Name,Email,YT Channel,YT Subscribers,Type,Country,Cadence,Last Upload (days),Uploads (90d),IG Account,IG Followers,Skool Community,Skool Link,# of Members,Status
+1,MMT Holiday Expert,,https://www.youtube.com/channel/UCD6Fz9CH8jS7xlnqvw2Eqdg,478,business,,inactive,122,0,,,,,,below_min_subscribers
+2,Holiday Expert,Email in YouTube Bio,https://www.youtube.com/c/CheapHolidayExpert,102000,solo,United Kingdom,monthly,21,2,https://www.instagram.com/holidayexpert/,,,,,ok
+3,Honest Holiday Review,,https://www.youtube.com/channel/UCauClR6XOj9ePThlSVWa37A,2250,solo,United States,biweekly,1,8,,,,,,below_min_subscribers
+4,HOLIDAY EXPERTS,Email in YouTube Bio,https://www.youtube.com/@holidayexpertscrete,3790,unclear,Greece,weekly,2,14,,,,,,below_min_subscribers
+5,TRAVEL BOX B2B HOLIDAY EXPERT,,https://www.youtube.com/channel/UChwu4PBz5szHzZsQe9lPfHw,17,business,,inactive,152,0,,,,,,below_min_subscribers
+6,All Inclusive Reviews,Email in YouTube Bio,https://www.youtube.com/allinclusivereviews,14100,unclear,United States,sporadic,61,1,,,,,,cadence_sporadic
+7,Benidorm Enthusiast,,https://www.youtube.com/channel/UCm-MbeXbYivVMGFrT8E2oNQ,81000,unclear,,weekly,2,20,,,,,,ok
+8,Benidorm by Ana,Email in YouTube Bio,https://www.youtube.com/channel/UCZOL4SHrFofhaBpxhwsJJCw,25800,business,Spain,weekly,0,30,https://www.instagram.com/benidormbyana/,,,,,looks_like_business
+9,BENIDORM AND BEYOND,,https://www.youtube.com/@benidormandbeyond2445,12100,solo,Spain,weekly,1,30,,,,,,ok
+10,Vlog Benidorm,,https://www.youtube.com/channel/UCk-EPn3z3XT7DBrJseqMknQ,,unclear,Pakistan,unknown,,0,,,,,,no_subscriber_count
+11,Benidorm Channel,Email in YouTube Bio,https://www.youtube.com/channel/UCVXrSJ-_jr3jkJjsgcZFocw,10900,solo,Spain,weekly,12,24,https://www.instagram.com/benidormchannel,,,,,ok
+12,BENIDORM TODAY,,https://www.youtube.com/channel/UCC-y15yM_QugIyqxW2mOIUQ,8900,solo,,dormant,183,0,,,,,,below_min_subscribers
+13,Paul and Carole Love to Travel,Email in YouTube Bio,https://www.youtube.com/channel/UCpnRH1jL_EKoVv5VWoyiB0A,33600,solo,United Kingdom,weekly,3,21,https://www.instagram.com/paulandcarole/,,,,,ok
+14,Family Travel Vlog,,https://www.youtube.com/c/FamilyTravelVlog,1300,solo,Australia,inactive,152,0,https://www.instagram.com/familytravelvlog/,,,,,below_min_subscribers
