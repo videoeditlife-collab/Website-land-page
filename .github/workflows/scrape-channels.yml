@@ -82,7 +82,7 @@ jobs:
         run: |
           set -o pipefail
           ARGS="--min-subscribers $MIN_SUBS --max-subscribers $MAX_SUBS"
-          ARGS="$ARGS --output results.csv --concurrency 2 --delay 1"
+          ARGS="$ARGS --output results.csv --concurrency 2 --delay 1 --solo-only"
           if [ -n "$CADENCE" ]; then
             ARGS="$ARGS --require-cadence $CADENCE"
           fi

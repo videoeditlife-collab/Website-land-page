@@ -271,6 +271,17 @@ def subscribers_from_data(data):
     return fallback if fallback else (None, None)
 
 
+def field_value(data, *names):
+    """First non-empty value held under any of `names` anywhere in the payload."""
+    for obj in walk_objects(data or {}):
+        for name in names:
+            value = obj.get(name)
+            text = _text_of(value) if value is not None else None
+            if text and text.strip():
+                return text.strip()
+    return None
+
+
 def channel_name_from_html(html, data):
     """Read the channel's display name from og:title, falling back to the JSON."""
     match = re.search(
@@ -528,6 +539,89 @@ async def scrape_uploads(page, channel_url):
     return label, last, uploads_90, len(ages)
 
 
+# ============================================================================
+# SOLO CREATOR vs BUSINESS
+#
+# Distinguishes an individual creator from a tour operator, agency or OTA
+# running a branded channel. Earning affiliate commission does not make a
+# channel a business here - selling the travel does.
+# ============================================================================
+
+_BUSINESS_PHRASES = re.compile(
+    r'\b(we offer|our tours|our packages|book with us|book now|official channel'
+    r'|travel agency|travel agent|tour operator|tour company|b2b|dmc'
+    r'|our clients|our customers|contact our team|enquire now'
+    r'|we are a (?:travel|tour) )\b',
+    re.IGNORECASE,
+)
+
+# A channel linking its own tour-selling site is an operator, whoever fronts it.
+_BUSINESS_DOMAINS = re.compile(
+    r'\b(tours?\.com|\w*tours\.\w+|booking\.\w+|reservations?\.\w+'
+    r'|travelagen\w*|\w*holidays\.co)\b',
+    re.IGNORECASE,
+)
+
+_SOLO_PHRASES = re.compile(
+    r"(my name'?s?\b|i'?m \w+|i am \w+|hi,? i'?m|welcome to my channel"
+    r"|my channel|we are a .{0,20}(couple|family)|our family|i moved to"
+    r"|i'?ve lived|who'?s been living|join me\b|follow my)",
+    re.IGNORECASE,
+)
+
+_SOLO_LINK_HINTS = (
+    'patreon.com', 'buymeacoffee.com', 'ko-fi.com', 'cameo.com',
+    'instagram.com', 'tiktok.com',
+)
+
+
+def classify_creator(name, description, link_urls):
+    """
+    'business', 'solo' or 'unclear'.
+
+    A hint for triage, not a verdict - a channel with no description and no
+    links is genuinely ambiguous and is reported as such rather than guessed.
+    """
+    text = f"{name or ''} {description or ''}"
+    urls = ' '.join(link_urls or []).lower()
+
+    if _BUSINESS_PHRASES.search(text) or _BUSINESS_DOMAINS.search(urls):
+        return 'business'
+
+    if _SOLO_PHRASES.search(text):
+        return 'solo'
+
+    if any(hint in urls for hint in _SOLO_LINK_HINTS):
+        return 'solo'
+
+    return 'unclear'
+
+
+def all_external_links(data):
+    """Every external URL the channel lists on its About page."""
+    urls = []
+
+    for obj in walk_objects(data or {}):
+        model = obj.get('channelExternalLinkViewModel')
+        if not isinstance(model, dict):
+            continue
+        for inner in walk_objects(model):
+            raw = inner.get('url')
+            if isinstance(raw, str):
+                resolved = resolve_redirect(raw)
+                if resolved and resolved not in urls:
+                    urls.append(resolved)
+
+    return urls
+
+
+def description_from_html(html):
+    match = re.search(
+        r'<meta\s+property="og:description"\s+content="([^"]*)"', html, re.IGNORECASE
+    )
+    return _unescape_html(match.group(1)) if match else ''
+
+
 _EMAIL_HINTS = (
     'sign in to see email address',
     'sign in to view email address',
@@ -689,6 +783,8 @@ async def scrape_skool(page, skool_url):
 async def scrape_channel(yt_page, ig_page, skool_page, channel_url, check_uploads=True):
     """Scrape one YouTube channel's About page and its linked profiles."""
     result = {
+        'creator_type': None,
+        'country': None,
         'cadence': None,
         'last_upload_days': None,
         'uploads_90d': None,
@@ -735,6 +831,12 @@ async def scrape_channel(yt_page, ig_page, skool_page, channel_url, check_upload
 
     result['has_email'] = has_business_email(html, data)
     print(f"         Email listed: {'yes' if result['has_email'] else 'no'}")
+
+    result['country'] = field_value(data, 'country')
+    result['creator_type'] = classify_creator(
+        result['channel_name'], description_from_html(html), all_external_links(data))
+    print(f"         Type: {result['creator_type']}"
+          + (f" ({result['country']})" if result['country'] else ""))
 
     instagram_links = links_from_page(html, data, 'instagram.com')
     if instagram_links:
@@ -1022,13 +1124,15 @@ def read_input(path):
             unique.append(url)
 
     dropped = len(urls) - len(unique)
-    print(f"Loaded {len(unique)} channels from {path}" + (f" ({dropped} duplicates dropped)" if dropped else ""))
+    print(f"Loaded {len(unique)} channels from {path}"
+          + (f" ({dropped} duplicates dropped)" if dropped else ""),
+          file=sys.stderr)
     return unique
 
 
 CSV_HEADER = [
     '#', 'Display Name', 'Email', 'YT Channel', 'YT Subscribers',
-    'Cadence', 'Last Upload (days)', 'Uploads (90d)',
+    'Type', 'Country', 'Cadence', 'Last Upload (days)', 'Uploads (90d)',
     'IG Account', 'IG Followers', 'Skool Community', 'Skool Link',
     '# of Members', 'Status',
 ]
@@ -1081,6 +1185,8 @@ class ResultWriter:
                 'Email in YouTube Bio' if result.get('has_email') else '',
                 channel_url,
                 result.get('subscriber_count') or '',
+                result.get('creator_type') or '',
+                result.get('country') or '',
                 result.get('cadence') or '',
                 '' if result.get('last_upload_days') is None
                    else result['last_upload_days'],
@@ -1104,7 +1210,7 @@ class ResultWriter:
 
 async def worker(name, queue, writer, browser, instagram_state, delay,
                  min_subscribers=0, max_subscribers=0,
-                 check_uploads=True, require_cadence=None):
+                 check_uploads=True, require_cadence=None, solo_only=False):
     """Own a set of pages and drain the shared queue."""
     yt_context = await new_context(browser)
     yt_page = await yt_context.new_page()
@@ -1147,6 +1253,11 @@ async def worker(name, queue, writer, browser, instagram_state, delay,
 
             # Cadence is checked only once a channel has cleared the size band,
             # so the status column names the first reason it was set aside.
+            if result.get('status') == 'ok' and solo_only:
+                if result.get('creator_type') == 'business':
+                    result['status'] = 'looks_like_business'
+                    print("         Looks like a tour operator or agency")
+
             if result.get('status') == 'ok' and require_cadence:
                 label = result.get('cadence')
                 if not meets_cadence(label, require_cadence):
@@ -1253,7 +1364,7 @@ async def run(args):
         await asyncio.gather(*[
             worker(f"w{i + 1}", queue, writer, browser, instagram_state,
                    args.delay, args.min_subscribers, args.max_subscribers,
-                   not args.skip_uploads, args.require_cadence)
+                   not args.skip_uploads, args.require_cadence, args.solo_only)
             for i in range(concurrency)
         ])
 
@@ -1309,6 +1420,8 @@ def parse_args(argv=None):
 
     parser.add_argument('--output', default='youtube_scraped_details.csv',
                         help='Where to write results (default: youtube_scraped_details.csv)')
+    parser.add_argument('--solo-only', action='store_true',
+                        help='Flag channels that look like tour operators or agencies')
     parser.add_argument('--require-cadence', choices=['weekly', 'biweekly', 'monthly'],
                         help='Flag channels that upload less consistently than this')
     parser.add_argument('--skip-uploads', action='store_true',

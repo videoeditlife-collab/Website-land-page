@@ -22,6 +22,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import youtube_scraper  # noqa: E402
 from youtube_scraper import (  # noqa: E402
+    classify_creator,
     classify_cadence,
     meets_cadence,
     parse_relative_age,
@@ -338,6 +339,51 @@ def test_upload_cadence():
     check("no requirement", meets_cadence('dormant', None), True)
 
 
+def test_creator_type():
+    print("\nSolo creator vs business")
+    # Every case below is a real description and link set from the seed scrape.
+    check("tour site -> business",
+          classify_creator("Benidorm by Ana",
+                           "Welcome to Benidorm, Costa Blanca and other Holiday Destinations",
+                           ["https://www.benidormbyanatours.com",
+                            "https://www.instagram.com/benidormbyana/"]),
+          "business")
+    check("'we offer' -> business",
+          classify_creator("MMT Holiday Expert",
+                           "As the Holiday Pro, we offer practical tips and reviews", []),
+          "business")
+    check("B2B in name -> business",
+          classify_creator("TRAVEL BOX B2B HOLIDAY EXPERT", "", []), "business")
+
+    check("first person -> solo",
+          classify_creator("Holiday Expert",
+                           "My name's Chelsea and I'm a holiday expert!",
+                           ["https://holidayexpert.com/"]),
+          "solo")
+    check("lived-there -> solo",
+          classify_creator("Benidorm Channel",
+                           "Hi! I'm Michael, a Dutch guy who's been living in Benidorm",
+                           []),
+          "solo")
+    check("couple -> solo",
+          classify_creator("Paul and Carole",
+                           "We are a fun loving married couple who love to travel", []),
+          "solo")
+    check("support link -> solo",
+          classify_creator("Some Channel", "",
+                           ["https://www.buymeacoffee.com/x"]), "solo")
+
+    # An affiliate link is monetisation, not a tour business.
+    check("affiliate link stays solo",
+          classify_creator("Reviewer", "My name's Sam",
+                           ["https://amzn.to/abc"]), "solo")
+
+    check("no signal -> unclear",
+          classify_creator("Benidorm Enthusiast",
+                           "Benidorm is located on the Costa Blanca, Spain.", []),
+          "unclear")
+
+
 def test_search_filters():
     print("\nSearch filter encoding")
     # These are the values YouTube itself puts in the sp= parameter, so they
@@ -643,6 +689,7 @@ def main():
     test_extraction()
     test_profile_regexes()
     test_upload_cadence()
+    test_creator_type()
     test_search_filters()
     test_channel_hrefs()
     test_output_roundtrip()
