@@ -622,6 +622,29 @@ def description_from_html(html):
     return _unescape_html(match.group(1)) if match else ''
 
 
+# ============================================================================
+# NICHE RELEVANCE
+#
+# Search returns channels that merely matched a query word, so a channel can
+# clear the subscriber, cadence and solo checks while making content about
+# something else entirely. This tests the topic itself.
+# ============================================================================
+
+NICHE_KEYWORDS = (
+    'travel', 'holiday', 'vacation', 'resort', 'cruise', 'hotel', 'destination',
+    'trip', 'tour', 'flight', 'backpack', 'itinerary', 'abroad', 'expat',
+    'nomad', 'getaway', 'staycation', 'road trip', 'caravan', 'campervan',
+    'motorhome', 'theme park', 'all inclusive', 'airline', 'airport',
+    'excursion', 'sightseeing', 'wanderlust', 'passport',
+)
+
+
+def matches_niche(name, description, keywords=NICHE_KEYWORDS):
+    """Does the channel's own wording place it in the niche?"""
+    blob = f"{name or ''} {description or ''}".lower()
+    return any(keyword in blob for keyword in keywords)
+
+
 _EMAIL_HINTS = (
     'sign in to see email address',
     'sign in to view email address',
@@ -783,6 +806,7 @@ async def scrape_skool(page, skool_url):
 async def scrape_channel(yt_page, ig_page, skool_page, channel_url, check_uploads=True):
     """Scrape one YouTube channel's About page and its linked profiles."""
     result = {
+        'niche_match': None,
         'creator_type': None,
         'country': None,
         'cadence': None,
@@ -833,8 +857,10 @@ async def scrape_channel(yt_page, ig_page, skool_page, channel_url, check_upload
     print(f"         Email listed: {'yes' if result['has_email'] else 'no'}")
 
     result['country'] = field_value(data, 'country')
+    _description = description_from_html(html)
+    result['niche_match'] = matches_niche(result['channel_name'], _description)
     result['creator_type'] = classify_creator(
-        result['channel_name'], description_from_html(html), all_external_links(data))
+        result['channel_name'], _description, all_external_links(data))
     print(f"         Type: {result['creator_type']}"
           + (f" ({result['country']})" if result['country'] else ""))
 
@@ -1132,7 +1158,7 @@ def read_input(path):
 
 CSV_HEADER = [
     '#', 'Display Name', 'Email', 'YT Channel', 'YT Subscribers',
-    'Type', 'Country', 'Cadence', 'Last Upload (days)', 'Uploads (90d)',
+    'Type', 'Niche', 'Country', 'Cadence', 'Last Upload (days)', 'Uploads (90d)',
     'IG Account', 'IG Followers', 'Skool Community', 'Skool Link',
     '# of Members', 'Status',
 ]
@@ -1186,6 +1212,7 @@ class ResultWriter:
                 channel_url,
                 result.get('subscriber_count') or '',
                 result.get('creator_type') or '',
+                'yes' if result.get('niche_match') else 'no',
                 result.get('country') or '',
                 result.get('cadence') or '',
                 '' if result.get('last_upload_days') is None
@@ -1210,7 +1237,8 @@ class ResultWriter:
 
 async def worker(name, queue, writer, browser, instagram_state, delay,
                  min_subscribers=0, max_subscribers=0,
-                 check_uploads=True, require_cadence=None, solo_only=False):
+                 check_uploads=True, require_cadence=None, solo_only=False,
+                 require_niche=False):
     """Own a set of pages and drain the shared queue."""
     yt_context = await new_context(browser)
     yt_page = await yt_context.new_page()
@@ -1253,6 +1281,11 @@ async def worker(name, queue, writer, browser, instagram_state, delay,
 
             # Cadence is checked only once a channel has cleared the size band,
             # so the status column names the first reason it was set aside.
+            if result.get('status') == 'ok' and require_niche:
+                if not result.get('niche_match'):
+                    result['status'] = 'off_niche'
+                    print("         No travel/holiday wording - off niche")
+
             if result.get('status') == 'ok' and solo_only:
                 if result.get('creator_type') == 'business':
                     result['status'] = 'looks_like_business'
@@ -1364,7 +1397,8 @@ async def run(args):
         await asyncio.gather(*[
             worker(f"w{i + 1}", queue, writer, browser, instagram_state,
                    args.delay, args.min_subscribers, args.max_subscribers,
-                   not args.skip_uploads, args.require_cadence, args.solo_only)
+                   not args.skip_uploads, args.require_cadence, args.solo_only,
+                   args.require_niche)
             for i in range(concurrency)
         ])
 
@@ -1420,6 +1454,9 @@ def parse_args(argv=None):
 
     parser.add_argument('--output', default='youtube_scraped_details.csv',
                         help='Where to write results (default: youtube_scraped_details.csv)')
+    parser.add_argument('--require-niche', action='store_true',
+                        help='Flag channels whose name and description show no '
+                             'travel or holiday wording as off_niche')
     parser.add_argument('--solo-only', action='store_true',
                         help='Flag channels that look like tour operators or agencies')
     parser.add_argument('--require-cadence', choices=['weekly', 'biweekly', 'monthly'],

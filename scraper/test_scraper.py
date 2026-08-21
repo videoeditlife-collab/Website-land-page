@@ -22,6 +22,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import youtube_scraper  # noqa: E402
 from youtube_scraper import (  # noqa: E402
+    matches_niche,
     classify_creator,
     classify_cadence,
     meets_cadence,
@@ -384,6 +385,23 @@ def test_creator_type():
           "unclear")
 
 
+def test_niche():
+    print("\nNiche relevance")
+    # Real names and descriptions from the 283-channel search run.
+    check("cruise channel", matches_niche("Eat Sleep Cruise", "cruise tips"), True)
+    check("travel in name",
+          matches_niche("Happy to Wander (Travel Tips & Inspo)", ""), True)
+    check("general vlogger rejected",
+          matches_niche("Ryan Trahan", "just a guy"), False)
+    check("fitness rejected",
+          matches_niche("Mike Thurston", "For business enquiries"), False)
+    check("kids channel rejected",
+          matches_niche("Ozzie - Educational Videos For Kids",
+                        "Australian kid's entertainer"), False)
+    check("resort wording", matches_niche("Some Channel", "all inclusive resort reviews"), True)
+    check("empty", matches_niche("", ""), False)
+
+
 def test_search_filters():
     print("\nSearch filter encoding")
     # These are the values YouTube itself puts in the sp= parameter, so they
@@ -690,6 +708,7 @@ def main():
     test_profile_regexes()
     test_upload_cadence()
     test_creator_type()
+    test_niche()
     test_search_filters()
     test_channel_hrefs()
     test_output_roundtrip()

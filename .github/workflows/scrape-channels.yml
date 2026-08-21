@@ -78,7 +78,7 @@ jobs:
           if [ -n "$MAX_SUBS" ]; then
             ARGS="$ARGS --max-subscribers $MAX_SUBS"
           fi
-          ARGS="$ARGS --output results.csv --concurrency 3 --delay 0.5 --solo-only"
+          ARGS="$ARGS --output results.csv --concurrency 3 --delay 0.5 --solo-only --require-niche"
           if [ -n "$CADENCE" ]; then
             ARGS="$ARGS --require-cadence $CADENCE"
           fi
