@@ -12,15 +12,15 @@ on:
       source:
         description: 'seed (holiday_seed_channels.csv) or search (holiday_terms.txt)'
         required: false
-        default: 'seed'
+        default: 'search'
       min_subscribers:
         description: 'Minimum subscribers'
         required: false
-        default: '10000'
+        default: '100000'
       max_subscribers:
-        description: 'Maximum subscribers'
+        description: 'Maximum subscribers (empty for no ceiling)'
         required: false
-        default: '200000'
+        default: ''
       require_cadence:
         description: 'weekly, biweekly, monthly, or empty for no check'
         required: false
@@ -37,7 +37,7 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
 
     steps:
       - uses: actions/checkout@v4
@@ -65,30 +65,26 @@ jobs:
             echo "::warning::YouTube returned $code from this runner"
           fi
 
-      - name: Diagnose Videos tab shape
-        working-directory: scraper
-        continue-on-error: true
-        run: |
-          python diagnose_videos.py https://www.youtube.com/@CheapHolidayExpert \
-            2>&1 | tee diagnose.log
-
       - name: Scrape
         working-directory: scraper
         env:
-          SOURCE: ${{ github.event.inputs.source || 'seed' }}
-          MIN_SUBS: ${{ github.event.inputs.min_subscribers || '10000' }}
-          MAX_SUBS: ${{ github.event.inputs.max_subscribers || '200000' }}
+          SOURCE: ${{ github.event.inputs.source || 'search' }}
+          MIN_SUBS: ${{ github.event.inputs.min_subscribers || '100000' }}
+          MAX_SUBS: ${{ github.event.inputs.max_subscribers || '' }}
           CADENCE: ${{ github.event.inputs.require_cadence || 'monthly' }}
         run: |
           set -o pipefail
-          ARGS="--min-subscribers $MIN_SUBS --max-subscribers $MAX_SUBS"
-          ARGS="$ARGS --output results.csv --concurrency 2 --delay 1 --solo-only"
+          ARGS="--min-subscribers $MIN_SUBS"
+          if [ -n "$MAX_SUBS" ]; then
+            ARGS="$ARGS --max-subscribers $MAX_SUBS"
+          fi
+          ARGS="$ARGS --output results.csv --concurrency 3 --delay 0.5 --solo-only"
           if [ -n "$CADENCE" ]; then
             ARGS="$ARGS --require-cadence $CADENCE"
           fi
           if [ "$SOURCE" = "search" ]; then
             ARGS="$ARGS --search-file holiday_terms.txt --duration long"
-            ARGS="$ARGS --sort-by date --scrolls 4 --per-term 15"
+            ARGS="$ARGS --sort-by date --scrolls 3 --per-term 8 --limit 300"
             ARGS="$ARGS --save-discovered discovered.txt"
           else
             ARGS="$ARGS --input holiday_seed_channels.csv"
@@ -97,11 +93,24 @@ jobs:
           # Keep going on failure so a partial CSV is still published.
           python youtube_scraper.py $ARGS 2>&1 | tee run.log || true
 
+      - name: Build shortlists
+        working-directory: scraper
+        continue-on-error: true
+        run: |
+          # Everything over the floor, solo/known type only.
+          python make_shortlist.py results.csv shortlist.csv || true
+          # And the 100k-200k slice, in case the ceiling still matters.
+          python make_shortlist.py results.csv shortlist_100k_200k.csv \
+            --max-subscribers 200000 || true
+          # Kept separately: no person named, no links - needs a human look.
+          python make_shortlist.py results.csv shortlist_unclear.csv \
+            --include-unclear || true
+
       - name: Inspect channels for shared links or affiliates
         working-directory: scraper
         continue-on-error: true
         run: |
-          python inspect_channels.py results/holiday_channels.csv \
+          python inspect_channels.py shortlist.csv \
             > inspect.json 2> inspect.err || true
           tail -40 inspect.err || true
 
@@ -118,6 +127,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           mkdir -p scraper/results
           cp scraper/results.csv scraper/results/holiday_channels.csv 2>/dev/null || true
+          cp scraper/shortlist.csv scraper/results/shortlist.csv 2>/dev/null || true
+          cp scraper/shortlist_100k_200k.csv scraper/results/shortlist_100k_200k.csv 2>/dev/null || true
+          cp scraper/shortlist_unclear.csv scraper/results/shortlist_unclear.csv 2>/dev/null || true
           cp scraper/run.log scraper/results/run.log 2>/dev/null || true
           cp scraper/diagnose.log scraper/results/diagnose.log 2>/dev/null || true
           cp scraper/inspect.json scraper/results/inspect.json 2>/dev/null || true
