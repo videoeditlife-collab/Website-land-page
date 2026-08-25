@@ -74,30 +74,51 @@ jobs:
           CADENCE: ${{ github.event.inputs.require_cadence || 'monthly' }}
         run: |
           set -o pipefail
-          ARGS="--min-subscribers $MIN_SUBS"
+          # An array, not a string: a string expanded unquoted word-splits on
+          # the spaces inside --countries and passes quotes as literal chars.
+          ARGS=(--min-subscribers "$MIN_SUBS")
           if [ -n "$MAX_SUBS" ]; then
-            ARGS="$ARGS --max-subscribers $MAX_SUBS"
+            ARGS+=(--max-subscribers "$MAX_SUBS")
           fi
-          ARGS="$ARGS --output results.csv --concurrency 3 --delay 0.5 --solo-only --require-niche"
-          ARGS="$ARGS --countries 'United States,Canada,United Kingdom,Ireland'"
+          ARGS+=(--output results.csv --concurrency 3 --delay 0.5)
+          ARGS+=(--solo-only --require-niche)
+          ARGS+=(--countries "United States,Canada,United Kingdom,Ireland")
           if [ -n "$CADENCE" ]; then
-            ARGS="$ARGS --require-cadence $CADENCE"
+            ARGS+=(--require-cadence "$CADENCE")
           fi
           if [ "$SOURCE" = "search" ]; then
-            ARGS="$ARGS --search-file holiday_terms.txt --duration long"
-            ARGS="$ARGS --sort-by date --scrolls 3 --per-term 6 --limit 650"
-            # Re-evaluate everything already discovered in the same pass, so the
-            # 80k floor and the new niche/country columns apply to those too.
+            ARGS+=(--search-file holiday_terms.txt --duration long)
+            ARGS+=(--sort-by date --scrolls 3 --per-term 6 --limit 650)
+            ARGS+=(--save-discovered discovered.txt)
+            # Re-evaluate everything already discovered in the same pass.
             if [ -f results/discovered.txt ]; then
-              ARGS="$ARGS --input results/discovered.txt"
+              ARGS+=(--input results/discovered.txt)
             fi
-            ARGS="$ARGS --save-discovered discovered.txt"
           else
-            ARGS="$ARGS --input holiday_seed_channels.csv"
+            ARGS+=(--input holiday_seed_channels.csv)
           fi
-          echo "Running: python youtube_scraper.py $ARGS"
+          printf 'Running: python youtube_scraper.py'; printf ' %q' "${ARGS[@]}"; echo
           # Keep going on failure so a partial CSV is still published.
-          python youtube_scraper.py $ARGS 2>&1 | tee run.log || true
+          python youtube_scraper.py "${ARGS[@]}" 2>&1 | tee run.log || true
+
+      - name: Fail if the scrape produced nothing
+        working-directory: scraper
+        run: |
+          # Without this the run reports success when the scraper never ran:
+          # `|| true` above hides a crash, and the previous results file is
+          # simply left in place, looking like a fresh result.
+          if [ ! -s results.csv ]; then
+            echo "::error::results.csv missing or empty - scraper did not run"
+            tail -30 run.log || true
+            exit 1
+          fi
+          rows=$(($(wc -l < results.csv) - 1))
+          echo "results.csv has $rows rows"
+          if [ "$rows" -lt 1 ]; then
+            echo "::error::results.csv has no data rows"
+            tail -30 run.log || true
+            exit 1
+          fi
 
       - name: Build shortlists
         working-directory: scraper
