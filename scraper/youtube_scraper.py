@@ -551,7 +551,10 @@ _BUSINESS_PHRASES = re.compile(
     r'\b(we offer|our tours|our packages|book with us|book now|official channel'
     r'|travel agency|travel agent|tour operator|tour company|b2b|dmc'
     r'|our clients|our customers|contact our team|enquire now'
-    r'|we are a (?:travel|tour) )\b',
+    r'|we are a (?:travel|tour) '
+    r'|public (?:news|broadcast)|news service|news network|broadcaster'
+    r'|national (?:public|broadcast)|our newsroom|media (?:group|network)'
+    r'|official channel of|the official youtube)\b',
     re.IGNORECASE,
 )
 

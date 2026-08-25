@@ -379,6 +379,11 @@ def test_creator_type():
           classify_creator("Reviewer", "My name's Sam",
                            ["https://amzn.to/abc"]), "solo")
 
+    check("broadcaster -> business",
+          classify_creator("CBC News",
+                           "As Canada's national public news and information service", []),
+          "business")
+
     check("no signal -> unclear",
           classify_creator("Benidorm Enthusiast",
                            "Benidorm is located on the Costa Blanca, Spain.", []),
