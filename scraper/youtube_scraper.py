@@ -1238,7 +1238,7 @@ class ResultWriter:
 async def worker(name, queue, writer, browser, instagram_state, delay,
                  min_subscribers=0, max_subscribers=0,
                  check_uploads=True, require_cadence=None, solo_only=False,
-                 require_niche=False):
+                 require_niche=False, countries=None):
     """Own a set of pages and drain the shared queue."""
     yt_context = await new_context(browser)
     yt_page = await yt_context.new_page()
@@ -1281,6 +1281,15 @@ async def worker(name, queue, writer, browser, instagram_state, delay,
 
             # Cadence is checked only once a channel has cleared the size band,
             # so the status column names the first reason it was set aside.
+            # A channel that publishes no country is kept: absence is not
+            # evidence of being somewhere else.
+            if result.get('status') == 'ok' and countries:
+                wanted = {c.strip().lower() for c in countries.split(',') if c.strip()}
+                actual = (result.get('country') or '').strip().lower()
+                if actual and actual not in wanted:
+                    result['status'] = 'wrong_country'
+                    print(f"         Outside target countries ({result['country']})")
+
             if result.get('status') == 'ok' and require_niche:
                 if not result.get('niche_match'):
                     result['status'] = 'off_niche'
@@ -1359,9 +1368,15 @@ async def run(args):
 
     # Without search terms the channel list has to come from a file, and it is
     # worth failing before launching a browser.
+    # --input and --search combine: a known list can be re-evaluated in the same
+    # run that discovers new channels.
+    seed_urls = []
+    if args.input and os.path.exists(args.input):
+        seed_urls = read_input(args.input)
+
     urls = []
     if not terms:
-        urls = apply_limits(read_input(args.input), args)
+        urls = apply_limits(seed_urls, args)
         if not urls:
             print("Nothing to scrape.")
             return 1
@@ -1377,7 +1392,17 @@ async def run(args):
         browser = await launch_browser(playwright, args)
 
         if terms:
-            urls = apply_limits(await run_discovery(browser, terms, args), args)
+            discovered = await run_discovery(browser, terms, args)
+            merged = list(seed_urls)
+            known = {u.rstrip('/').lower() for u in merged}
+            for url in discovered:
+                if url.rstrip('/').lower() not in known:
+                    known.add(url.rstrip('/').lower())
+                    merged.append(url)
+            if seed_urls:
+                print(f"Merged {len(seed_urls)} seed + "
+                      f"{len(merged) - len(seed_urls)} newly discovered channels")
+            urls = apply_limits(merged, args)
             if args.save_discovered:
                 with open(args.save_discovered, 'w', encoding='utf-8') as handle:
                     handle.write('\n'.join(urls) + '\n')
@@ -1398,7 +1423,7 @@ async def run(args):
             worker(f"w{i + 1}", queue, writer, browser, instagram_state,
                    args.delay, args.min_subscribers, args.max_subscribers,
                    not args.skip_uploads, args.require_cadence, args.solo_only,
-                   args.require_niche)
+                   args.require_niche, args.countries)
             for i in range(concurrency)
         ])
 
@@ -1454,6 +1479,11 @@ def parse_args(argv=None):
 
     parser.add_argument('--output', default='youtube_scraped_details.csv',
                         help='Where to write results (default: youtube_scraped_details.csv)')
+    parser.add_argument('--countries', metavar='LIST',
+                        help='Comma-separated countries to keep, e.g. '
+                             '"United States,Canada,United Kingdom". Channels '
+                             'elsewhere are flagged wrong_country; channels that '
+                             'publish no country are kept.')
     parser.add_argument('--require-niche', action='store_true',
                         help='Flag channels whose name and description show no '
                              'travel or holiday wording as off_niche')

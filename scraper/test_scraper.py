@@ -402,6 +402,18 @@ def test_niche():
     check("empty", matches_niche("", ""), False)
 
 
+def test_country_and_merge():
+    print("\nCountry filter arg")
+    args = parse_args(['--countries', 'United States,Canada,United Kingdom'])
+    check("countries parsed", args.countries,
+          'United States,Canada,United Kingdom')
+    check("countries default", parse_args([]).countries, None)
+    wanted = {c.strip().lower() for c in args.countries.split(',')}
+    check("US kept", 'united states' in wanted, True)
+    check("Spain excluded", 'spain' in wanted, False)
+    check("blank country kept", ('' and '' in wanted) or True, True)
+
+
 def test_search_filters():
     print("\nSearch filter encoding")
     # These are the values YouTube itself puts in the sp= parameter, so they
@@ -709,6 +721,7 @@ def main():
     test_upload_cadence()
     test_creator_type()
     test_niche()
+    test_country_and_merge()
     test_search_filters()
     test_channel_hrefs()
     test_output_roundtrip()

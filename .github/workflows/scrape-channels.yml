@@ -16,7 +16,7 @@ on:
       min_subscribers:
         description: 'Minimum subscribers'
         required: false
-        default: '100000'
+        default: '80000'
       max_subscribers:
         description: 'Maximum subscribers (empty for no ceiling)'
         required: false
@@ -37,7 +37,7 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 240
 
     steps:
       - uses: actions/checkout@v4
@@ -69,7 +69,7 @@ jobs:
         working-directory: scraper
         env:
           SOURCE: ${{ github.event.inputs.source || 'search' }}
-          MIN_SUBS: ${{ github.event.inputs.min_subscribers || '100000' }}
+          MIN_SUBS: ${{ github.event.inputs.min_subscribers || '80000' }}
           MAX_SUBS: ${{ github.event.inputs.max_subscribers || '' }}
           CADENCE: ${{ github.event.inputs.require_cadence || 'monthly' }}
         run: |
@@ -79,12 +79,18 @@ jobs:
             ARGS="$ARGS --max-subscribers $MAX_SUBS"
           fi
           ARGS="$ARGS --output results.csv --concurrency 3 --delay 0.5 --solo-only --require-niche"
+          ARGS="$ARGS --countries 'United States,Canada,United Kingdom,Ireland'"
           if [ -n "$CADENCE" ]; then
             ARGS="$ARGS --require-cadence $CADENCE"
           fi
           if [ "$SOURCE" = "search" ]; then
             ARGS="$ARGS --search-file holiday_terms.txt --duration long"
-            ARGS="$ARGS --sort-by date --scrolls 3 --per-term 8 --limit 300"
+            ARGS="$ARGS --sort-by date --scrolls 3 --per-term 6 --limit 650"
+            # Re-evaluate everything already discovered in the same pass, so the
+            # 80k floor and the new niche/country columns apply to those too.
+            if [ -f results/discovered.txt ]; then
+              ARGS="$ARGS --input results/discovered.txt"
+            fi
             ARGS="$ARGS --save-discovered discovered.txt"
           else
             ARGS="$ARGS --input holiday_seed_channels.csv"
