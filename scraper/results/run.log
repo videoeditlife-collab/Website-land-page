@@ -1,19 +1,4023 @@
-usage: youtube_scraper.py [-h] [--input INPUT] [--search TERM]
-                          [--search-file PATH]
-                          [--duration {long,medium,short}]
-                          [--upload-date {hour,month,today,week,year}]
-                          [--result-type {channel,movie,playlist,video}]
-                          [--sort-by {date,rating,relevance,views}]
-                          [--scrolls SCROLLS] [--per-term PER_TERM]
-                          [--save-discovered PATH]
-                          [--min-subscribers MIN_SUBSCRIBERS]
-                          [--max-subscribers MAX_SUBSCRIBERS]
-                          [--output OUTPUT] [--countries LIST]
-                          [--require-niche] [--solo-only]
-                          [--require-cadence {weekly,biweekly,monthly}]
-                          [--skip-uploads] [--concurrency CONCURRENCY]
-                          [--limit LIMIT] [--delay DELAY]
-                          [--browser {chromium,webkit,firefox}] [--headed]
-                          [--executable-path EXECUTABLE_PATH]
-                          [--instagram-state INSTAGRAM_STATE] [--resume]
-youtube_scraper.py: error: unrecognized arguments: States,Canada,United Kingdom,Ireland'
+Loaded 283 channels from results/discovered.txt
+   Instagram state file not found: instagram_storage_state.json - Instagram scraping disabled
+Started chromium (headless)
+Search filter: sp=CAISAhgC
+
+   Searching: cheap holiday tips
+      https://www.youtube.com/results?search_query=cheap+holiday+tips&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: holiday deals how to book
+      https://www.youtube.com/results?search_query=holiday+deals+how+to+book&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: travel money saving tips
+      https://www.youtube.com/results?search_query=travel+money+saving+tips&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: how to book cheap package holiday
+      https://www.youtube.com/results?search_query=how+to+book+cheap+package+holiday&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: best time to book holiday
+      https://www.youtube.com/results?search_query=best+time+to+book+holiday&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: package holiday review
+      https://www.youtube.com/results?search_query=package+holiday+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: jet2 holiday review
+      https://www.youtube.com/results?search_query=jet2+holiday+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: tui holiday review
+      https://www.youtube.com/results?search_query=tui+holiday+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: first choice holiday review
+      https://www.youtube.com/results?search_query=first+choice+holiday+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: easyjet holidays review
+      https://www.youtube.com/results?search_query=easyjet+holidays+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: all inclusive resort review
+      https://www.youtube.com/results?search_query=all+inclusive+resort+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: all inclusive turkey review
+      https://www.youtube.com/results?search_query=all+inclusive+turkey+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: all inclusive mexico review
+      https://www.youtube.com/results?search_query=all+inclusive+mexico+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: all inclusive egypt review
+      https://www.youtube.com/results?search_query=all+inclusive+egypt+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: hotel room tour review
+      https://www.youtube.com/results?search_query=hotel+room+tour+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: family holiday resort review
+      https://www.youtube.com/results?search_query=family+holiday+resort+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: adults only hotel review
+      https://www.youtube.com/results?search_query=adults+only+hotel+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: cruise ship review
+      https://www.youtube.com/results?search_query=cruise+ship+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: cruise cabin tour
+      https://www.youtube.com/results?search_query=cruise+cabin+tour&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: p&o cruise vlog
+      https://www.youtube.com/results?search_query=p%26o+cruise+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: first time cruise tips
+      https://www.youtube.com/results?search_query=first+time+cruise+tips&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: benidorm holiday vlog
+      https://www.youtube.com/results?search_query=benidorm+holiday+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: tenerife holiday vlog
+      https://www.youtube.com/results?search_query=tenerife+holiday+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: lanzarote holiday vlog
+      https://www.youtube.com/results?search_query=lanzarote+holiday+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: costa del sol holiday
+      https://www.youtube.com/results?search_query=costa+del+sol+holiday&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: greece holiday vlog
+      https://www.youtube.com/results?search_query=greece+holiday+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: spain holiday vlog
+      https://www.youtube.com/results?search_query=spain+holiday+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: portugal algarve holiday
+      https://www.youtube.com/results?search_query=portugal+algarve+holiday&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: dubai holiday vlog
+      https://www.youtube.com/results?search_query=dubai+holiday+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: florida holiday vlog
+      https://www.youtube.com/results?search_query=florida+holiday+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: disney world holiday planning
+      https://www.youtube.com/results?search_query=disney+world+holiday+planning&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: bali resort review
+      https://www.youtube.com/results?search_query=bali+resort+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: cancun resort review
+      https://www.youtube.com/results?search_query=cancun+resort+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: uk staycation vlog
+      https://www.youtube.com/results?search_query=uk+staycation+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: caravan holiday uk
+      https://www.youtube.com/results?search_query=caravan+holiday+uk&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: holiday park review
+      https://www.youtube.com/results?search_query=holiday+park+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: butlins haven review
+      https://www.youtube.com/results?search_query=butlins+haven+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: airport tips and hacks
+      https://www.youtube.com/results?search_query=airport+tips+and+hacks&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: holiday packing tips
+      https://www.youtube.com/results?search_query=holiday+packing+tips&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: travel insurance advice
+      https://www.youtube.com/results?search_query=travel+insurance+advice&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: first time flying tips
+      https://www.youtube.com/results?search_query=first+time+flying+tips&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: gold coast holiday vlog
+      https://www.youtube.com/results?search_query=gold+coast+holiday+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: queensland holiday vlog
+      https://www.youtube.com/results?search_query=queensland+holiday+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: fiji holiday resort
+      https://www.youtube.com/results?search_query=fiji+holiday+resort&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: new zealand holiday vlog
+      https://www.youtube.com/results?search_query=new+zealand+holiday+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: las vegas travel guide
+      https://www.youtube.com/results?search_query=las+vegas+travel+guide&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: orlando florida vacation tips
+      https://www.youtube.com/results?search_query=orlando+florida+vacation+tips&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: disney world vacation planning
+      https://www.youtube.com/results?search_query=disney+world+vacation+planning&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: universal orlando vlog
+      https://www.youtube.com/results?search_query=universal+orlando+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: hawaii vacation guide
+      https://www.youtube.com/results?search_query=hawaii+vacation+guide&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: alaska cruise vlog
+      https://www.youtube.com/results?search_query=alaska+cruise+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: mexico all inclusive resort
+      https://www.youtube.com/results?search_query=mexico+all+inclusive+resort&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: cancun vacation vlog
+      https://www.youtube.com/results?search_query=cancun+vacation+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: punta cana resort review
+      https://www.youtube.com/results?search_query=punta+cana+resort+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: jamaica all inclusive
+      https://www.youtube.com/results?search_query=jamaica+all+inclusive&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: national park vacation guide
+      https://www.youtube.com/results?search_query=national+park+vacation+guide&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: rv road trip america
+      https://www.youtube.com/results?search_query=rv+road+trip+america&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: new york city travel guide
+      https://www.youtube.com/results?search_query=new+york+city+travel+guide&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: california road trip vlog
+      https://www.youtube.com/results?search_query=california+road+trip+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: myrtle beach vacation
+      https://www.youtube.com/results?search_query=myrtle+beach+vacation&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: outer banks vacation
+      https://www.youtube.com/results?search_query=outer+banks+vacation&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: carnival cruise vlog
+      https://www.youtube.com/results?search_query=carnival+cruise+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: royal caribbean cruise review
+      https://www.youtube.com/results?search_query=royal+caribbean+cruise+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: norwegian cruise line vlog
+      https://www.youtube.com/results?search_query=norwegian+cruise+line+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: disney cruise line vlog
+      https://www.youtube.com/results?search_query=disney+cruise+line+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: us travel tips family
+      https://www.youtube.com/results?search_query=us+travel+tips+family&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: budget travel usa
+      https://www.youtube.com/results?search_query=budget+travel+usa&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: canada vacation guide
+      https://www.youtube.com/results?search_query=canada+vacation+guide&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: banff jasper travel vlog
+      https://www.youtube.com/results?search_query=banff+jasper+travel+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: toronto travel guide
+      https://www.youtube.com/results?search_query=toronto+travel+guide&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: canadian rockies road trip
+      https://www.youtube.com/results?search_query=canadian+rockies+road+trip&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: uk family holiday vlog
+      https://www.youtube.com/results?search_query=uk+family+holiday+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: package holiday tips uk
+      https://www.youtube.com/results?search_query=package+holiday+tips+uk&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: airport parking tips uk
+      https://www.youtube.com/results?search_query=airport+parking+tips+uk&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: manchester airport vlog
+      https://www.youtube.com/results?search_query=manchester+airport+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: easyjet holiday review
+      https://www.youtube.com/results?search_query=easyjet+holiday+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: on the beach holiday review
+      https://www.youtube.com/results?search_query=on+the+beach+holiday+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: holiday money saving uk
+      https://www.youtube.com/results?search_query=holiday+money+saving+uk&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: cornwall devon holiday vlog
+      https://www.youtube.com/results?search_query=cornwall+devon+holiday+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: lake district holiday
+      https://www.youtube.com/results?search_query=lake+district+holiday&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: center parcs review
+      https://www.youtube.com/results?search_query=center+parcs+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: pontins pontins review
+      https://www.youtube.com/results?search_query=pontins+pontins+review&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: uk seaside holiday vlog
+      https://www.youtube.com/results?search_query=uk+seaside+holiday+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: british holiday park vlog
+      https://www.youtube.com/results?search_query=british+holiday+park+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: skegness blackpool vlog
+      https://www.youtube.com/results?search_query=skegness+blackpool+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: majorca menorca holiday vlog
+      https://www.youtube.com/results?search_query=majorca+menorca+holiday+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: turkey holiday vlog uk
+      https://www.youtube.com/results?search_query=turkey+holiday+vlog+uk&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: egypt holiday vlog uk
+      https://www.youtube.com/results?search_query=egypt+holiday+vlog+uk&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: cyprus holiday vlog
+      https://www.youtube.com/results?search_query=cyprus+holiday+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: malta holiday vlog
+      https://www.youtube.com/results?search_query=malta+holiday+vlog&sp=CAISAhgC
+      Found 6 channels
+
+   Searching: croatia holiday vlog
+      https://www.youtube.com/results?search_query=croatia+holiday+vlog&sp=CAISAhgC
+      Found 6 channels
+
+Discovered 385 unique channels across 91 terms
+Merged 283 seed + 202 newly discovered channels
+Limited to first 485 channels
+Saved discovered channel list to discovered.txt
+
+Scraping 485 channels with 3 workers
+
+   [w1] (1/485) https://www.youtube.com/@taylorwynn
+   [w3] (2/485) https://www.youtube.com/@thetravelcoaches
+   [w2] (3/485) https://www.youtube.com/@discoverydestination
+         Name: The Travel Coaches
+         Subscribers: 76.1K subscribers (76100)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/thetravelcoaches?igshid=MzRlODBiNWFlZA==
+         Name: Discovery Destination
+         Subscribers: 20.2K subscribers (20200)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: Taylor Wynn
+         Subscribers: 861K subscribers (861000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://instagram.com/taylorwynn
+         Uploads: weekly, last 0d ago, 20 in 90d (sampled 30)
+         Below range (20,200 < 80,000)
+         Uploads: monthly, last 1d ago, 4 in 90d (sampled 30)
+         Below range (76,100 < 80,000)
+   [w2] (4/485) https://www.youtube.com/@ChewsToExplore
+   [w3] (5/485) https://www.youtube.com/@RetirementUnlocked07
+         Uploads: weekly, last 5d ago, 11 in 90d (sampled 30)
+   [w1] (6/485) https://www.youtube.com/@KeithandDev
+         Name: Retirement Unlocked
+         Subscribers: 9.05K subscribers (9050)
+         Email listed: no
+         Type: unclear (United States)
+         Name: Chews to Explore
+         Subscribers: 124K subscribers (124000)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: Keith & Dev
+         Subscribers: 28.9K subscribers (28900)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/keithanddev/
+         Uploads: weekly, last 1d ago, 22 in 90d (sampled 30)
+         Below range (9,050 < 80,000)
+         Uploads: weekly, last 3d ago, 13 in 90d (sampled 30)
+   [w3] (7/485) https://www.youtube.com/@BonVoyageBrenda
+         Uploads: biweekly, last 1d ago, 8 in 90d (sampled 30)
+         Below range (28,900 < 80,000)
+   [w2] (8/485) https://www.youtube.com/@Passport_Pages
+   [w1] (9/485) https://www.youtube.com/@ashknowstravel
+         Name: Ash Knows Travel
+         Subscribers: 14K subscribers (14000)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: PP: Passport Pages
+         Subscribers: 138K subscribers (138000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/passportpagestravel
+         Name: Bon Voyage Brenda
+         Subscribers: 4.68K subscribers (4680)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/bonvbrenda?igsh=MTJsYXlpdzg2ZW4yaQ==&utm_source=qr
+         Uploads: weekly, last 10d ago, 23 in 90d (sampled 30)
+         Below range (14,000 < 80,000)
+         Uploads: biweekly, last 1d ago, 6 in 90d (sampled 30)
+         Uploads: monthly, last 4d ago, 4 in 90d (sampled 30)
+         Below range (4,680 < 80,000)
+   [w1] (10/485) https://www.youtube.com/@holidayexpertshow
+   [w2] (11/485) https://www.youtube.com/@TierraTravelsCo.
+   [w3] (12/485) https://www.youtube.com/@TravellingwithBruce
+         Name: The Holiday Expert Show
+         Subscribers: 1.38K subscribers (1380)
+         Email listed: no
+         Type: unclear (United Kingdom)
+         Name: Tierra Travels
+         Subscribers: 439 subscribers (439)
+         Email listed: no
+         Type: solo
+         Name: Travelling with Bruce
+         Subscribers: 60.2K subscribers (60200)
+         Email listed: yes
+         Type: solo (Canada)
+         Uploads: biweekly, last 5d ago, 8 in 90d (sampled 8)
+         Below range (1,380 < 80,000)
+         Uploads: dormant, last 730d ago, 0 in 90d (sampled 14)
+         Below range (439 < 80,000)
+   [w1] (13/485) https://www.youtube.com/@AdventuringWithAnnie
+         Uploads: inactive, last 122d ago, 0 in 90d (sampled 30)
+         Below range (60,200 < 80,000)
+   [w2] (14/485) https://www.youtube.com/@DFBGuide
+   [w3] (15/485) https://www.youtube.com/@TheFrugalBrit
+         Name: DFBGuide
+         Subscribers: 1.13M subscribers (1130000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://instagram.com/disneyfoodblog
+         Name: The Frugal Brit - Orlando
+         Subscribers: 114K subscribers (114000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/Hello everyone! In addition to creating a new vlog channel, I thought I’d also create an Instagram account so that I can give updates even quicker. Here’s the link if anyone’s interested:
+
+instagram.com/jayjackorlando/
+
+I’ll hopefully be setting up the vlog channel in the next few weeks. Really pleased with the response to the last post, thank you!! 😁
+         Name: Adventuring with Annie
+         Subscribers: 12.2K subscribers (12200)
+         Email listed: no
+         Type: unclear
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+   [w2] (16/485) https://www.youtube.com/@sevenstarsholiday
+         Uploads: weekly, last 2d ago, 26 in 90d (sampled 30)
+         Below range (12,200 < 80,000)
+         Uploads: biweekly, last 9d ago, 5 in 90d (sampled 30)
+   [w1] (17/485) https://www.youtube.com/@FrugalFitMom
+   [w3] (18/485) https://www.youtube.com/@seerasan
+         Name: Seven Stars Holiday
+         Subscribers: 1.3K subscribers (1300)
+         Email listed: yes
+         Type: unclear (India)
+         Name: seerasan
+         Subscribers: 153K subscribers (153000)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/seerasan/
+         Name: Frugal Fit Mom
+         Subscribers: 691K subscribers (691000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/frugalfitmom6/
+         Uploads: dormant, last 365d ago, 0 in 90d (sampled 14)
+         Below range (1,300 < 80,000)
+   [w2] (19/485) https://www.youtube.com/@travelsworldguidecom
+         Uploads: weekly, last 1d ago, 10 in 90d (sampled 30)
+         Outside target countries (Australia)
+         Uploads: weekly, last 5d ago, 18 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (20/485) https://www.youtube.com/@FamilyAtSea
+   [w1] (21/485) https://www.youtube.com/@TravelDanceLife
+         Name: Travels World Guide
+         Subscribers: 9 subscribers (9)
+         Email listed: no
+         Type: solo (Türkiye)
+         Name: Family at Sea
+         Subscribers: 45.5K subscribers (45500)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/familyatsea.travel/
+         Name: Travel Dance Life
+         Subscribers: 2.02K subscribers (2020)
+         Email listed: no
+         Type: unclear (India)
+         Uploads: dormant, last 730d ago, 0 in 90d (sampled 17)
+         Below range (9 < 80,000)
+   [w2] (22/485) https://www.youtube.com/@TheMacMaster
+         Uploads: weekly, last 2d ago, 25 in 90d (sampled 30)
+         Below range (45,500 < 80,000)
+   [w3] (23/485) https://www.youtube.com/@travelmorepodcast
+         Uploads: monthly, last 10d ago, 2 in 90d (sampled 30)
+         Below range (2,020 < 80,000)
+   [w1] (24/485) https://www.youtube.com/@BenidormbyAna
+         Name: The MacMaster
+         Subscribers: 247K subscribers (247000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/ukmacmaster/
+         Name: Travel More
+         Subscribers: 18 subscribers (18)
+         Email listed: yes
+         Type: unclear
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Name: Benidorm by Ana
+         Subscribers: 25.8K subscribers (25800)
+         Email listed: yes
+         Type: business (Spain)
+         Instagram: https://www.instagram.com/benidormbyana/
+   [w2] (25/485) https://www.youtube.com/@30AndAWakeUp
+         Uploads: dormant, last 244d ago, 0 in 90d (sampled 30)
+         Below range (18 < 80,000)
+   [w3] (26/485) https://www.youtube.com/channel/UCkhvsUsHkQv1PDWVl7-9Bvg
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Below range (25,800 < 80,000)
+         Name: 30 And A Wake Up
+         Subscribers: 115K subscribers (115000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/30andawakeup/
+   [w1] (27/485) https://www.youtube.com/@AshandKels
+         Name: TVRemix
+         Subscribers: 1.5K subscribers (1500)
+         Email listed: no
+         Type: unclear (United Kingdom)
+         Name: Ash and Kels
+         Subscribers: 85.7K subscribers (85700)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/_ashandkels/
+         Uploads: dormant, last 365d ago, 0 in 90d (sampled 30)
+         Cadence 'dormant' below required 'monthly'
+         Uploads: monthly, last 0d ago, 4 in 90d (sampled 18)
+         Below range (1,500 < 80,000)
+   [w2] (28/485) https://www.youtube.com/@GoofyGetawaysTravelAgency
+   [w3] (29/485) https://www.youtube.com/@MickeyGuruTravel
+         Uploads: weekly, last 3d ago, 19 in 90d (sampled 30)
+         Name: Goofy Getaways
+         Subscribers: 64 subscribers (64)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/goofygetaways
+         Name: Mickey Guru Travel Company
+         Subscribers: 161 subscribers (161)
+         Email listed: yes
+         Type: business (United States)
+         Instagram: https://www.instagram.com/mickeygurutravel/
+   [w1] (30/485) https://www.youtube.com/@Twoforthewinpodcast
+         Uploads: biweekly, last 6d ago, 5 in 90d (sampled 30)
+         Below range (64 < 80,000)
+         Name: Two for the win
+         Subscribers: 106 subscribers (106)
+         Email listed: yes
+         Type: unclear (United States)
+   [w2] (31/485) https://www.youtube.com/@TheHawaiiVacationGuide
+         Uploads: weekly, last 4d ago, 29 in 90d (sampled 30)
+         Below range (161 < 80,000)
+   [w3] (32/485) https://www.youtube.com/@selfmaidpod
+         Name: Self Maid with Jason Cleans
+         Subscribers: 100 subscribers (100)
+         Email listed: no
+         Type: unclear
+         Uploads: inactive, last 91d ago, 0 in 90d (sampled 30)
+         Below range (106 < 80,000)
+         Name: The Hawaii Vacation Guide
+         Subscribers: 164K subscribers (164000)
+         Email listed: yes
+         Type: unclear (United States)
+         Instagram: https://www.instagram.com/Welcome to our Hawaii adventures! We're Erica and Jordan and we've lived on Maui and Oahu. Now, with our son and daughter in tow, we continue learning as much as possible about traveling in Hawaii. We share everything we learn to help you plan your best trip to Hawaii. We share tips, activities, and reviews. Sustainable travel starts with building love and respect for the islands. We hope these videos spread that message. Mahalo for watching.
+
+Website: https://thehawaiivacationguide.com/
+Instagram: https://www.instagram.com/thehawaiivacationguide/
+   [w1] (33/485) https://www.youtube.com/@TheParkProdigy
+         Uploads: weekly, last 3d ago, 16 in 90d (sampled 30)
+         Below range (100 < 80,000)
+   [w3] (34/485) https://www.youtube.com/@thebangkokguide
+         Uploads: weekly, last 2d ago, 12 in 90d (sampled 30)
+   [w2] (35/485) https://www.youtube.com/@EdChapman23
+         Name: The Park Prodigy
+         Subscribers: 29.1K subscribers (29100)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/theparkprodigy
+         Name: Cal
+         Subscribers: 107K subscribers (107000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/ajarncal/
+         Uploads: weekly, last 1d ago, 26 in 90d (sampled 30)
+         Below range (29,100 < 80,000)
+         Name: Ed Chapman
+         Subscribers: 149K subscribers (149000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://instagram.com/edchapman23
+   [w1] (36/485) https://www.youtube.com/@WalkWithMeTim
+         Uploads: weekly, last 6d ago, 22 in 90d (sampled 30)
+   [w3] (37/485) https://www.youtube.com/@WalkWithNiamh
+         Uploads: weekly, last 0d ago, 12 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Name: Walk With Me Tim
+         Subscribers: 1.05M subscribers (1050000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/walkwithmetim
+   [w2] (38/485) https://www.youtube.com/@ThisIsOurRetirement
+         Name: Walk With Niamh
+         Subscribers: 5.77K subscribers (5770)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Uploads: weekly, last 1d ago, 14 in 90d (sampled 30)
+   [w1] (39/485) https://www.youtube.com/@Thehotelandtakeawayhunter
+         Name: This Is Our Retirement
+         Subscribers: 117K subscribers (117000)
+         Email listed: no
+         Type: unclear (Canada)
+         Uploads: inactive, last 152d ago, 0 in 90d (sampled 30)
+         Below range (5,770 < 80,000)
+   [w3] (40/485) https://www.youtube.com/@travellyman
+         Name: The hotel & hunter
+         Subscribers: 16.1K subscribers (16100)
+         Email listed: no
+         Type: solo
+         Uploads: weekly, last 1d ago, 11 in 90d (sampled 30)
+   [w2] (41/485) https://www.youtube.com/@WorldWide_Dom
+         Name: Travelly Man
+         Subscribers: 4.8K subscribers (4800)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/travelly_man/
+         Uploads: monthly, last 14d ago, 3 in 90d (sampled 30)
+         Below range (16,100 < 80,000)
+   [w1] (42/485) https://www.youtube.com/@johnnyfied1
+         Uploads: biweekly, last 30d ago, 7 in 90d (sampled 30)
+         Below range (4,800 < 80,000)
+         Name: WorldWide Dom
+         Subscribers: 34.3K subscribers (34300)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/world_wide_dom/
+   [w3] (43/485) https://www.youtube.com/@OnBoardHD
+         Name: Johnnyfied
+         Subscribers: 4.72K subscribers (4720)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Uploads: weekly, last 2d ago, 13 in 90d (sampled 30)
+         Below range (34,300 < 80,000)
+         Name: OnBoardHD
+         Subscribers: 163K subscribers (163000)
+         Email listed: yes
+         Type: unclear (Spain)
+   [w2] (44/485) https://www.youtube.com/@TheUnchartedFamily
+         Uploads: inactive, last 91d ago, 0 in 90d (sampled 30)
+         Below range (4,720 < 80,000)
+   [w1] (45/485) https://www.youtube.com/@Walesadventures
+         Name: The Uncharted Family
+         Subscribers: 209K subscribers (209000)
+         Email listed: yes
+         Type: unclear
+         Uploads: biweekly, last 2d ago, 6 in 90d (sampled 30)
+         Outside target countries (Spain)
+   [w3] (46/485) https://www.youtube.com/@8Ball-adventures
+         Name: Wales Adventures
+         Subscribers: 2.26K subscribers (2260)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/wales.adventures?igsh=MWlyc251dnU0ZGM3YQ==
+         Uploads: biweekly, last 14d ago, 8 in 90d (sampled 30)
+   [w2] (47/485) https://www.youtube.com/@JazzyinTransit
+         Name: 8Ball Adventures
+         Subscribers: 216 subscribers (216)
+         Email listed: no
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/8.ball_adventures?igsh=MXBjYXIzaDR3cjFweg==&utm_source=qr
+         Uploads: weekly, last 3d ago, 14 in 90d (sampled 30)
+         Below range (2,260 < 80,000)
+   [w1] (48/485) https://www.youtube.com/@zachrachandlife
+         Name: Jazzy In Transit
+         Subscribers: 629 subscribers (629)
+         Email listed: no
+         Type: solo
+         Uploads: monthly, last 3d ago, 4 in 90d (sampled 30)
+         Below range (216 < 80,000)
+   [w3] (49/485) https://www.youtube.com/@WanderingandBeyond
+         Name: Zach, Rach & Life
+         Subscribers: 1.26K subscribers (1260)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/zachrachandlife/
+         Uploads: sporadic, last 30d ago, 1 in 90d (sampled 30)
+         Below range (629 < 80,000)
+   [w2] (50/485) https://www.youtube.com/@dadlifewithriver
+         Uploads: biweekly, last 3d ago, 6 in 90d (sampled 30)
+         Below range (1,260 < 80,000)
+         Name: Wandering and Beyond
+         Subscribers: 5.89K subscribers (5890)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/wanderingandbeyond/
+   [w1] (51/485) https://www.youtube.com/@oliverscott4865
+         Name: Dad Life - Parent Humour and Family Travel
+         Subscribers: 21.8K subscribers (21800)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/dadlifewithriver/
+         Name: Oliver Scott
+         Subscribers: 761 subscribers (761)
+         Email listed: no
+         Type: unclear
+         Uploads: weekly, last 2d ago, 29 in 90d (sampled 30)
+         Below range (5,890 < 80,000)
+         Uploads: dormant, last 183d ago, 0 in 90d (sampled 25)
+         Below range (21,800 < 80,000)
+   [w3] (52/485) https://www.youtube.com/@kayleighhale
+   [w2] (53/485) https://www.youtube.com/@lifewithkaz4130
+         Uploads: dormant, last 1826d ago, 0 in 90d (sampled 30)
+         Below range (761 < 80,000)
+   [w1] (54/485) https://www.youtube.com/@FitChickGlows
+         Name: Lee Hale
+         Subscribers: 2 subscribers (2)
+         Email listed: no
+         Type: unclear
+         Name: Life With Kaz
+         Subscribers: 709 subscribers (709)
+         Email listed: no
+         Type: solo
+         Instagram: https://www.instagram.com/lifewithkaz/
+         Name: FitChickGlows
+         Subscribers: 389 subscribers (389)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/fitchickglows/
+         Uploads: dormant, last 4018d ago, 0 in 90d (sampled 1)
+         Below range (2 < 80,000)
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Below range (709 < 80,000)
+   [w3] (55/485) https://www.youtube.com/@vloggytravels
+   [w2] (56/485) https://www.youtube.com/@FamilyPerspective
+         Uploads: dormant, last 365d ago, 0 in 90d (sampled 30)
+         Below range (389 < 80,000)
+   [w1] (57/485) https://www.youtube.com/@POURTHEWINEITSROMCOMTIME
+         Name: Vloggy Travels
+         Subscribers: 388 subscribers (388)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/thechilloutflightchannel/
+         Name: Our perspective
+         Subscribers: 40 subscribers (40)
+         Email listed: no
+         Type: solo (United Kingdom)
+         Name: POUR THE WINE, IT'S ROM-COM TIME
+         Subscribers: 258 subscribers (258)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/pourthewineitsromcomtime/
+         Uploads: dormant, last 730d ago, 0 in 90d (sampled 30)
+         Below range (388 < 80,000)
+   [w3] (58/485) https://www.youtube.com/@whoknowswhere
+         Uploads: dormant, last 304d ago, 0 in 90d (sampled 2)
+         Below range (40 < 80,000)
+   [w2] (59/485) https://www.youtube.com/@LegoJakeProductions
+         Uploads: weekly, last 2d ago, 30 in 90d (sampled 30)
+         Below range (258 < 80,000)
+   [w1] (60/485) https://www.youtube.com/@steveandcarole
+         Name: Who Knows Where
+         Subscribers: 29.5K subscribers (29500)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/whoknowswhere11/
+         Name: Jake
+         Subscribers: 174 subscribers (174)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Name: steve and carole vano
+         Subscribers: 22.4K subscribers (22400)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://instagram.com/steveandcarolevano?igshid=OGQ5ZDc20DK2ZA==
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Below range (29,500 < 80,000)
+   [w3] (61/485) https://www.youtube.com/@FlightFormula
+         Uploads: biweekly, last 5d ago, 9 in 90d (sampled 30)
+         Below range (174 < 80,000)
+   [w2] (62/485) https://www.youtube.com/@Cassiearan
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Below range (22,400 < 80,000)
+   [w1] (63/485) https://www.youtube.com/@lakemaker
+         Name: Flight Formula
+         Subscribers: 79.1K subscribers (79100)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/simondean.xyz/
+         Name: Cassie Aran
+         Subscribers: 173K subscribers (173000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/This is the WORST electric car that we could find to take on a 500 mile road trip around Italy. It's not meant to leave the main city of Rome because NO ONE would do this due to its INSANE inconveniences. It's top speed is 25 miles an hour so you can only go on back roads and EVERYONE will pass you. It has no AC and only two tiny push windows so it is HOT at all times. If it rains, you have to pull over because all the windows will fog up and there is nothing you can do about it. And incase it couldn't get any worse, it only lasts up to 40 miles on a charge..but if you hit and mountains or elevation..you can expect to get A LOT less.
+
+All Links in One Spot!: https://linktr.ee/cassiearan
+
+Tiktok:
+https://www.tiktok.com/@cassiearan?lang=en
+
+Instagram:    
+https://www.instagram.com/cassie.aran/?hl=en
+
+Socks & Shirts to Save Animals: www.theearsocks.com
+
+WISH US LUCK!
+         Name: Lakemaker
+         Subscribers: 5.93K subscribers (5930)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/andrewlakemaker/
+         Uploads: biweekly, last 11d ago, 6 in 90d (sampled 30)
+         Below range (79,100 < 80,000)
+   [w3] (64/485) https://www.youtube.com/@3Days3Noches
+         Uploads: biweekly, last 14d ago, 6 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (65/485) https://www.youtube.com/@Coolist
+         Uploads: dormant, last 244d ago, 0 in 90d (sampled 30)
+         Below range (5,930 < 80,000)
+   [w1] (66/485) https://www.youtube.com/@VIP_Travel
+         Name: 3 Days 3 Noches
+         Subscribers: 57.7K subscribers (57700)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: Coolist
+         Subscribers: 128K subscribers (128000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/james.coolist
+         Name: VIP Travel
+         Subscribers: 9.05K subscribers (9050)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: biweekly, last 6d ago, 9 in 90d (sampled 30)
+         Below range (57,700 < 80,000)
+   [w3] (67/485) https://www.youtube.com/@Explorcation
+         Uploads: biweekly, last 13d ago, 5 in 90d (sampled 30)
+   [w2] (68/485) https://www.youtube.com/@AllInclusiveReviews
+         Uploads: dormant, last 304d ago, 0 in 90d (sampled 22)
+         Below range (9,050 < 80,000)
+   [w1] (69/485) https://www.youtube.com/@GoTimeTravels
+         Name: Explorcation
+         Subscribers: 92.2K subscribers (92200)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/explor_cation
+         Name: All Inclusive Reviews
+         Subscribers: 14.2K subscribers (14200)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: GoTime Travels
+         Subscribers: 116K subscribers (116000)
+         Email listed: yes
+         Type: solo (Ireland)
+         Instagram: https://www.instagram.com/gotimetravels/
+         Uploads: biweekly, last 9d ago, 9 in 90d (sampled 30)
+   [w3] (70/485) https://www.youtube.com/@TheWanderlustWayisback
+         Uploads: inactive, last 91d ago, 0 in 90d (sampled 30)
+         Below range (14,200 < 80,000)
+   [w2] (71/485) https://www.youtube.com/@TheTravelDash
+         Uploads: weekly, last 3d ago, 11 in 90d (sampled 30)
+   [w1] (72/485) https://www.youtube.com/@Deanalex7
+         Name: The Wanderlust Way
+         Subscribers: 39.2K subscribers (39200)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/the.wanderlustway/
+         Name: Travel Dash
+         Subscribers: 3.29K subscribers (3290)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/traveldashofficial
+         Name: Deanalex
+         Subscribers: 85.1K subscribers (85100)
+         Email listed: no
+         Type: unclear
+         Uploads: weekly, last 1d ago, 15 in 90d (sampled 30)
+         Below range (39,200 < 80,000)
+   [w3] (73/485) https://www.youtube.com/@dannyvlogstravels
+         Uploads: weekly, last 1d ago, 18 in 90d (sampled 30)
+         Below range (3,290 < 80,000)
+   [w2] (74/485) https://www.youtube.com/@travelTimeAdventures
+         Uploads: weekly, last 1d ago, 15 in 90d (sampled 30)
+   [w1] (75/485) https://www.youtube.com/@strictlydumpling
+         Name: DannyVlogsTravels
+         Subscribers: 11.1K subscribers (11100)
+         Email listed: no
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/dannyvlogstravels/
+         Name: TravelTime
+         Subscribers: 12.8K subscribers (12800)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 1d ago, 25 in 90d (sampled 30)
+         Below range (11,100 < 80,000)
+   [w3] (76/485) https://www.youtube.com/@strictlydumplingshorts
+         Name: Strictly Dumpling
+         Subscribers: 4.29M subscribers (4290000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/mikexingchen
+         Uploads: weekly, last 4d ago, 21 in 90d (sampled 30)
+         Below range (12,800 < 80,000)
+   [w2] (77/485) https://www.youtube.com/@GriffandAlyssa
+         Uploads: weekly, last 0d ago, 21 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Name: Mike Chen Clips & BEST Eats
+         Subscribers: 135K subscribers (135000)
+         Email listed: no
+         Type: unclear (United States)
+   [w1] (78/485) https://www.youtube.com/@TheLoversPassport
+         Name: Griff & Alyssa
+         Subscribers: 129K subscribers (129000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/griffandalyssa
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (79/485) https://www.youtube.com/@Danygotaworldtosee
+         Name: The Lovers Passport
+         Subscribers: 102K subscribers (102000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/theloverspassport
+         Uploads: weekly, last 9d ago, 11 in 90d (sampled 30)
+   [w2] (80/485) https://www.youtube.com/@TouristKate
+         Name: Dany Dev
+         Subscribers: 437K subscribers (437000)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/danydevv/
+         Uploads: weekly, last 2d ago, 13 in 90d (sampled 30)
+   [w1] (81/485) https://www.youtube.com/@CheckInKlaudiaiMicha%C5%82
+         Name: Tourist Kat
+         Subscribers: 1.84K subscribers (1840)
+         Email listed: no
+         Type: unclear (Türkiye)
+         Uploads: monthly, last 14d ago, 3 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Name: Check In - Klaudia i Michał
+         Subscribers: 73.2K subscribers (73200)
+         Email listed: yes
+         Type: solo (Poland)
+         Instagram: https://www.instagram.com/check_in_klaudia_i_michal
+   [w3] (82/485) https://www.youtube.com/@LouiseUsher
+         Uploads: monthly, last 10d ago, 3 in 90d (sampled 17)
+         Below range (1,840 < 80,000)
+   [w2] (83/485) https://www.youtube.com/@Katieehopkins
+         Name: Lusher Life
+         Subscribers: 13.7K subscribers (13700)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: http://www.instagram.com/lusher.life
+         Uploads: weekly, last 1d ago, 13 in 90d (sampled 30)
+         Below range (73,200 < 80,000)
+   [w1] (84/485) https://www.youtube.com/@360frankie
+         Name: Katie Lynn Hopkins
+         Subscribers: 21.5K subscribers (21500)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/katie.hopkins_x
+         Uploads: monthly, last 61d ago, 2 in 90d (sampled 30)
+         Below range (13,700 < 80,000)
+   [w3] (85/485) https://www.youtube.com/@KylePalIo
+         Name: 360frankie
+         Subscribers: 246 subscribers (246)
+         Email listed: no
+         Type: solo
+         Uploads: weekly, last 0d ago, 13 in 90d (sampled 30)
+         Below range (21,500 < 80,000)
+   [w2] (86/485) https://www.youtube.com/@Mammoth_Club
+         Name: Kyle Pallo
+         Subscribers: 251K subscribers (251000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://instagram.com/kylepallo
+         Uploads: sporadic, last 30d ago, 1 in 90d (sampled 1)
+         Below range (246 < 80,000)
+   [w1] (87/485) https://www.youtube.com/@nickandcarmen3885
+         Name: Mammoth Club
+         Subscribers: 307K subscribers (307000)
+         Email listed: no
+         Type: unclear (United States)
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+   [w3] (88/485) https://www.youtube.com/@ryan
+         Name: Nick and Carmen
+         Subscribers: 861 subscribers (861)
+         Email listed: no
+         Type: unclear (United States)
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+   [w2] (89/485) https://www.youtube.com/@MissMaryMak
+         Name: Ryan Trahan
+         Subscribers: 23.7M subscribers (23700000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://www.instagram.com/ryantrahan
+         Uploads: inactive, last 152d ago, 0 in 90d (sampled 30)
+         Below range (861 < 80,000)
+   [w1] (90/485) https://www.youtube.com/@DavidXLasVegas
+         Name: Miss Mary Mak
+         Subscribers: 1.27K subscribers (1270)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Instagram: https://www.instagram.com/miss_mary_mak/
+         Uploads: biweekly, last 30d ago, 6 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (91/485) https://www.youtube.com/@YellowProductions
+         Name: David X Las Vegas
+         Subscribers: 9.4K subscribers (9400)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: monthly, last 61d ago, 2 in 90d (sampled 30)
+         Below range (1,270 < 80,000)
+   [w2] (92/485) https://www.youtube.com/@LauriPesur
+         Name: Yellow Productions
+         Subscribers: 434K subscribers (434000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/yellowwproductions/
+         Uploads: inactive, last 152d ago, 0 in 90d (sampled 22)
+         Below range (9,400 < 80,000)
+   [w1] (93/485) https://www.youtube.com/@TheResortReportReviews
+         Name: Lauri Pesur
+         Subscribers: 1.15K subscribers (1150)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Name: The Resort Report
+         Subscribers: 672 subscribers (672)
+         Email listed: no
+         Type: unclear (United Kingdom)
+         Uploads: biweekly, last 30d ago, 7 in 90d (sampled 22)
+         Below range (1,150 < 80,000)
+   [w3] (94/485) https://www.youtube.com/@HeatherTravelsXO
+   [w2] (95/485) https://www.youtube.com/@ellieV
+         Uploads: monthly, last 30d ago, 3 in 90d (sampled 21)
+         Below range (672 < 80,000)
+         Name: ellieV
+         Subscribers: 2.98M subscribers (2980000)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/elliev_yt/
+   [w1] (96/485) https://www.youtube.com/@HoltandAshley
+         Name: HeatherTravelsXO
+         Subscribers: 33.4K subscribers (33400)
+         Email listed: yes
+         Type: business (United States)
+         Instagram: https://www.instagram.com/heatherstylesxo/
+         Uploads: monthly, last 13d ago, 3 in 90d (sampled 30)
+         Below range (33,400 < 80,000)
+   [w3] (97/485) https://www.youtube.com/@TravelLemming
+         Name: Holt & Ashley
+         Subscribers: 28.4K subscribers (28400)
+         Email listed: yes
+         Type: solo (United States)
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Outside target countries (Australia)
+   [w2] (98/485) https://www.youtube.com/@UpUpOurWay
+         Name: Travel Lemming
+         Subscribers: 7.49K subscribers (7490)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/travellemming/
+         Uploads: inactive, last 152d ago, 0 in 90d (sampled 30)
+         Below range (28,400 < 80,000)
+         Name: Up Up & Our Way
+         Subscribers: 56K subscribers (56000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/upupandourway
+   [w1] (99/485) https://www.youtube.com/@HannahRicketts
+         Uploads: biweekly, last 30d ago, 9 in 90d (sampled 30)
+         Below range (7,490 < 80,000)
+   [w3] (100/485) https://www.youtube.com/@pursuitforadventure
+         Name: Hannah Ricketts
+         Subscribers: 506K subscribers (506000)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Uploads: weekly, last 2d ago, 11 in 90d (sampled 30)
+         Below range (56,000 < 80,000)
+   [w2] (101/485) https://www.youtube.com/@JSHIPLIFE
+         Name: Pursuit For Adventure
+         Subscribers: 3.31K subscribers (3310)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/pursuit_for_adventure/
+         Uploads: weekly, last 3d ago, 26 in 90d (sampled 30)
+         Name: The Shiplife
+         Subscribers: 346K subscribers (346000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/theshiplife__official/
+   [w1] (102/485) https://www.youtube.com/@Eatsleepcruise1
+         Uploads: weekly, last 2d ago, 10 in 90d (sampled 30)
+         Below range (3,310 < 80,000)
+   [w3] (103/485) https://www.youtube.com/@BrightSunTravels
+         Uploads: weekly, last 4d ago, 25 in 90d (sampled 30)
+   [w2] (104/485) https://www.youtube.com/@LexieLimitless
+         Name: Eat Sleep Cruise
+         Subscribers: 170K subscribers (170000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/eatsleepcruise
+         Name: Bright Sun Travels
+         Subscribers: 353K subscribers (353000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/jakerosswilliams/
+         Name: Lexie Limitless
+         Subscribers: 751K subscribers (751000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/lexielimitless/
+         Uploads: weekly, last 1d ago, 12 in 90d (sampled 30)
+   [w1] (105/485) https://www.youtube.com/@CruiseInsider
+         Uploads: monthly, last 14d ago, 3 in 90d (sampled 30)
+   [w3] (106/485) https://www.youtube.com/@SimonWilson12
+         Uploads: monthly, last 21d ago, 2 in 90d (sampled 30)
+   [w2] (107/485) https://www.youtube.com/@ritzytravelguide
+         Name: Cruise Insider
+         Subscribers: 60.1K subscribers (60100)
+         Email listed: no
+         Type: unclear (Argentina)
+         Name: Simon Wilson
+         Subscribers: 2.14M subscribers (2140000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/simonjwils/
+         Name: Ritzy Travel Guide
+         Subscribers: 104K subscribers (104000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/ritzytravelguide
+         Uploads: weekly, last 5d ago, 10 in 90d (sampled 30)
+         Below range (60,100 < 80,000)
+   [w1] (108/485) https://www.youtube.com/@Trektrendy
+         Uploads: monthly, last 30d ago, 3 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (109/485) https://www.youtube.com/@jbauth
+         Uploads: biweekly, last 3d ago, 7 in 90d (sampled 30)
+   [w2] (110/485) https://www.youtube.com/@Cruisewith
+         Name: Trek Trendy
+         Subscribers: 1.44M subscribers (1440000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/trektrendy
+         Name: Jordan Bauth
+         Subscribers: 126K subscribers (126000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://www.instagram.com/jbauth
+         Name: Cruise With Ben and David
+         Subscribers: 341K subscribers (341000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/itsbenanddavid
+         Uploads: monthly, last 8d ago, 4 in 90d (sampled 30)
+   [w1] (111/485) https://www.youtube.com/@CruiserTravels
+         Uploads: weekly, last 0d ago, 27 in 90d (sampled 30)
+   [w3] (112/485) https://www.youtube.com/@HoffmanHappyTravels
+         Uploads: weekly, last 1d ago, 10 in 90d (sampled 30)
+   [w2] (113/485) https://www.youtube.com/@seemoreseascruises3791
+         Name: Cruiser Travels
+         Subscribers: 8.6K subscribers (8600)
+         Email listed: yes
+         Type: business (United States)
+         Instagram: https://www.instagram.com/cruisertravels/
+         Name: Hoffman Happy Travels
+         Subscribers: 30.6K subscribers (30600)
+         Email listed: yes
+         Type: business (United States)
+         Instagram: https://www.instagram.com/hoffman.happy.travels/
+         Name: See More Seas Cruises!
+         Subscribers: 16.3K subscribers (16300)
+         Email listed: yes
+         Type: business (United States)
+         Uploads: monthly, last 14d ago, 3 in 90d (sampled 30)
+         Below range (8,600 < 80,000)
+   [w1] (114/485) https://www.youtube.com/@brogantatexo
+         Uploads: weekly, last 8d ago, 11 in 90d (sampled 30)
+         Below range (30,600 < 80,000)
+   [w3] (115/485) https://www.youtube.com/@georgiaskye5542
+         Uploads: monthly, last 3d ago, 4 in 90d (sampled 30)
+         Below range (16,300 < 80,000)
+   [w2] (116/485) https://www.youtube.com/@ParisHedger
+         Name: Brogan Tate
+         Subscribers: 154K subscribers (154000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://instagram.com/brogantatexo
+         Name: Georgia Skye
+         Subscribers: 2.52K subscribers (2520)
+         Email listed: no
+         Type: unclear (United Kingdom)
+         Name: Paris Hedger
+         Subscribers: 14.7K subscribers (14700)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/parishedger/?hl=en
+         Uploads: weekly, last 0d ago, 14 in 90d (sampled 30)
+   [w1] (117/485) https://www.youtube.com/@TheSanbrookeAdventures
+         Uploads: dormant, last 335d ago, 0 in 90d (sampled 30)
+         Below range (14,700 < 80,000)
+         Uploads: biweekly, last 28d ago, 5 in 90d (sampled 30)
+         Below range (2,520 < 80,000)
+   [w2] (118/485) https://www.youtube.com/@Lifewithlils07
+   [w3] (119/485) https://www.youtube.com/@raleyadventures
+         Name: The Sanbrooke Adventures
+         Subscribers: 136K subscribers (136000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/thesanbrookeadventureschannel/
+         Name: Lily Pritchett
+         Subscribers: 195 subscribers (195)
+         Email listed: no
+         Type: unclear
+         Name: Raley Adventures
+         Subscribers: 1.9K subscribers (1900)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/raleyadventures
+         Uploads: weekly, last 5d ago, 21 in 90d (sampled 30)
+   [w1] (120/485) https://www.youtube.com/@LifeWellCruised
+         Uploads: biweekly, last 4d ago, 8 in 90d (sampled 11)
+         Below range (195 < 80,000)
+         Uploads: weekly, last 6d ago, 12 in 90d (sampled 30)
+         Below range (1,900 < 80,000)
+   [w2] (121/485) https://www.youtube.com/@LifeWithUsTV
+   [w3] (122/485) https://www.youtube.com/@MHFamilyAdventures
+         Name: Life Well Cruised
+         Subscribers: 516K subscribers (516000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/lifewellcruised/
+         Name: MH Family Adventures (Cruise Travel)
+         Subscribers: 42.7K subscribers (42700)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/mhfamilyadventures/
+         Name: LifeWithUsTV
+         Subscribers: 161K subscribers (161000)
+         Email listed: yes
+         Type: business (United States)
+         Instagram: https://instagram.com/codefuntravels
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Uploads: weekly, last 1d ago, 20 in 90d (sampled 30)
+         Below range (42,700 < 80,000)
+   [w1] (123/485) https://www.youtube.com/@PetwayTravel
+         Uploads: weekly, last 1d ago, 11 in 90d (sampled 29)
+         Looks like a tour operator or agency
+   [w3] (124/485) https://www.youtube.com/@CruiseCompass25
+   [w2] (125/485) https://www.youtube.com/@thetravelingtalls
+         Name: Stress Free Cruising
+         Subscribers: 2.43K subscribers (2430)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: The Traveling Talls
+         Subscribers: 3.22K subscribers (3220)
+         Email listed: yes
+         Type: solo (United States)
+         Name: Cruise Compass
+         Subscribers: 31.3K subscribers (31300)
+         Email listed: no
+         Type: unclear (United States)
+         Uploads: biweekly, last 1d ago, 6 in 90d (sampled 30)
+         Below range (2,430 < 80,000)
+   [w1] (126/485) https://www.youtube.com/@channonmooney
+         Uploads: monthly, last 30d ago, 2 in 90d (sampled 27)
+         Below range (3,220 < 80,000)
+         Uploads: weekly, last 2d ago, 16 in 90d (sampled 30)
+         Below range (31,300 < 80,000)
+   [w2] (127/485) https://www.youtube.com/@2Passports1Dream
+   [w3] (128/485) https://www.youtube.com/@HannahandMartinOnTheGlobe
+         Name: channonmooney
+         Subscribers: 117K subscribers (117000)
+         Email listed: no
+         Type: unclear (United Kingdom)
+         Name: Hannah and Martin On The Globe
+         Subscribers: 2.74K subscribers (2740)
+         Email listed: no
+         Type: unclear (United Kingdom)
+         Name: 2Passports 1Dream
+         Subscribers: 298K subscribers (298000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/2passports1dream
+         Uploads: weekly, last 3d ago, 19 in 90d (sampled 30)
+         Below range (2,740 < 80,000)
+   [w3] (129/485) https://www.youtube.com/@DROPOUTSUK
+         Uploads: weekly, last 8d ago, 17 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Uploads: weekly, last 2d ago, 13 in 90d (sampled 30)
+   [w1] (130/485) https://www.youtube.com/@TraveLike
+   [w2] (131/485) https://www.youtube.com/@Immaculatemicheals
+         Name: DROPOUTS
+         Subscribers: 274K subscribers (274000)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Instagram: https://www.instagram.com/dropoutsinsta
+         Name: TraveLike
+         Subscribers: 34K subscribers (34000)
+         Email listed: no
+         Type: solo (Poland)
+         Instagram: https://www.instagram.com/travelike.ada
+         Name: Emms Tv
+         Subscribers: 1.76K subscribers (1760)
+         Email listed: no
+         Type: solo (Austria)
+         Instagram: https://www.instagram.com/emms_tv/?hl=en
+         Uploads: dormant, last 274d ago, 0 in 90d (sampled 9)
+         Below range (1,760 < 80,000)
+         Uploads: biweekly, last 9d ago, 6 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (132/485) https://www.youtube.com/@JumpingPlaces
+   [w3] (133/485) https://www.youtube.com/@mrsrebeccahobson
+         Uploads: monthly, last 30d ago, 2 in 90d (sampled 30)
+         Below range (34,000 < 80,000)
+   [w1] (134/485) https://www.youtube.com/@Leilahannoun
+         Name: Jumping Places
+         Subscribers: 489K subscribers (489000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/jumpingplaces
+         Name: Rebecca Hobson
+         Subscribers: 111K subscribers (111000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/mrsrebeccahobson
+         Name: Leila Hannoun
+         Subscribers: 53.2K subscribers (53200)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/abcdefghijkleila_/?hl=en
+         Uploads: weekly, last 2d ago, 14 in 90d (sampled 30)
+   [w2] (135/485) https://www.youtube.com/@chloewhitthread
+         Uploads: monthly, last 30d ago, 3 in 90d (sampled 30)
+   [w3] (136/485) https://www.youtube.com/@shannonspaldingx
+         Uploads: weekly, last 0d ago, 10 in 90d (sampled 30)
+         Below range (53,200 < 80,000)
+   [w1] (137/485) https://www.youtube.com/@annaliviahynds23
+         Name: Chloe Whitthread
+         Subscribers: 13.5K subscribers (13500)
+         Email listed: no
+         Type: unclear
+         Name: Shannon Spalding
+         Subscribers: 20.4K subscribers (20400)
+         Email listed: no
+         Type: unclear
+         Name: Annalivia Hynds
+         Subscribers: 23.4K subscribers (23400)
+         Email listed: no
+         Type: unclear
+         Uploads: monthly, last 30d ago, 3 in 90d (sampled 30)
+         Below range (13,500 < 80,000)
+   [w2] (138/485) https://www.youtube.com/@leahblake03
+         Uploads: biweekly, last 1d ago, 5 in 90d (sampled 30)
+         Below range (20,400 < 80,000)
+   [w3] (139/485) https://www.youtube.com/@EmilyBull
+         Uploads: monthly, last 21d ago, 3 in 90d (sampled 14)
+         Below range (23,400 < 80,000)
+   [w1] (140/485) https://www.youtube.com/@AmiCharlizex
+         Name: Leah's Life in Motion
+         Subscribers: 55 subscribers (55)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/leahblake03/
+         Name: Emily Bull
+         Subscribers: 26.8K subscribers (26800)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/eemilybull/
+         Name: Ami Charlize
+         Subscribers: 432K subscribers (432000)
+         Email listed: no
+         Type: unclear
+         Uploads: inactive, last 152d ago, 0 in 90d (sampled 16)
+         Below range (55 < 80,000)
+   [w2] (141/485) https://www.youtube.com/@elleswift
+         Uploads: weekly, last 14d ago, 10 in 90d (sampled 30)
+         Below range (26,800 < 80,000)
+   [w3] (142/485) https://www.youtube.com/@AimeeStewart97
+         Uploads: weekly, last 8d ago, 13 in 90d (sampled 30)
+   [w1] (143/485) https://www.youtube.com/@FionaJColes
+         Name: Elle Swift
+         Subscribers: 585K subscribers (585000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: http://instagram.com/elleswift
+         Name: Aimee Stewart
+         Subscribers: 381 subscribers (381)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Uploads: weekly, last 1d ago, 12 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Name: Fiona J Coles
+         Subscribers: 3.57K subscribers (3570)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/fionajanehome
+   [w2] (144/485) https://www.youtube.com/@hayleightwose
+         Uploads: monthly, last 30d ago, 2 in 90d (sampled 30)
+         Below range (381 < 80,000)
+   [w3] (145/485) https://www.youtube.com/@YouTube-Seany_Boyy_
+         Name: Hayleigh Twose
+         Subscribers: 79 subscribers (79)
+         Email listed: yes
+         Type: unclear
+         Uploads: weekly, last 1d ago, 14 in 90d (sampled 30)
+         Below range (3,570 < 80,000)
+   [w1] (146/485) https://www.youtube.com/@spainrevealed
+         Name: Seany Boyy
+         Subscribers: 7.32K subscribers (7320)
+         Email listed: no
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/seany_boyy_/
+         Uploads: biweekly, last 1d ago, 8 in 90d (sampled 10)
+         Below range (79 < 80,000)
+   [w2] (147/485) https://www.youtube.com/@thepakspan
+         Name: Spain Revealed
+         Subscribers: 320K subscribers (320000)
+         Email listed: yes
+         Type: unclear (Spain)
+         Uploads: sporadic, last 30d ago, 1 in 90d (sampled 30)
+         Below range (7,320 < 80,000)
+         Name: Pakspan
+         Subscribers: 30.8K subscribers (30800)
+         Email listed: yes
+         Type: solo (Spain)
+         Instagram: https://instagram.com/thepakspan?igshid=YmMyMTA2M2Y=
+   [w3] (148/485) https://www.youtube.com/@mixflix2874
+         Uploads: weekly, last 4d ago, 13 in 90d (sampled 30)
+         Outside target countries (Spain)
+   [w1] (149/485) https://www.youtube.com/@WendallExplores
+         Uploads: weekly, last 1d ago, 13 in 90d (sampled 30)
+         Below range (30,800 < 80,000)
+   [w2] (150/485) https://www.youtube.com/@EvantheWayfarer
+         Name: Mix Flix
+         Subscribers: 371 subscribers (371)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Name: Wendall
+         Subscribers: 200K subscribers (200000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/wendall.youtube
+         Name: Evan the Wayfarer
+         Subscribers: 1.64K subscribers (1640)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: biweekly, last 4d ago, 9 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (151/485) https://www.youtube.com/@KrielJan
+         Uploads: weekly, last 0d ago, 28 in 90d (sampled 30)
+         Below range (371 < 80,000)
+   [w3] (152/485) https://www.youtube.com/@timandfin
+         Uploads: biweekly, last 2d ago, 7 in 90d (sampled 30)
+         Below range (1,640 < 80,000)
+   [w2] (153/485) https://www.youtube.com/@imtaramichelle
+         Name: Kriel Jan
+         Subscribers: 65.2K subscribers (65200)
+         Email listed: yes
+         Type: solo (Spain)
+         Instagram: http://www.instagram.com/krieljanig
+         Name: TIM and FIN
+         Subscribers: 255K subscribers (255000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/timandfin
+         Name: Tara Michelle
+         Subscribers: 1.29M subscribers (1290000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://instagram.com/imtaramichelle
+         Uploads: dormant, last 365d ago, 0 in 90d (sampled 30)
+         Cadence 'dormant' below required 'monthly'
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Below range (65,200 < 80,000)
+   [w3] (154/485) https://www.youtube.com/@luke_davis
+   [w1] (155/485) https://www.youtube.com/@MikeThurston
+         Uploads: weekly, last 3d ago, 25 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (156/485) https://www.youtube.com/@FamilyFizz
+         Name: Luke Davis
+         Subscribers: 207K subscribers (207000)
+         Email listed: yes
+         Type: unclear
+         Instagram: https://www.instagram.com/braedenalmas/
+         Name: Mike Thurston
+         Subscribers: 1.65M subscribers (1650000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/mikethurston/
+         Name: Family Fizz
+         Subscribers: 2.78M subscribers (2780000)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Uploads: monthly, last 6d ago, 2 in 90d (sampled 25)
+         No travel/holiday wording - off niche
+   [w3] (157/485) https://www.youtube.com/@summerandmattvlogs
+         Uploads: biweekly, last 4d ago, 5 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (158/485) https://www.youtube.com/@StephBohrer
+         Uploads: biweekly, last 1d ago, 7 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (159/485) https://www.youtube.com/@laurenkimofficial
+         Name: Summer & Matt
+         Subscribers: 10.3K subscribers (10300)
+         Email listed: no
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/summerfox___/
+         Name: Steph Bohrer
+         Subscribers: 821K subscribers (821000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/stephbohrer
+         Name: Lauren Kim
+         Subscribers: 496K subscribers (496000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/laurenkkim0?igsh=bnd0NXZuNTB0bHEx&utm_source=qr
+         Uploads: monthly, last 30d ago, 2 in 90d (sampled 13)
+         Below range (10,300 < 80,000)
+   [w3] (160/485) https://www.youtube.com/@ImAbbySigua
+         Uploads: biweekly, last 12d ago, 6 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (161/485) https://www.youtube.com/@Cessuche
+         Uploads: weekly, last 8d ago, 10 in 90d (sampled 16)
+         No travel/holiday wording - off niche
+   [w2] (162/485) https://www.youtube.com/@christineleeee
+         Name: ABBY
+         Subscribers: 106K subscribers (106000)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/imabbysigua
+         Name: Princess Uche
+         Subscribers: 56.7K subscribers (56700)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/cessuche/
+         Name: Christine Le
+         Subscribers: 345K subscribers (345000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/christineleeee/
+         Uploads: monthly, last 30d ago, 3 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (163/485) https://www.youtube.com/@JanandAnn
+         Uploads: monthly, last 10d ago, 2 in 90d (sampled 30)
+         Uploads: biweekly, last 2d ago, 5 in 90d (sampled 30)
+         Below range (56,700 < 80,000)
+         Name: Jan and Ann
+         Subscribers: 240K subscribers (240000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/itsannliwanag/
+   [w2] (164/485) https://www.youtube.com/@mrsemilynorris
+   [w1] (165/485) https://www.youtube.com/@kathy_jo
+         Uploads: biweekly, last 1d ago, 6 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (166/485) https://www.youtube.com/@EatSeeTV
+         Name: Kathy Jo
+         Subscribers: 41K subscribers (41000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/glo.ssary/
+         Name: Emily Norris
+         Subscribers: 889K subscribers (889000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/mrsemilynorris/
+         Name: Eat See TV
+         Subscribers: 142K subscribers (142000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/EatSeeTV/
+         Uploads: biweekly, last 10d ago, 6 in 90d (sampled 30)
+         Below range (41,000 < 80,000)
+   [w1] (167/485) https://www.youtube.com/@birtahlin
+         Uploads: weekly, last 5d ago, 12 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (168/485) https://www.youtube.com/@RealWorldTravelGuide
+         Uploads: biweekly, last 0d ago, 6 in 90d (sampled 30)
+   [w3] (169/485) https://www.youtube.com/@ian.and.ana.
+         Name: Birta Hlin
+         Subscribers: 523K subscribers (523000)
+         Email listed: yes
+         Type: solo (Denmark)
+         Instagram: http://instagram.com/birtahlin
+         Name: World Travel Guide
+         Subscribers: 114K subscribers (114000)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: Ian and Ana
+         Subscribers: 328K subscribers (328000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/ian.and.ana/
+         Uploads: monthly, last 30d ago, 2 in 90d (sampled 30)
+         Outside target countries (Denmark)
+   [w1] (170/485) https://www.youtube.com/@ToucanTravellers
+         Uploads: monthly, last 14d ago, 4 in 90d (sampled 30)
+   [w2] (171/485) https://www.youtube.com/@EllaMcFadin
+         Uploads: inactive, last 91d ago, 0 in 90d (sampled 30)
+         Cadence 'inactive' below required 'monthly'
+   [w3] (172/485) https://www.youtube.com/@Summersfamilytravel
+         Name: Toucan Travellers
+         Subscribers: 19K subscribers (19000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/toucan_travellers/
+         Name: Ella McFadin
+         Subscribers: 46.2K subscribers (46200)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/ellarosemcfadin/
+         Name: The Summers Family Travel
+         Subscribers: 826 subscribers (826)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Uploads: biweekly, last 1d ago, 6 in 90d (sampled 30)
+         Below range (19,000 < 80,000)
+         Uploads: biweekly, last 12d ago, 7 in 90d (sampled 30)
+         Below range (46,200 < 80,000)
+   [w1] (173/485) https://www.youtube.com/@RickStevesEuropeOfficial
+   [w2] (174/485) https://www.youtube.com/@rachel_muse
+         Uploads: biweekly, last 6d ago, 6 in 90d (sampled 30)
+         Below range (826 < 80,000)
+   [w3] (175/485) https://www.youtube.com/@ExoticVacation
+         Name: Rick Steves' Europe
+         Subscribers: 2.08M subscribers (2080000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/ricksteveseurope
+         Name: Rachel Muse
+         Subscribers: 73K subscribers (73000)
+         Email listed: no
+         Type: unclear (United States)
+         Name: Exotic Vacation
+         Subscribers: 183K subscribers (183000)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: inactive, last 122d ago, 0 in 90d (sampled 10)
+         Below range (73,000 < 80,000)
+   [w2] (176/485) https://www.youtube.com/@thejadamarie
+         Uploads: weekly, last 2d ago, 19 in 90d (sampled 30)
+   [w1] (177/485) https://www.youtube.com/@KenAbroad
+         Uploads: weekly, last 1d ago, 22 in 90d (sampled 30)
+   [w3] (178/485) https://www.youtube.com/@okayasmin
+         Name: Jada Marie
+         Subscribers: 365K subscribers (365000)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/thejadamarie/
+         Name: Ken Abroad
+         Subscribers: 698K subscribers (698000)
+         Email listed: yes
+         Type: solo (Germany)
+         Instagram: https://www.instagram.com/ken_abroad
+         Name: okayasmin
+         Subscribers: 68K subscribers (68000)
+         Email listed: no
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/okayasmin
+         Uploads: dormant, last 213d ago, 0 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (179/485) https://www.youtube.com/@Imogenhorton.
+         Uploads: biweekly, last 3d ago, 7 in 90d (sampled 30)
+         Outside target countries (Germany)
+         Uploads: monthly, last 30d ago, 3 in 90d (sampled 30)
+         Below range (68,000 < 80,000)
+   [w1] (180/485) https://www.youtube.com/@TheStewartFam
+   [w3] (181/485) https://www.youtube.com/@brezscales
+         Name: Imogen Horton
+         Subscribers: 411K subscribers (411000)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Name: The Stewart Fam
+         Subscribers: 346K subscribers (346000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/laylaraestewart/?hl=en
+         Name: Brez
+         Subscribers: 560K subscribers (560000)
+         Email listed: no
+         Type: unclear
+         Uploads: biweekly, last 1d ago, 6 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (182/485) https://www.youtube.com/@Tattooed.Tourists
+         Uploads: weekly, last 9d ago, 10 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (183/485) https://www.youtube.com/@Britfam.
+         Uploads: biweekly, last 12d ago, 7 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (184/485) https://www.youtube.com/@kailynnino
+         Name: Tattooed Tourists
+         Subscribers: 4.04K subscribers (4040)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/tattooed.tourists/?igsh=ZjZjd3BhczM0ZHJ2&utm_source=qr
+         Name: Kailyn Nino
+         Subscribers: 5.96K subscribers (5960)
+         Email listed: no
+         Type: unclear
+         Name: Brit fam 🇬🇧
+         Subscribers: 5.73K subscribers (5730)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Uploads: weekly, last 10d ago, 13 in 90d (sampled 30)
+         Below range (4,040 < 80,000)
+   [w2] (185/485) https://www.youtube.com/@AsiaAubree
+         Uploads: inactive, last 152d ago, 0 in 90d (sampled 30)
+         Below range (5,960 < 80,000)
+   [w3] (186/485) https://www.youtube.com/@ErikaDiane
+         Uploads: biweekly, last 14d ago, 8 in 90d (sampled 30)
+         Below range (5,730 < 80,000)
+   [w1] (187/485) https://www.youtube.com/@TayyLiz
+         Name: asia and aubree
+         Subscribers: 184K subscribers (184000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/asiaasanii/?igshid=YmMyMTA2M2Y=
+         Name: Erika Diane
+         Subscribers: 1.7M subscribers (1700000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/erikadianeyt/
+         Name: TayyLiz
+         Subscribers: 27.2K subscribers (27200)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/tayy_lizz?igsh=MTVvMHVvdzN5YWV2Yw==&utm_source=qr
+         Uploads: monthly, last 61d ago, 2 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Uploads: monthly, last 21d ago, 3 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (188/485) https://www.youtube.com/@SimplyZaryee
+   [w3] (189/485) https://www.youtube.com/@TheMackenzieBorg
+         Uploads: biweekly, last 6d ago, 8 in 90d (sampled 30)
+         Below range (27,200 < 80,000)
+   [w1] (190/485) https://www.youtube.com/@Jodie_Mo
+         Name: SimplyZaryee
+         Subscribers: 66.7K subscribers (66700)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/justzaryee/
+         Name: Mackenzie Borg
+         Subscribers: 7.97K subscribers (7970)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/themackenzieborg
+         Name: Jodie M
+         Subscribers: 8.19K subscribers (8189)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/jodiemo_
+         Uploads: biweekly, last 14d ago, 8 in 90d (sampled 30)
+         Below range (7,970 < 80,000)
+         Uploads: biweekly, last 21d ago, 7 in 90d (sampled 23)
+         Below range (66,700 < 80,000)
+   [w3] (191/485) https://www.youtube.com/@CreatingtheMagic
+   [w2] (192/485) https://www.youtube.com/@AllEarsNet
+         Uploads: weekly, last 1d ago, 26 in 90d (sampled 30)
+         Below range (8,189 < 80,000)
+   [w1] (193/485) https://www.youtube.com/@MadisonPracht
+         Name: Creating The Magic
+         Subscribers: 5.05K subscribers (5050)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/creatingthemagic_/
+         Name: AllEars.net
+         Subscribers: 428K subscribers (428000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://instagram.com/allearsnet
+         Name: Madison Pracht
+         Subscribers: 20.7K subscribers (20700)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/madison.pracht/
+         Uploads: weekly, last 3d ago, 19 in 90d (sampled 30)
+         Below range (5,050 < 80,000)
+   [w3] (194/485) https://www.youtube.com/@interactiveWDW
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Uploads: weekly, last 14d ago, 13 in 90d (sampled 30)
+         Below range (20,700 < 80,000)
+   [w2] (195/485) https://www.youtube.com/@ExploringDisney
+   [w1] (196/485) https://www.youtube.com/@benmorris
+         Name: interactiveWDW
+         Subscribers: 5.27K subscribers (5270)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: Exploring Disney
+         Subscribers: 373 subscribers (373)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/exploring_disney/
+         Name: Ben Morris
+         Subscribers: 1.01M subscribers (1010000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/benmorris/
+         Uploads: dormant, last 304d ago, 0 in 90d (sampled 30)
+         Below range (5,270 < 80,000)
+   [w3] (197/485) https://www.youtube.com/@luxurytravelhost
+         Uploads: biweekly, last 21d ago, 5 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (198/485) https://www.youtube.com/@adellecerna
+         Name: Luxury Travel Host
+         Subscribers: 89.6K subscribers (89600)
+         Email listed: yes
+         Type: solo (Romania)
+         Instagram: https://www.instagram.com/alexiarogoz/
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 30)
+         Below range (373 < 80,000)
+   [w2] (199/485) https://www.youtube.com/@tfft
+         Name: Adelle
+         Subscribers: 87.4K subscribers (87400)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/adellecerna/
+         Uploads: weekly, last 4d ago, 11 in 90d (sampled 30)
+         Outside target countries (Romania)
+         Name: The Flip Flop Traveller
+         Subscribers: 200K subscribers (200000)
+         Email listed: yes
+         Type: solo (United States)
+   [w3] (200/485) https://www.youtube.com/@the.ringard
+         Uploads: weekly, last 5d ago, 13 in 90d (sampled 30)
+         Outside target countries (Australia)
+         Name: The Ringard
+         Subscribers: 198 subscribers (198)
+         Email listed: no
+         Type: solo (Germany)
+   [w1] (201/485) https://www.youtube.com/@nickgray
+         Uploads: weekly, last 2d ago, 30 in 90d (sampled 30)
+   [w2] (202/485) https://www.youtube.com/@NonstopDanVlogs
+         Uploads: weekly, last 3d ago, 10 in 90d (sampled 30)
+         Below range (198 < 80,000)
+   [w3] (203/485) https://www.youtube.com/@harryjaggardvlogs
+         Name: Nick Gray
+         Subscribers: 18.5K subscribers (18500)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/nickgraynews
+         Name: Nonstop Dan Vlogs
+         Subscribers: 30.3K subscribers (30300)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/thenonstopdan
+         Name: Harry Jaggard Vlogs
+         Subscribers: 648K subscribers (648000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/harryjaggard/
+         Uploads: sporadic, last 0d ago, 1 in 90d (sampled 30)
+         Below range (18,500 < 80,000)
+   [w1] (204/485) https://www.youtube.com/@ThisIsGoTravel
+         Uploads: biweekly, last 7d ago, 5 in 90d (sampled 30)
+         Below range (30,300 < 80,000)
+   [w2] (205/485) https://www.youtube.com/@Kathyftravels
+         Uploads: biweekly, last 1d ago, 7 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (206/485) https://www.youtube.com/@reanne.witter
+         Name: Go Travel
+         Subscribers: 2.03K subscribers (2029)
+         Email listed: yes
+         Type: solo (United States)
+         Name: Katherine Ferreira
+         Subscribers: 522 subscribers (522)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/kathyftravels
+         Name: Reanne Witter
+         Subscribers: 1.6K subscribers (1600)
+         Email listed: no
+         Type: unclear
+         Uploads: monthly, last 30d ago, 2 in 90d (sampled 30)
+         Below range (2,029 < 80,000)
+   [w1] (207/485) https://www.youtube.com/@stephanieecoxx
+         Uploads: monthly, last 61d ago, 2 in 90d (sampled 15)
+         Below range (522 < 80,000)
+   [w2] (208/485) https://www.youtube.com/@LexusC
+         Uploads: biweekly, last 5d ago, 8 in 90d (sampled 30)
+         Below range (1,600 < 80,000)
+   [w3] (209/485) https://www.youtube.com/@RACHEL_B
+         Name: Stephanie Cox
+         Subscribers: 11K subscribers (11000)
+         Email listed: yes
+         Type: unclear
+         Name: Lexus C
+         Subscribers: 6.8K subscribers (6800)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/lexuscrystal/
+         Name: Rachel B
+         Subscribers: 1.59K subscribers (1590)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/rachellxb/
+         Uploads: monthly, last 11d ago, 4 in 90d (sampled 30)
+         Below range (6,800 < 80,000)
+   [w2] (210/485) https://www.youtube.com/@laraponle
+         Uploads: weekly, last 21d ago, 16 in 90d (sampled 30)
+         Below range (11,000 < 80,000)
+         Uploads: sporadic, last 30d ago, 1 in 90d (sampled 30)
+         Below range (1,590 < 80,000)
+   [w1] (211/485) https://www.youtube.com/@AvaaDaniels
+   [w3] (212/485) https://www.youtube.com/@lisajemide
+         Name: LARA PONLE
+         Subscribers: 26.6K subscribers (26600)
+         Email listed: yes
+         Type: unclear
+         Name: Ava Daniels
+         Subscribers: 74.7K subscribers (74700)
+         Email listed: no
+         Type: unclear
+         Name: LisaJemide
+         Subscribers: 49K subscribers (49000)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/lisajemide/
+         Uploads: monthly, last 11d ago, 2 in 90d (sampled 30)
+         Below range (26,600 < 80,000)
+   [w2] (213/485) https://www.youtube.com/@DaniNicholls
+         Uploads: weekly, last 0d ago, 10 in 90d (sampled 30)
+         Below range (74,700 < 80,000)
+   [w1] (214/485) https://www.youtube.com/@RoamingwiththeBarrys
+         Uploads: biweekly, last 21d ago, 5 in 90d (sampled 30)
+         Below range (49,000 < 80,000)
+   [w3] (215/485) https://www.youtube.com/@fabandell
+         Name: Dani Nicholls
+         Subscribers: 6.54K subscribers (6540)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://instagram.com/daninicholls/
+         Name: Roaming with the Barrys
+         Subscribers: 6.16K subscribers (6160)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/roamingwiththebarrys
+         Name: Fab and Ell
+         Subscribers: 69.8K subscribers (69800)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/fabandell/
+         Uploads: weekly, last 1d ago, 10 in 90d (sampled 30)
+         Below range (6,540 < 80,000)
+   [w2] (216/485) https://www.youtube.com/@TouringWithRiva
+         Uploads: biweekly, last 1d ago, 9 in 90d (sampled 30)
+         Below range (6,160 < 80,000)
+   [w1] (217/485) https://www.youtube.com/@ShannanLorraine
+         Uploads: weekly, last 4d ago, 13 in 90d (sampled 30)
+         Below range (69,800 < 80,000)
+   [w3] (218/485) https://www.youtube.com/@honestplaces
+         Name: Touring With Riva
+         Subscribers: 13.4K subscribers (13400)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/touringwithriva?igsh=emU0emwzbnpqcXNi
+         Name: ShannanLorraine
+         Subscribers: 4.09K subscribers (4090)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/shannanlorraine/?hl=en
+         Name: Honest Places
+         Subscribers: 120K subscribers (120000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/honestplaces/
+         Uploads: weekly, last 1d ago, 17 in 90d (sampled 30)
+         Below range (13,400 < 80,000)
+   [w2] (219/485) https://www.youtube.com/@ConnorAndLiana
+         Uploads: biweekly, last 21d ago, 5 in 90d (sampled 30)
+         Below range (4,090 < 80,000)
+   [w1] (220/485) https://www.youtube.com/@TravelsMeTCB
+         Uploads: weekly, last 4d ago, 10 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (221/485) https://www.youtube.com/@Itsa_jackslife
+         Name: Connor And Liana
+         Subscribers: 4.19M subscribers (4190000)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Name: Travels, Me & TCB
+         Subscribers: 946 subscribers (946)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/travelsmetcb/
+         Name: It’s a Jack’s Life
+         Subscribers: 6.1K subscribers (6100)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Uploads: monthly, last 3d ago, 2 in 90d (sampled 30)
+         Below range (946 < 80,000)
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (222/485) https://www.youtube.com/@JayGetsAbout
+   [w2] (223/485) https://www.youtube.com/@Hensleysadventures
+         Uploads: weekly, last 3d ago, 18 in 90d (sampled 30)
+         Below range (6,100 < 80,000)
+   [w3] (224/485) https://www.youtube.com/@affordableholidays
+         Name: Jay Gets About
+         Subscribers: 71 subscribers (71)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Name: Hensley's Adventures
+         Subscribers: 8.27K subscribers (8270)
+         Email listed: yes
+         Type: solo
+         Instagram: https://instagram.com/hensleys.adventures
+         Name: Affordable Holidays
+         Subscribers: 3.26K subscribers (3260)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Uploads: sporadic, last 30d ago, 1 in 90d (sampled 10)
+         Below range (71 < 80,000)
+   [w1] (225/485) https://www.youtube.com/@TheHadwinsTV
+         Uploads: weekly, last 4d ago, 11 in 90d (sampled 30)
+         Below range (8,270 < 80,000)
+   [w2] (226/485) https://www.youtube.com/@TPD
+         Uploads: weekly, last 1d ago, 24 in 90d (sampled 30)
+         Below range (3,260 < 80,000)
+   [w3] (227/485) https://www.youtube.com/@Beachlife-and-Beyond
+         Name: The Hadwins
+         Subscribers: 14.3K subscribers (14300)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/thehadwins/
+         Name: TPD TV
+         Subscribers: 231K subscribers (231000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://instagram.com/officialtpdtv
+         Name: Beachlife and Beyond
+         Subscribers: 5.38K subscribers (5380)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Uploads: monthly, last 30d ago, 2 in 90d (sampled 30)
+         Below range (14,300 < 80,000)
+   [w1] (228/485) https://www.youtube.com/@TheDandylion5
+         Uploads: weekly, last 1d ago, 12 in 90d (sampled 30)
+   [w2] (229/485) https://www.youtube.com/@JackRhysEdwards
+         Uploads: weekly, last 10d ago, 10 in 90d (sampled 30)
+         Below range (5,380 < 80,000)
+   [w3] (230/485) https://www.youtube.com/@HappytoWander
+         Name: Jack Edwards
+         Subscribers: 530 subscribers (530)
+         Email listed: no
+         Type: unclear
+         Name: TheDandylion5
+         Subscribers: 8.6K subscribers (8600)
+         Email listed: no
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/the_dandylion_5
+         Name: Happy to Wander (Travel Tips & Inspo)
+         Subscribers: 199K subscribers (199000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/happytowander/
+         Uploads: weekly, last 4d ago, 30 in 90d (sampled 30)
+         Below range (8,600 < 80,000)
+         Uploads: monthly, last 4d ago, 2 in 90d (sampled 17)
+         Below range (530 < 80,000)
+   [w1] (231/485) https://www.youtube.com/@heynadine
+   [w2] (232/485) https://www.youtube.com/@aglimpseofgoodtravels
+         Uploads: biweekly, last 4d ago, 7 in 90d (sampled 30)
+   [w3] (233/485) https://www.youtube.com/@AirportTipsAndTricks
+         Name: A Glimpse of Good Travel Tips
+         Subscribers: 3.04K subscribers (3040)
+         Email listed: yes
+         Type: solo (United States)
+         Name: Hey Nadine
+         Subscribers: 510K subscribers (510000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://instagram.com/heynadine
+         Uploads: weekly, last 1d ago, 15 in 90d (sampled 30)
+         Below range (3,040 < 80,000)
+   [w2] (234/485) https://www.youtube.com/@BrightSideTravelHacks
+         Uploads: dormant, last 365d ago, 0 in 90d (sampled 30)
+         Cadence 'dormant' below required 'monthly'
+   [w1] (235/485) https://www.youtube.com/@Jet-Set-Genius
+         Name: Airport Tips And Tricks
+         Subscribers: 32.5K subscribers (32500)
+         Email listed: no
+         Type: unclear (Australia)
+         Name: Bright Side Travel Hacks
+         Subscribers: 25.2K subscribers (25200)
+         Email listed: no
+         Type: unclear (United States)
+         Name: Jet Set Genius
+         Subscribers: 64.1K subscribers (64099)
+         Email listed: no
+         Type: unclear (United States)
+         Uploads: monthly, last 14d ago, 2 in 90d (sampled 30)
+         Below range (32,500 < 80,000)
+   [w3] (236/485) https://www.youtube.com/@girlvsglobe
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Below range (64,099 < 80,000)
+         Uploads: weekly, last 2d ago, 30 in 90d (sampled 30)
+         Below range (25,200 < 80,000)
+   [w1] (237/485) https://www.youtube.com/@TravelTipsbyLaurie
+   [w2] (238/485) https://www.youtube.com/@Thefamilyfudge
+         Name: Girl vs Globe
+         Subscribers: 273K subscribers (273000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://instagram.com/girlvsglobe
+         Name: Travel Tips by Laurie
+         Subscribers: 445K subscribers (445000)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: dormant, last 730d ago, 0 in 90d (sampled 30)
+         Cadence 'dormant' below required 'monthly'
+   [w3] (239/485) https://www.youtube.com/@HannahGraceRiddle
+         Name: The Family Fudge
+         Subscribers: 2.04M subscribers (2040000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/thefamilyfudge/
+         Uploads: weekly, last 1d ago, 14 in 90d (sampled 30)
+   [w1] (240/485) https://www.youtube.com/@CrosbyGraceTravels
+         Name: Hannah Grace
+         Subscribers: 6.32K subscribers (6320)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/hannahgraceriddle
+         Uploads: biweekly, last 9d ago, 5 in 90d (sampled 30)
+   [w2] (241/485) https://www.youtube.com/@PackHacker
+         Name: Crosby Grace Travels
+         Subscribers: 94.4K subscribers (94400)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/crosbygracetravels/
+         Uploads: weekly, last 0d ago, 12 in 90d (sampled 30)
+         Below range (6,320 < 80,000)
+   [w3] (242/485) https://www.youtube.com/@piqtourjapan
+         Name: Pack Hacker
+         Subscribers: 345K subscribers (345000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/packhacker/
+         Uploads: dormant, last 244d ago, 0 in 90d (sampled 30)
+         Cadence 'dormant' below required 'monthly'
+   [w1] (243/485) https://www.youtube.com/@MichaelaBento
+         Name: PiQtour Japan
+         Subscribers: 76.8K subscribers (76800)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 3d ago, 15 in 90d (sampled 30)
+   [w2] (244/485) https://www.youtube.com/@NoraDunn
+         Name: Michaela Bento
+         Subscribers: 321K subscribers (321000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/michaelabento/
+         Uploads: biweekly, last 1d ago, 9 in 90d (sampled 30)
+         Below range (76,800 < 80,000)
+   [w3] (245/485) https://www.youtube.com/@Pixiedustadventures
+         Name: Nora Dunn (The Professional Hobo)
+         Subscribers: 112K subscribers (112000)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/theprofessionalhobo
+         Uploads: weekly, last 4d ago, 12 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (246/485) https://www.youtube.com/@BreastCancerNowCharity
+         Name: Pixie Dust Adventures
+         Subscribers: 3.75K subscribers (3750)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://instagram.com/pixiedustadventures
+         Uploads: dormant, last 730d ago, 0 in 90d (sampled 30)
+         Cadence 'dormant' below required 'monthly'
+   [w2] (247/485) https://www.youtube.com/@CoverTrip
+         Name: Breast Cancer Now
+         Subscribers: 4.21K subscribers (4210)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/breastcancernow/
+         Uploads: biweekly, last 2d ago, 6 in 90d (sampled 30)
+         Below range (3,750 < 80,000)
+   [w3] (248/485) https://www.youtube.com/@askarealtravelexpert
+         Uploads: biweekly, last 10d ago, 8 in 90d (sampled 30)
+         Below range (4,210 < 80,000)
+   [w1] (249/485) https://www.youtube.com/@InsiderTravelReport
+         Name: CoverTrip
+         Subscribers: 2.2K subscribers (2200)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: Ask a Real Travel Expert - RTE Travel Talk
+         Subscribers: 31.5K subscribers (31500)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/realtravelexperts/
+         Uploads: inactive, last 91d ago, 0 in 90d (sampled 16)
+         Below range (2,200 < 80,000)
+   [w2] (250/485) https://www.youtube.com/@buildyourmoxie
+         Name: Insider Travel Report
+         Subscribers: 9.19K subscribers (9190)
+         Email listed: no
+         Type: unclear (United States)
+         Uploads: weekly, last 6d ago, 12 in 90d (sampled 30)
+         Below range (31,500 < 80,000)
+   [w3] (251/485) https://www.youtube.com/@Steleo
+         Name: Build Your Moxie
+         Subscribers: 118K subscribers (118000)
+         Email listed: yes
+         Type: solo
+         Instagram: https://instagram.com/buildyourmoxie
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Below range (9,190 < 80,000)
+   [w1] (252/485) https://www.youtube.com/@OzzieForKids
+         Name: Steleo - Educational Videos for Kids
+         Subscribers: 830K subscribers (830000)
+         Email listed: yes
+         Type: solo (New Zealand)
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 30)
+         Cadence 'sporadic' below required 'monthly'
+   [w2] (253/485) https://www.youtube.com/@BoardiFly
+         Uploads: biweekly, last 4d ago, 5 in 90d (sampled 30)
+         Outside target countries (New Zealand)
+         Name: Ozzie – Educational Videos For Kids
+         Subscribers: 144K subscribers (144000)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/ozzie_forkids
+   [w3] (254/485) https://www.youtube.com/@NicoleLaeno
+         Name: BoardiFly
+         Subscribers: 13.1K subscribers (13100)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 1d ago, 28 in 90d (sampled 30)
+         Outside target countries (Australia)
+   [w1] (255/485) https://www.youtube.com/@caricakes
+         Name: Nicole Laeno
+         Subscribers: 3.73M subscribers (3730000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/nicolelaeno/
+         Uploads: weekly, last 0d ago, 23 in 90d (sampled 30)
+         Below range (13,100 < 80,000)
+   [w2] (256/485) https://www.youtube.com/@AirportNow
+         Name: cari cakes
+         Subscribers: 437K subscribers (437000)
+         Email listed: yes
+         Type: solo (South Korea)
+         Instagram: https://www.instagram.com/caricakez/
+         Uploads: weekly, last 3d ago, 13 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Name: Airport NOW
+         Subscribers: 37.6K subscribers (37600)
+         Email listed: no
+         Type: unclear (United States)
+   [w3] (257/485) https://www.youtube.com/@elizaandshania
+         Uploads: weekly, last 2d ago, 10 in 90d (sampled 30)
+         Outside target countries (South Korea)
+   [w1] (258/485) https://www.youtube.com/@ivandeguzman
+         Uploads: weekly, last 6d ago, 19 in 90d (sampled 30)
+         Below range (37,600 < 80,000)
+   [w2] (259/485) https://www.youtube.com/@sopha_dopha
+         Name: Eliza and Shania
+         Subscribers: 15.7K subscribers (15700)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/elizajhall/
+         Uploads: biweekly, last 5d ago, 8 in 90d (sampled 30)
+         Below range (15,700 < 80,000)
+         Name: Ivan de Guzman
+         Subscribers: 110K subscribers (110000)
+         Email listed: yes
+         Type: solo (Philippines)
+         Instagram: https://instagram.com/paulivandg
+   [w3] (260/485) https://www.youtube.com/@sophie.williams
+         Name: Sopha Dopha
+         Subscribers: 143K subscribers (143000)
+         Email listed: no
+         Type: unclear
+         Name: Sophie Williams
+         Subscribers: 624 subscribers (624)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/_soph.williams?igsh=MWp5NGRubWI2Y3R2MA==&utm_source=qr
+         Uploads: weekly, last 1d ago, 12 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (261/485) https://www.youtube.com/@fafali_reigna.x
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Outside target countries (Philippines)
+   [w1] (262/485) https://www.youtube.com/@edengorrel
+         Uploads: weekly, last 1d ago, 11 in 90d (sampled 30)
+         Below range (624 < 80,000)
+   [w3] (263/485) https://www.youtube.com/@jathaly
+         Name: Fafali Reigna
+         Subscribers: 3.83K subscribers (3830)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/fafali_reigna
+         Name: Eden Gorrel
+         Subscribers: 47 subscribers (47)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/activewith.eden
+         Name: Jathaly
+         Subscribers: 557K subscribers (557000)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/jacobmacias_/
+         Uploads: inactive, last 91d ago, 0 in 90d (sampled 30)
+         Below range (3,830 < 80,000)
+   [w2] (264/485) https://www.youtube.com/@PassengerParamvir
+         Uploads: dormant, last 213d ago, 0 in 90d (sampled 10)
+         Below range (47 < 80,000)
+   [w1] (265/485) https://www.youtube.com/@WoutoftheWorld
+         Uploads: monthly, last 30d ago, 2 in 90d (sampled 30)
+   [w3] (266/485) https://www.youtube.com/@sharps47
+         Name: Passenger Paramvir
+         Subscribers: 2.81M subscribers (2810000)
+         Email listed: yes
+         Type: solo (India)
+         Instagram: https://www.instagram.com/paramvir_beniwal
+         Name: Wout of the World
+         Subscribers: 120K subscribers (120000)
+         Email listed: yes
+         Type: solo (Netherlands)
+         Instagram: https://www.instagram.com/woutoftheworld
+         Name: SHARPS 47
+         Subscribers: 618 subscribers (618)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://instagram.com/sharpsgrossofficial
+         Uploads: biweekly, last 3d ago, 7 in 90d (sampled 30)
+         Outside target countries (India)
+   [w2] (267/485) https://www.youtube.com/@AngelicaandAileenWanders
+         Uploads: weekly, last 2d ago, 15 in 90d (sampled 30)
+         Outside target countries (Netherlands)
+         Uploads: biweekly, last 13d ago, 6 in 90d (sampled 30)
+         Below range (618 < 80,000)
+   [w1] (268/485) https://www.youtube.com/@thecartwrights
+   [w3] (269/485) https://www.youtube.com/@islashepherd
+         Name: Angelica & Aileen Wanders
+         Subscribers: 241K subscribers (241000)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/AileenWanders/
+         Name: Isla Shepherd
+         Subscribers: 149 subscribers (149)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/isla_shepherd/?hl=en
+         Uploads: monthly, last 1d ago, 4 in 90d (sampled 30)
+   [w2] (270/485) https://www.youtube.com/@nicolaboyle_
+         Name: The Cartwrights
+         Subscribers: 140K subscribers (140000)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/cartwright.company
+         Uploads: dormant, last 1461d ago, 0 in 90d (sampled 11)
+         Below range (149 < 80,000)
+   [w3] (271/485) https://www.youtube.com/@UltimateTravelists
+         Name: Nicola Boyle
+         Subscribers: 3.8K subscribers (3800)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/nicola.fitfoodie/?img_index=1
+         Uploads: biweekly, last 2d ago, 9 in 90d (sampled 30)
+         Outside target countries (Australia)
+   [w1] (272/485) https://www.youtube.com/@adellepetros
+         Name: UltimateTravelists
+         Subscribers: 6.42K subscribers (6420)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Uploads: monthly, last 10d ago, 3 in 90d (sampled 30)
+         Below range (3,800 < 80,000)
+   [w2] (273/485) https://www.youtube.com/@havea676
+         Name: Adelle Petropoulos
+         Subscribers: 5.03K subscribers (5030)
+         Email listed: no
+         Type: unclear
+         Uploads: monthly, last 9d ago, 4 in 90d (sampled 30)
+         Below range (6,420 < 80,000)
+   [w3] (274/485) https://www.youtube.com/@RoamingwithRhysandHayley
+         Uploads: weekly, last 3d ago, 13 in 90d (sampled 30)
+         Below range (5,030 < 80,000)
+         Name: Havea676
+         Subscribers: 87K subscribers (87000)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/havea_676/
+   [w1] (275/485) https://www.youtube.com/@annadawnphillips
+         Name: Roaming with Rhys and Hayley
+         Subscribers: 186 subscribers (186)
+         Email listed: no
+         Type: unclear
+         Uploads: weekly, last 6d ago, 12 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (276/485) https://www.youtube.com/@SarahsDay
+         Name: Anna Klem
+         Subscribers: 17.1K subscribers (17100)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/annaaklem/
+         Uploads: monthly, last 8d ago, 3 in 90d (sampled 30)
+         Below range (186 < 80,000)
+   [w3] (277/485) https://www.youtube.com/@brettconti
+         Name: Sarahs Day
+         Subscribers: 1.55M subscribers (1550000)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/sarahs_day/
+         Uploads: biweekly, last 0d ago, 8 in 90d (sampled 30)
+         Below range (17,100 < 80,000)
+   [w1] (278/485) https://www.youtube.com/@DaneAndStacey
+         Name: Brett Conti
+         Subscribers: 1.03M subscribers (1030000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/brettcconti
+         Uploads: biweekly, last 14d ago, 6 in 90d (sampled 30)
+         Outside target countries (Australia)
+   [w2] (279/485) https://www.youtube.com/@MollyThompsonx_
+         Name: Dane and Stacey
+         Subscribers: 221K subscribers (221000)
+         Email listed: yes
+         Type: unclear (New Zealand)
+         Instagram: http://instagram.com/danegerandstacey
+         Uploads: monthly, last 14d ago, 4 in 90d (sampled 30)
+   [w3] (280/485) https://www.youtube.com/@NathalyCuevas
+         Name: Molly Thompson
+         Subscribers: 169K subscribers (169000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: http://instagram.com/molly_thompson
+         Uploads: weekly, last 3d ago, 11 in 90d (sampled 30)
+         Outside target countries (New Zealand)
+   [w1] (281/485) https://www.youtube.com/@TaylorBell
+         Name: Nathaly Cuevas
+         Subscribers: 1.39M subscribers (1390000)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 5d ago, 18 in 90d (sampled 30)
+   [w2] (282/485) https://www.youtube.com/@Joel_Emilia
+         Name: Taylor Bell
+         Subscribers: 921K subscribers (921000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/taykbell
+         Uploads: biweekly, last 3d ago, 7 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (283/485) https://www.youtube.com/@LisaAndJosh
+         Name: Joel and Emilia
+         Subscribers: 398K subscribers (398000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/emiliabeattie/
+         Uploads: biweekly, last 10d ago, 7 in 90d (sampled 30)
+   [w1] (284/485) https://www.youtube.com/@AbroadinJapan
+         Name: Lisa and Josh
+         Subscribers: 168K subscribers (168000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/wearelisaandjosh
+         Uploads: biweekly, last 0d ago, 8 in 90d (sampled 30)
+         Name: Abroad in Japan
+         Subscribers: 3.29M subscribers (3290000)
+         Email listed: yes
+         Type: solo
+         Instagram: https://instagram.com/abroadinjapan/
+   [w2] (285/485) https://www.youtube.com/@TheMagicInTheMusic
+         Uploads: dormant, last 274d ago, 0 in 90d (sampled 30)
+         Cadence 'dormant' below required 'monthly'
+   [w3] (286/485) https://www.youtube.com/@merginglifeandmoney
+         Uploads: biweekly, last 30d ago, 5 in 90d (sampled 30)
+         Name: The Magic In The Music
+         Subscribers: 12.3K subscribers (12300)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/themagicinthemusic/
+   [w1] (287/485) https://www.youtube.com/@LetsTalkDis
+         Name: Merging Life and Money
+         Subscribers: 451 subscribers (451)
+         Email listed: yes
+         Type: solo (United States)
+         Uploads: sporadic, last 21d ago, 1 in 90d (sampled 30)
+         Below range (12,300 < 80,000)
+   [w2] (288/485) https://www.youtube.com/@aviationcinematics
+         Uploads: dormant, last 183d ago, 0 in 90d (sampled 30)
+         Below range (451 < 80,000)
+         Name: Let's Talk Dis
+         Subscribers: 1.23K subscribers (1230)
+         Email listed: yes
+         Type: unclear (United States)
+   [w3] (289/485) https://www.youtube.com/@jams3y
+         Name: jams3y
+         Subscribers: 41 subscribers (41)
+         Email listed: no
+         Type: unclear
+         Uploads: weekly, last 5d ago, 13 in 90d (sampled 30)
+         Below range (1,230 < 80,000)
+         Name: Aviation Cinematics
+         Subscribers: 6.64K subscribers (6640)
+         Email listed: no
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/ldn.aviation_/
+   [w1] (290/485) https://www.youtube.com/@seekingtravel
+         Uploads: dormant, last 1096d ago, 0 in 90d (sampled 30)
+         Below range (41 < 80,000)
+   [w3] (291/485) https://www.youtube.com/@my.ali.travels
+         Name: Seeking Travel
+         Subscribers: 3.23K subscribers (3230)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/seekingtravel/
+         Uploads: weekly, last 6d ago, 12 in 90d (sampled 30)
+         Below range (6,640 < 80,000)
+   [w2] (292/485) https://www.youtube.com/@lostlevlog
+         Name: My Ali Travels
+         Subscribers: 6.25K subscribers (6250)
+         Email listed: yes
+         Type: business (United States)
+         Instagram: https://instagram.com/my.ali.travels
+         Uploads: monthly, last 14d ago, 2 in 90d (sampled 30)
+         Below range (3,230 < 80,000)
+   [w1] (293/485) https://www.youtube.com/@ryanwalkerT5
+         Name: Lost LeVlog
+         Subscribers: 49.5K subscribers (49500)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/lostleblanc
+         Uploads: monthly, last 30d ago, 2 in 90d (sampled 17)
+         Below range (6,250 < 80,000)
+   [w3] (294/485) https://www.youtube.com/@TheKrystalPalace
+         Uploads: dormant, last 365d ago, 0 in 90d (sampled 30)
+         Below range (49,500 < 80,000)
+         Name: Ryan Walker
+         Subscribers: 160K subscribers (160000)
+         Email listed: yes
+         Type: unclear (United States)
+   [w2] (295/485) https://www.youtube.com/@EmmaCruises
+         Name: The Krystal Palace
+         Subscribers: 81K subscribers (81000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/thekrystalpalace_/
+         Uploads: biweekly, last 2d ago, 7 in 90d (sampled 30)
+   [w1] (296/485) https://www.youtube.com/@MarkFerris1
+         Name: Emma Cruises
+         Subscribers: 433K subscribers (433000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Uploads: weekly, last 5d ago, 22 in 90d (sampled 30)
+   [w3] (297/485) https://www.youtube.com/@TripswithCK
+         Uploads: biweekly, last 0d ago, 9 in 90d (sampled 30)
+   [w2] (298/485) https://www.youtube.com/@HighSeasCruisingBlog
+         Name: Mark Ferris
+         Subscribers: 672K subscribers (672000)
+         Email listed: no
+         Type: solo
+         Instagram: http://instagram.com/markyyferris
+         Name: Trips with CK
+         Subscribers: 4 subscribers (4)
+         Email listed: no
+         Type: unclear
+         Uploads: monthly, last 14d ago, 2 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Name: High Seas Cruising
+         Subscribers: 470 subscribers (470)
+         Email listed: yes
+         Type: unclear (Canada)
+         Uploads: monthly, last 0d ago, 2 in 90d (sampled 2)
+         Below range (4 < 80,000)
+   [w1] (299/485) https://www.youtube.com/@EmmaTamsin
+   [w3] (300/485) https://www.youtube.com/@julyandraph
+         Name: Emma Tamsin
+         Subscribers: 139K subscribers (139000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/emmatamsinhill/
+         Uploads: monthly, last 5d ago, 2 in 90d (sampled 6)
+         Below range (470 < 80,000)
+   [w2] (301/485) https://www.youtube.com/@Robynw05
+         Name: July and Raph
+         Subscribers: 2.05K subscribers (2050)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/julyandraph?igsh=MWlzOTZ2MnluOXQ4dw==&utm_source=qr
+         Uploads: dormant, last 213d ago, 0 in 90d (sampled 30)
+         Below range (2,050 < 80,000)
+         Uploads: biweekly, last 14d ago, 7 in 90d (sampled 30)
+         Skool: https://www.skool.com/the-allbody-club-1839/about
+   [w3] (302/485) https://www.youtube.com/@GemmaLouiseMiles
+         Name: Robyn🌟
+         Subscribers: 7.85K subscribers (7850)
+         Email listed: no
+         Type: unclear
+         Skool community: The Allbody Club - 500 members
+         No travel/holiday wording - off niche
+   [w1] (303/485) https://www.youtube.com/@bethjade__
+         Name: Gemma Louise Miles
+         Subscribers: 605K subscribers (605000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/_gemmalouisemiles
+         Name: Beth Jade
+         Subscribers: 1.39K subscribers (1390)
+         Email listed: yes
+         Type: solo
+         Instagram: http://instagram.com/bethjade__
+         Uploads: dormant, last 183d ago, 0 in 90d (sampled 8)
+         Below range (7,850 < 80,000)
+   [w2] (304/485) https://www.youtube.com/@DanaBerez
+         Uploads: weekly, last 2d ago, 11 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (305/485) https://www.youtube.com/@elizabeth.wisebourt
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 30)
+         Below range (1,390 < 80,000)
+         Name: Dana Berez
+         Subscribers: 162K subscribers (162000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/danaberez
+   [w1] (306/485) https://www.youtube.com/@ThroughMyLens
+         Name: Elizabeth Wisebourt
+         Subscribers: 2.47K subscribers (2470)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/elizabeth.wisebourt/
+         Name: Through My Lens
+         Subscribers: 486K subscribers (486000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/throughmylensco
+         Uploads: weekly, last 1d ago, 26 in 90d (sampled 30)
+   [w2] (307/485) https://www.youtube.com/@allofdestiny
+         Uploads: dormant, last 213d ago, 0 in 90d (sampled 30)
+         Below range (2,470 < 80,000)
+   [w3] (308/485) https://www.youtube.com/@AllCentralFlorida
+         Uploads: weekly, last 1d ago, 17 in 90d (sampled 30)
+   [w1] (309/485) https://www.youtube.com/@lovesiphiwe
+         Name: allofdestiny
+         Subscribers: 392K subscribers (392000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://www.instagram.com/allofdestiny
+         Name: AllCentralFlorida
+         Subscribers: 25.8K subscribers (25800)
+         Email listed: yes
+         Type: unclear (United States)
+         Instagram: https://Instagram.com/AllCentralFlorida
+         Name: Love, Siphiwé
+         Subscribers: 593 subscribers (593)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/lovesiphiwe
+         Uploads: biweekly, last 4d ago, 9 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (310/485) https://www.youtube.com/@SuitcaseMonkey
+         Uploads: inactive, last 91d ago, 0 in 90d (sampled 6)
+         Below range (593 < 80,000)
+         Uploads: biweekly, last 2d ago, 9 in 90d (sampled 30)
+         Below range (25,800 < 80,000)
+   [w1] (311/485) https://www.youtube.com/@michellereedg
+   [w3] (312/485) https://www.youtube.com/@NatalieZacek
+         Name: Suitcase Monkey
+         Subscribers: 394K subscribers (394000)
+         Email listed: no
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/suitcasemonkey/
+         Name: Michelle Reed
+         Subscribers: 501K subscribers (501000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/michellereed/
+         Name: Natalie Zacek
+         Subscribers: 424K subscribers (424000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/nataliezacek/
+         Uploads: monthly, last 14d ago, 3 in 90d (sampled 30)
+   [w2] (313/485) https://www.youtube.com/@moinpeach
+         Uploads: weekly, last 5d ago, 11 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (314/485) https://www.youtube.com/@nicoleandmico
+         Uploads: weekly, last 1d ago, 10 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (315/485) https://www.youtube.com/@CBCNews
+         Name: moinpeach
+         Subscribers: 184K subscribers (184000)
+         Email listed: yes
+         Type: solo (Indonesia)
+         Instagram: https://www.instagram.com/moinpeach/
+         Name: Nicole and Mico
+         Subscribers: 83.3K subscribers (83300)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/nicoleandmico_/
+         Name: CBC News
+         Subscribers: 4.72M subscribers (4720000)
+         Email listed: yes
+         Type: solo (Canada)
+         Uploads: monthly, last 30d ago, 3 in 90d (sampled 30)
+         Outside target countries (Indonesia)
+   [w2] (316/485) https://www.youtube.com/@FletcherMorley
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Uploads: dormant, last 365d ago, 0 in 90d (sampled 30)
+         Cadence 'dormant' below required 'monthly'
+   [w3] (317/485) https://www.youtube.com/@ToastedGhost0027
+   [w1] (318/485) https://www.youtube.com/@ManifestingOurWay
+         Name: Fletcher Morley
+         Subscribers: 47 subscribers (47)
+         Email listed: no
+         Type: solo
+         Instagram: https://www.instagram.com/fletchermorley?igsh=a3ZrbnowMGc1cW5v&utm_source=qr
+         Name: Toasted Ghost
+         Subscribers: 2.69K subscribers (2690)
+         Email listed: yes
+         Type: solo
+         Name: Manifesting Our Way
+         Subscribers: 24.9K subscribers (24900)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/manifestationbabe/?hl=en
+         Uploads: inactive, last 122d ago, 0 in 90d (sampled 1)
+         Below range (47 < 80,000)
+   [w2] (319/485) https://www.youtube.com/@IslandHopperTV
+         Uploads: biweekly, last 1d ago, 6 in 90d (sampled 30)
+         Below range (2,690 < 80,000)
+   [w3] (320/485) https://www.youtube.com/@internetshaquille
+         Uploads: inactive, last 122d ago, 0 in 90d (sampled 30)
+         Below range (24,900 < 80,000)
+   [w1] (321/485) https://www.youtube.com/@HungryPassport
+         Name: Island Hopper TV
+         Subscribers: 531K subscribers (531000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/islandhoppertv/
+         Name: Internet Shaquille
+         Subscribers: 847K subscribers (847000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/internetshaquille/
+         Uploads: weekly, last 2d ago, 23 in 90d (sampled 30)
+   [w2] (322/485) https://www.youtube.com/@The_Roaming_Routes
+         Name: Hungry Passport
+         Subscribers: 281K subscribers (281000)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: monthly, last 8d ago, 3 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (323/485) https://www.youtube.com/@Florida-mAndrew
+         Name: Roaming Routes
+         Subscribers: 1.22K subscribers (1220)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Uploads: dormant, last 730d ago, 0 in 90d (sampled 30)
+         Cadence 'dormant' below required 'monthly'
+   [w1] (324/485) https://www.youtube.com/@FloridaTipsForBrits
+         Name: Andrew Platt
+         Subscribers: 21.4K subscribers (21400)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/floridamandreww/
+         Uploads: monthly, last 61d ago, 2 in 90d (sampled 26)
+         Below range (1,220 < 80,000)
+   [w2] (325/485) https://www.youtube.com/@BrandonsTravelGuides
+         Name: Florida Tips For Brits
+         Subscribers: 3.53K subscribers (3530)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Uploads: monthly, last 0d ago, 4 in 90d (sampled 30)
+         Below range (21,400 < 80,000)
+   [w3] (326/485) https://www.youtube.com/@BriannaWoodbine
+         Name: Brandon’s Travel Guides
+         Subscribers: 35.9K subscribers (35900)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: dormant, last 365d ago, 0 in 90d (sampled 30)
+         Below range (3,530 < 80,000)
+   [w1] (327/485) https://www.youtube.com/@themickeywikioffical
+         Name: Brianna Woodbine
+         Subscribers: 22.4K subscribers (22400)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/briannawoodbine/
+         Uploads: sporadic, last 5d ago, 1 in 90d (sampled 30)
+         Below range (35,900 < 80,000)
+   [w2] (328/485) https://www.youtube.com/@LouiseEmma
+         Name: themickeywiki
+         Subscribers: 331 subscribers (331)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 1d ago, 22 in 90d (sampled 30)
+         Below range (22,400 < 80,000)
+   [w3] (329/485) https://www.youtube.com/@Amayipernecia
+         Uploads: dormant, last 335d ago, 0 in 90d (sampled 15)
+         Below range (331 < 80,000)
+         Name: Louise Emma
+         Subscribers: 8.67K subscribers (8670)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/louiseemmma/
+   [w1] (330/485) https://www.youtube.com/@hannahmarshx
+         Name: Amayi Pernecia
+         Subscribers: 28K subscribers (28000)
+         Email listed: yes
+         Type: solo (United States)
+         Name: Hannah Marsh
+         Subscribers: 20.2K subscribers (20200)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/hannahmarsh___?igsh=MWs3cmVxczlnbHg0Yw==&utm_source=qr
+         Uploads: weekly, last 0d ago, 13 in 90d (sampled 30)
+         Below range (8,670 < 80,000)
+   [w2] (331/485) https://www.youtube.com/@NathanandGrace
+         Uploads: weekly, last 1d ago, 24 in 90d (sampled 30)
+         Below range (28,000 < 80,000)
+   [w3] (332/485) https://www.youtube.com/@EmilyEnchanted
+         Uploads: biweekly, last 2d ago, 8 in 90d (sampled 30)
+         Below range (20,200 < 80,000)
+   [w1] (333/485) https://www.youtube.com/@MattsTravelTips
+         Name: Nathan and Grace
+         Subscribers: 13.5K subscribers (13500)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Name: Emily Enchanted
+         Subscribers: 144K subscribers (144000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/emilynels8/?hl=en
+         Name: Matt's Travel Tips
+         Subscribers: 193K subscribers (193000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/mattstraveltips/
+         Uploads: biweekly, last 11d ago, 5 in 90d (sampled 30)
+   [w3] (334/485) https://www.youtube.com/@ExpozaTravel
+         Uploads: monthly, last 21d ago, 4 in 90d (sampled 30)
+         Below range (13,500 < 80,000)
+   [w2] (335/485) https://www.youtube.com/@SeanKaleponi
+         Uploads: dormant, last 365d ago, 0 in 90d (sampled 13)
+         Cadence 'dormant' below required 'monthly'
+   [w1] (336/485) https://www.youtube.com/@hannanoelle
+         Name: Expoza Travel
+         Subscribers: 251K subscribers (251000)
+         Email listed: no
+         Type: unclear
+         Name: HawaiianTraveler | Sean Kaleponi
+         Subscribers: 92.6K subscribers (92600)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/hawaiiantraveler/
+         Name: hanna noelle
+         Subscribers: 100K subscribers (100000)
+         Email listed: no
+         Type: solo
+         Instagram: https://www.instagram.com/hanna_noellee/
+         Uploads: sporadic, last 21d ago, 1 in 90d (sampled 30)
+         Cadence 'sporadic' below required 'monthly'
+         Uploads: dormant, last 365d ago, 0 in 90d (sampled 30)
+         Cadence 'dormant' below required 'monthly'
+   [w2] (337/485) https://www.youtube.com/@dejahlanay
+   [w3] (338/485) https://www.youtube.com/@AdventuresofMattandNat
+         Uploads: weekly, last 1d ago, 12 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (339/485) https://www.youtube.com/@bellarosablog
+         Name: Dejah Lanay
+         Subscribers: 531K subscribers (531000)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: Adventures of Matt and Nat
+         Subscribers: 145K subscribers (145000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/adventuresofmattandnat/
+         Uploads: weekly, last 3d ago, 21 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Name: maria rosa
+         Subscribers: 4.17K subscribers (4170)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://instagram.com/bellarosablog
+   [w2] (340/485) https://www.youtube.com/@Theendlessadventure
+         Uploads: biweekly, last 10d ago, 5 in 90d (sampled 30)
+   [w3] (341/485) https://www.youtube.com/@JasmineBoateng
+         Uploads: dormant, last 304d ago, 0 in 90d (sampled 30)
+         Below range (4,170 < 80,000)
+   [w1] (342/485) https://www.youtube.com/@iamchelsiejanea809
+         Name: The Endless Adventure
+         Subscribers: 664K subscribers (664000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/theendlessadventure/
+         Name: Jasmine Boateng
+         Subscribers: 112K subscribers (112000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/__jahzmynn__/
+         Name: IAMCHELSIEJANEA
+         Subscribers: 113K subscribers (113000)
+         Email listed: no
+         Type: unclear (United States)
+         Uploads: biweekly, last 1d ago, 9 in 90d (sampled 30)
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (343/485) https://www.youtube.com/@micahleia
+   [w3] (344/485) https://www.youtube.com/@juliahuynh
+         Uploads: weekly, last 2d ago, 30 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (345/485) https://www.youtube.com/@JessicaJayneTurner
+         Name: Mícah Leia
+         Subscribers: 82.6K subscribers (82600)
+         Email listed: yes
+         Type: unclear
+         Name: Julia Huynh
+         Subscribers: 455K subscribers (455000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/iamjuliahuynh
+         Name: Jessica Jayne
+         Subscribers: 43.6K subscribers (43600)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/jessicajayneturner
+         Uploads: weekly, last 2d ago, 13 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Uploads: monthly, last 14d ago, 4 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (346/485) https://www.youtube.com/@mandys_iphone
+   [w2] (347/485) https://www.youtube.com/@Luxscapes
+         Uploads: biweekly, last 3d ago, 7 in 90d (sampled 30)
+         Below range (43,600 < 80,000)
+   [w1] (348/485) https://www.youtube.com/@Joeymiuccio
+         Name: Mandy's iPhone
+         Subscribers: 427K subscribers (427000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://instagram.com/mandys_iphone
+         Name: Luxscape
+         Subscribers: 40.9K subscribers (40900)
+         Email listed: yes
+         Type: unclear
+         Name: Joey Miuccio
+         Subscribers: 222K subscribers (222000)
+         Email listed: no
+         Type: solo
+         Uploads: biweekly, last 3d ago, 6 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (349/485) https://www.youtube.com/@newtravelescapes
+         Uploads: weekly, last 2d ago, 14 in 90d (sampled 30)
+         Below range (40,900 < 80,000)
+   [w2] (350/485) https://www.youtube.com/@twobirdbrains
+         Uploads: weekly, last 10d ago, 10 in 90d (sampled 30)
+   [w1] (351/485) https://www.youtube.com/@sachitaa.s
+         Name: New Travel Escapes
+         Subscribers: 13.4K subscribers (13400)
+         Email listed: yes
+         Type: solo (Canada)
+         Name: twobirdbrains
+         Subscribers: 1.91K subscribers (1910)
+         Email listed: no
+         Type: unclear
+         Uploads: weekly, last 1d ago, 13 in 90d (sampled 30)
+         Below range (13,400 < 80,000)
+         Name: Sachita Subramanian
+         Subscribers: 45.8K subscribers (45800)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/sachitaa.s
+   [w3] (352/485) https://www.youtube.com/@TopFlightFamily
+         Uploads: inactive, last 152d ago, 0 in 90d (sampled 7)
+         Below range (1,910 < 80,000)
+   [w2] (353/485) https://www.youtube.com/@DanTreks
+         Uploads: monthly, last 30d ago, 3 in 90d (sampled 30)
+         Below range (45,800 < 80,000)
+         Name: Carmen Van Kerckhove
+         Subscribers: 133K subscribers (133000)
+         Email listed: yes
+         Type: unclear (United States)
+   [w1] (354/485) https://www.youtube.com/@DirtInMyShoes
+         Name: Dan Treks
+         Subscribers: 12.1K subscribers (12100)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/dantreks
+         Uploads: dormant, last 365d ago, 0 in 90d (sampled 30)
+         Cadence 'dormant' below required 'monthly'
+   [w3] (355/485) https://www.youtube.com/@GreenerGrass
+         Uploads: sporadic, last 30d ago, 1 in 90d (sampled 30)
+         Below range (12,100 < 80,000)
+         Name: Dirt In My Shoes
+         Subscribers: 52.3K subscribers (52300)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/dirtinmyshoes/
+   [w2] (356/485) https://www.youtube.com/@JeanieMarie
+         Name: Jeb Brooks
+         Subscribers: 1.03M subscribers (1030000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/jebbrooksflies/
+         Name: Jeanie Marie
+         Subscribers: 51.5K subscribers (51500)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 0d ago, 14 in 90d (sampled 30)
+         Below range (52,300 < 80,000)
+   [w1] (357/485) https://www.youtube.com/@KeepYourDaydream
+         Uploads: biweekly, last 9d ago, 6 in 90d (sampled 30)
+         Uploads: inactive, last 91d ago, 0 in 90d (sampled 30)
+         Below range (51,500 < 80,000)
+   [w3] (358/485) https://www.youtube.com/@gabandbren
+   [w2] (359/485) https://www.youtube.com/@RVMiles
+         Name: Keep Your Daydream
+         Subscribers: 567K subscribers (567000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/keepyourdaydream/
+         Name: RV Miles
+         Subscribers: 134K subscribers (134000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/RVMiles
+         Name: Gab and Bren
+         Subscribers: 13.4K subscribers (13400)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 1d ago, 12 in 90d (sampled 30)
+   [w1] (360/485) https://www.youtube.com/@TheHutchinsons
+         Uploads: weekly, last 3d ago, 12 in 90d (sampled 30)
+         Below range (13,400 < 80,000)
+   [w3] (361/485) https://www.youtube.com/@HereBeBarr
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (362/485) https://www.youtube.com/@HereBeBarrExtra
+         Name: The Hutchinsons
+         Subscribers: 193K subscribers (193000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/thehutchinsonfamily/
+         Name: Jon Barr
+         Subscribers: 668K subscribers (668000)
+         Email listed: yes
+         Type: unclear (United States)
+         Instagram: http://www.instagram.com/here.be.barr
+         Uploads: biweekly, last 21d ago, 5 in 90d (sampled 30)
+   [w1] (363/485) https://www.youtube.com/@NomacGuides
+         Name: Jon Barr Shorts
+         Subscribers: 38.5K subscribers (38500)
+         Email listed: no
+         Type: unclear (United States)
+         Uploads: biweekly, last 10d ago, 7 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (364/485) https://www.youtube.com/@MichelJanse
+         Name: Nomac Guides
+         Subscribers: 62.9K subscribers (62900)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: dormant, last 274d ago, 0 in 90d (sampled 30)
+         Below range (38,500 < 80,000)
+   [w2] (365/485) https://www.youtube.com/@AdventuresofAplusK
+         Name: Michel Janse
+         Subscribers: 282K subscribers (282000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/michel.c.janse
+         Uploads: biweekly, last 4d ago, 6 in 90d (sampled 30)
+         Below range (62,900 < 80,000)
+   [w1] (366/485) https://www.youtube.com/@emmachamberlain
+         Uploads: weekly, last 2d ago, 24 in 90d (sampled 30)
+   [w3] (367/485) https://www.youtube.com/@TarMarz
+         Name: Adventures of A+K
+         Subscribers: 297K subscribers (297000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/adventuresofaplusk/
+         Name: emma chamberlain
+         Subscribers: 12M subscribers (12000000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/emmachamberlain
+         Name: Tar Mar
+         Subscribers: 156K subscribers (156000)
+         Email listed: yes
+         Type: solo (Ireland)
+         Instagram: http://instagram.com/tarmarz
+         Uploads: biweekly, last 8d ago, 5 in 90d (sampled 30)
+   [w2] (368/485) https://www.youtube.com/@BigtimeMyrtleBeach
+         Uploads: dormant, last 244d ago, 0 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (369/485) https://www.youtube.com/@HeatherHugs
+         Uploads: biweekly, last 14d ago, 5 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (370/485) https://www.youtube.com/@kaitylately
+         Name: Bigtime Myrtle Beach to Orlando
+         Subscribers: 4.34K subscribers (4340)
+         Email listed: yes
+         Type: solo (United States)
+         Name: HeatherHugs
+         Subscribers: 1.04K subscribers (1040)
+         Email listed: no
+         Type: solo (United States)
+         Name: Kaitlyn Mason
+         Subscribers: 21 subscribers (21)
+         Email listed: no
+         Type: unclear
+         Uploads: biweekly, last 21d ago, 8 in 90d (sampled 30)
+         Below range (4,340 < 80,000)
+   [w2] (371/485) https://www.youtube.com/@gordenmarthadove122
+         Uploads: inactive, last 122d ago, 0 in 90d (sampled 30)
+         Below range (1,040 < 80,000)
+   [w1] (372/485) https://www.youtube.com/@isabelle_jada
+         Uploads: sporadic, last 28d ago, 1 in 90d (sampled 1)
+         Below range (21 < 80,000)
+   [w3] (373/485) https://www.youtube.com/@buildthedream77
+         Name: Gorden & Martha Dove
+         Subscribers: 617K subscribers (617000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/gordenandmarthadove
+         Name: isabelle
+         Subscribers: 213 subscribers (213)
+         Email listed: no
+         Type: unclear
+         Name: Build The Dream
+         Subscribers: 50.5K subscribers (50500)
+         Email listed: yes
+         Type: solo (United States)
+         Uploads: biweekly, last 3d ago, 5 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (374/485) https://www.youtube.com/@EECCTravels
+         Uploads: biweekly, last 2d ago, 9 in 90d (sampled 30)
+         Below range (50,500 < 80,000)
+         Uploads: sporadic, last 28d ago, 1 in 90d (sampled 2)
+         Below range (213 < 80,000)
+   [w3] (375/485) https://www.youtube.com/@styledbymckenz
+   [w1] (376/485) https://www.youtube.com/@itsthedonnellys
+         Name: EECC Travels
+         Subscribers: 205K subscribers (205000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/eecctravels/
+         Name: McKenzie Morgan
+         Subscribers: 90.9K subscribers (90900)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/styledbymckenz/
+         Name: It's The Donnellys
+         Subscribers: 1.14M subscribers (1140000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://instagram.com/itsthedonnellysofficial/
+         Uploads: weekly, last 1d ago, 19 in 90d (sampled 30)
+   [w2] (377/485) https://www.youtube.com/@trovexgo8076
+         Uploads: weekly, last 12d ago, 19 in 90d (sampled 30)
+         Uploads: biweekly, last 8d ago, 8 in 90d (sampled 30)
+   [w3] (378/485) https://www.youtube.com/@JoeyContino2
+   [w1] (379/485) https://www.youtube.com/@alyssaahoward
+         Name: trovexgo
+         Subscribers: 4.55K subscribers (4550)
+         Email listed: yes
+         Type: solo (India)
+         Name: Alyssa Howard
+         Subscribers: 344K subscribers (344000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/alyssaa.howard
+         Name: Joey Contino
+         Subscribers: 74K subscribers (74000)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 3d ago, 23 in 90d (sampled 30)
+         Below range (4,550 < 80,000)
+   [w2] (380/485) https://www.youtube.com/@RoyalSmithofficial
+         Name: Blitzz_Royal
+         Subscribers: 1.04K subscribers (1040)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/blitzzz.royal?igsh=NTc4MTIwNjQ2YQ==&utm_source=qr
+         Uploads: weekly, last 14d ago, 16 in 90d (sampled 30)
+         Below range (74,000 < 80,000)
+         Uploads: biweekly, last 21d ago, 6 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (381/485) https://www.youtube.com/@KamariyaMcDonald
+   [w1] (382/485) https://www.youtube.com/@KamsOdyssey
+         Uploads: weekly, last 2d ago, 11 in 90d (sampled 30)
+         Below range (1,040 < 80,000)
+   [w2] (383/485) https://www.youtube.com/@Lily.phillips
+         Name: Kamariya
+         Subscribers: 22.7K subscribers (22700)
+         Email listed: no
+         Type: unclear
+         Name: Kam 💫
+         Subscribers: 612 subscribers (612)
+         Email listed: no
+         Type: unclear (United States)
+         Uploads: sporadic, last 1d ago, 1 in 90d (sampled 30)
+         Below range (612 < 80,000)
+   [w1] (384/485) https://www.youtube.com/@Theroyaltyadventure
+         Uploads: weekly, last 0d ago, 10 in 90d (sampled 30)
+         Below range (22,700 < 80,000)
+         Name: Lily Phillips
+         Subscribers: 3.2K subscribers (3200)
+         Email listed: no
+         Type: unclear
+   [w3] (385/485) https://www.youtube.com/@TimmyTakeout
+         Uploads: monthly, last 61d ago, 2 in 90d (sampled 21)
+         Below range (3,200 < 80,000)
+   [w2] (386/485) https://www.youtube.com/@TravelSpreeOfficial
+         Name: The Royalty Adventure
+         Subscribers: 12.8K subscribers (12800)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/theroyaltyadventure/?fbclid=IwAR1-5uxqqp7ne8hcyqn3avxmcVqjpuWDzkxLZPs-bgflXDU72KDFJc-Dnxc
+         Name: Timmy's Takeout
+         Subscribers: 1.59M subscribers (1590000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/timmytakeout/
+         Name: Travel Spree
+         Subscribers: 104K subscribers (104000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/travelspreeofficial
+         Uploads: weekly, last 1d ago, 22 in 90d (sampled 30)
+         Below range (12,800 < 80,000)
+   [w1] (387/485) https://www.youtube.com/@ryanandkala
+         Uploads: weekly, last 2d ago, 13 in 90d (sampled 30)
+   [w3] (388/485) https://www.youtube.com/@themirandasadventure3797
+         Uploads: weekly, last 2d ago, 15 in 90d (sampled 30)
+   [w2] (389/485) https://www.youtube.com/@adamhattan
+         Name: Ryan and Kala
+         Subscribers: 25.3K subscribers (25300)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/ryanandkala
+         Name: The Miranda's Adventures
+         Subscribers: 545 subscribers (545)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/themirandasadventures/
+         Name: Adam Hattan
+         Subscribers: 158K subscribers (158000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: http://www.instagram.com/adamhattan
+         Uploads: weekly, last 1d ago, 14 in 90d (sampled 30)
+         Below range (25,300 < 80,000)
+         Uploads: monthly, last 13d ago, 2 in 90d (sampled 29)
+         Below range (545 < 80,000)
+   [w1] (390/485) https://www.youtube.com/@DreandKenEmpire
+   [w3] (391/485) https://www.youtube.com/@jhousevlogs
+         Uploads: biweekly, last 30d ago, 8 in 90d (sampled 30)
+   [w2] (392/485) https://www.youtube.com/@magicalfam
+         Name: Dre and Ken Empire
+         Subscribers: 1.74M subscribers (1740000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/thedre_way
+         Name: J House Vlogs
+         Subscribers: 3.55M subscribers (3550000)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: Magical Fam
+         Subscribers: 6.46K subscribers (6460)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/magical.familytravels/
+         Uploads: weekly, last 3d ago, 24 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (393/485) https://www.youtube.com/@FamilywithFour
+         Uploads: biweekly, last 5d ago, 6 in 90d (sampled 30)
+   [w3] (394/485) https://www.youtube.com/@10xTravel
+         Uploads: weekly, last 1d ago, 27 in 90d (sampled 30)
+         Below range (6,460 < 80,000)
+   [w2] (395/485) https://www.youtube.com/@NotEnoughNelsons
+         Name: Family with Four
+         Subscribers: 7.14K subscribers (7140)
+         Email listed: yes
+         Type: solo (Canada)
+         Name: 10xTravel
+         Subscribers: 9.46K subscribers (9460)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/10xtravelblog/
+         Name: Not Enough Nelsons
+         Subscribers: 5.57M subscribers (5570000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/justkass/
+         Uploads: weekly, last 2d ago, 13 in 90d (sampled 30)
+         Below range (7,140 < 80,000)
+   [w1] (396/485) https://www.youtube.com/@thriftytraveler
+         Uploads: biweekly, last 12d ago, 6 in 90d (sampled 29)
+         Below range (9,460 < 80,000)
+   [w3] (397/485) https://www.youtube.com/@markwiemels
+         Uploads: weekly, last 1d ago, 15 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (398/485) https://www.youtube.com/@smileycitrus
+         Name: Mark Wiemels
+         Subscribers: 169K subscribers (169000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/markwiemels/
+         Name: Thrifty Traveler
+         Subscribers: 15.4K subscribers (15400)
+         Email listed: no
+         Type: unclear (United States)
+         Name: smileycitrus
+         Subscribers: 74.8K subscribers (74800)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: http://instagram.com/smileycitrus
+         Uploads: weekly, last 5d ago, 11 in 90d (sampled 30)
+   [w3] (399/485) https://www.youtube.com/@camdendavid
+         Uploads: weekly, last 3d ago, 20 in 90d (sampled 30)
+         Below range (15,400 < 80,000)
+   [w1] (400/485) https://www.youtube.com/@SophieNadeau
+         Uploads: weekly, last 6d ago, 11 in 90d (sampled 30)
+         Below range (74,800 < 80,000)
+   [w2] (401/485) https://www.youtube.com/@travels_wright
+         Name: Camden David
+         Subscribers: 103K subscribers (103000)
+         Email listed: yes
+         Type: solo (United States)
+         Name: Sophie Nadeau
+         Subscribers: 136K subscribers (136000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/sophieannenadeau
+         Name: Travel Wright
+         Subscribers: 5.55K subscribers (5550)
+         Email listed: no
+         Type: unclear (Canada)
+         Uploads: biweekly, last 3d ago, 6 in 90d (sampled 30)
+   [w3] (402/485) https://www.youtube.com/@WereintheRockies
+         Uploads: weekly, last 1d ago, 11 in 90d (sampled 30)
+         Uploads: sporadic, last 21d ago, 1 in 90d (sampled 18)
+         Below range (5,550 < 80,000)
+   [w1] (403/485) https://www.youtube.com/@traveleaz
+   [w2] (404/485) https://www.youtube.com/@RAJBTRAVELS
+         Name: We're in the Rockies
+         Subscribers: 125K subscribers (125000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/wereintherockies/
+         Name: Travel Eaz
+         Subscribers: 19.7K subscribers (19700)
+         Email listed: yes
+         Type: solo (United States)
+         Name: RAJ B TRAVELS
+         Subscribers: 1.48K subscribers (1480)
+         Email listed: no
+         Type: unclear (United States)
+         Uploads: weekly, last 2d ago, 16 in 90d (sampled 30)
+   [w3] (405/485) https://www.youtube.com/@ChrissaTravels
+         Uploads: biweekly, last 10d ago, 8 in 90d (sampled 30)
+         Below range (19,700 < 80,000)
+   [w1] (406/485) https://www.youtube.com/@UltimateBucketList
+         Uploads: inactive, last 122d ago, 0 in 90d (sampled 30)
+         Below range (1,480 < 80,000)
+   [w2] (407/485) https://www.youtube.com/@anakhodus
+         Name: Chrissa Travels
+         Subscribers: 57.1K subscribers (57100)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/chrissatravels/
+         Name: Ultimate Bucket List
+         Subscribers: 135K subscribers (135000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/ninhlyuk/
+         Name: Ana Khodus
+         Subscribers: 2.87K subscribers (2870)
+         Email listed: yes
+         Type: solo (Canada)
+         Uploads: weekly, last 2d ago, 12 in 90d (sampled 30)
+         Below range (57,100 < 80,000)
+   [w3] (408/485) https://www.youtube.com/@ontarioroadtripping
+         Uploads: biweekly, last 61d ago, 5 in 90d (sampled 30)
+   [w1] (409/485) https://www.youtube.com/@DotsonaMap
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 30)
+         Below range (2,870 < 80,000)
+   [w2] (410/485) https://www.youtube.com/@jackschmidt98
+         Name: Ontario Road Tripping
+         Subscribers: 18.9K subscribers (18900)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/ontarioroadtripping/
+         Name: Dots on a Map
+         Subscribers: 215K subscribers (215000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/dotsonamap
+         Name: Jack Schmidt
+         Subscribers: 3.15K subscribers (3150)
+         Email listed: no
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/schmidtdogg_/?hl=en
+         Uploads: weekly, last 10d ago, 18 in 90d (sampled 30)
+         Below range (18,900 < 80,000)
+   [w3] (411/485) https://www.youtube.com/@ineed2travel
+         Uploads: monthly, last 12d ago, 4 in 90d (sampled 30)
+         Uploads: dormant, last 365d ago, 0 in 90d (sampled 3)
+         Below range (3,150 < 80,000)
+   [w1] (412/485) https://www.youtube.com/@MummyofFourUK
+   [w2] (413/485) https://www.youtube.com/@AmyHart
+         Name: Travel with Brett
+         Subscribers: 178 subscribers (178)
+         Email listed: no
+         Type: unclear
+         Name: Rhiannan Morgan - Mummy of Four
+         Subscribers: 38.8K subscribers (38800)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/mummyoffouruk/
+         Name: Amy Hart
+         Subscribers: 13.9K subscribers (13900)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/amyhartxo/
+         Uploads: sporadic, last 30d ago, 1 in 90d (sampled 30)
+         Below range (178 < 80,000)
+         Uploads: weekly, last 11d ago, 24 in 90d (sampled 30)
+         Below range (38,800 < 80,000)
+   [w3] (414/485) https://www.youtube.com/@travelwright3124
+   [w1] (415/485) https://www.youtube.com/@sofmathew
+         Uploads: weekly, last 21d ago, 10 in 90d (sampled 30)
+         Below range (13,900 < 80,000)
+   [w2] (416/485) https://www.youtube.com/@which
+         Name: TravelWright
+         Subscribers: 1.6K subscribers (1600)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/travelwright7733/
+         Name: sofia mathew
+         Subscribers: 10.2K subscribers (10200)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/sofia.mathew/
+         Name: Which?
+         Subscribers: 112K subscribers (112000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/whichuk/reels/
+         Uploads: dormant, last 213d ago, 0 in 90d (sampled 11)
+         Below range (1,600 < 80,000)
+   [w3] (417/485) https://www.youtube.com/@LurgsHowToGuides
+         Uploads: biweekly, last 1d ago, 9 in 90d (sampled 30)
+         Below range (10,200 < 80,000)
+   [w1] (418/485) https://www.youtube.com/@TheKnightStrider
+         Uploads: weekly, last 10d ago, 13 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (419/485) https://www.youtube.com/@earsandideasextras814
+         Name: Lurgs How To Guides
+         Subscribers: 138K subscribers (138000)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Name: The Knightstrider
+         Subscribers: 116K subscribers (116000)
+         Email listed: yes
+         Type: solo (Spain)
+         Instagram: https://www.instagram.com/the_knightstrider
+         Name: Ears and Ideas Extras
+         Subscribers: 249 subscribers (249)
+         Email listed: no
+         Type: solo (United Kingdom)
+         Uploads: monthly, last 14d ago, 2 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (420/485) https://www.youtube.com/@TheB1M
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Outside target countries (Spain)
+   [w1] (421/485) https://www.youtube.com/@DrivingTestRoutesUK
+         Uploads: biweekly, last 5d ago, 7 in 90d (sampled 30)
+         Below range (249 < 80,000)
+   [w2] (422/485) https://www.youtube.com/@theincrediblewilsons
+         Name: The B1M
+         Subscribers: 4.05M subscribers (4050000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/fred_mills/
+         Name: Driving Test Routes UK
+         Subscribers: 6.72K subscribers (6720)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Name: The Incredible Wilsons
+         Subscribers: 16.2K subscribers (16200)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/theincrediblewilsons?igsh=MXgxZmFyNWtsZHN0OA==&utm_source=qr
+         Uploads: weekly, last 0d ago, 20 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Uploads: weekly, last 30d ago, 30 in 90d (sampled 30)
+         Below range (6,720 < 80,000)
+   [w3] (423/485) https://www.youtube.com/@kirstyskingdom
+         Uploads: weekly, last 4d ago, 16 in 90d (sampled 30)
+         Below range (16,200 < 80,000)
+   [w1] (424/485) https://www.youtube.com/@TheJayWay5
+   [w2] (425/485) https://www.youtube.com/@TheKershawsAdventures
+         Name: The Jay Way
+         Subscribers: 60.1K subscribers (60100)
+         Email listed: yes
+         Type: solo (Kuwait)
+         Instagram: https://www.instagram.com/thejayway005?igsh=MTE5YnRkYmZ4cDlmZQ==&utm_source=qr
+         Name: The Kershaws Adventures
+         Subscribers: 18.7K subscribers (18700)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/thekershawsadentures
+         Name: Kirsty’s Kingdom
+         Subscribers: 898 subscribers (898)
+         Email listed: no
+         Type: solo
+         Instagram: https://www.instagram.com/kirstyskingdom?igsh=MXE4M2JoMnpkcWsybA==&utm_source=qr
+         Uploads: inactive, last 122d ago, 0 in 90d (sampled 16)
+         Below range (898 < 80,000)
+         Uploads: biweekly, last 3d ago, 9 in 90d (sampled 30)
+         Below range (18,700 < 80,000)
+   [w3] (426/485) https://www.youtube.com/@Eyupben-fifa
+         Uploads: biweekly, last 4d ago, 5 in 90d (sampled 28)
+         Below range (60,100 < 80,000)
+   [w2] (427/485) https://www.youtube.com/@Dbeestory
+   [w1] (428/485) https://www.youtube.com/@SamanthaEliza_beth
+         Name: Ben & Fifa - Eyup Vlogs
+         Subscribers: 2.2K subscribers (2200)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Name: Dbeestory
+         Subscribers: 781 subscribers (781)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/dbeestory
+         Name: Samantha Elizabeth
+         Subscribers: 13.2K subscribers (13200)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/samanthaeliza_beth
+         Uploads: weekly, last 0d ago, 14 in 90d (sampled 30)
+         Below range (2,200 < 80,000)
+         Uploads: weekly, last 4d ago, 17 in 90d (sampled 30)
+         Below range (781 < 80,000)
+   [w3] (429/485) https://www.youtube.com/@LaraJoannaJarvis
+   [w2] (430/485) https://www.youtube.com/@robbieroams
+         Uploads: sporadic, last 30d ago, 1 in 90d (sampled 30)
+         Below range (13,200 < 80,000)
+   [w1] (431/485) https://www.youtube.com/@Jennyandryantravel
+         Name: Lara Joanna Jarvis
+         Subscribers: 78K subscribers (78000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/larajoannajarvis/
+         Name: Robbie Roams
+         Subscribers: 45.9K subscribers (45900)
+         Email listed: no
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/robbieroams/
+         Name: Jenny and Ryan Travel
+         Subscribers: 319 subscribers (319)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/jennyandryan_
+         Uploads: monthly, last 21d ago, 3 in 90d (sampled 30)
+         Below range (78,000 < 80,000)
+   [w3] (432/485) https://www.youtube.com/@welshgingerhobo
+         Uploads: weekly, last 1d ago, 12 in 90d (sampled 30)
+         Below range (45,900 < 80,000)
+         Uploads: monthly, last 7d ago, 3 in 90d (sampled 23)
+         Below range (319 < 80,000)
+   [w2] (433/485) https://www.youtube.com/@ALotofWhatYouFancy
+   [w1] (434/485) https://www.youtube.com/@travellingtuesdays
+         Name: Welsh Ginger Hobo
+         Subscribers: 6K subscribers (6000)
+         Email listed: no
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/The highlights of today. 😁
+If you'd like to keep up with my daily shenanigans I'd recommend following my Instagram stories. I'm having one of those moments where I'm finding that's the easiest outlet for content.
+
+I've lost my video editing mojo lately. I've been concentrating on myself a little and totally loving life here in Dartmoor. Sometimes you have to prioritise yourself before anything else. This has been one of those moments. But rest assured, videos will come again soon I promise 😁
+
+Enjoy the rest of your day folks. Peace ✌🏽💚🧡
+
+www.instagram.com/welshgingerhobo
+         Name: A Lot of What You Fancy
+         Subscribers: 890 subscribers (890)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/alotofwhatyoufancy
+         Name: Travelling Tuesdays TV by Abena
+         Subscribers: 11.6K subscribers (11600)
+         Email listed: yes
+         Type: unclear
+         Uploads: weekly, last 1d ago, 19 in 90d (sampled 30)
+         Below range (6,000 < 80,000)
+   [w3] (435/485) https://www.youtube.com/@MariaOliviaTravel
+         Uploads: dormant, last 365d ago, 0 in 90d (sampled 25)
+         Below range (890 < 80,000)
+   [w2] (436/485) https://www.youtube.com/@LiamBrown
+         Uploads: weekly, last 1d ago, 12 in 90d (sampled 30)
+         Below range (11,600 < 80,000)
+   [w1] (437/485) https://www.youtube.com/@TheJuicyVlog
+         Name: Maria & Olivia
+         Subscribers: 9.18K subscribers (9180)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/mariaandoliviatravel
+         Name: Liam Brown
+         Subscribers: 203K subscribers (203000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/realliambrown/
+         Name: The Juicy Vlog
+         Subscribers: 589K subscribers (589000)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Uploads: monthly, last 21d ago, 3 in 90d (sampled 30)
+         Below range (9,180 < 80,000)
+   [w3] (438/485) https://www.youtube.com/@FowlerFamAdventures
+         Uploads: monthly, last 12d ago, 3 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (439/485) https://www.youtube.com/@RobCadenElkins
+         Uploads: weekly, last 3d ago, 16 in 90d (sampled 30)
+   [w1] (440/485) https://www.youtube.com/@tashandbrad
+         Name: Fowler Fam Adventures
+         Subscribers: 1.88K subscribers (1880)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/fowler_fam_adventures?igsh=djkzZTdsMDQ1ZWVk&utm_source=qr
+         Name: Rob Caden-Elkins
+         Subscribers: 3.72K subscribers (3720)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Name: Tash and Brad
+         Subscribers: 5.65K subscribers (5650)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/tashalsharpe/
+         Uploads: dormant, last 183d ago, 0 in 90d (sampled 30)
+         Below range (1,880 < 80,000)
+   [w3] (441/485) https://www.youtube.com/@JackDoesTravel
+         Uploads: biweekly, last 1d ago, 6 in 90d (sampled 30)
+         Below range (3,720 < 80,000)
+   [w2] (442/485) https://www.youtube.com/@ZacJonesYouTube
+         Uploads: weekly, last 14d ago, 11 in 90d (sampled 30)
+         Below range (5,650 < 80,000)
+   [w1] (443/485) https://www.youtube.com/@TheYardPodcast
+         Name: Jack Does Travel
+         Subscribers: 774 subscribers (774)
+         Email listed: no
+         Type: solo
+         Name: Zac Jones
+         Subscribers: 32K subscribers (32000)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Name: The Yard
+         Subscribers: 452K subscribers (452000)
+         Email listed: no
+         Type: solo (United States)
+         Uploads: biweekly, last 8d ago, 8 in 90d (sampled 30)
+         Below range (774 < 80,000)
+   [w3] (444/485) https://www.youtube.com/@FamilyFreedom
+         Uploads: weekly, last 4d ago, 26 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Uploads: biweekly, last 30d ago, 5 in 90d (sampled 30)
+         Below range (32,000 < 80,000)
+   [w1] (445/485) https://www.youtube.com/@CallumsCorner.
+   [w2] (446/485) https://www.youtube.com/@itsjxylxn
+         Name: Family Freedom
+         Subscribers: 179K subscribers (179000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/familyfreedomvlogs/
+         Name: Callums Corner
+         Subscribers: 371K subscribers (371000)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Name: itsjxylxn
+         Subscribers: 4.97K subscribers (4970)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Uploads: monthly, last 9d ago, 3 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (447/485) https://www.youtube.com/@NiamhMackinnon
+   [w1] (448/485) https://www.youtube.com/@erinrdavila
+         Uploads: biweekly, last 7d ago, 9 in 90d (sampled 30)
+         Below range (4,970 < 80,000)
+   [w2] (449/485) https://www.youtube.com/@LottieRainbow
+         Name: Niamh Mackinnon
+         Subscribers: 176K subscribers (176000)
+         Email listed: yes
+         Type: unclear
+         Name: Erin Davila
+         Subscribers: 7.41K subscribers (7410)
+         Email listed: yes
+         Type: unclear (United States)
+         Instagram: https://www.instagram.com/erinrdavila/
+         Uploads: biweekly, last 14d ago, 6 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Name: Lottie Rainbow
+         Subscribers: 45.9K subscribers (45900)
+         Email listed: no
+         Type: solo
+   [w3] (450/485) https://www.youtube.com/@OutdoorBoys
+         Uploads: weekly, last 4d ago, 14 in 90d (sampled 30)
+         Below range (7,410 < 80,000)
+   [w1] (451/485) https://www.youtube.com/@TheLaurenNorris
+         Uploads: dormant, last 365d ago, 0 in 90d (sampled 30)
+         Below range (45,900 < 80,000)
+   [w2] (452/485) https://www.youtube.com/@the_jnlt_channel
+         Name: Outdoor Boys
+         Subscribers: 20.5M subscribers (20500000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/outdoorboyschannel/
+         Name: Lauren Norris
+         Subscribers: 342K subscribers (342000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/thelaurennorris/
+         Name: The JNLT Channel
+         Subscribers: 12.5K subscribers (12500)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/the_jnlt_channel/
+         Uploads: dormant, last 274d ago, 0 in 90d (sampled 30)
+         Cadence 'dormant' below required 'monthly'
+   [w3] (453/485) https://www.youtube.com/@Life_with_Jessie
+         Uploads: weekly, last 2d ago, 24 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (454/485) https://www.youtube.com/@theellmersadventures
+         Uploads: monthly, last 9d ago, 4 in 90d (sampled 30)
+         Below range (12,500 < 80,000)
+   [w2] (455/485) https://www.youtube.com/@ThemeParkWorldwide
+         Name: Jessie Hall
+         Subscribers: 916 subscribers (916)
+         Email listed: no
+         Type: unclear (United Kingdom)
+         Name: The Ellmers Adventures
+         Subscribers: 1.06K subscribers (1060)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/the_ellmers_adventures/
+         Name: Theme Park Worldwide
+         Subscribers: 461K subscribers (461000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: http://www.instagram.com/themeparkworldwide
+         Uploads: monthly, last 13d ago, 4 in 90d (sampled 30)
+         Below range (916 < 80,000)
+         Uploads: weekly, last 3d ago, 16 in 90d (sampled 30)
+         Below range (1,060 < 80,000)
+   [w3] (456/485) https://www.youtube.com/@TheColdMash
+   [w1] (457/485) https://www.youtube.com/@PTVlogsUK
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+   [w2] (458/485) https://www.youtube.com/@AWalkontheWildSideBlackpool
+         Name: PT Vlogs UK
+         Subscribers: 19.2K subscribers (19200)
+         Email listed: no
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/ptvlogs_uk/
+         Name: Cold Mash
+         Subscribers: 233K subscribers (233000)
+         Email listed: no
+         Type: solo
+         Instagram: https://instagram.com/mashtaglazy
+         Name: A Walk on the Wild Side
+         Subscribers: 84.9K subscribers (84900)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/awalkonthewildside69/
+         Uploads: weekly, last 1d ago, 18 in 90d (sampled 30)
+         Below range (19,200 < 80,000)
+         Uploads: weekly, last 0d ago, 12 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (459/485) https://www.youtube.com/@yourexperienceguide
+   [w3] (460/485) https://www.youtube.com/@lifeoftimbo2507
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Name: Your Experience Guide
+         Subscribers: 56.7K subscribers (56700)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/yrexperienceguide/
+   [w2] (461/485) https://www.youtube.com/@steve-marsh
+         Name: Life of Timbo
+         Subscribers: 399 subscribers (399)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Name: SteveMarsh
+         Subscribers: 391K subscribers (391000)
+         Email listed: no
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/stevemarsh_youtube/
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Below range (56,700 < 80,000)
+         Uploads: sporadic, last 30d ago, 1 in 90d (sampled 30)
+         Below range (399 < 80,000)
+   [w1] (462/485) https://www.youtube.com/@JesuisLou
+   [w3] (463/485) https://www.youtube.com/@JosieIrons
+         Uploads: weekly, last 2d ago, 22 in 90d (sampled 30)
+   [w2] (464/485) https://www.youtube.com/@Shanteldebonsu
+         Name: Josie
+         Subscribers: 600K subscribers (600000)
+         Email listed: no
+         Type: solo (United Kingdom)
+         Instagram: http://instagram.com/josieldn
+         Name: Je suis Lou
+         Subscribers: 181K subscribers (181000)
+         Email listed: yes
+         Type: solo (Spain)
+         Instagram: https://www.instagram.com/je.suis.lou/
+         Name: Shantel De Bonsu
+         Subscribers: 5.93K subscribers (5930)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/shanteldebonsu/
+         Uploads: weekly, last 1d ago, 26 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (465/485) https://www.youtube.com/@LucindaStrafford
+         Uploads: weekly, last 1d ago, 26 in 90d (sampled 30)
+         Outside target countries (Spain)
+   [w1] (466/485) https://www.youtube.com/@TheInghamFamily
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 30)
+         Below range (5,930 < 80,000)
+   [w2] (467/485) https://www.youtube.com/@NaseyFamily
+         Name: Lucinda Strafford
+         Subscribers: 77.2K subscribers (77200)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/lucindastrafford/
+         Name: Nasey Family
+         Subscribers: 395K subscribers (395000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/caaseybarker/
+         Name: The Ingham Family
+         Subscribers: 1.38M subscribers (1380000)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Uploads: monthly, last 61d ago, 2 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (468/485) https://www.youtube.com/@NDL
+         Uploads: monthly, last 30d ago, 2 in 90d (sampled 30)
+         Below range (77,200 < 80,000)
+   [w3] (469/485) https://www.youtube.com/@miawootton
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+   [w1] (470/485) https://www.youtube.com/@FarhanaOberson
+         Name: NDL
+         Subscribers: 4.64M subscribers (4640000)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Instagram: http://instagram.com/niko
+         Name: Mia Wootton
+         Subscribers: 24.1K subscribers (24100)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Name: Farhana Oberson
+         Subscribers: 172K subscribers (172000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://instagram.com/farhana_oberson/
+         Uploads: weekly, last 5d ago, 12 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Uploads: weekly, last 7d ago, 18 in 90d (sampled 30)
+         Below range (24,100 < 80,000)
+   [w2] (471/485) https://www.youtube.com/@YousraHere
+   [w3] (472/485) https://www.youtube.com/@adventurewithemon
+         Uploads: inactive, last 152d ago, 0 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (473/485) https://www.youtube.com/@CyprusScope
+         Name: Yousra
+         Subscribers: 26.7K subscribers (26700)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/yousra.here/
+         Name: Adventure with Emon
+         Subscribers: 929 subscribers (929)
+         Email listed: no
+         Type: unclear (United Kingdom)
+         Name: Cyprus Scope
+         Subscribers: 27.5K subscribers (27500)
+         Email listed: yes
+         Type: unclear (Cyprus)
+         Uploads: weekly, last 1d ago, 11 in 90d (sampled 30)
+         Below range (26,700 < 80,000)
+   [w2] (474/485) https://www.youtube.com/@allyiahsface
+         Uploads: monthly, last 30d ago, 2 in 90d (sampled 30)
+         Below range (929 < 80,000)
+   [w3] (475/485) https://www.youtube.com/@TamKaurVlogs
+         Uploads: sporadic, last 30d ago, 1 in 90d (sampled 30)
+         Below range (27,500 < 80,000)
+   [w1] (476/485) https://www.youtube.com/@miakhannn
+         Name: AllyiahsFace
+         Subscribers: 933K subscribers (933000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/allyiahsface/
+         Name: Tam Kaur Vlogs
+         Subscribers: 231K subscribers (231000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/tamkaur/?hl=en
+         Uploads: biweekly, last 1d ago, 9 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (477/485) https://www.youtube.com/@RosieRyan_x
+         Name: Mia Bibi
+         Subscribers: 43K subscribers (43000)
+         Email listed: no
+         Type: solo
+         Instagram: https://www.instagram.com/miakhannn?igsh=MWQ4Y2xzc2dnZzdmOQ==&utm_source=qr
+         Uploads: biweekly, last 6d ago, 7 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (478/485) https://www.youtube.com/@milliejanerichardson
+         Uploads: biweekly, last 14d ago, 8 in 90d (sampled 30)
+         Below range (43,000 < 80,000)
+   [w1] (479/485) https://www.youtube.com/@ChevB
+         Name: Rosie Ryan
+         Subscribers: 343 subscribers (343)
+         Email listed: no
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/rosieryan_x?igsh=d2Z1MzlybHk4cmFv&utm_source=qr
+         Name: Chev B.
+         Subscribers: 601K subscribers (601000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/damnthatschev/?hl=en
+         Name: Millie Jane Richardson
+         Subscribers: 1.39K subscribers (1390)
+         Email listed: no
+         Type: unclear
+         Uploads: weekly, last 6d ago, 12 in 90d (sampled 30)
+         Below range (343 < 80,000)
+   [w2] (480/485) https://www.youtube.com/@JordanahMeshe
+         Uploads: weekly, last 1d ago, 11 in 90d (sampled 30)
+   [w1] (481/485) https://www.youtube.com/@Kajelly101
+         Name: Jordanah Meshe
+         Subscribers: 46.7K subscribers (46700)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Uploads: dormant, last 365d ago, 0 in 90d (sampled 13)
+         Below range (1,390 < 80,000)
+   [w3] (482/485) https://www.youtube.com/@daishansacker
+         Name: Kaj0000
+         Subscribers: 300 subscribers (300)
+         Email listed: no
+         Type: unclear
+         Uploads: inactive, last 152d ago, 0 in 90d (sampled 30)
+         Below range (46,700 < 80,000)
+   [w2] (483/485) https://www.youtube.com/@MorganYatesVids
+         Name: Daishan Sacker
+         Subscribers: 679 subscribers (679)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/the.names_daishan?igsh=YXg4MjZiMmtubmN3&utm_source=qr
+         Uploads: monthly, last 2d ago, 4 in 90d (sampled 5)
+         Below range (300 < 80,000)
+         Name: Morgan Yates
+         Subscribers: 363K subscribers (363000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://instagram.com/morgan.yates
+   [w1] (484/485) https://www.youtube.com/@EpicExplorationsTVEN
+         Uploads: monthly, last 14d ago, 3 in 90d (sampled 30)
+         Below range (679 < 80,000)
+   [w3] (485/485) https://www.youtube.com/@baileydedrick
+         Uploads: dormant, last 183d ago, 0 in 90d (sampled 30)
+         Cadence 'dormant' below required 'monthly'
+         Name: EpicExplorationsTV EN
+         Subscribers: 442K subscribers (442000)
+         Email listed: yes
+         Type: solo (Italy)
+         Instagram: https://www.instagram.com/antonio.pansini/
+         Name: Bailey Dedrick
+         Subscribers: 844K subscribers (844000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/baileydedrick
+         Uploads: weekly, last 5d ago, 10 in 90d (sampled 30)
+         Outside target countries (Italy)
+         Uploads: biweekly, last 6d ago, 9 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+
+Done. Wrote 485 rows to results.csv
