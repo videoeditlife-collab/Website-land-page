@@ -384,6 +384,15 @@ def test_creator_type():
                            "As Canada's national public news and information service", []),
           "business")
 
+    check("travel advisor -> business",
+          classify_creator("Hoffman Happy Travels",
+                           "I am a travel advisor who can book your next Disney "
+                           "vacation at no extra cost to you", []),
+          "business")
+    check("plan your trip -> business",
+          classify_creator("Mickey Guru", "Let me plan your Disney trip", []),
+          "business")
+
     check("no signal -> unclear",
           classify_creator("Benidorm Enthusiast",
                            "Benidorm is located on the Costa Blanca, Spain.", []),
@@ -413,6 +422,8 @@ def test_country_and_merge():
     check("countries parsed", args.countries,
           'United States,Canada,United Kingdom')
     check("countries default", parse_args([]).countries, None)
+    check("business-only flag", parse_args(['--business-only']).business_only, True)
+    check("business-only default", parse_args([]).business_only, False)
     wanted = {c.strip().lower() for c in args.countries.split(',')}
     check("US kept", 'united states' in wanted, True)
     check("Spain excluded", 'spain' in wanted, False)

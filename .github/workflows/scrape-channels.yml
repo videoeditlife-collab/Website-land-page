@@ -10,13 +10,13 @@ on:
   workflow_dispatch:
     inputs:
       source:
-        description: 'seed (holiday_seed_channels.csv) or search (holiday_terms.txt)'
+        description: 'agency (agency_terms.txt), search (holiday_terms.txt) or seed'
         required: false
-        default: 'search'
+        default: 'agency'
       min_subscribers:
         description: 'Minimum subscribers'
         required: false
-        default: '80000'
+        default: '2000'
       max_subscribers:
         description: 'Maximum subscribers (empty for no ceiling)'
         required: false
@@ -68,8 +68,8 @@ jobs:
       - name: Scrape
         working-directory: scraper
         env:
-          SOURCE: ${{ github.event.inputs.source || 'search' }}
-          MIN_SUBS: ${{ github.event.inputs.min_subscribers || '80000' }}
+          SOURCE: ${{ github.event.inputs.source || 'agency' }}
+          MIN_SUBS: ${{ github.event.inputs.min_subscribers || '2000' }}
           MAX_SUBS: ${{ github.event.inputs.max_subscribers || '' }}
           CADENCE: ${{ github.event.inputs.require_cadence || 'monthly' }}
         run: |
@@ -81,12 +81,25 @@ jobs:
             ARGS+=(--max-subscribers "$MAX_SUBS")
           fi
           ARGS+=(--output results.csv --concurrency 3 --delay 0.5)
-          ARGS+=(--solo-only --require-niche)
+          # Josh's brief: target creator-operators who sell travel, which is the
+          # inverse of the solo-only filter used on the previous lists.
+          if [ "$SOURCE" = "agency" ]; then
+            ARGS+=(--business-only --require-niche)
+          else
+            ARGS+=(--solo-only --require-niche)
+          fi
           ARGS+=(--countries "United States,Canada,United Kingdom,Ireland")
           if [ -n "$CADENCE" ]; then
             ARGS+=(--require-cadence "$CADENCE")
           fi
-          if [ "$SOURCE" = "search" ]; then
+          if [ "$SOURCE" = "agency" ]; then
+            # No --duration filter: agent content is often short, and the
+            #long form filter would hide most of this segment.
+            ARGS+=(--search-file agency_terms.txt)
+            ARGS+=(--scrolls 3 --per-term 10 --limit 600)
+            ARGS+=(--save-discovered discovered_agency.txt)
+            ARGS+=(--output results.csv)
+          elif [ "$SOURCE" = "search" ]; then
             ARGS+=(--search-file holiday_terms.txt --duration long)
             ARGS+=(--sort-by date --scrolls 3 --per-term 6 --limit 650)
             ARGS+=(--save-discovered discovered.txt)
@@ -161,6 +174,8 @@ jobs:
           cp scraper/diagnose.log scraper/results/diagnose.log 2>/dev/null || true
           cp scraper/inspect.json scraper/results/inspect.json 2>/dev/null || true
           cp scraper/discovered.txt scraper/results/discovered.txt 2>/dev/null || true
+          cp scraper/discovered_agency.txt scraper/results/discovered_agency.txt 2>/dev/null || true
+          cp scraper/results.csv scraper/results/agency_channels.csv 2>/dev/null || true
           git add -f scraper/results/ || true
           if git diff --staged --quiet; then
             echo "Nothing to commit"

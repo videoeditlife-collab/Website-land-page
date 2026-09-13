@@ -552,6 +552,11 @@ _BUSINESS_PHRASES = re.compile(
     r'|travel agency|travel agent|tour operator|tour company|b2b|dmc'
     r'|our clients|our customers|contact our team|enquire now'
     r'|we are a (?:travel|tour) '
+    r'|travel advisor|vacation planner|trip planner|travel specialist'
+    r'|host agency|independent agent|certified \w+ specialist'
+    r'|(?:plan|book) your (?:next )?(?:trip|vacation|cruise|holiday)'
+    r'|let me plan|i can book|book through me|book with me|quote request'
+    r'|no (?:extra )?cost to you|my travel (?:agency|business)'
     r'|public (?:news|broadcast)|news service|news network|broadcaster'
     r'|national (?:public|broadcast)|our newsroom|media (?:group|network)'
     r'|official channel of|the official youtube)\b',
@@ -1241,7 +1246,7 @@ class ResultWriter:
 async def worker(name, queue, writer, browser, instagram_state, delay,
                  min_subscribers=0, max_subscribers=0,
                  check_uploads=True, require_cadence=None, solo_only=False,
-                 require_niche=False, countries=None):
+                 require_niche=False, countries=None, business_only=False):
     """Own a set of pages and drain the shared queue."""
     yt_context = await new_context(browser)
     yt_page = await yt_context.new_page()
@@ -1297,6 +1302,11 @@ async def worker(name, queue, writer, browser, instagram_state, delay,
                 if not result.get('niche_match'):
                     result['status'] = 'off_niche'
                     print("         No travel/holiday wording - off niche")
+
+            if result.get('status') == 'ok' and business_only:
+                if result.get('creator_type') != 'business':
+                    result['status'] = 'not_a_business'
+                    print("         Not selling travel - skipped")
 
             if result.get('status') == 'ok' and solo_only:
                 if result.get('creator_type') == 'business':
@@ -1426,7 +1436,7 @@ async def run(args):
             worker(f"w{i + 1}", queue, writer, browser, instagram_state,
                    args.delay, args.min_subscribers, args.max_subscribers,
                    not args.skip_uploads, args.require_cadence, args.solo_only,
-                   args.require_niche, args.countries)
+                   args.require_niche, args.countries, args.business_only)
             for i in range(concurrency)
         ])
 
@@ -1492,6 +1502,9 @@ def parse_args(argv=None):
                              'travel or holiday wording as off_niche')
     parser.add_argument('--solo-only', action='store_true',
                         help='Flag channels that look like tour operators or agencies')
+    parser.add_argument('--business-only', action='store_true',
+                        help='The inverse: flag channels that are NOT selling travel, '
+                             'for targeting creator-operators who run an agency')
     parser.add_argument('--require-cadence', choices=['weekly', 'biweekly', 'monthly'],
                         help='Flag channels that upload less consistently than this')
     parser.add_argument('--skip-uploads', action='store_true',

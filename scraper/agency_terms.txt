@@ -1,0 +1,71 @@
+# Search terms for creator-operators: people who make travel videos AND sell
+# travel. Travel agents, advisors, agency owners, tour operators.
+#
+#   python youtube_scraper.py --search-file agency_terms.txt \
+#       --business-only --require-niche --min-subscribers 2000 \
+#       --countries "United States,Canada,United Kingdom,Ireland"
+#
+# Note the low subscriber floor. This segment is not chasing subscribers -
+# YouTube is a lead channel for the agency, so the audiences are small. The
+# eight agent-owned channels already found ranged from 161 to 161,000 subs,
+# with most under 35,000.
+
+# --- the agent's own language ---
+travel agent
+travel advisor
+i'm a travel agent
+travel agent tips
+day in the life travel agent
+why use a travel agent
+travel agent vs booking online
+book with a travel agent
+
+# --- Disney and Universal specialists (a large agent niche) ---
+disney travel agent
+disney vacation planner
+authorized disney vacation planner
+disney world planning agent
+universal vacation planner
+disney cruise line travel agent
+
+# --- cruise specialists ---
+cruise travel agent
+cruise specialist
+cruise planner
+book a cruise with me
+cruise agent tips
+
+# --- all inclusive and destination wedding specialists ---
+all inclusive travel agent
+destination wedding planner travel
+honeymoon travel agent
+sandals travel agent
+mexico travel agent
+
+# --- agency business content ---
+travel agency owner
+starting a travel agency
+host agency travel
+travel agent business tips
+independent travel agent
+how to become a travel agent
+travel agency marketing
+
+# --- small tour operators ---
+tour company owner
+small group tour operator
+private tour guide business
+i run a tour company
+walking tour company
+
+# --- luxury and concierge ---
+luxury travel advisor
+travel concierge
+bespoke travel planner
+villa rental company
+
+# --- UK market ---
+uk travel agent
+homeworking travel agent
+travel agent uk tips
+package holiday agent
