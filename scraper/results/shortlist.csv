@@ -1,22 +1,187 @@
-#,Display Name,Email,YT Channel,YT Subscribers,Type,Niche,Country,Cadence,Last Upload (days),Uploads (90d),IG Account,IG Followers,Skool Community,Skool Link,# of Members,Status
-1,DFBGuide,Email in YouTube Bio,https://www.youtube.com/@DFBGuide,1140000,business,yes,United States,weekly,0,30,http://instagram.com/disneyfoodblog,,,,,ok
-2,Prowalk Tours,Email in YouTube Bio,https://www.youtube.com/@ProwalkTours,766000,business,yes,United States,weekly,1,10,https://www.instagram.com/ProwalkTours/,,,,,ok
-3,LifeWithUsTV,Email in YouTube Bio,https://www.youtube.com/@LifeWithUsTV,161000,business,yes,United States,weekly,12,13,https://instagram.com/codefuntravels,,,,,ok
-4,Destination Well Known,Email in YouTube Bio,https://www.youtube.com/@destinationwellknown,85800,business,yes,,biweekly,3,6,https://www.instagram.com/destination_wellknown/,,,,,ok
-5,Cyndi Williams,Email in YouTube Bio,https://www.youtube.com/@wanderlustceo,74400,business,yes,United States,weekly,3,12,https://www.instagram.com/wanderlustceo/,,,,,ok
-6,Byte Size Cruises,Email in YouTube Bio,https://www.youtube.com/@ByteSizeCruises,43300,business,yes,United States,weekly,0,30,https://instagram.com/bytesizecruises,,,,,ok
-7,Addicted to the Mouse,Email in YouTube Bio,https://www.youtube.com/@AddictedtotheMouse,26700,business,yes,United States,weekly,0,26,https://www.instagram.com/addictedtothemouse/,,,,,ok
-8,Honeymoon Always,Email in YouTube Bio,https://www.youtube.com/@HoneymoonAlways,17300,business,yes,,biweekly,30,5,https://www.instagram.com/honeymoonalways/,,,,,ok
-9,KHM Travel Group,Email in YouTube Bio,https://www.youtube.com/@KHMTravelGroup,15800,business,yes,United States,biweekly,21,6,https://www.instagram.com/khmtravel/,,,,,ok
-10,A Couple Travelers,Email in YouTube Bio,https://www.youtube.com/@ACoupleTravelers,13800,business,yes,United States,monthly,4,4,https://www.instagram.com/a.couple.travelers/?hl=en,,,,,ok
-11,Fudge Factor,Email in YouTube Bio,https://www.youtube.com/@fudge_factor,13500,business,yes,United States,weekly,1,15,https://www.instagram.com/fudge_factor/,,,,,ok
-12,Travel Professional NEWS,,https://www.youtube.com/@TomOgg,10300,business,yes,United States,weekly,3,26,,,,,,ok
-13,Fora,,https://www.youtube.com/@hellofora,8980,business,yes,United States,biweekly,21,7,https://www.instagram.com/foratravel,,,,,ok
-14,Where's Walter Travel,Email in YouTube Bio,https://www.youtube.com/@WheresWalterTravel,8320,business,yes,United States,monthly,30,4,https://www.instagram.com/whereswaltertravel/,,,,,ok
-15,Travelpreneur Dreams With Tyra | A Host Agency,Email in YouTube Bio,https://www.youtube.com/@TravelpreneurDreamsWithTyra,7640,business,yes,United States,weekly,2,10,,,,,,ok
-16,Travel Agent Haven,Email in YouTube Bio,https://www.youtube.com/@travelagenthaven,7250,business,yes,United States,monthly,13,3,https://www.instagram.com/travelagenthaven/,,,,,ok
-17,Only Provence,Email in YouTube Bio,https://www.youtube.com/@OnlyProvence,3840,business,yes,,biweekly,21,8,https://www.instagram.com/only.provence/,,,,,ok
-18,The Wanderlust Jetsetter,Email in YouTube Bio,https://www.youtube.com/@thewanderlustjetsetter9342,3490,business,yes,United States,biweekly,0,9,https://www.instagram.com/thewanderlustjetsetter,,,,,ok
-19,Cruise Specialists,Email in YouTube Bio,https://www.youtube.com/@CruiseSpecialists,3130,business,yes,United States,monthly,30,3,,,,,,ok
-20,Samantha Hammond,Email in YouTube Bio,https://www.youtube.com/@iamsamanthahammond,3100,business,yes,,biweekly,30,5,,,,,,ok
-21,Scenic Views Travel,Email in YouTube Bio,https://www.youtube.com/@scenicviewstravelgal,2870,business,yes,United States,weekly,0,13,https://www.instagram.com/scenicviewstravel/,,,,,ok
+#,Display Name,Email,YT Channel,YT Subscribers,Type,Sells,Niche,Country,Cadence,Last Upload (days),Uploads (90d),IG Account,IG Followers,Skool Community,Skool Link,# of Members,Status
+1,MrBeast,Email in YouTube Bio,https://www.youtube.com/@MrBeast,517000000,solo,,no,United States,biweekly,2,6,https://www.instagram.com/mrbeast/,,,,,ok
+2,MrBeast 2,Email in YouTube Bio,https://www.youtube.com/@MrBeast2,62000000,solo,,no,United States,monthly,14,2,https://www.instagram.com/mrbeast,,,,,ok
+3,Jordan Matter,Email in YouTube Bio,https://www.youtube.com/@jordanmatter,38100000,solo,,no,United States,weekly,2,12,https://www.instagram.com/salishmatter/,,,,,ok
+4,SSSniperWolf,Email in YouTube Bio,https://www.youtube.com/@SSSniperWolf,35000000,solo,,no,United States,weekly,1,30,http://instagram.com/SSSniperWolf,,,,,ok
+5,7clouds,Email in YouTube Bio,https://www.youtube.com/@7clouds,33600000,solo,,no,United States,weekly,0,30,https://www.instagram.com/7clouds,,,,,ok
+6,Chloe Ting,Email in YouTube Bio,https://www.youtube.com/@ChloeTing,26100000,solo,"own site, app",no,United States,biweekly,30,6,https://www.instagram.com/itschloeting,,,,,ok
+7,Stay Wild,Email in YouTube Bio,https://www.youtube.com/@StayWild-,25400000,solo,,no,United States,weekly,1,14,https://www.instagram.com/westaywild,,,,,ok
+8,Rebecca Zamolo,Email in YouTube Bio,https://www.youtube.com/@rebeccazamolo,23300000,solo,,no,United States,weekly,2,21,http://instagram.com/rebeccazamolo,,,,,ok
+9,Mrwhosetheboss,Email in YouTube Bio,https://www.youtube.com/@Mrwhosetheboss,22900000,solo,,no,United Kingdom,weekly,3,12,https://www.instagram.com/mrwhosetheboss/,,,,,ok
+10,The Infographics Show,Email in YouTube Bio,https://www.youtube.com/@TheInfographicsShow,15500000,solo,,no,United States,weekly,1,30,,,,,,ok
+11,ATHLEAN-X™,Email in YouTube Bio,https://www.youtube.com/@athleanx,14300000,solo,,no,United States,weekly,1,14,http://instagram.com/athleanx,,,,,ok
+12,Yoga With Adriene,Email in YouTube Bio,https://www.youtube.com/@yogawithadriene,13700000,solo,,no,United States,weekly,10,13,https://www.instagram.com/adrienelouise/,,,,,ok
+13,NBC News,,https://www.youtube.com/@NBCNews,12100000,solo,,no,,weekly,0,30,http://instagram.com/nbcnews,,,,,ok
+14,MrBallen,Email in YouTube Bio,https://www.youtube.com/@MrBallen,11300000,solo,,no,United States,weekly,1,30,https://www.instagram.com/mrballen,,,,,ok
+15,Carter Sharer,Email in YouTube Bio,https://www.youtube.com/@CarterSharer,11200000,solo,,no,United States,biweekly,4,7,https://www.instagram.com/cartersharer,,,,,ok
+16,Jesse James West,Email in YouTube Bio,https://www.youtube.com/@JesseJamesWest,11000000,solo,,no,United States,biweekly,14,6,https://www.instagram.com/jessejameswest/?hl=en,,,"https://www.skool.com/Stay Relentless and Subscribe❤️
+
+Team Relentless Coaching (7 Day Free Trial):
+https:/about",,ok
+17,PurpleStars02,Email in YouTube Bio,https://www.youtube.com/@PurpleStars02,8279999,solo,,yes,,weekly,1,27,https://www.instagram.com/kdrwal1999,,,,,ok
+18,Jeremy Ethier,Email in YouTube Bio,https://www.youtube.com/@JeremyEthier,7930000,solo,,no,Canada,biweekly,8,6,https://www.instagram.com/jeremyethier/,,,,,ok
+19,BeardMeatsFood,Email in YouTube Bio,https://www.youtube.com/@Beardmeatsfood,6840000,solo,,no,United Kingdom,weekly,1,14,https://www.instagram.com/beardmeatsfood/,,,,,ok
+20,Lilly Sabri,Email in YouTube Bio,https://www.youtube.com/@LillySabri,6820000,solo,,no,United Kingdom,weekly,0,30,https://instagram.com/leanwithlilly,,,,,ok
+21,Team Jesser,Email in YouTube Bio,https://www.youtube.com/@TeamJesser,6220000,solo,,no,United States,weekly,3,12,https://www.instagram.com/jesser/,,,,,ok
+22,Ireland Boys Productions,Email in YouTube Bio,https://www.youtube.com/@IrelandBoysProductions,5570000,solo,,no,United States,biweekly,2,7,http://instagram.com/irelandboysproductions,,,,,ok
+23,Bob & Brad,Email in YouTube Bio,https://www.youtube.com/@BobandBrad,5480000,solo,"storefront, own site",no,United States,weekly,1,30,https://www.instagram.com/officialbobandbrad/,,,,,ok
+24,Will Tennyson,,https://www.youtube.com/@WillTennyson,5410000,solo,,no,Canada,biweekly,1,7,https://www.instagram.com/willtenny/,,,,,ok
+25,The Ramsey Show Highlights,,https://www.youtube.com/@TheRamseyShow,4600000,solo,,no,United States,weekly,0,30,http://instagram.com/daveramsey,,,,,ok
+26,Unspeakable Studios,,https://www.youtube.com/@UnspeakableStudios,4570000,solo,,no,United States,weekly,1,30,https://www.instagram.com/unspeakablestudios/,,,,,ok
+27,Kara and Nate,Email in YouTube Bio,https://www.youtube.com/@KaraandNate,4540000,solo,,yes,United States,biweekly,2,8,https://www.instagram.com/karaandnate/,,,,,ok
+28,Matt D'Avella,Email in YouTube Bio,https://www.youtube.com/@mattdavella,4050000,solo,,no,United States,monthly,14,2,https://instagram.com/mattdavella,,,,,ok
+29,nikola’s pilates,Email in YouTube Bio,https://www.youtube.com/@Nikolaspilates,3940000,solo,,no,,weekly,5,12,https://www.instagram.com/nikolaspilates/profilecard/?igsh=Y2d6YTl0eHRsaGow,,,,,ok
+30,Sydney Serena,Email in YouTube Bio,https://www.youtube.com/@SydneySerena,3900000,solo,,no,United States,biweekly,6,7,https://www.instagram.com/sydneyserena/,,,,,ok
+31,Nicole Laeno,Email in YouTube Bio,https://www.youtube.com/@NicoleLaeno,3740000,solo,,no,United States,weekly,2,15,https://www.instagram.com/nicolelaeno/,,,,,ok
+32,Global Cycling Network,Email in YouTube Bio,https://www.youtube.com/@gcn,3630000,solo,,no,United States,weekly,1,30,https://instagram.com/globalcyclingnetwork,,,,,ok
+33,pigmie,Email in YouTube Bio,https://www.youtube.com/@FocusedLucas,3480000,solo,,no,United States,weekly,2,17,http://www.instagram.com/focusedlucas,,,,,ok
+34,Top5s,Email in YouTube Bio,https://www.youtube.com/@Top5s,3440000,solo,"store, membership",no,United Kingdom,weekly,1,21,,,,,,ok
+35,Yoga with Kassandra,Email in YouTube Bio,https://www.youtube.com/@yogawithkassandra,3320000,solo,,no,Canada,weekly,0,11,http://www.instagram.com/Yoga_with_Kassandra,,,,,ok
+36,Tone and Tighten,Email in YouTube Bio,https://www.youtube.com/@toneandtighten,3310000,solo,,no,United States,weekly,4,20,https://www.instagram.com/jaredbeckstranddpt/,,,,,ok
+37,LeanBeefPatty,,https://www.youtube.com/@theleanbeefpatty,3030000,solo,,no,United States,weekly,1,14,https://www.instagram.com/leanbeefpatty,,,,,ok
+38,JesssFam,Email in YouTube Bio,https://www.youtube.com/@JesssFam,2880000,solo,,no,United States,monthly,11,4,http://instagram.com/jesssfam,,,,,ok
+39,Lucy Wyndham-Read,Email in YouTube Bio,https://www.youtube.com/@lucywyndhamread,2840000,solo,,no,United Kingdom,weekly,0,27,,,,,,ok
+40,Juice & Toya,Email in YouTube Bio,https://www.youtube.com/@JuiceandToya,2620000,solo,own site,no,United States,biweekly,1,9,https://www.instagram.com/juiceandtoya/,,,,,ok
+41,Doctor Mike Diamonds,Email in YouTube Bio,https://www.youtube.com/@DoctorMikeDiamonds,2420000,business,,no,United States,weekly,1,30,http://instagram.com/mikediamonds.md,,,,,ok
+42,Alivia D'Andrea,Email in YouTube Bio,https://www.youtube.com/@aliviadandrea,2360000,solo,,no,United States,monthly,21,2,http://instagram.com/aliviadandrea/,,,,,ok
+43,Rowan Row,Email in YouTube Bio,https://www.youtube.com/@RowanRow,2320000,solo,,no,United Kingdom,weekly,0,11,http://www.instagram.com/rowanrow,,,,,ok
+44,Lidia Mera,,https://www.youtube.com/@lidiavmera,2320000,solo,,no,,weekly,1,17,https://www.instagram.com/lidiavmera/?hl=en,,,,,ok
+45,SHAWSTRENGTH,Email in YouTube Bio,https://www.youtube.com/@SHAWSTRENGTH,2300000,solo,,no,,weekly,2,15,https://www.instagram.com/shawstrength/?hl=en,,,,,ok
+46,Multi DO,,https://www.youtube.com/@multido1598,2290000,solo,,no,United States,weekly,0,30,,,,,,ok
+47,HASfit,Email in YouTube Bio,https://www.youtube.com/@HASfit,2290000,solo,"store, app, own site",no,United States,weekly,0,19,https://www.instagram.com/hasfit_official/,,,,,ok
+48,Fit Media Channel,Email in YouTube Bio,https://www.youtube.com/@FitMediaChannel,2069999,solo,,no,United Kingdom,biweekly,9,6,https://www.instagram.com/fitmediachannelofficial/,,,,,ok
+49,Frank Medrano,Email in YouTube Bio,https://www.youtube.com/@frank_medrano,1830000,solo,,no,United States,weekly,21,10,http://www.instagram.com/frank_medrano,,,,,ok
+50,CrossFit,,https://www.youtube.com/@crossfit,1790000,solo,,no,United States,weekly,0,25,https://www.instagram.com/crossfit/,,,,,ok
+51,MrCreepyPasta,Email in YouTube Bio,https://www.youtube.com/@MrCreepyPasta,1720000,solo,membership,no,United States,weekly,1,26,,,,,,ok
+52,Linda Sun,Email in YouTube Bio,https://www.youtube.com/@lindasunyt,1600000,solo,,yes,United States,monthly,10,4,https://www.instagram.com/lindasunyt/,,,,,ok
+53,LenaLifts,Email in YouTube Bio,https://www.youtube.com/@lenalifts,1520000,solo,,no,United States,weekly,12,13,https://www.instagram.com/lenaliftsx/?hl=en,,,,,ok
+54,Nick Bare,Email in YouTube Bio,https://www.youtube.com/@nickbarefitness,1520000,business,,no,United States,weekly,4,14,http://www.instagram.com/nickbarefitness,,,,,ok
+55,Huberman Lab Clips,,https://www.youtube.com/@HubermanLabClips,1480000,solo,,no,United States,weekly,0,30,https://www.instagram.com/hubermanlab/,,,,,ok
+56,Breanna Quan,Email in YouTube Bio,https://www.youtube.com/@BreannaQuan,1470000,solo,,no,Canada,biweekly,14,7,https://www.instagram.com/breannaquan.xo/?hl=en,,,,,ok
+57,AustinMcConnell,Email in YouTube Bio,https://www.youtube.com/@austinmcconnell,1440000,business,membership,no,United States,monthly,2,3,,,,,,ok
+58,fitbymik,Email in YouTube Bio,https://www.youtube.com/@fitbymik,1350000,solo,,yes,Canada,biweekly,0,7,https://www.instagram.com/fitbymik/?hl=en,,,,,ok
+59,Tara Michelle,Email in YouTube Bio,https://www.youtube.com/@imtaramichelle,1290000,solo,,no,United States,weekly,2,25,http://instagram.com/imtaramichelle,,,,,ok
+60,Brandon Carter,Email in YouTube Bio,https://www.youtube.com/@HighLifeWorkout,1270000,solo,,no,United States,weekly,4,30,http://instagram.com/KingKeto,,,,,ok
+61,nourishmovelove,Email in YouTube Bio,https://www.youtube.com/@nourishmovelove,1200000,solo,,no,United States,weekly,4,17,https://www.instagram.com/nourishmovelove/,,,,,ok
+62,Via Li,Email in YouTube Bio,https://www.youtube.com/@via.ilyouu,1170000,solo,,no,United States,biweekly,1,9,https://instagram.com/via.ilyou,,,,,ok
+63,Katina Eats Kilos,,https://www.youtube.com/@KatinaEatsKilos,1170000,solo,,yes,United States,biweekly,1,7,https://www.instagram.com/katinaeatskilos,,,,,ok
+64,Joel Hansen,Email in YouTube Bio,https://www.youtube.com/@JoelHansen,1170000,solo,,no,Canada,weekly,1,21,https://www.instagram.com/modelvsfood,,,,,ok
+65,Jessica Valant,Email in YouTube Bio,https://www.youtube.com/@Jessicasvalant,1160000,solo,,no,United States,weekly,0,12,http://www.instagram.com/jessicasvalant,,,,,ok
+66,Rosie Graham,Email in YouTube Bio,https://www.youtube.com/@RosieGraham444,1150000,solo,,no,,weekly,1,30,https://www.instagram.com/rosiegraham_/,,,,,ok
+67,Ally Purugganan,Email in YouTube Bio,https://www.youtube.com/@allyduhrey,1110000,solo,,no,,biweekly,7,7,https://www.instagram.com/allyysophia/,,,,,ok
+68,Global Triathlon Network,Email in YouTube Bio,https://www.youtube.com/@gtn,1100000,solo,,no,United Kingdom,weekly,1,30,http://instagram.com/globaltriathlonnetwork,,,,,ok
+69,annika's leaf,Email in YouTube Bio,https://www.youtube.com/@annikasleaf,1080000,solo,"storefront, own site",no,United States,biweekly,21,7,https://www.instagram.com/annikasleaf/,,,,,ok
+70,Emily Paulichi,Email in YouTube Bio,https://www.youtube.com/@emilypaulichi,1040000,solo,,no,United States,biweekly,3,9,,,,,,ok
+71,Rogue Fitness,,https://www.youtube.com/@roguefitness,1020000,solo,,no,,weekly,3,25,http://instagram.com/roguefitness,,,,,ok
+72,The Bioneer,Email in YouTube Bio,https://www.youtube.com/@TheBioneer,958000,solo,,no,United Kingdom,weekly,3,12,http://instagram.com/tree_house_frog/,,,,,ok
+73,Jess Yoga,Email in YouTube Bio,https://www.youtube.com/@JessicaRichburg,945000,solo,,no,United States,monthly,13,2,https://www.instagram.com/jessicarichburg,,,,,ok
+74,Finatic,Email in YouTube Bio,https://www.youtube.com/@Finatic,944000,solo,,no,United States,weekly,1,20,https://www.instagram.com/finaticc,,,,,ok
+75,trainer winny,Email in YouTube Bio,https://www.youtube.com/@trainerwinny,933000,solo,,no,,biweekly,2,8,https://www.instagram.com/trainerwinny,,,,,ok
+76,Bedros Keuilian,Email in YouTube Bio,https://www.youtube.com/@BedrosKeuilian,871000,solo,,no,United States,weekly,1,30,https://www.instagram.com/bedroskeuilian/?hl=en,,,,,ok
+77,Kenna Marie,Email in YouTube Bio,https://www.youtube.com/@KennaMarie,868000,solo,,no,United States,biweekly,14,7,https://www.instagram.com/mckennasalazar/,,,,,ok
+78,Obi Vincent,Email in YouTube Bio,https://www.youtube.com/@ObiVincent,867000,solo,,no,United Kingdom,biweekly,1,7,https://www.instagram.com/obi_vincent/,,,,,ok
+79,Alan Thrall (Untamed Strength),Email in YouTube Bio,https://www.youtube.com/@AlanThrall,848000,solo,,no,United States,monthly,14,2,https://www.instagram.com/untamedstrength/?hl=en,,,,,ok
+80,Chelsea Trevor,Email in YouTube Bio,https://www.youtube.com/@ChelseaTrevor,837000,solo,,no,Canada,weekly,3,10,https://www.instagram.com/chelseatrevor/,,,,,ok
+81,Joe Delaney,Email in YouTube Bio,https://www.youtube.com/@JoeDelaneyy,834000,solo,,no,United Kingdom,monthly,21,2,http://instagram.com/shredbundy,,,,,ok
+82,lay luv,Email in YouTube Bio,https://www.youtube.com/@layluv,829000,solo,,no,United States,weekly,3,14,https://www.instagram.com/layla.l.acosta/,,,,,ok
+83,Brix Glover,Email in YouTube Bio,https://www.youtube.com/@Brixglover,827000,solo,,no,United States,monthly,0,3,https://www.instagram.com/brixglover/,,,,,ok
+84,Tara Henderson,Email in YouTube Bio,https://www.youtube.com/@tarahenderson,790000,solo,,no,United States,weekly,3,17,https://www.instagram.com/taralynnn/,,,,,ok
+85,Garage Strength,Email in YouTube Bio,https://www.youtube.com/@GarageStrength,684000,solo,,no,United States,weekly,0,30,https://www.instagram.com/garagestrength/,,,,,ok
+86,Casey Kelly,,https://www.youtube.com/@caseykellyfit,614000,solo,,no,United States,biweekly,2,6,,,,,,ok
+87,Hussein,,https://www.youtube.com/@Hussein.fht1,611000,solo,,no,,monthly,14,3,https://www.instagram.com/hussein.fht/,,,,,ok
+88,Lauren Kim,,https://www.youtube.com/@laurenkimofficial,587000,solo,,no,United States,weekly,10,13,https://www.instagram.com/laurenkkim0?igsh=bnd0NXZuNTB0bHEx&utm_source=qr,,,,,ok
+89,Scott Burnhard,Email in YouTube Bio,https://www.youtube.com/@ScottBurnhard,568000,solo,,no,United States,weekly,14,23,https://instagram.com/scottburnhard/,,,,,ok
+90,Goal Guys,Email in YouTube Bio,https://www.youtube.com/@GoalGuys,561000,solo,,no,Canada,monthly,1,2,https://instagram.com/goalguysinsta,,,,,ok
+91,Kaleigh Cohen Strength,Email in YouTube Bio,https://www.youtube.com/@KaleighStrength,548000,solo,"membership, storefront, own site",no,United States,weekly,0,28,https://www.instagram.com/kaleighacohen,,,,,ok
+92,Tom Beckles,Email in YouTube Bio,https://www.youtube.com/@TomBeckles,541000,solo,,no,,biweekly,14,5,https://www.instagram.com/becklesfitness/,,,,,ok
+93,Yoga With Tim,Email in YouTube Bio,https://www.youtube.com/@yogawithtim,535000,solo,,no,United States,weekly,7,12,https://www.instagram.com/timsenesiyoga/,,,,,ok
+94,millie liao,Email in YouTube Bio,https://www.youtube.com/@mildredsauce,534000,solo,,no,United States,biweekly,7,6,https://www.instagram.com/mildredsauce/,,,,,ok
+95,Nate Murphy,Email in YouTube Bio,https://www.youtube.com/@NateMurphy,478000,solo,,yes,United Kingdom,biweekly,10,9,https://www.instagram.com/nate_murphy1/,,,,,ok
+96,ava rae,Email in YouTube Bio,https://www.youtube.com/@avarae,477000,solo,,no,United States,biweekly,3,9,https://www.instagram.com/theavarae/,,,,,ok
+97,Kisha Alejandra,Email in YouTube Bio,https://www.youtube.com/@KishaAlejandra,460000,solo,,no,Canada,weekly,13,10,http://www.instagram.com/kishaalejandra,,,,,ok
+98,Loeppkys Life,Email in YouTube Bio,https://www.youtube.com/@LoeppkysLife,457000,solo,,no,Canada,weekly,10,11,https://www.instagram.com/loeppkyslife/,,,,,ok
+99,Riley Rehl,Email in YouTube Bio,https://www.youtube.com/@rileyrehl,430000,solo,,no,United States,biweekly,6,9,https://www.instagram.com/rileyrehl/,,,,,ok
+100,A to Zen Life,,https://www.youtube.com/@AtoZenLife,430000,solo,,no,United States,biweekly,1,9,https://www.instagram.com/atozenlife/,,,,,ok
+101,English with Brittany,,https://www.youtube.com/@EnglishwithBrittany,426000,solo,course,no,,monthly,5,4,,,,,,ok
+102,Sab Yang,Email in YouTube Bio,https://www.youtube.com/@fromsabyang,410000,solo,,no,Canada,weekly,1,13,https://www.instagram.com/fromsabyang/,,,,,ok
+103,Kris Hui,Email in YouTube Bio,https://www.youtube.com/@KrisHui,410000,solo,,no,United States,biweekly,14,7,https://www.instagram.com/sanfrankrisco/,,,,,ok
+104,Lauren Snyder,Email in YouTube Bio,https://www.youtube.com/@laurensnyder,367000,solo,"storefront, own site",no,,weekly,1,20,http://instagram.com/itslaurensnyder,,,,,ok
+105,Julia Bedell,Email in YouTube Bio,https://www.youtube.com/@JuliaBedell,366000,solo,,no,United States,weekly,1,15,https://instagram.com/_juliabedell?igshid=1vaeo0ocj20y,,,,,ok
+106,Karla Espinosa,Email in YouTube Bio,https://www.youtube.com/@KarlaEspinosa,351000,solo,,no,United States,weekly,3,13,https://www.instagram.com/karlaxespinosa/,,,,,ok
+107,Dr. Swole,Email in YouTube Bio,https://www.youtube.com/@DrSwole,311000,solo,,no,Canada,monthly,7,4,https://www.instagram.com/dr_swole/,,,,,ok
+108,Lucy Davis Fit,Email in YouTube Bio,https://www.youtube.com/@LucyDavisFit,309000,solo,,no,United Kingdom,weekly,4,12,http://www.instagram.com/lucydavis,,,,,ok
+109,STRIQfit,Email in YouTube Bio,https://www.youtube.com/@STRIQfit,302000,solo,store,no,United States,weekly,1,13,https://www.instagram.com/STRIQfit/,,,,,ok
+110,Dan Churchill,,https://www.youtube.com/@danchurchillcooks,297000,solo,,no,United States,biweekly,9,7,http://instagram.com/dan_churchill,,,,,ok
+111,Hospital for Special Surgery,Email in YouTube Bio,https://www.youtube.com/@HSpecialSurgery,297000,solo,,no,United States,weekly,7,17,https://www.instagram.com/hspecialsurgery,,,,,ok
+112,Kelly Matthews,,https://www.youtube.com/@kellylmatthews,295000,solo,,yes,United States,weekly,1,15,https://www.instagram.com/kellylmatthews,,,,,ok
+113,Helaine Zhao,Email in YouTube Bio,https://www.youtube.com/@helainezhao,294000,solo,storefront,no,United States,biweekly,4,7,https://www.instagram.com/helainezhao_/,,,,,ok
+114,Tatyana Lopez,Email in YouTube Bio,https://www.youtube.com/@TatyanaLopez,283000,solo,,no,Canada,biweekly,21,7,http://www.instagram.com/tatyanalopez,,,,,ok
+115,Liftwsarah,Email in YouTube Bio,https://www.youtube.com/@Liftwsarah,275000,solo,,no,,biweekly,1,7,https://www.instagram.com/liftwsarah,,,,,ok
+116,clarisseintheclouds,Email in YouTube Bio,https://www.youtube.com/@clarisseintheclouds,268000,solo,,no,Canada,biweekly,14,6,https://www.instagram.com/clarisseintheclouds/,,,,,ok
+117,Crystal Nicole,Email in YouTube Bio,https://www.youtube.com/@CurlieCrys,261000,solo,,no,United States,monthly,6,3,https://www.instagram.com/iamcrystalnicolee/?hl=en,,,,,ok
+118,Charlotte Elise,Email in YouTube Bio,https://www.youtube.com/@CharlotteElise,258000,solo,,no,United States,monthly,30,2,https://www.instagram.com/charlotteelise/,,,,,ok
+119,WORKOUT WITH GINA,Email in YouTube Bio,https://www.youtube.com/@workoutwithgina,255000,solo,,no,Canada,weekly,4,10,https://www.instagram.com/workoutwithgina/,,,,,ok
+120,The Movement System,Email in YouTube Bio,https://www.youtube.com/@TheMovementSystem,245000,solo,,no,United States,biweekly,12,6,https://www.instagram.com/themovementsystem/,,,,,ok
+121,Apple Cheeks,Email in YouTube Bio,https://www.youtube.com/@apple.cheeks,230000,solo,membership,no,United States,monthly,21,4,https://www.instagram.com/apple.cheeks/,,,,,ok
+122,elitefts,Email in YouTube Bio,https://www.youtube.com/@eliteftsofficial,225000,solo,,no,United States,weekly,1,30,https://www.instagram.com/elitefts/?hl=en,,,,,ok
+123,1st Phorm,Email in YouTube Bio,https://www.youtube.com/@1stphorm,224000,solo,,no,United States,weekly,4,12,https://www.instagram.com/1stphorm/,,,,,ok
+124,Olivia Jarvis,Email in YouTube Bio,https://www.youtube.com/@OliviaJarvis,220000,solo,,no,United Kingdom,weekly,1,11,https://www.instagram.com/oliviajarviss/,,,,,ok
+125,Jaz Turner,Email in YouTube Bio,https://www.youtube.com/@jazturner16,210000,solo,"storefront, own site",no,,biweekly,4,9,https://www.instagram.com/jazturner16/,,,,,ok
+126,Serenity,,https://www.youtube.com/@Serenitygirlmom,207000,solo,,no,,monthly,3,3,,,,,,ok
+127,Caitie June,Email in YouTube Bio,https://www.youtube.com/@caitiejunefit,204000,solo,,no,United States,weekly,4,17,https://www.instagram.com/caitiejune_/,,,,,ok
+128,TK Twins,,https://www.youtube.com/@TheTKTwins.,197000,solo,,no,,biweekly,1,7,https://www.instagram.com/tktwins__/,,,,,ok
+129,Being Neiicey,Email in YouTube Bio,https://www.youtube.com/@BeingNeiicey,186000,solo,,no,United States,monthly,4,2,http://instagram.com/shaneicecrystal,,,,,ok
+130,Nikki Gets Fit,Email in YouTube Bio,https://www.youtube.com/@NikkiGetsFit,177000,solo,,no,United States,weekly,1,30,https://www.instagram.com/nikkigets_fit,,,,,ok
+131,JTM_FIT,Email in YouTube Bio,https://www.youtube.com/@jtm_fit,175000,solo,,no,United States,monthly,21,2,,,,,,ok
+132,Lauren Nicholsen,Email in YouTube Bio,https://www.youtube.com/@LaurenNicholsen,174000,solo,community,no,United States,weekly,1,23,https://www.instagram.com/mrslaurennicholsen/,,,,,ok
+133,Love Sundays,Email in YouTube Bio,https://www.youtube.com/@LoveSundays,169000,solo,,no,United Kingdom,weekly,1,13,https://www.instagram.com/lovesundays84/,,,,,ok
+134,Big Loz Official,Email in YouTube Bio,https://www.youtube.com/@BigLozOfficial,168000,solo,own site,no,United Kingdom,weekly,5,30,https://www.instagram.com/mrs_shahlaei/?hl=en,,,,,ok
+135,Amelie Desai,Email in YouTube Bio,https://www.youtube.com/@ameliedesai,162000,solo,"storefront, own site",yes,United States,weekly,0,18,https://www.instagram.com/ameliedesai/,,,,,ok
+136,takechu,,https://www.youtube.com/@takechu22,157000,solo,,no,,weekly,2,25,https://www.instagram.com/takechu_u22?igsh=MTF3ZG1qd3psd3czZA==&utm_source=qr,,,,,ok
+137,Catalyst Athletics,Email in YouTube Bio,https://www.youtube.com/@CatalystAthletics,157000,solo,,no,United States,biweekly,21,8,https://www.instagram.com/catalystathletics,,,,,ok
+138,lana ♡,,https://www.youtube.com/@lanaserenelife,152000,solo,,no,,biweekly,14,8,,,,,,ok
+139,Fergus Crawley,Email in YouTube Bio,https://www.youtube.com/@ferguscrawley95,151000,solo,,no,United Kingdom,weekly,12,10,https://www.instagram.com/ferguscrawley/,,,,,ok
+140,Rachel Vinn,Email in YouTube Bio,https://www.youtube.com/@RachelVinn,148000,solo,"storefront, own site",no,United States,weekly,0,24,https://www.instagram.com/rach.vinn/,,,,,ok
+141,Mana,,https://www.youtube.com/@ManaVlogs_yt,139000,solo,,no,Canada,biweekly,8,6,,,,,,ok
+142,Team Charles-Barclay,,https://www.youtube.com/@LucyCharlesBarclay,139000,solo,,no,United Kingdom,monthly,3,4,https://www.instagram.com/hollycharlesphotography_,,,,,ok
+143,BPN,Email in YouTube Bio,https://www.youtube.com/@bpnsupps,138000,business,,no,United States,weekly,9,14,https://www.instagram.com/bpnsupps/,,,,,ok
+144,Roots in the Wild,Email in YouTube Bio,https://www.youtube.com/@Roots-In-The-Wild,132000,solo,membership,yes,United Kingdom,weekly,2,11,https://www.instagram.com/jessicakleczka/,,,,,ok
+145,Holly Brooks,Email in YouTube Bio,https://www.youtube.com/@hollyjobrooks,131000,solo,,no,,weekly,0,13,https://www.instagram.com/p/CRbBzd6Bc3y/,,,,,ok
+146,Michelle Roots Fitness & Nutrition Coach,Email in YouTube Bio,https://www.youtube.com/@MichelleRoots,129000,solo,,no,Canada,biweekly,3,8,http://www.instagram.com/michellerootsfit,,,,,ok
+147,Andi Renay,,https://www.youtube.com/@andirenay,128000,solo,,no,,biweekly,30,6,,,,,,ok
+148,Cobra Scalez,,https://www.youtube.com/@cobrascalez,125000,solo,community,no,,monthly,4,3,https://www.instagram.com/cobrasthenics/,,Cobrasthenics Bootcamp,https://www.skool.com/cobrasthenics-7347/about,2800,ok
+149,Lauralie Chapados,Email in YouTube Bio,https://www.youtube.com/@LauralieChapadosIFBBPro,122000,solo,,no,United States,weekly,0,15,https://www.instagram.com/lauraliechap/,,,,,ok
+150,emi’s spellbook,,https://www.youtube.com/@emisspellbook,118000,solo,,no,,biweekly,11,5,,,,,,ok
+151,Bupa Health,,https://www.youtube.com/@BupaHealth,118000,solo,"app, own site",no,United Kingdom,biweekly,21,6,https://www.instagram.com/bupa.uk,,,,,ok
+152,Mitch Boyer,Email in YouTube Bio,https://www.youtube.com/@MitchBoyer,117000,solo,,no,United States,monthly,14,3,https://www.instagram.com/mitchwayneboyer/,,,,,ok
+153,UHM - Upcoming Horror Movies,Email in YouTube Bio,https://www.youtube.com/@UHMovies,112000,business,membership,no,United States,weekly,0,30,https://www.instagram.com/uhmovies/,,,,,ok
+154,Holiday Expert,Email in YouTube Bio,https://www.youtube.com/c/CheapHolidayExpert,109000,solo,,yes,United Kingdom,monthly,14,3,https://www.instagram.com/holidayexpert/,,,,,ok
+155,Sorta Healthy Trainer Education,Email in YouTube Bio,https://www.youtube.com/@SortaHealthyTrainerEducation,108000,solo,,no,United States,biweekly,4,9,https://www.instagram.com/sortahealthyjeff,,,,,ok
+156,maggy,Email in YouTube Bio,https://www.youtube.com/@maggymaa,102000,solo,,no,,monthly,1,2,https://www.instagram.com/mmmaaggyyy/,,,,,ok
+157,Just Elias,,https://www.youtube.com/@just_elias,95400,solo,,no,,biweekly,0,5,https://www.instagram.com/justt_eliass/,,,,,ok
+158,Living the life you love,Email in YouTube Bio,https://www.youtube.com/@Livingthelifeyoulove,94000,solo,,no,United Kingdom,weekly,2,12,https://www.instagram.com/livingthelifeyoulove/,,,,,ok
+159,sydgrows,Email in YouTube Bio,https://www.youtube.com/@sydgrows,86000,solo,,no,,monthly,9,2,https://www.instagram.com/sydgrows/,,,,,ok
+160,KevTheTrainer,Email in YouTube Bio,https://www.youtube.com/@KevTheTrainer,85500,solo,,no,United States,weekly,1,11,https://www.instagram.com/kev.the.trainer,,,,,ok
+161,Ridhi Sharma,Email in YouTube Bio,https://www.youtube.com/@ridhi.culous,81200,solo,,no,,weekly,1,13,https://instagram.com/ridhi.culous,,,,,ok
+162,Ariel,Email in YouTube Bio,https://www.youtube.com/@Arielyavuncu,78800,solo,,no,,biweekly,8,5,https://www.instagram.com/arielyavuncu?igsh=MTl0eDc0Mmh3NXBiNQ==,,,,,ok
+163,Mica Rivera Wood,Email in YouTube Bio,https://www.youtube.com/@micawoodruns,75400,solo,,no,,monthly,61,3,https://www.instagram.com/thewoodsrun/,,,,,ok
+164,Wayne Algenio,Email in YouTube Bio,https://www.youtube.com/@WayneAlgenio,74900,solo,,no,United States,weekly,1,26,http://instagram.com/wayneywonder29,,,,,ok
+165,Emily English,Email in YouTube Bio,https://www.youtube.com/@emthenutritionist,72000,solo,,no,United Kingdom,biweekly,3,5,https://www.instagram.com/emthenutritionist,,,,,ok
+166,Celine ♡,Email in YouTube Bio,https://www.youtube.com/@Celinelikedion,60700,solo,"membership, storefront, own site",no,Canada,weekly,7,10,http://instagram.com/celinelikedion,,,,,ok
+167,Crystal Park,Email in YouTube Bio,https://www.youtube.com/@crystalpark,58800,solo,,no,,biweekly,2,6,https://www.instagram.com/crystalpaark/,,,,,ok
+168,Anabolic Bodybuilding | Big Paul,Email in YouTube Bio,https://www.youtube.com/@anabolicbodybuilding,52400,solo,,no,United States,weekly,3,19,https://www.instagram.com/paulkbarnett/,,,,,ok
+169,Nicky Lyan,Email in YouTube Bio,https://www.youtube.com/@NICKYLYAN,52300,solo,,no,United States,weekly,9,10,https://www.instagram.com/nicky.lyan/?hl=en,,,,,ok
+170,Mark Coles,Email in YouTube Bio,https://www.youtube.com/@M10Fitness,50600,solo,,no,United Kingdom,weekly,3,18,https://www.instagram.com/markjcoles/,,,,,ok
+171,Morgan Peterson,,https://www.youtube.com/@morgantpete,46300,solo,,no,,biweekly,13,9,https://www.instagram.com/morgantpete,,,,,ok
+172,Elle Garenne,Email in YouTube Bio,https://www.youtube.com/@elle_garenne,42200,solo,,no,United States,weekly,1,13,https://www.instagram.com/elle_garenne,,,,,ok
+173,OPEX Fitness,Email in YouTube Bio,https://www.youtube.com/@OPEXFitness,39500,solo,,no,United States,biweekly,4,6,https://www.instagram.com/coachrx.app/,,,,,ok
+174,Buffalo 8 Movie Channel,Email in YouTube Bio,https://www.youtube.com/@buffalo8moviechannel,37000,solo,,no,United States,weekly,9,26,https://www.instagram.com/buffalo8pro/?hl=en,,,,,ok
+175,Cass Spinelli,Email in YouTube Bio,https://www.youtube.com/@CassSpinelli,35000,solo,"storefront, own site",no,United States,biweekly,14,5,https://www.instagram.com/cass.spinelli,,,,,ok
+176,nico🫶,,https://www.youtube.com/@nicosheri,34100,solo,,no,,monthly,30,2,,,,,,ok
+177,Paul and Carole Love to Travel,Email in YouTube Bio,https://www.youtube.com/channel/UCpnRH1jL_EKoVv5VWoyiB0A,33900,solo,membership,yes,United Kingdom,weekly,3,19,https://www.instagram.com/paulandcarole/,,,,,ok
+178,TayyLiz,,https://www.youtube.com/@TayyLiz,29300,solo,,no,United States,weekly,4,11,https://www.instagram.com/tayy_lizz?igsh=MTVvMHVvdzN5YWV2Yw==&utm_source=qr,,,,,ok
+179,Brian Mark,Email in YouTube Bio,https://www.youtube.com/@therealbrianmark,28500,solo,,no,Canada,weekly,6,30,https://www.instagram.com/therealbrianmark/,,,,,ok
+180,Jen Lauren,Email in YouTube Bio,https://www.youtube.com/@JenLauren,27900,solo,,no,United States,biweekly,1,8,https://www.instagram.com/jen_laurenn/,,,,,ok
+181,Alyssa Perry,Email in YouTube Bio,https://www.youtube.com/@Nurse.alyssaperry,23400,solo,,no,,biweekly,1,7,https://www.instagram.com/alyssamjobes/?hl=en,,,,,ok
+182,Riley Kristine,Email in YouTube Bio,https://www.youtube.com/@rileykristine,23300,solo,,no,,biweekly,1,9,https://www.instagram.com/rileykrist1ne?igsh=dHgzcjBsdTcyd3Ez&utm_source=qr,,,,,ok
+183,Runs with Emily,Email in YouTube Bio,https://www.youtube.com/@Runswithemily,21000,solo,,no,United Kingdom,biweekly,4,7,https://www.instagram.com/runswithemily/,,,,,ok
