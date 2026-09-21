@@ -1,0 +1,80 @@
+# Search terms for the broadened brief: vlogs, challenge content and fitness.
+#
+#   python youtube_scraper.py --search-file vlog_fitness_terms.txt \
+#       --niche-file niche_broad.txt --min-subscribers 20000 \
+#       --countries "United States,Canada,United Kingdom,Ireland"
+
+# --- daily and lifestyle vlogs ---
+daily vlog
+day in my life
+week in my life vlog
+life update vlog
+morning routine vlog
+productivity vlog
+moving house vlog
+college student vlog
+mom vlog daily
+family daily vlog
+solo living vlog
+apartment tour vlog
+budget living vlog
+van conversion vlog
+
+# --- challenge formats ---
+24 hour challenge
+48 hour challenge
+30 day challenge results
+100 days challenge
+i tried for 30 days
+last to leave challenge
+survival challenge video
+extreme challenge video
+eating challenge
+no spend challenge
+cold plunge challenge
+sleep experiment
+
+# --- general fitness ---
+full body workout routine
+push pull legs routine
+home workout no equipment
+gym workout vlog
+body transformation journey
+weight loss journey vlog
+fat loss transformation
+building muscle beginner
+beginner gym guide
+progressive overload training
+
+# --- strength and lifting ---
+powerlifting training vlog
+bodybuilding prep vlog
+strongman training
+olympic weightlifting training
+calisthenics progression
+street workout
+
+# --- endurance ---
+marathon training vlog
+running vlog daily
+couch to 5k journey
+hyrox training vlog
+triathlon training
+cycling training vlog
+
+# --- crossfit and functional ---
+crossfit training vlog
+functional fitness workout
+hybrid athlete training
+
+# --- coaching and business-side fitness ---
+online fitness coach
+personal trainer day in the life
+how i built my coaching business
+fitness coach client results
+nutrition coaching macros
+
+# --- mobility and mind-body ---
+yoga practice at home
+pilates workout at home
+mobility routine daily

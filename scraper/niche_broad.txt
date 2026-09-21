@@ -1,0 +1,93 @@
+# Niche keywords for the broadened brief: travel/holiday (kept), plus vlogs,
+# challenge content and fitness. A channel matches if any of these appear in its
+# name or About description.
+
+# --- travel / holiday (carried over) ---
+travel
+holiday
+vacation
+resort
+cruise
+hotel
+destination
+trip
+tour
+flight
+backpack
+itinerary
+abroad
+expat
+nomad
+getaway
+staycation
+road trip
+theme park
+all inclusive
+airline
+airport
+
+# --- vlogs / lifestyle ---
+vlog
+vlogs
+vlogger
+daily vlog
+day in the life
+day in my life
+week in my life
+life update
+lifestyle
+routine
+behind the scenes
+storytime
+documenting
+
+# --- challenges / stunts ---
+challenge
+challenges
+24 hours
+48 hours
+30 days
+100 days
+i tried
+experiment
+survive
+last to
+dare
+attempt
+world record
+
+# --- fitness / training ---
+fitness
+workout
+workouts
+gym
+training
+train
+lifting
+weightlifting
+powerlifting
+bodybuilding
+calisthenics
+crossfit
+hyrox
+strength
+physique
+transformation
+weight loss
+fat loss
+muscle
+nutrition
+macros
+protein
+running
+runner
+marathon
+triathlon
+cycling
+yoga
+pilates
+mobility
+personal trainer
+coach
+coaching
+athlete

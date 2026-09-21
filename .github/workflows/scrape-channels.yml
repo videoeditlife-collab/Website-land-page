@@ -10,13 +10,13 @@ on:
   workflow_dispatch:
     inputs:
       source:
-        description: 'agency (agency_terms.txt), search (holiday_terms.txt) or seed'
+        description: 'broad (vlogs/challenges/fitness), agency, search or seed'
         required: false
-        default: 'agency'
+        default: 'broad'
       min_subscribers:
         description: 'Minimum subscribers'
         required: false
-        default: '2000'
+        default: '20000'
       max_subscribers:
         description: 'Maximum subscribers (empty for no ceiling)'
         required: false
@@ -68,8 +68,8 @@ jobs:
       - name: Scrape
         working-directory: scraper
         env:
-          SOURCE: ${{ github.event.inputs.source || 'agency' }}
-          MIN_SUBS: ${{ github.event.inputs.min_subscribers || '2000' }}
+          SOURCE: ${{ github.event.inputs.source || 'broad' }}
+          MIN_SUBS: ${{ github.event.inputs.min_subscribers || '20000' }}
           MAX_SUBS: ${{ github.event.inputs.max_subscribers || '' }}
           CADENCE: ${{ github.event.inputs.require_cadence || 'monthly' }}
         run: |
@@ -83,8 +83,16 @@ jobs:
           ARGS+=(--output results.csv --concurrency 3 --delay 0.5)
           # Josh's brief: target creator-operators who sell travel, which is the
           # inverse of the solo-only filter used on the previous lists.
-          if [ "$SOURCE" = "agency" ]; then
+          if [ "$SOURCE" = "broad" ]; then
+            ARGS+=(--search-file vlog_fitness_terms.txt)
+            ARGS+=(--sort-by date --scrolls 3 --per-term 8 --limit 700)
+            ARGS+=(--save-discovered discovered_broad.txt)
+          elif [ "$SOURCE" = "agency" ]; then
             ARGS+=(--business-only --require-niche)
+          elif [ "$SOURCE" = "broad" ]; then
+            # No solo/business filter here. Both are wanted and the Type and
+            # Sells columns record which is which, so one run serves either.
+            ARGS+=(--require-niche --niche-file niche_broad.txt)
           else
             ARGS+=(--solo-only --require-niche)
           fi
@@ -175,6 +183,8 @@ jobs:
           cp scraper/inspect.json scraper/results/inspect.json 2>/dev/null || true
           cp scraper/discovered.txt scraper/results/discovered.txt 2>/dev/null || true
           cp scraper/discovered_agency.txt scraper/results/discovered_agency.txt 2>/dev/null || true
+          cp scraper/discovered_broad.txt scraper/results/discovered_broad.txt 2>/dev/null || true
+          cp scraper/results.csv scraper/results/broad_channels.csv 2>/dev/null || true
           cp scraper/results.csv scraper/results/agency_channels.csv 2>/dev/null || true
           git add -f scraper/results/ || true
           if git diff --staged --quiet; then

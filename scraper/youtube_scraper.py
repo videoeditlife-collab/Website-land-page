@@ -647,10 +647,66 @@ NICHE_KEYWORDS = (
 )
 
 
+def load_niche_keywords(path):
+    """Keywords from a file, one per line, '#' for comments."""
+    words = []
+    with open(path, encoding='utf-8') as handle:
+        for line in handle:
+            line = line.strip().lower()
+            if line and not line.startswith('#'):
+                words.append(line)
+    return tuple(words) if words else NICHE_KEYWORDS
+
+
 def matches_niche(name, description, keywords=NICHE_KEYWORDS):
     """Does the channel's own wording place it in the niche?"""
     blob = f"{name or ''} {description or ''}".lower()
     return any(keyword in blob for keyword in keywords)
+
+
+# ============================================================================
+# COMMERCIAL SIGNALS
+#
+# Josh's brief is business owners. Outside travel that is not a tour operator,
+# it is a creator with something to sell: coaching, a program, a course, an app
+# or a store. Detected from the links they publish rather than from wording,
+# because a storefront is a fact and a description is a claim.
+# ============================================================================
+
+_SELLS_DOMAINS = {
+    'shopify': 'store', 'myshopify': 'store', 'etsy.com': 'store',
+    'teachable': 'course', 'kajabi': 'course', 'thinkific': 'course',
+    'podia.com': 'course', 'gumroad': 'course', 'skool.com': 'community',
+    'patreon.com': 'membership', 'ko-fi.com': 'membership',
+    'buymeacoffee': 'membership', 'circle.so': 'community',
+    'trainerize': 'coaching', 'truecoach': 'coaching', 'everfit': 'coaching',
+    'calendly': 'bookings', 'acuityscheduling': 'bookings',
+    'apps.apple.com': 'app', 'play.google.com': 'app',
+    'amazon.com/shop': 'storefront', 'shopmy': 'storefront',
+    'stan.store': 'storefront', 'beacons.ai': 'storefront',
+}
+
+_SELLS_PATHS = re.compile(
+    r'/(shop|store|merch|coaching|coach|programs?|plans?|courses?|training|'
+    r'ebook|guide|book-?a-?call|work-with-me|services)(/|$|\?)',
+    re.IGNORECASE,
+)
+
+
+def commercial_signals(link_urls):
+    """What a channel appears to sell, from the links on its About page."""
+    found = []
+
+    for url in link_urls or []:
+        lowered = url.lower()
+        for needle, label in _SELLS_DOMAINS.items():
+            if needle in lowered and label not in found:
+                found.append(label)
+        if _SELLS_PATHS.search(lowered):
+            if 'own site' not in found:
+                found.append('own site')
+
+    return found
 
 
 _EMAIL_HINTS = (
@@ -811,9 +867,11 @@ async def scrape_skool(page, skool_url):
     return name, member_count, member_text
 
 
-async def scrape_channel(yt_page, ig_page, skool_page, channel_url, check_uploads=True):
+async def scrape_channel(yt_page, ig_page, skool_page, channel_url,
+                         check_uploads=True, niche_keywords=None):
     """Scrape one YouTube channel's About page and its linked profiles."""
     result = {
+        'sells': None,
         'niche_match': None,
         'creator_type': None,
         'country': None,
@@ -866,9 +924,12 @@ async def scrape_channel(yt_page, ig_page, skool_page, channel_url, check_upload
 
     result['country'] = field_value(data, 'country')
     _description = description_from_html(html)
-    result['niche_match'] = matches_niche(result['channel_name'], _description)
+    result['niche_match'] = matches_niche(result['channel_name'], _description,
+                                          niche_keywords or NICHE_KEYWORDS)
+    _links = all_external_links(data)
+    result['sells'] = ', '.join(commercial_signals(_links))
     result['creator_type'] = classify_creator(
-        result['channel_name'], _description, all_external_links(data))
+        result['channel_name'], _description, _links)
     print(f"         Type: {result['creator_type']}"
           + (f" ({result['country']})" if result['country'] else ""))
 
@@ -1166,7 +1227,7 @@ def read_input(path):
 
 CSV_HEADER = [
     '#', 'Display Name', 'Email', 'YT Channel', 'YT Subscribers',
-    'Type', 'Niche', 'Country', 'Cadence', 'Last Upload (days)', 'Uploads (90d)',
+    'Type', 'Sells', 'Niche', 'Country', 'Cadence', 'Last Upload (days)', 'Uploads (90d)',
     'IG Account', 'IG Followers', 'Skool Community', 'Skool Link',
     '# of Members', 'Status',
 ]
@@ -1220,6 +1281,7 @@ class ResultWriter:
                 channel_url,
                 result.get('subscriber_count') or '',
                 result.get('creator_type') or '',
+                result.get('sells') or '',
                 'yes' if result.get('niche_match') else 'no',
                 result.get('country') or '',
                 result.get('cadence') or '',
@@ -1246,7 +1308,8 @@ class ResultWriter:
 async def worker(name, queue, writer, browser, instagram_state, delay,
                  min_subscribers=0, max_subscribers=0,
                  check_uploads=True, require_cadence=None, solo_only=False,
-                 require_niche=False, countries=None, business_only=False):
+                 require_niche=False, countries=None, business_only=False,
+                 niche_keywords=None, sells_only=False):
     """Own a set of pages and drain the shared queue."""
     yt_context = await new_context(browser)
     yt_page = await yt_context.new_page()
@@ -1271,7 +1334,8 @@ async def worker(name, queue, writer, browser, instagram_state, delay,
 
             try:
                 result = await scrape_channel(yt_page, ig_page, skool_page,
-                                              channel_url, check_uploads)
+                                              channel_url, check_uploads,
+                                              niche_keywords)
             except Exception as exc:
                 print(f"         Unhandled error: {exc}")
                 result = {'status': f"error: {type(exc).__name__}"}
@@ -1302,6 +1366,10 @@ async def worker(name, queue, writer, browser, instagram_state, delay,
                 if not result.get('niche_match'):
                     result['status'] = 'off_niche'
                     print("         No travel/holiday wording - off niche")
+
+            if result.get('status') == 'ok' and sells_only and not result.get('sells'):
+                result['status'] = 'not_selling'
+                print("         No storefront, course or coaching link")
 
             if result.get('status') == 'ok' and business_only:
                 if result.get('creator_type') != 'business':
@@ -1394,6 +1462,15 @@ async def run(args):
             print("Nothing to scrape.")
             return 1
 
+    niche_keywords = None
+    if args.niche_file:
+        if not os.path.exists(args.niche_file):
+            print(f"Niche file not found: {args.niche_file}", file=sys.stderr)
+            return 1
+        niche_keywords = load_niche_keywords(args.niche_file)
+        print(f"Niche: {len(niche_keywords)} keywords from {args.niche_file}",
+              file=sys.stderr)
+
     instagram_state = load_instagram_state(args.instagram_state)
     writer = ResultWriter(args.output, resume=args.resume)
 
@@ -1436,7 +1513,8 @@ async def run(args):
             worker(f"w{i + 1}", queue, writer, browser, instagram_state,
                    args.delay, args.min_subscribers, args.max_subscribers,
                    not args.skip_uploads, args.require_cadence, args.solo_only,
-                   args.require_niche, args.countries, args.business_only)
+                   args.require_niche, args.countries, args.business_only,
+                   niche_keywords, args.sells_only)
             for i in range(concurrency)
         ])
 
@@ -1497,6 +1575,12 @@ def parse_args(argv=None):
                              '"United States,Canada,United Kingdom". Channels '
                              'elsewhere are flagged wrong_country; channels that '
                              'publish no country are kept.')
+    parser.add_argument('--niche-file', metavar='PATH',
+                        help='Keyword file defining the niche, one per line. '
+                             'Defaults to the built-in travel/holiday list.')
+    parser.add_argument('--sells-only', action='store_true',
+                        help='Flag channels with no storefront, course, coaching '
+                             'or membership link as not_selling')
     parser.add_argument('--require-niche', action='store_true',
                         help='Flag channels whose name and description show no '
                              'travel or holiday wording as off_niche')
