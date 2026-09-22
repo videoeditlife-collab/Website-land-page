@@ -25,6 +25,13 @@
  * log and to the Status column without sending anything.
  */
 
+// Paste the Sheet's ID here. It is the long code in the Sheet's own URL:
+//   docs.google.com/spreadsheets/d/THIS_PART_HERE/edit
+// Required when the script lives at script.google.com on its own. Leave it
+// empty only if you created the script from inside the Sheet via
+// Extensions > Apps Script, where getActive() finds the Sheet by itself.
+const SPREADSHEET_ID = '';
+
 const SHEET_NAME = 'Outreach';
 const DAILY_CAP = 12;
 const FOLLOWUP_1_AFTER_DAYS = 3;
@@ -41,8 +48,21 @@ const UNFILLED = /\[WATCH\]|\{\{\s*\w+\s*\}\}/;
 
 
 function run() {
-  const sheet = SpreadsheetApp.getActive().getSheetByName(SHEET_NAME);
-  if (!sheet) throw new Error('No sheet named ' + SHEET_NAME);
+  const book = SPREADSHEET_ID
+    ? SpreadsheetApp.openById(SPREADSHEET_ID)
+    : SpreadsheetApp.getActive();
+
+  if (!book) {
+    throw new Error(
+      'No spreadsheet. This script is standalone, so set SPREADSHEET_ID at ' +
+      'the top to the id in your Sheet URL.');
+  }
+
+  const sheet = book.getSheetByName(SHEET_NAME);
+  if (!sheet) {
+    throw new Error('No tab named "' + SHEET_NAME + '". Tabs found: ' +
+                    book.getSheets().map(s => s.getName()).join(', '));
+  }
 
   const data = sheet.getDataRange().getValues();
   const col = {};
