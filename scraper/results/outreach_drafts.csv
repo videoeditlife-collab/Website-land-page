@@ -1,5 +1,5 @@
-#,Channel,FirstName,Email,Subs,Niche,Cadence,Country,Handle,Subject,Body,Status
-1,The Lovers Passport,,,102000,travel,weekly,United States,@TheLoversPassport,built something for The Lovers Passport,"Hey there,
+#,Channel,FirstName,Email,Subs,Niche,Cadence,Country,Handle,Subject,Body,Followup1,Followup2,Status,ThreadId,LastSent,Touch
+1,The Lovers Passport,,,102000,travel,weekly,United States,@TheLoversPassport,built something for The Lovers Passport,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -12,8 +12,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-2,michaela amari,,,102000,vlog/fitness,biweekly,United States,@michaelaamari,built something for michaela amari,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+2,michaela amari,,,102000,vlog/fitness,biweekly,United States,@michaelaamari,built something for michaela amari,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -26,8 +49,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-3,maggy,,,102000,vlog/fitness,monthly,,@maggymaa,built something for maggy,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+3,maggy,,,102000,vlog/fitness,monthly,,@maggymaa,built something for maggy,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -40,8 +86,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-4,Camden David,,,103000,travel,biweekly,United States,@camdendavid,built something for Camden David,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+4,Camden David,,,103000,travel,biweekly,United States,@camdendavid,built something for Camden David,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -54,8 +123,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-5,Ritzy Travel Guide,,,104000,travel,biweekly,United Kingdom,@ritzytravelguide,built something for Ritzy Travel Guide,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+5,Ritzy Travel Guide,,,104000,travel,biweekly,United Kingdom,@ritzytravelguide,built something for Ritzy Travel Guide,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -68,8 +160,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-6,Travel Spree,,,104000,travel,weekly,United States,@TravelSpreeOfficial,built something for Travel Spree,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+6,Travel Spree,,,104000,travel,weekly,United States,@TravelSpreeOfficial,built something for Travel Spree,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -82,8 +197,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-7,Phil Mosley - MyProCoach Triathlon Training,,,104000,vlog/fitness,biweekly,United Kingdom,@myprocoach123,built something for Phil Mosley - MyProCoach Triathlon Training,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+7,Phil Mosley - MyProCoach Triathlon Training,,,104000,vlog/fitness,biweekly,United Kingdom,@myprocoach123,built something for Phil Mosley - MyProCoach Triathlon Training,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -96,8 +234,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-8,Just Elias,,,95400,vlog/fitness,biweekly,,@just_elias,built something for Just Elias,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+8,Just Elias,,,95400,vlog/fitness,biweekly,,@just_elias,built something for Just Elias,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -110,8 +271,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-9,Living the life you love,,,94000,vlog/fitness,weekly,United Kingdom,@Livingthelifeyoulove,built something for Living the life you love,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+9,Living the life you love,,,94000,vlog/fitness,weekly,United Kingdom,@Livingthelifeyoulove,built something for Living the life you love,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -124,8 +308,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-10,Cal,,,107000,travel,weekly,Canada,@thebangkokguide,built something for Cal,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+10,Cal,,,107000,travel,weekly,Canada,@thebangkokguide,built something for Cal,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -138,8 +345,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-11,National Academy of Sports Medicine (NASM),,,107000,vlog/fitness,weekly,,@NasmOrgPersonalTrainer,built something for National Academy of Sports Medicine (NASM),"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+11,National Academy of Sports Medicine (NASM),,,107000,vlog/fitness,weekly,,@NasmOrgPersonalTrainer,built something for National Academy of Sports Medicine (NASM),"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -152,8 +382,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-12,Explorcation,,,92200,travel,biweekly,United States,@Explorcation,built something for Explorcation,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+12,Explorcation,,,92200,travel,biweekly,United States,@Explorcation,built something for Explorcation,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -166,8 +419,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-13,Sorta Healthy Trainer Education,,,108000,vlog/fitness,biweekly,United States,@SortaHealthyTrainerEducation,built something for Sorta Healthy Trainer Education,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+13,Sorta Healthy Trainer Education,,,108000,vlog/fitness,biweekly,United States,@SortaHealthyTrainerEducation,built something for Sorta Healthy Trainer Education,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -180,8 +456,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-14,Holiday Expert,,,109000,travel,monthly,United Kingdom,https://www.youtube.com/c/CheapHolidayExpert,built something for Holiday Expert,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+14,Holiday Expert,,,109000,travel,monthly,United Kingdom,https://www.youtube.com/c/CheapHolidayExpert,built something for Holiday Expert,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -194,8 +493,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-15,McKenzie Morgan,,,90900,travel,weekly,United States,@styledbymckenz,built something for McKenzie Morgan,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+15,McKenzie Morgan,,,90900,travel,weekly,United States,@styledbymckenz,built something for McKenzie Morgan,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -208,8 +530,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-16,Ivan de Guzman,,,110000,travel,weekly,Philippines,@ivandeguzman,built something for Ivan de Guzman,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+16,Ivan de Guzman,,,110000,travel,weekly,Philippines,@ivandeguzman,built something for Ivan de Guzman,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -222,8 +567,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-17,Rebecca Hobson,,,111000,travel,monthly,United Kingdom,@mrsrebeccahobson,built something for Rebecca Hobson,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+17,Rebecca Hobson,,,111000,travel,monthly,United Kingdom,@mrsrebeccahobson,built something for Rebecca Hobson,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -236,8 +604,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-18,UHM - Upcoming Horror Movies,,,112000,vlog/fitness,weekly,United States,@UHMovies,built something for UHM - Upcoming Horror Movies,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+18,UHM - Upcoming Horror Movies,,,112000,vlog/fitness,weekly,United States,@UHMovies,built something for UHM - Upcoming Horror Movies,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -252,8 +643,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-19,The Frugal Brit - Orlando,,,114000,travel,biweekly,United Kingdom,@TheFrugalBrit,built something for The Frugal Brit - Orlando,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+19,The Frugal Brit - Orlando,,,114000,travel,biweekly,United Kingdom,@TheFrugalBrit,built something for The Frugal Brit - Orlando,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -266,8 +680,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-20,World Travel Guide,,,114000,travel,monthly,United States,@RealWorldTravelGuide,built something for World Travel Guide,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+20,World Travel Guide,,,114000,travel,monthly,United States,@RealWorldTravelGuide,built something for World Travel Guide,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -280,8 +717,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-21,sydgrows,,,86000,vlog/fitness,monthly,,@sydgrows,built something for sydgrows,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+21,sydgrows,,,86000,vlog/fitness,monthly,,@sydgrows,built something for sydgrows,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -294,8 +754,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-22,Destination Well Known,,,85800,travel,biweekly,,@destinationwellknown,built something for Destination Well Known,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+22,Destination Well Known,,,85800,travel,biweekly,,@destinationwellknown,built something for Destination Well Known,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -308,8 +791,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-23,Ash and Kels,,,85700,travel,weekly,United Kingdom,@AshandKels,built something for Ash and Kels,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+23,Ash and Kels,,,85700,travel,weekly,United Kingdom,@AshandKels,built something for Ash and Kels,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -322,8 +828,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-24,KevTheTrainer,,,85500,vlog/fitness,weekly,United States,@KevTheTrainer,built something for KevTheTrainer,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+24,KevTheTrainer,,,85500,vlog/fitness,weekly,United States,@KevTheTrainer,built something for KevTheTrainer,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -336,8 +865,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-25,Deanalex,,,85100,travel,weekly,,@Deanalex7,built something for Deanalex,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+25,Deanalex,,,85100,travel,weekly,,@Deanalex7,built something for Deanalex,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -350,8 +902,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-26,A Walk on the Wild Side,,,84900,travel,weekly,United Kingdom,@AWalkontheWildSideBlackpool,built something for A Walk on the Wild Side,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+26,A Walk on the Wild Side,,,84900,travel,weekly,United Kingdom,@AWalkontheWildSideBlackpool,built something for A Walk on the Wild Side,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -364,8 +939,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-27,GoTime Travels,,,116000,travel,weekly,Ireland,@GoTimeTravels,built something for GoTime Travels,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+27,GoTime Travels,,,116000,travel,weekly,Ireland,@GoTimeTravels,built something for GoTime Travels,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -378,8 +976,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-28,This Is Our Retirement,,,117000,travel,weekly,Canada,@ThisIsOurRetirement,built something for This Is Our Retirement,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+28,This Is Our Retirement,,,117000,travel,weekly,Canada,@ThisIsOurRetirement,built something for This Is Our Retirement,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -392,8 +1013,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-29,Mitch Boyer,,,117000,vlog/fitness,monthly,United States,@MitchBoyer,built something for Mitch Boyer,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+29,Mitch Boyer,,,117000,vlog/fitness,monthly,United States,@MitchBoyer,built something for Mitch Boyer,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -406,8 +1050,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-30,Sika Strength,,,83000,vlog/fitness,weekly,,@sikastrength,built something for Sika Strength,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+30,Sika Strength,,,83000,vlog/fitness,weekly,,@sikastrength,built something for Sika Strength,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -420,8 +1087,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-31,emi’s spellbook,,,118000,vlog/fitness,biweekly,,@emisspellbook,built something for emi’s spellbook,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+31,emi’s spellbook,,,118000,vlog/fitness,biweekly,,@emisspellbook,built something for emi’s spellbook,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -434,8 +1124,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-32,Bupa Health,,,118000,vlog/fitness,biweekly,United Kingdom,@BupaHealth,built something for Bupa Health,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+32,Bupa Health,,,118000,vlog/fitness,biweekly,United Kingdom,@BupaHealth,built something for Bupa Health,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -450,8 +1163,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-33,Benidorm Enthusiast,,,81800,vlog/fitness,weekly,,https://www.youtube.com/channel/UCm-MbeXbYivVMGFrT8E2oNQ,built something for Benidorm Enthusiast,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+33,Benidorm Enthusiast,,,81800,vlog/fitness,weekly,,https://www.youtube.com/channel/UCm-MbeXbYivVMGFrT8E2oNQ,built something for Benidorm Enthusiast,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -464,8 +1200,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-34,Ridhi Sharma,,,81200,vlog/fitness,weekly,,@ridhi.culous,built something for Ridhi Sharma,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+34,Ridhi Sharma,,,81200,vlog/fitness,weekly,,@ridhi.culous,built something for Ridhi Sharma,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -478,8 +1237,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-35,The Krystal Palace,,,81000,travel,weekly,United States,@TheKrystalPalace,built something for The Krystal Palace,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+35,The Krystal Palace,,,81000,travel,weekly,United States,@TheKrystalPalace,built something for The Krystal Palace,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -492,8 +1274,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-36,Wout of the World,,,120000,travel,weekly,Netherlands,@WoutoftheWorld,built something for Wout of the World,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+36,Wout of the World,,,120000,travel,weekly,Netherlands,@WoutoftheWorld,built something for Wout of the World,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -506,8 +1311,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-37,Ariel,,,78800,vlog/fitness,biweekly,,@Arielyavuncu,built something for Ariel,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+37,Ariel,,,78800,vlog/fitness,biweekly,,@Arielyavuncu,built something for Ariel,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -520,8 +1348,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-38,Mia Stephens,,,122000,vlog/fitness,biweekly,,@MiaStephens,built something for Mia Stephens,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+38,Mia Stephens,,,122000,vlog/fitness,biweekly,,@MiaStephens,built something for Mia Stephens,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -534,8 +1385,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-39,Lauralie Chapados,,,122000,vlog/fitness,weekly,United States,@LauralieChapadosIFBBPro,built something for Lauralie Chapados,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+39,Lauralie Chapados,,,122000,vlog/fitness,weekly,United States,@LauralieChapadosIFBBPro,built something for Lauralie Chapados,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -548,8 +1422,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-40,Chews to Explore,,,124000,travel,weekly,United States,@ChewsToExplore,built something for Chews to Explore,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+40,Chews to Explore,,,124000,travel,weekly,United States,@ChewsToExplore,built something for Chews to Explore,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -562,8 +1459,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-41,Mica Rivera Wood,,,75400,vlog/fitness,monthly,,@micawoodruns,built something for Mica Rivera Wood,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+41,Mica Rivera Wood,,,75400,vlog/fitness,monthly,,@micawoodruns,built something for Mica Rivera Wood,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -576,8 +1496,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-42,We're in the Rockies,,,125000,travel,weekly,United States,@WereintheRockies,built something for We're in the Rockies,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+42,We're in the Rockies,,,125000,travel,weekly,United States,@WereintheRockies,built something for We're in the Rockies,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -590,8 +1533,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-43,Cobra Scalez,,,125000,vlog/fitness,monthly,,@cobrascalez,built something for Cobra Scalez,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+43,Cobra Scalez,,,125000,vlog/fitness,monthly,,@cobrascalez,built something for Cobra Scalez,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -606,8 +1572,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-44,Wayne Algenio,,,74900,vlog/fitness,weekly,United States,@WayneAlgenio,built something for Wayne Algenio,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+44,Wayne Algenio,,,74900,vlog/fitness,weekly,United States,@WayneAlgenio,built something for Wayne Algenio,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -620,8 +1609,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-45,Cyndi Williams,,,74400,agency,weekly,United States,@wanderlustceo,built something for Cyndi Williams,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+45,Cyndi Williams,,,74400,agency,weekly,United States,@wanderlustceo,built something for Cyndi Williams,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -634,8 +1646,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-46,Jordan Bauth,,,126000,travel,weekly,United States,@jbauth,built something for Jordan Bauth,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+46,Jordan Bauth,,,126000,travel,weekly,United States,@jbauth,built something for Jordan Bauth,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -648,8 +1683,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-47,Coolist,,,128000,travel,biweekly,United States,@Coolist,built something for Coolist,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+47,Coolist,,,128000,travel,biweekly,United States,@Coolist,built something for Coolist,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -662,8 +1720,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-48,Emily English,,,72000,vlog/fitness,biweekly,United Kingdom,@emthenutritionist,built something for Emily English,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+48,Emily English,,,72000,vlog/fitness,biweekly,United Kingdom,@emthenutritionist,built something for Emily English,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -676,8 +1757,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-49,Andi Renay,,,128000,vlog/fitness,biweekly,,@andirenay,built something for Andi Renay,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+49,Andi Renay,,,128000,vlog/fitness,biweekly,,@andirenay,built something for Andi Renay,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -690,8 +1794,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-50,Griff & Alyssa,,,129000,travel,weekly,United States,@GriffandAlyssa,built something for Griff & Alyssa,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+50,Griff & Alyssa,,,129000,travel,weekly,United States,@GriffandAlyssa,built something for Griff & Alyssa,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -704,8 +1831,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-51,Michelle Roots Fitness & Nutrition Coach,,,129000,vlog/fitness,biweekly,Canada,@MichelleRoots,built something for Michelle Roots Fitness & Nutrition Coach,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+51,Michelle Roots Fitness & Nutrition Coach,,,129000,vlog/fitness,biweekly,Canada,@MichelleRoots,built something for Michelle Roots Fitness & Nutrition Coach,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -718,8 +1868,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-52,Holly Brooks,,,131000,vlog/fitness,weekly,,@hollyjobrooks,built something for Holly Brooks,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+52,Holly Brooks,,,131000,vlog/fitness,weekly,,@hollyjobrooks,built something for Holly Brooks,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -732,8 +1905,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-53,Roots in the Wild,,,132000,vlog/fitness,weekly,United Kingdom,@Roots-In-The-Wild,built something for Roots in the Wild,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+53,Roots in the Wild,,,132000,vlog/fitness,weekly,United Kingdom,@Roots-In-The-Wild,built something for Roots in the Wild,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -748,8 +1944,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-54,Justin Medeiros,,,65700,vlog/fitness,weekly,,@JustinMedeiros34,built something for Justin Medeiros,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+54,Justin Medeiros,,,65700,vlog/fitness,weekly,,@JustinMedeiros34,built something for Justin Medeiros,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -762,8 +1981,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-55,Ultimate Bucket List,,,135000,travel,biweekly,United Kingdom,@UltimateBucketList,built something for Ultimate Bucket List,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+55,Ultimate Bucket List,,,135000,travel,biweekly,United Kingdom,@UltimateBucketList,built something for Ultimate Bucket List,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -776,8 +2018,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-56,The Sanbrooke Adventures,,,136000,travel,weekly,United Kingdom,@TheSanbrookeAdventures,built something for The Sanbrooke Adventures,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+56,The Sanbrooke Adventures,,,136000,travel,weekly,United Kingdom,@TheSanbrookeAdventures,built something for The Sanbrooke Adventures,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -790,8 +2055,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-57,Sophie Nadeau,,,136000,travel,weekly,United Kingdom,@SophieNadeau,built something for Sophie Nadeau,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+57,Sophie Nadeau,,,136000,travel,weekly,United Kingdom,@SophieNadeau,built something for Sophie Nadeau,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -804,8 +2092,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-58,PP: Passport Pages,,,138000,travel,biweekly,United States,@Passport_Pages,built something for PP: Passport Pages,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+58,PP: Passport Pages,,,138000,travel,biweekly,United States,@Passport_Pages,built something for PP: Passport Pages,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -818,8 +2129,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-59,BPN,,,138000,vlog/fitness,weekly,United States,@bpnsupps,built something for BPN,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+59,BPN,,,138000,vlog/fitness,weekly,United States,@bpnsupps,built something for BPN,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -832,8 +2166,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-60,MoreMozi,,,138000,vlog/fitness,weekly,United States,@MoreMozi,built something for MoreMozi,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+60,MoreMozi,,,138000,vlog/fitness,weekly,United States,@MoreMozi,built something for MoreMozi,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -846,8 +2203,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-61,Mana,,,139000,vlog/fitness,biweekly,Canada,@ManaVlogs_yt,built something for Mana,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+61,Mana,,,139000,vlog/fitness,biweekly,Canada,@ManaVlogs_yt,built something for Mana,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -860,8 +2240,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-62,Team Charles-Barclay,,,139000,vlog/fitness,monthly,United Kingdom,@LucyCharlesBarclay,built something for Team Charles-Barclay,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+62,Team Charles-Barclay,,,139000,vlog/fitness,monthly,United Kingdom,@LucyCharlesBarclay,built something for Team Charles-Barclay,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -874,8 +2277,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-63,Celine ♡,,,60700,vlog/fitness,weekly,Canada,@Celinelikedion,built something for Celine ♡,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+63,Celine ♡,,,60700,vlog/fitness,weekly,Canada,@Celinelikedion,built something for Celine ♡,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -890,8 +2316,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-64,The Cartwrights,,,140000,travel,biweekly,Australia,@thecartwrights,built something for The Cartwrights,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+64,The Cartwrights,,,140000,travel,biweekly,Australia,@thecartwrights,built something for The Cartwrights,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -904,8 +2353,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-65,Lisa Mthembu,,,58800,vlog/fitness,monthly,,@lisa_mthembu,built something for Lisa Mthembu,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+65,Lisa Mthembu,,,58800,vlog/fitness,monthly,,@lisa_mthembu,built something for Lisa Mthembu,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -918,8 +2390,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-66,Crystal Park,,,58800,vlog/fitness,biweekly,,@crystalpark,built something for Crystal Park,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+66,Crystal Park,,,58800,vlog/fitness,biweekly,,@crystalpark,built something for Crystal Park,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -932,8 +2427,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-67,Eat See TV,,,142000,travel,biweekly,United States,@EatSeeTV,built something for Eat See TV,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+67,Eat See TV,,,142000,travel,biweekly,United States,@EatSeeTV,built something for Eat See TV,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -946,8 +2464,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-68,Mind Pump Clips,,,56400,vlog/fitness,weekly,United States,@MindPumpClips,built something for Mind Pump Clips,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+68,Mind Pump Clips,,,56400,vlog/fitness,weekly,United States,@MindPumpClips,built something for Mind Pump Clips,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -960,8 +2501,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-69,Emily Enchanted,,,144000,travel,biweekly,United States,@EmilyEnchanted,built something for Emily Enchanted,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+69,Emily Enchanted,,,144000,travel,biweekly,United States,@EmilyEnchanted,built something for Emily Enchanted,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -974,8 +2538,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-70,Adventures of Matt and Nat,,,145000,travel,biweekly,United States,@AdventuresofMattandNat,built something for Adventures of Matt and Nat,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+70,Adventures of Matt and Nat,,,145000,travel,biweekly,United States,@AdventuresofMattandNat,built something for Adventures of Matt and Nat,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -988,8 +2575,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-71,Thinking with a Pump,,,145000,vlog/fitness,biweekly,,@ThinkingwithaPump,built something for Thinking with a Pump,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+71,Thinking with a Pump,,,145000,vlog/fitness,biweekly,,@ThinkingwithaPump,built something for Thinking with a Pump,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1004,8 +2614,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-72,Anabolic Bodybuilding | Big Paul,,,52400,vlog/fitness,weekly,United States,@anabolicbodybuilding,built something for Anabolic Bodybuilding | Big Paul,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+72,Anabolic Bodybuilding | Big Paul,,,52400,vlog/fitness,weekly,United States,@anabolicbodybuilding,built something for Anabolic Bodybuilding | Big Paul,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1018,8 +2651,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-73,Nicky Lyan,,,52300,vlog/fitness,weekly,United States,@NICKYLYAN,built something for Nicky Lyan,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+73,Nicky Lyan,,,52300,vlog/fitness,weekly,United States,@NICKYLYAN,built something for Nicky Lyan,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1032,8 +2688,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-74,Rachel Vinn,,,148000,vlog/fitness,weekly,United States,@RachelVinn,built something for Rachel Vinn,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+74,Rachel Vinn,,,148000,vlog/fitness,weekly,United States,@RachelVinn,built something for Rachel Vinn,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1048,8 +2727,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-75,Mark Coles,,,50600,vlog/fitness,weekly,United Kingdom,@M10Fitness,built something for Mark Coles,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+75,Mark Coles,,,50600,vlog/fitness,weekly,United Kingdom,@M10Fitness,built something for Mark Coles,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1062,8 +2764,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-76,Fergus Crawley,,,151000,vlog/fitness,weekly,United Kingdom,@ferguscrawley95,built something for Fergus Crawley,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+76,Fergus Crawley,,,151000,vlog/fitness,weekly,United Kingdom,@ferguscrawley95,built something for Fergus Crawley,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1076,8 +2801,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-77,seerasan,,,152000,travel,biweekly,Australia,@seerasan,built something for seerasan,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+77,seerasan,,,152000,travel,biweekly,Australia,@seerasan,built something for seerasan,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1090,8 +2838,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-78,lana ♡,,,152000,vlog/fitness,biweekly,,@lanaserenelife,built something for lana ♡,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+78,lana ♡,,,152000,vlog/fitness,biweekly,,@lanaserenelife,built something for lana ♡,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1104,8 +2875,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-79,Becky Mae,,,153000,vlog/fitness,biweekly,United States,@beckymaelee,built something for Becky Mae,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+79,Becky Mae,,,153000,vlog/fitness,biweekly,United States,@beckymaelee,built something for Becky Mae,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1120,8 +2914,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-80,Brogan Tate,,,154000,travel,weekly,United Kingdom,@brogantatexo,built something for Brogan Tate,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+80,Brogan Tate,,,154000,travel,weekly,United Kingdom,@brogantatexo,built something for Brogan Tate,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1134,8 +2951,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-81,takechu,,,157000,vlog/fitness,weekly,,@takechu22,built something for takechu,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+81,takechu,,,157000,vlog/fitness,weekly,,@takechu22,built something for takechu,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1148,8 +2988,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-82,Catalyst Athletics,,,157000,vlog/fitness,biweekly,United States,@CatalystAthletics,built something for Catalyst Athletics,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+82,Catalyst Athletics,,,157000,vlog/fitness,biweekly,United States,@CatalystAthletics,built something for Catalyst Athletics,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1162,8 +3025,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-83,Adam Hattan,,,158000,travel,biweekly,United Kingdom,@adamhattan,built something for Adam Hattan,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+83,Adam Hattan,,,158000,travel,biweekly,United Kingdom,@adamhattan,built something for Adam Hattan,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1176,8 +3062,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-84,Brenda Anton,,,158000,vlog/fitness,biweekly,,@brendaantonn,built something for Brenda Anton,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+84,Brenda Anton,,,158000,vlog/fitness,biweekly,,@brendaantonn,built something for Brenda Anton,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1190,8 +3099,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-85,Ryan Walker,,,160000,travel,biweekly,United States,@ryanwalkerT5,built something for Ryan Walker,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+85,Ryan Walker,,,160000,travel,biweekly,United States,@ryanwalkerT5,built something for Ryan Walker,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1204,8 +3136,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-86,Ryguy v2,,,160000,vlog/fitness,biweekly,United States,@Ryguyv2,built something for Ryguy v2,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+86,Ryguy v2,,,160000,vlog/fitness,biweekly,United States,@Ryguyv2,built something for Ryguy v2,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1218,8 +3173,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-87,LifeWithUsTV,,,161000,agency,weekly,United States,@LifeWithUsTV,built something for LifeWithUsTV,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+87,LifeWithUsTV,,,161000,agency,weekly,United States,@LifeWithUsTV,built something for LifeWithUsTV,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1232,8 +3210,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-88,Dana Berez,,,162000,travel,weekly,United States,@DanaBerez,built something for Dana Berez,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+88,Dana Berez,,,162000,travel,weekly,United States,@DanaBerez,built something for Dana Berez,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1246,8 +3247,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-89,Jada Waters,,,162000,vlog/fitness,weekly,,@valuejada,built something for Jada Waters,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+89,Jada Waters,,,162000,vlog/fitness,weekly,,@valuejada,built something for Jada Waters,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1260,8 +3284,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-90,Amelie Desai,,,162000,vlog/fitness,weekly,United States,@ameliedesai,built something for Amelie Desai,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+90,Amelie Desai,,,162000,vlog/fitness,weekly,United States,@ameliedesai,built something for Amelie Desai,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1276,8 +3323,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-91,The Hawaii Vacation Guide,,,164000,travel,weekly,United States,@TheHawaiiVacationGuide,built something for The Hawaii Vacation Guide,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+91,The Hawaii Vacation Guide,,,164000,travel,weekly,United States,@TheHawaiiVacationGuide,built something for The Hawaii Vacation Guide,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1290,8 +3360,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-92,Big Loz Official,,,168000,vlog/fitness,weekly,United Kingdom,@BigLozOfficial,built something for Big Loz Official,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+92,Big Loz Official,,,168000,vlog/fitness,weekly,United Kingdom,@BigLozOfficial,built something for Big Loz Official,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1306,8 +3399,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-93,Molly Thompson,,,169000,travel,weekly,United Kingdom,@MollyThompsonx_,built something for Molly Thompson,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+93,Molly Thompson,,,169000,travel,weekly,United Kingdom,@MollyThompsonx_,built something for Molly Thompson,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1320,8 +3436,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-94,Mark Wiemels,,,169000,travel,weekly,United States,@markwiemels,built something for Mark Wiemels,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+94,Mark Wiemels,,,169000,travel,weekly,United States,@markwiemels,built something for Mark Wiemels,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1334,8 +3473,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-95,Love Sundays,,,169000,vlog/fitness,weekly,United Kingdom,@LoveSundays,built something for Love Sundays,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+95,Love Sundays,,,169000,vlog/fitness,weekly,United Kingdom,@LoveSundays,built something for Love Sundays,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1348,8 +3510,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-96,Eat Sleep Cruise,,,170000,travel,weekly,United States,@Eatsleepcruise1,built something for Eat Sleep Cruise,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+96,Eat Sleep Cruise,,,170000,travel,weekly,United States,@Eatsleepcruise1,built something for Eat Sleep Cruise,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1362,8 +3547,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-97,Lauren Nicholsen,,,174000,vlog/fitness,weekly,United States,@LaurenNicholsen,built something for Lauren Nicholsen,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+97,Lauren Nicholsen,,,174000,vlog/fitness,weekly,United States,@LaurenNicholsen,built something for Lauren Nicholsen,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1378,8 +3586,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-98,JTM_FIT,,,175000,vlog/fitness,monthly,United States,@jtm_fit,built something for JTM_FIT,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+98,JTM_FIT,,,175000,vlog/fitness,monthly,United States,@jtm_fit,built something for JTM_FIT,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1392,8 +3623,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-99,Nikki Gets Fit,,,177000,vlog/fitness,weekly,United States,@NikkiGetsFit,built something for Nikki Gets Fit,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+99,Nikki Gets Fit,,,177000,vlog/fitness,weekly,United States,@NikkiGetsFit,built something for Nikki Gets Fit,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1406,8 +3660,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-100,Family Freedom,,,179000,travel,weekly,United Kingdom,@FamilyFreedom,built something for Family Freedom,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+100,Family Freedom,,,179000,travel,weekly,United Kingdom,@FamilyFreedom,built something for Family Freedom,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1420,8 +3697,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-101,Exotic Vacation,,,183000,travel,weekly,United States,@ExoticVacation,built something for Exotic Vacation,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+101,Exotic Vacation,,,183000,travel,weekly,United States,@ExoticVacation,built something for Exotic Vacation,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1434,8 +3734,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-102,Being Neiicey,,,186000,vlog/fitness,monthly,United States,@BeingNeiicey,built something for Being Neiicey,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+102,Being Neiicey,,,186000,vlog/fitness,monthly,United States,@BeingNeiicey,built something for Being Neiicey,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1448,8 +3771,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-103,The Hutchinsons,,,193000,travel,biweekly,United Kingdom,@TheHutchinsons,built something for The Hutchinsons,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+103,The Hutchinsons,,,193000,travel,biweekly,United Kingdom,@TheHutchinsons,built something for The Hutchinsons,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1462,8 +3808,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-104,TK Twins,,,197000,vlog/fitness,biweekly,,@TheTKTwins.,built something for TK Twins,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+104,TK Twins,,,197000,vlog/fitness,biweekly,,@TheTKTwins.,built something for TK Twins,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1476,8 +3845,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-105,Happy to Wander (Travel Tips & Inspo),,,199000,travel,biweekly,Canada,@HappytoWander,built something for Happy to Wander (Travel Tips & Inspo),"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+105,Happy to Wander (Travel Tips & Inspo),,,199000,travel,biweekly,Canada,@HappytoWander,built something for Happy to Wander (Travel Tips & Inspo),"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1490,8 +3882,31 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
-106,The Flip Flop Traveller,,,200000,travel,weekly,United States,@tfft,built something for The Flip Flop Traveller,"Hey there,
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,
+106,The Flip Flop Traveller,,,200000,travel,weekly,United States,@tfft,built something for The Flip Flop Traveller,"Hey {{firstName}},
 
 [WATCH] <- one line about their most recent video, written by you
 
@@ -1504,4 +3919,27 @@ I put together a 90 second breakdown of one of your recent videos - three specif
 Want me to send it over?
 
 JB
-JB Medias - jbmedias.com",
+JB Medias - jbmedias.com","Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB","Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB",,,,

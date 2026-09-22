@@ -20,6 +20,33 @@ import csv
 import re
 import sys
 
+FOLLOWUP_1 = """Hey {{firstName}},
+
+Just bumping this in case it got buried.
+
+The reason I reached out is that most creators at your size are still cutting
+their own videos, and it quietly caps how often they can post.
+
+That 90 second breakdown of your recent video is still sitting here.
+
+Want me to send it over?
+
+JB"""
+
+FOLLOWUP_2 = """Hey {{firstName}},
+
+Reaching out one last time.
+
+I know you probably get pitched by editors constantly, which is why I would
+rather just show you the work than describe it.
+
+The breakdown shows exactly what I would change in one of your videos and why -
+three cuts, the sound underneath them, and what it does to the drop-off.
+
+Want me to send it over?
+
+JB"""
+
 YOUR_NAME = 'JB'
 YOUR_SITE = 'jbmedias.com'
 
@@ -127,13 +154,12 @@ def infer_niche(row):
 
 def build_email(row):
     name = (row.get('Display Name') or '').strip()
-    first = (row.get('FirstName') or '').strip() or 'there'
     subs = format_subs(row.get('YT Subscribers'))
     cadence = (row.get('Cadence') or '').strip()
     niche = infer_niche(row)
 
     parts = [
-        f"Hey {first},",
+        "Hey {{firstName}},",
         "",
         "[WATCH] <- one line about their most recent video, written by you",
         "",
@@ -179,7 +205,9 @@ def main():
         rows = rows[:args.limit]
 
     out_cols = ['#', 'Channel', 'FirstName', 'Email', 'Subs', 'Niche',
-                'Cadence', 'Country', 'Handle', 'Subject', 'Body', 'Status']
+                'Cadence', 'Country', 'Handle', 'Subject', 'Body',
+                'Followup1', 'Followup2', 'Status', 'ThreadId', 'LastSent',
+                'Touch']
 
     with open(args.destination, 'w', newline='', encoding='utf-8') as handle:
         writer = csv.DictWriter(handle, fieldnames=out_cols)
@@ -201,7 +229,12 @@ def main():
                 'Handle': match.group(1) if match else url,
                 'Subject': subject,
                 'Body': body,
+                'Followup1': FOLLOWUP_1,
+                'Followup2': FOLLOWUP_2,
                 'Status': '',
+                'ThreadId': '',
+                'LastSent': '',
+                'Touch': '',
             })
 
     print(f"{len(rows)} drafts -> {args.destination}", file=sys.stderr)
