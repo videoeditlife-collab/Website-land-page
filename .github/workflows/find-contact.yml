@@ -1,0 +1,64 @@
+name: Find contact details
+
+# Looks up published business contact details for specific creators. Separate
+# from the scrape workflow because it targets a handful of named URLs rather
+# than running a discovery sweep.
+
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: 'Space-separated channel and site URLs'
+        required: true
+  push:
+    branches:
+      - claude/youtube-scraper-zn66ns
+    paths:
+      - 'scraper/.contact-targets'
+
+permissions:
+  contents: write
+
+jobs:
+  contact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        working-directory: scraper
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Look up contacts
+        working-directory: scraper
+        run: |
+          set -o pipefail
+          if [ -n "${{ github.event.inputs.urls }}" ]; then
+            URLS="${{ github.event.inputs.urls }}"
+          else
+            URLS=$(grep -vE '^\s*(#|$)' .contact-targets | tr '\n' ' ')
+          fi
+          echo "Looking up: $URLS"
+          python find_contact.py $URLS 2>&1 | tee contact.log
+
+      - name: Commit the log
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p scraper/results
+          cp scraper/contact.log scraper/results/contact.log 2>/dev/null || true
+          git add -f scraper/results/contact.log || true
+          if git diff --staged --quiet; then
+            echo "Nothing to commit"
+          else
+            git commit -m "Contact lookup from run ${{ github.run_id }}"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
