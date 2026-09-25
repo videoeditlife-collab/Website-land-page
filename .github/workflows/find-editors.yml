@@ -1,0 +1,78 @@
+name: Find credited editors
+
+# Reads recent video descriptions for a list of creators and pulls out the
+# editors they credit. Separate from the scrape because it reads watch pages
+# rather than channel pages.
+
+on:
+  workflow_dispatch:
+    inputs:
+      videos:
+        description: 'Recent videos to read per channel'
+        required: false
+        default: '4'
+      limit:
+        description: 'Only scan the first N channels (0 = all)'
+        required: false
+        default: '0'
+  push:
+    branches:
+      - claude/youtube-scraper-zn66ns
+    paths:
+      - 'scraper/.editors-trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  editors:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        working-directory: scraper
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Scan for editor credits
+        working-directory: scraper
+        run: |
+          set -o pipefail
+          ARGS=(results/creators_around_100k.csv editors.csv)
+          ARGS+=(--videos "${{ github.event.inputs.videos || '4' }}")
+          if [ "${{ github.event.inputs.limit || '0' }}" != "0" ]; then
+            ARGS+=(--limit "${{ github.event.inputs.limit }}")
+          fi
+          python find_editors.py "${ARGS[@]}" 2>&1 | tee editors.log
+
+      - name: Fail if nothing was produced
+        working-directory: scraper
+        run: |
+          if [ ! -s editors.csv ]; then
+            echo "::error::editors.csv missing or empty"
+            tail -30 editors.log || true
+            exit 1
+          fi
+          echo "editors.csv rows: $(($(wc -l < editors.csv) - 1))"
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p scraper/results
+          cp scraper/editors.csv scraper/results/editors.csv 2>/dev/null || true
+          cp scraper/editors.log scraper/results/editors.log 2>/dev/null || true
+          git add -f scraper/results/editors.csv scraper/results/editors.log || true
+          if git diff --staged --quiet; then
+            echo "Nothing to commit"
+          else
+            git commit -m "Editor credits from run ${{ github.run_id }}"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
