@@ -14,7 +14,7 @@ on:
       limit:
         description: 'Only scan the first N channels (0 = all)'
         required: false
-        default: '6'
+        default: '0'
   push:
     branches:
       - claude/youtube-scraper-zn66ns
@@ -40,13 +40,6 @@ jobs:
         run: |
           pip install -r requirements.txt
           python -m playwright install --with-deps chromium
-
-      - name: Diagnose a watch page
-        working-directory: scraper
-        continue-on-error: true
-        run: |
-          python diagnose_watch.py https://www.youtube.com/@TheLoversPassport \
-            2>&1 | tee watch_diag.log
 
       - name: Scan for editor credits
         working-directory: scraper

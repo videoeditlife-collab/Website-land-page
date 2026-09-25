@@ -74,17 +74,34 @@ def video_ids_from_data(data, limit):
     return ids[:limit]
 
 
-def description_from_player(html):
-    """The full description, from the player payload rather than the DOM."""
-    data = extract_json_blob(html, 'ytInitialPlayerResponse')
-    if not data:
-        return ''
-    for obj in walk_objects(data):
-        details = obj.get('videoDetails')
-        if isinstance(details, dict):
-            text = details.get('shortDescription')
-            if isinstance(text, str):
-                return text
+def description_from_watch(html):
+    """
+    The full description off a watch page.
+
+    Live pages carry it as attributedDescription.content inside ytInitialData.
+    videoDetails.shortDescription, the obvious place, does not appear at all -
+    a diagnostic against a real page counted it zero times in 2MB of HTML while
+    attributedDescription held the text. The player payload is kept as a
+    fallback in case that flips back.
+    """
+    data = extract_json_blob(html, 'ytInitialData')
+    if data:
+        for obj in walk_objects(data):
+            attributed = obj.get('attributedDescription')
+            if isinstance(attributed, dict):
+                text = attributed.get('content')
+                if isinstance(text, str) and text.strip():
+                    return text
+
+    player = extract_json_blob(html, 'ytInitialPlayerResponse')
+    if player:
+        for obj in walk_objects(player):
+            details = obj.get('videoDetails')
+            if isinstance(details, dict):
+                text = details.get('shortDescription')
+                if isinstance(text, str) and text.strip():
+                    return text
+
     return ''
 
 
@@ -146,7 +163,7 @@ async def scan_channel(page, channel_url, video_count):
         watch = await read(page, f"https://www.youtube.com/watch?v={vid}")
         if not watch:
             continue
-        for name, line in credits_from_description(description_from_player(watch)):
+        for name, line in credits_from_description(description_from_watch(watch)):
             rows.append({
                 'Editor': name,
                 'Credited By': channel_url,
