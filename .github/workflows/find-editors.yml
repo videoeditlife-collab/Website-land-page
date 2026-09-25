@@ -14,7 +14,7 @@ on:
       limit:
         description: 'Only scan the first N channels (0 = all)'
         required: false
-        default: '0'
+        default: '6'
   push:
     branches:
       - claude/youtube-scraper-zn66ns
@@ -40,6 +40,13 @@ jobs:
         run: |
           pip install -r requirements.txt
           python -m playwright install --with-deps chromium
+
+      - name: Diagnose a watch page
+        working-directory: scraper
+        continue-on-error: true
+        run: |
+          python diagnose_watch.py https://www.youtube.com/@TheLoversPassport \
+            2>&1 | tee watch_diag.log
 
       - name: Scan for editor credits
         working-directory: scraper
@@ -69,7 +76,8 @@ jobs:
           mkdir -p scraper/results
           cp scraper/editors.csv scraper/results/editors.csv 2>/dev/null || true
           cp scraper/editors.log scraper/results/editors.log 2>/dev/null || true
-          git add -f scraper/results/editors.csv scraper/results/editors.log || true
+          cp scraper/watch_diag.log scraper/results/watch_diag.log 2>/dev/null || true
+          git add -f scraper/results/editors.csv scraper/results/editors.log scraper/results/watch_diag.log || true
           if git diff --staged --quiet; then
             echo "Nothing to commit"
           else
