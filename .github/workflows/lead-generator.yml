@@ -13,7 +13,7 @@ on:
       limit:
         description: 'Only score the first N (0 = all)'
         required: false
-        default: '0'
+        default: '3'
       descriptions:
         description: 'Video descriptions to read per channel'
         required: false
@@ -48,6 +48,12 @@ jobs:
         working-directory: scraper
         run: python test_lead_generator.py
 
+      - name: Diagnose the About payload
+        working-directory: scraper
+        continue-on-error: true
+        run: |
+          python diagnose_about.py 2>&1 | tee about_diag.log
+
       - name: Score leads
         working-directory: scraper
         run: |
@@ -77,7 +83,8 @@ jobs:
           mkdir -p scraper/results
           cp scraper/leads.csv scraper/results/leads.csv 2>/dev/null || true
           cp scraper/leads.log scraper/results/leads.log 2>/dev/null || true
-          git add -f scraper/results/leads.csv scraper/results/leads.log || true
+          cp scraper/about_diag.log scraper/results/about_diag.log 2>/dev/null || true
+          git add -f scraper/results/leads.csv scraper/results/leads.log scraper/results/about_diag.log || true
           if git diff --staged --quiet; then
             echo "Nothing to commit"
           else
