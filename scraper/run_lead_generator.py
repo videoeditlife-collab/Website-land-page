@@ -109,23 +109,46 @@ def build_sample(videos, cfg):
     return kept[:cfg.sample_size]
 
 
-async def read(page, url):
-    try:
-        await page.goto(url, wait_until='domcontentloaded', timeout=25000)
-        await page.wait_for_timeout(600)
-        return await page.content()
-    except Exception as exc:
-        print(f"      load failed: {exc}", file=sys.stderr)
-        return ''
+async def read(page, url, require=None, attempts=2):
+    """
+    Fetch a page, and when a marker is required, make sure it actually arrived.
+
+    domcontentloaded fires before a 2.8MB channel page has finished streaming.
+    og:title is in the head and lands immediately; ytInitialData sits far down
+    the document. Reading too early returns a page with the name present and
+    the entire payload missing, which is how 106 creators were scored on zeros
+    without a single load error.
+    """
+    for attempt in range(attempts):
+        try:
+            await page.goto(url, wait_until='domcontentloaded', timeout=30000)
+            await page.wait_for_timeout(1500 + attempt * 2500)
+            html = await page.content()
+        except Exception as exc:
+            print(f"      load failed: {exc}", file=sys.stderr)
+            continue
+
+        if require and extract_json_blob(html, require) is None:
+            print(f"      {require} missing, retrying with a longer wait",
+                  file=sys.stderr)
+            continue
+        return html
+
+    return ''
 
 
 async def collect(page, channel_url, cfg, read_descriptions):
     c = Creator(channel_url=channel_url)
 
-    about = await read(page, channel_about_url(channel_url))
+    about = await read(page, channel_about_url(channel_url),
+                       require='ytInitialData')
     if not about:
         return None
     data = extract_json_blob(about, 'ytInitialData')
+    if data is None:
+        print("      no ytInitialData after retries - skipping rather than "
+              "scoring on zeros", file=sys.stderr)
+        return None
 
     c.creator_name = channel_name_from_html(about, data) or ''
     text, count = subscribers_from_data(data)
@@ -135,7 +158,8 @@ async def collect(page, channel_url, cfg, read_descriptions):
     links = all_external_links(data)
 
     videos_html = await read(
-        page, channel_about_url(channel_url).rsplit('/about', 1)[0] + '/videos')
+        page, channel_about_url(channel_url).rsplit('/about', 1)[0] + '/videos',
+        require='ytInitialData')
     videos = videos_from_grid(extract_json_blob(videos_html, 'ytInitialData'))
     sample = build_sample(videos, cfg)
     c.sample_size_used = len(sample)
