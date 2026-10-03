@@ -48,12 +48,6 @@ jobs:
         working-directory: scraper
         run: python test_lead_generator.py
 
-      - name: Dump a lockup
-        working-directory: scraper
-        continue-on-error: true
-        run: |
-          python diagnose_lockup.py 2>&1 | tee lockup_diag.log
-
       - name: Score leads
         working-directory: scraper
         run: |
@@ -66,7 +60,7 @@ jobs:
           # inside the test - the previous form passed an empty --limit and
           # argparse killed the run before anything was produced.
           ARGS+=(--descriptions "${DESCRIPTIONS:-3}")
-          LIMIT="${LIMIT:-1}"
+          LIMIT="${LIMIT:-0}"
           if [ "$LIMIT" != "0" ]; then
             ARGS+=(--limit "$LIMIT")
           fi

@@ -211,6 +211,32 @@ def test_row_shape():
           all(row[k] == '' for k in SHEET_COLUMNS[9:]), True)
 
 
+def test_live_payload_formats():
+    """Formats taken from a real Videos tab dump, not from what I expected."""
+    print("\nLive payload formats")
+    from run_lead_generator import parse_views, clean_title, duration_seconds
+
+    # YouTube spells the magnitude out in the accessibility label.
+    check("111 thousand views", parse_views("111 thousand views"), 111000)
+    check("1.2 million views", parse_views("1.2 million views"), 1200000)
+    check("2.4 billion views", parse_views("2.4 billion views"), 2400000000)
+    # Short counts print in full, which is all the old regex ever matched.
+    check("562 views", parse_views("562 views"), 562)
+    check("abbreviated still works", parse_views("48K views"), 48000)
+    check("no views", parse_views("No views"), None)
+
+    # The title label carries the duration on the end.
+    check("title strips duration",
+          clean_title("WATCH THIS BEFORE YOU VISIT TURKS AND CAICOS 26 minutes"),
+          "WATCH THIS BEFORE YOU VISIT TURKS AND CAICOS")
+    check("title strips compound duration",
+          clean_title("Some Title 1 hour, 2 minutes"), "Some Title")
+    check("title without duration untouched",
+          clean_title("Title With No Duration"), "Title With No Duration")
+
+    check("duration text", duration_seconds("26:28"), 1588)
+
+
 def main():
     test_fixtures()
     test_fixture_nine_review()
@@ -221,6 +247,7 @@ def main():
     test_niche_classification()
     test_view_stats()
     test_row_shape()
+    test_live_payload_formats()
 
     print("\n" + "=" * 60)
     if FAILURES:

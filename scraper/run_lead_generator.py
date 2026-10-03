@@ -28,7 +28,34 @@ from lead_generator import (
     rate_roti, to_row, view_stats,
 )
 
-VIEWS_RE = re.compile(r'([\d.,]+\s*[KMB]?)\s+views?', re.IGNORECASE)
+# YouTube writes the count out in words in the accessibility label:
+# "111 thousand views", not "111K views". A regex expecting the number next to
+# "views" only ever matched counts small enough to print in full, which is why
+# exactly the three-digit channels came through.
+VIEWS_RE = re.compile(
+    r'([\d.,]+)\s*(thousand|million|billion|[KMB])?\s+views?', re.IGNORECASE)
+
+_WORD_MAGNITUDE = {'thousand': 'K', 'million': 'M', 'billion': 'B'}
+
+# The title label carries the duration on the end: "Some Title 26 minutes".
+_TRAILING_DURATION = re.compile(
+    r'\s+\d+\s+(hours?|minutes?|seconds?)(,\s*\d+\s+(minutes?|seconds?))*$',
+    re.IGNORECASE)
+
+
+def parse_views(text):
+    """Views from any of the forms YouTube publishes."""
+    match = VIEWS_RE.search(text or '')
+    if not match:
+        return None
+    number = match.group(1)
+    suffix = (match.group(2) or '')
+    suffix = _WORD_MAGNITUDE.get(suffix.lower(), suffix)
+    return parse_count(f"{number}{suffix} views", require_word='view')
+
+
+def clean_title(text):
+    return _TRAILING_DURATION.sub('', (text or '').strip()).strip()
 DURATION_RE = re.compile(r'^(\d{1,2}):(\d{2})(?::(\d{2}))?$')
 
 
@@ -75,17 +102,14 @@ def videos_from_grid(data):
             if seconds is None:
                 seconds = duration_seconds(stripped)
             if views is None:
-                match = VIEWS_RE.search(stripped)
-                if match:
-                    views = parse_count(match.group(1) + ' views',
-                                        require_word='view')
+                views = parse_views(stripped)
             if age_days is None and stripped.lower().endswith('ago'):
                 age_days = parse_relative_age(stripped)
             # The longest plain string with no metadata markers is the title.
             if (len(stripped) > len(title) and ' views' not in stripped.lower()
                     and not stripped.lower().endswith('ago')
                     and not DURATION_RE.match(stripped)):
-                title = stripped
+                title = clean_title(stripped)
 
         out.append({'id': vid, 'title': title, 'views': views,
                     'age_days': age_days, 'seconds': seconds})
