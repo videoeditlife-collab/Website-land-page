@@ -1,0 +1,86 @@
+name: Lead generator
+
+# Widget 18 spec: scores creators for return on time investment and writes the
+# Lead Generator sheet columns in order.
+
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: 'Input CSV or txt of channel URLs'
+        required: false
+        default: 'results/creators_around_100k.csv'
+      limit:
+        description: 'Only score the first N (0 = all)'
+        required: false
+        default: '0'
+      descriptions:
+        description: 'Video descriptions to read per channel'
+        required: false
+        default: '3'
+  push:
+    branches:
+      - claude/youtube-scraper-zn66ns
+    paths:
+      - 'scraper/.leads-trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  leads:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        working-directory: scraper
+        run: |
+          pip install -r requirements.txt
+          python -m playwright install --with-deps chromium
+
+      - name: Spec fixtures
+        working-directory: scraper
+        run: python test_lead_generator.py
+
+      - name: Score leads
+        working-directory: scraper
+        run: |
+          set -o pipefail
+          ARGS=("${{ github.event.inputs.source || 'results/creators_around_100k.csv' }}" leads.csv)
+          ARGS+=(--descriptions "${{ github.event.inputs.descriptions || '3' }}")
+          if [ "${{ github.event.inputs.limit || '0' }}" != "0" ]; then
+            ARGS+=(--limit "${{ github.event.inputs.limit }}")
+          fi
+          python run_lead_generator.py "${ARGS[@]}" 2>&1 | tee leads.log
+
+      - name: Fail if nothing was produced
+        working-directory: scraper
+        run: |
+          rows=$(($(wc -l < leads.csv) - 1))
+          echo "leads.csv rows: $rows"
+          if [ "$rows" -lt 1 ]; then
+            echo "::error::no leads produced"
+            tail -40 leads.log || true
+            exit 1
+          fi
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p scraper/results
+          cp scraper/leads.csv scraper/results/leads.csv 2>/dev/null || true
+          cp scraper/leads.log scraper/results/leads.log 2>/dev/null || true
+          git add -f scraper/results/leads.csv scraper/results/leads.log || true
+          if git diff --staged --quiet; then
+            echo "Nothing to commit"
+          else
+            git commit -m "Lead generator results from run ${{ github.run_id }}"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
