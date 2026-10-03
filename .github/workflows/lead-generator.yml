@@ -48,6 +48,12 @@ jobs:
         working-directory: scraper
         run: python test_lead_generator.py
 
+      - name: Dump a lockup
+        working-directory: scraper
+        continue-on-error: true
+        run: |
+          python diagnose_lockup.py 2>&1 | tee lockup_diag.log
+
       - name: Score leads
         working-directory: scraper
         run: |
@@ -77,6 +83,7 @@ jobs:
           mkdir -p scraper/results
           cp scraper/leads.csv scraper/results/leads.csv 2>/dev/null || true
           cp scraper/leads.log scraper/results/leads.log 2>/dev/null || true
+          cp scraper/lockup_diag.log scraper/results/lockup_diag.log 2>/dev/null || true
           cp scraper/about_diag.log scraper/results/about_diag.log 2>/dev/null || true
           git add -f scraper/results/leads.csv scraper/results/leads.log scraper/results/about_diag.log || true
           if git diff --staged --quiet; then
