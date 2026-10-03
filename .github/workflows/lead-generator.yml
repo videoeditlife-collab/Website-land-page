@@ -60,7 +60,7 @@ jobs:
           set -o pipefail
           ARGS=("${{ github.event.inputs.source || 'results/creators_around_100k.csv' }}" leads.csv)
           ARGS+=(--descriptions "${{ github.event.inputs.descriptions || '3' }}")
-          if [ "${{ github.event.inputs.limit || '0' }}" != "0" ]; then
+          if [ "${{ github.event.inputs.limit || '1' }}" != "0" ]; then
             ARGS+=(--limit "${{ github.event.inputs.limit }}")
           fi
           python run_lead_generator.py "${ARGS[@]}" 2>&1 | tee leads.log
@@ -85,7 +85,7 @@ jobs:
           cp scraper/leads.log scraper/results/leads.log 2>/dev/null || true
           cp scraper/lockup_diag.log scraper/results/lockup_diag.log 2>/dev/null || true
           cp scraper/about_diag.log scraper/results/about_diag.log 2>/dev/null || true
-          git add -f scraper/results/leads.csv scraper/results/leads.log scraper/results/about_diag.log || true
+          git add -f scraper/results/ || true
           if git diff --staged --quiet; then
             echo "Nothing to commit"
           else
