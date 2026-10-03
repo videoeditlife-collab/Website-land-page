@@ -176,6 +176,20 @@ def test_niche_classification():
     niche, _ = classify_niche(["BJJ rolling session", "Muay Thai sparring"])
     check("martial arts", niche, 'martial_arts')
 
+    # An unlabelled title is uninformative, not off-niche. Counting it against
+    # the channel pushed every seller to 0.5 and blocked all 25 from High.
+    niche, consistency = classify_niche([
+        "WATCH THIS BEFORE YOU VISIT TURKS AND CAICOS",
+        "All 9 California National Parks Ranked",
+        "Best Beaches in Portugal",
+    ])
+    check("travel despite a keyword-free title", niche, 'travel')
+    check("unlabelled title does not drag consistency", consistency, 1.0)
+
+    # A channel genuinely split between topics still scores low.
+    _, consistency = classify_niche(["Full Body Workout", "Best Beaches in Portugal"])
+    check("genuinely mixed stays low", consistency, 0.5)
+
 
 def test_view_stats():
     print("\nView statistics")

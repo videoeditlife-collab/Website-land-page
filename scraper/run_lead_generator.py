@@ -69,9 +69,20 @@ def duration_seconds(text):
     return int(a) * 3600 + int(b) * 60 + int(c)
 
 
-def strings_in(node):
+# Keys that actually carry display text. Without this the longest string in a
+# lockup is clickTrackingParams - an ~88 character base64 blob - so every title
+# came out as tracking gibberish, no title matched a niche keyword, and every
+# channel fell back to the 0.5 description score that sits just under the 0.6
+# clear-niche threshold.
+TEXT_KEYS = {'label', 'content', 'title', 'simpleText', 'text',
+             'accessibilityLabel', 'headline'}
+
+
+def strings_in(node, keys=None):
     for obj in walk_objects(node):
-        for value in obj.values():
+        for key, value in obj.items():
+            if keys is not None and key not in keys:
+                continue
             if isinstance(value, str):
                 yield value
 
@@ -95,7 +106,7 @@ def videos_from_grid(data):
             continue
 
         title, views, age_days, seconds = '', None, None, None
-        for text in strings_in(lockup):
+        for text in strings_in(lockup, TEXT_KEYS):
             stripped = text.strip()
             if not stripped:
                 continue

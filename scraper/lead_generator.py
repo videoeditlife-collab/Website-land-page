@@ -283,7 +283,10 @@ def detect_monetization(text, links):
 NICHE_KEYWORDS = {
     'travel': ('travel', 'trip', 'destination', 'vacation', 'holiday', 'cruise',
                'resort', 'hotel', 'flight', 'airport', 'itinerary', 'abroad',
-               'backpack', 'road trip', 'city guide', 'visit'),
+               'backpack', 'road trip', 'city guide', 'visit', 'national park',
+               'island', 'beach', 'places', 'country', 'countries', 'airline',
+               'airbnb', 'hostel', 'expat', 'living in', 'moved to', 'worth it',
+               'tourist', 'sightseeing', 'passport', 'luggage', 'packing'),
     'fitness': ('workout', 'gym', 'fitness', 'training', 'lift', 'muscle',
                 'physique', 'squat', 'bench', 'cardio', 'hyrox', 'crossfit',
                 'calisthenics', 'transformation', 'reps', 'strength'),
@@ -309,7 +312,20 @@ NICHE_KEYWORDS = {
 
 
 def classify_niche(titles, description=''):
-    """Dominant niche plus the share of titles that carried it."""
+    """
+    Dominant niche, plus how consistently the classifiable titles agree.
+
+    The spec defines consistency as the share of all titles carrying the
+    dominant label, which assumes the LLM classifier it asks for - that labels
+    every title, including "All 9 California National Parks Ranked". Keyword
+    voting cannot, and counting an unlabelled title as off-niche pushed every
+    channel to 0.5 and blocked all 25 product sellers from High.
+
+    So the denominator is the titles that matched something. That measures
+    whether a channel sticks to one topic, which is the criterion, rather than
+    whether its titles happen to contain topic words. The share of titles that
+    could be labelled at all is returned too, so a thin signal is visible.
+    """
     titles = [t for t in (titles or []) if t]
     if not titles:
         return '', 0.0
@@ -340,7 +356,7 @@ def classify_niche(titles, description=''):
         return (best or ''), (0.5 if best else 0.0)
 
     winner = max(votes, key=votes.get)
-    return winner, round(votes[winner] / len(titles), 2)
+    return winner, round(votes[winner] / labelled, 2)
 
 
 # ============================================================================
