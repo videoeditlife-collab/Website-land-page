@@ -1,0 +1,30 @@
+
+=== ABOUT: https://www.youtube.com/@TheLoversPassport/about
+  bytes: 2810264
+  title: The Lovers Passport - YouTube
+    ytInitialData          2
+    lockupViewModel        62
+    subscribers            10
+    subscriberCountText    1
+    consent                0
+    Before you continue    0
+    Sign in to confirm     0
+    not a bot              0
+  extract_json_blob -> dict
+  dicts in payload: 16149   lockups: 61
+  subscribers_from_data: ('105K subscribers', 105000)
+
+=== VIDEOS: https://www.youtube.com/@TheLoversPassport/videos
+  bytes: 1660135
+  title: The Lovers Passport - YouTube
+    ytInitialData          2
+    lockupViewModel        31
+    subscribers            4
+    subscriberCountText    0
+    consent                0
+    Before you continue    0
+    Sign in to confirm     0
+    not a bot              0
+  extract_json_blob -> dict
+  dicts in payload: 6055   lockups: 30
+  subscribers_from_data: ('105K subscribers', 105000)
