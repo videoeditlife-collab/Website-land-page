@@ -58,10 +58,17 @@ jobs:
         working-directory: scraper
         run: |
           set -o pipefail
-          ARGS=("${{ github.event.inputs.source || 'results/creators_around_100k.csv' }}" leads.csv)
-          ARGS+=(--descriptions "${{ github.event.inputs.descriptions || '3' }}")
-          if [ "${{ github.event.inputs.limit || '1' }}" != "0" ]; then
-            ARGS+=(--limit "${{ github.event.inputs.limit }}")
+          SOURCE="${{ github.event.inputs.source }}"
+          ARGS=("${SOURCE:-results/creators_around_100k.csv}" leads.csv)
+          DESCRIPTIONS="${{ github.event.inputs.descriptions }}"
+          LIMIT="${{ github.event.inputs.limit }}"
+          # A push trigger supplies no inputs, so default here rather than only
+          # inside the test - the previous form passed an empty --limit and
+          # argparse killed the run before anything was produced.
+          ARGS+=(--descriptions "${DESCRIPTIONS:-3}")
+          LIMIT="${LIMIT:-1}"
+          if [ "$LIMIT" != "0" ]; then
+            ARGS+=(--limit "$LIMIT")
           fi
           python run_lead_generator.py "${ARGS[@]}" 2>&1 | tee leads.log
 
