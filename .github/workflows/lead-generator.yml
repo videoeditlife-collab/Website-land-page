@@ -30,7 +30,7 @@ permissions:
 jobs:
   leads:
     runs-on: ubuntu-latest
-    timeout-minutes: 240
+    timeout-minutes: 350
 
     steps:
       - uses: actions/checkout@v4
@@ -53,27 +53,30 @@ jobs:
         run: |
           set -o pipefail
           SOURCE="${{ github.event.inputs.source }}"
-          ARGS=("${SOURCE:-results/creators_around_100k.csv}" leads.csv)
+          ARGS=("${SOURCE:-results/unscored_channels.txt}" more_leads.csv --resume)
           DESCRIPTIONS="${{ github.event.inputs.descriptions }}"
           LIMIT="${{ github.event.inputs.limit }}"
           # A push trigger supplies no inputs, so default here rather than only
           # inside the test - the previous form passed an empty --limit and
           # argparse killed the run before anything was produced.
-          ARGS+=(--descriptions "${DESCRIPTIONS:-3}")
+          # One description per channel, not three: 1,024 channels at three
+          # watch pages each will not finish inside the job timeout, and the
+          # offer links that decide sells_product are on the About page anyway.
+          ARGS+=(--descriptions "${DESCRIPTIONS:-1}")
           LIMIT="${LIMIT:-0}"
           if [ "$LIMIT" != "0" ]; then
             ARGS+=(--limit "$LIMIT")
           fi
-          python run_lead_generator.py "${ARGS[@]}" 2>&1 | tee leads.log
+          python run_lead_generator.py "${ARGS[@]}" 2>&1 | tee more_leads.log
 
       - name: Fail if nothing was produced
         working-directory: scraper
         run: |
-          rows=$(($(wc -l < leads.csv) - 1))
+          rows=$(($(wc -l < more_leads.csv) - 1))
           echo "leads.csv rows: $rows"
           if [ "$rows" -lt 1 ]; then
             echo "::error::no leads produced"
-            tail -40 leads.log || true
+            tail -40 more_leads.log || true
             exit 1
           fi
 
@@ -82,8 +85,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           mkdir -p scraper/results
-          cp scraper/leads.csv scraper/results/leads.csv 2>/dev/null || true
-          cp scraper/leads.log scraper/results/leads.log 2>/dev/null || true
+          cp scraper/more_leads.csv scraper/results/more_leads.csv 2>/dev/null || true
+          cp scraper/more_leads.log scraper/results/more_leads.log 2>/dev/null || true
           cp scraper/lockup_diag.log scraper/results/lockup_diag.log 2>/dev/null || true
           cp scraper/about_diag.log scraper/results/about_diag.log 2>/dev/null || true
           git add -f scraper/results/ || true

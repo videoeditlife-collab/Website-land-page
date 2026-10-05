@@ -12,6 +12,7 @@ defines, scores it, and writes the sheet columns followed by the helpers.
 import argparse
 import asyncio
 import csv
+import os
 import re
 import sys
 
@@ -279,6 +280,14 @@ def find_email(blob, channel_description):
     return '', 'manual'
 
 
+def write_rows(path, rows):
+    with open(path, 'w', newline='', encoding='utf-8') as handle:
+        writer = csv.DictWriter(handle, fieldnames=ALL_COLUMNS,
+                                extrasaction='ignore')
+        writer.writeheader()
+        writer.writerows(rows)
+
+
 async def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('source')
@@ -287,6 +296,9 @@ async def main():
     parser.add_argument('--descriptions', type=int, default=3,
                         help='Video descriptions to read per channel for '
                              'monetization signals (0 to skip)')
+    parser.add_argument('--resume', action='store_true',
+                        help='Skip channels already present in the destination '
+                             'and append, so a long run survives a timeout')
     parser.add_argument('--use-mean', action='store_true',
                         help="Rate on the mean, the lesson's exact rule")
     args = parser.parse_args()
@@ -299,7 +311,24 @@ async def main():
     if args.limit:
         urls = urls[:args.limit]
 
-    rows = []
+    # Resume: a 1,000 channel pass outlives a job timeout, and losing it all
+    # to the last channel is not worth the tidier code.
+    done = set()
+    existing = []
+    if args.resume and os.path.exists(args.destination):
+        with open(args.destination, newline='', encoding='utf-8') as handle:
+            for row in csv.DictReader(handle):
+                link = (row.get('Channel Link') or '').rstrip('/').lower()
+                if link:
+                    done.add(link)
+                existing.append(row)
+        before = len(urls)
+        urls = [u for u in urls if u.rstrip('/').lower() not in done]
+        print(f"resuming: {before - len(urls)} already scored, "
+              f"{len(urls)} to go", file=sys.stderr)
+
+    rows = list(existing)
+    flushed = 0
     async with async_playwright() as playwright:
         browser = await playwright.chromium.launch(headless=True)
         page = await (await browser.new_context(user_agent=USER_AGENT)).new_page()
@@ -322,16 +351,18 @@ async def main():
                   file=sys.stderr)
             rows.append(to_row(c, roti, reasons, review, cfg))
 
+            # Write through periodically so a timeout keeps the work.
+            if len(rows) - flushed >= 25:
+                write_rows(args.destination, rows)
+                flushed = len(rows)
+
         await browser.close()
 
     order = {'High': 0, 'Mid': 1, 'Low': 2}
     rows.sort(key=lambda r: (order.get(r['Value Rating'], 3),
                              -int(r['median_views'] or 0)))
 
-    with open(args.destination, 'w', newline='', encoding='utf-8') as handle:
-        writer = csv.DictWriter(handle, fieldnames=ALL_COLUMNS)
-        writer.writeheader()
-        writer.writerows(rows)
+    write_rows(args.destination, rows)
 
     counts = {}
     for r in rows:
