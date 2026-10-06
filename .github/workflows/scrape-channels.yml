@@ -68,7 +68,7 @@ jobs:
       - name: Scrape
         working-directory: scraper
         env:
-          SOURCE: ${{ github.event.inputs.source || 'challenge' }}
+          SOURCE: ${{ github.event.inputs.source || 'outdoor' }}
           MIN_SUBS: ${{ github.event.inputs.min_subscribers || '20000' }}
           MAX_SUBS: ${{ github.event.inputs.max_subscribers || '' }}
           CADENCE: ${{ github.event.inputs.require_cadence || 'monthly' }}
@@ -84,6 +84,12 @@ jobs:
           # Josh's brief: target creator-operators who sell travel, which is the
           # inverse of the solo-only filter used on the previous lists.
           case "$SOURCE" in
+            outdoor)
+              ARGS+=(--require-niche --niche-file niche_broad.txt)
+              ARGS+=(--search-file outdoor_terms.txt)
+              ARGS+=(--sort-by date --scrolls 3 --per-term 8 --limit 700)
+              ARGS+=(--save-discovered discovered_outdoor.txt)
+              ;;
             challenge)
               ARGS+=(--require-niche --niche-file niche_broad.txt)
               ARGS+=(--search-file challenge_terms.txt)
@@ -180,6 +186,7 @@ jobs:
           cp scraper/discovered_agency.txt scraper/results/discovered_agency.txt 2>/dev/null || true
           cp scraper/discovered_broad.txt scraper/results/discovered_broad.txt 2>/dev/null || true
           cp scraper/discovered_challenge.txt scraper/results/discovered_challenge.txt 2>/dev/null || true
+          cp scraper/discovered_outdoor.txt scraper/results/discovered_outdoor.txt 2>/dev/null || true
           cp scraper/results.csv scraper/results/broad_channels.csv 2>/dev/null || true
           cp scraper/results.csv scraper/results/agency_channels.csv 2>/dev/null || true
           git add -f scraper/results/ || true

@@ -91,3 +91,24 @@ personal trainer
 coach
 coaching
 athlete
+
+# --- outdoors / camping / survival ---
+camping
+camp
+bushcraft
+survival
+wilderness
+backpacking
+tent
+trail
+hiking
+hike
+overland
+offgrid
+off grid
+campfire
+hammock
+forage
+prepper
+thru hike
+gear review

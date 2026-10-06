@@ -296,8 +296,11 @@ NICHE_KEYWORDS = {
                   'calories', 'recipe', 'eating'),
     'finance': ('money', 'budget', 'invest', 'stocks', 'savings', 'debt',
                 'retire', 'income', 'tax', 'wealth'),
-    'tech': ('iphone', 'android', 'laptop', 'review', 'setup', 'gadget',
-             'camera', 'software', 'app', 'ai '),
+    # 'review' and 'setup' were here and are far too generic - every niche
+    # reviews things, so gear-testing outdoors channels classified as tech.
+    'tech': ('iphone', 'android', 'smartphone', 'laptop', 'pc build', 'gpu',
+             'keyboard', 'headphones', 'gadget', 'software', 'tech review',
+             'unboxing tech', 'ai tools'),
     'business': ('business', 'client', 'freelance', 'agency', 'marketing',
                  'startup', 'entrepreneur', 'sales'),
     'lifestyle_vlog': ('vlog', 'day in my life', 'week in my life', 'routine',
@@ -306,8 +309,12 @@ NICHE_KEYWORDS = {
              'eat', 'street food'),
     'martial_arts': ('bjj', 'jiu jitsu', 'mma', 'boxing', 'muay thai', 'karate',
                      'judo', 'grappling', 'sparring', 'kickboxing', 'taekwondo'),
-    'outdoors': ('hiking', 'camping', 'van life', 'overland', 'fishing',
-                 'bushcraft', 'climbing', 'kayak'),
+    'outdoors': ('hiking', 'camping', 'camp', 'van life', 'overland',
+                 'fishing', 'bushcraft', 'climbing', 'kayak', 'survival',
+                 'backpacking', 'tent', 'wilderness', 'trail', 'hammock',
+                 'campfire', 'bivvy', 'shelter', 'forage', 'foraging',
+                 'offgrid', 'off grid', 'prepper', 'trek', 'summit',
+                 'thru hike', 'thru-hike', 'woodland', 'outdoors'),
 }
 
 
