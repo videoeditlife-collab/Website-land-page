@@ -53,7 +53,7 @@ jobs:
         run: |
           set -o pipefail
           SOURCE="${{ github.event.inputs.source }}"
-          ARGS=("${SOURCE:-results/discovered_challenge.txt}" challenge_leads.csv --resume)
+          ARGS=("${SOURCE:-results/discovered_outdoor.txt}" outdoor_leads.csv --resume)
           DESCRIPTIONS="${{ github.event.inputs.descriptions }}"
           LIMIT="${{ github.event.inputs.limit }}"
           # A push trigger supplies no inputs, so default here rather than only
@@ -67,16 +67,16 @@ jobs:
           if [ "$LIMIT" != "0" ]; then
             ARGS+=(--limit "$LIMIT")
           fi
-          python run_lead_generator.py "${ARGS[@]}" 2>&1 | tee challenge_leads.log
+          python run_lead_generator.py "${ARGS[@]}" 2>&1 | tee outdoor_leads.log
 
       - name: Fail if nothing was produced
         working-directory: scraper
         run: |
-          rows=$(($(wc -l < challenge_leads.csv) - 1))
+          rows=$(($(wc -l < outdoor_leads.csv) - 1))
           echo "leads.csv rows: $rows"
           if [ "$rows" -lt 1 ]; then
             echo "::error::no leads produced"
-            tail -40 challenge_leads.log || true
+            tail -40 outdoor_leads.log || true
             exit 1
           fi
 
@@ -85,8 +85,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           mkdir -p scraper/results
-          cp scraper/challenge_leads.csv scraper/results/challenge_leads.csv 2>/dev/null || true
-          cp scraper/challenge_leads.log scraper/results/challenge_leads.log 2>/dev/null || true
+          cp scraper/outdoor_leads.csv scraper/results/outdoor_leads.csv 2>/dev/null || true
+          cp scraper/outdoor_leads.log scraper/results/outdoor_leads.log 2>/dev/null || true
           cp scraper/lockup_diag.log scraper/results/lockup_diag.log 2>/dev/null || true
           cp scraper/about_diag.log scraper/results/about_diag.log 2>/dev/null || true
           git add -f scraper/results/ || true
