@@ -1,0 +1,62 @@
+# Challenge-format creators, weighted toward travel, fitness and outdoors -
+# the niches already in this dataset.
+#
+# Generic challenge terms are a trap: "24 hour challenge" returns MrBeast and
+# the channels copying him, all of which have in-house editors. The reachable
+# version of this niche is a specific format inside a subject, so these terms
+# name the format and the subject together.
+
+# --- travel challenges (closest to the existing High profile) ---
+travel challenge no money
+24 hours in a foreign country
+cheapest flight challenge
+random country generator travel
+budget travel challenge
+hitchhiking across challenge
+travel with no plan challenge
+last flight out challenge
+stranded abroad challenge
+living on a dollar a day abroad
+$0 to travel challenge
+spin the globe travel
+
+# --- endurance and fitness challenges ---
+75 hard challenge results
+30 day fitness challenge results
+running every day challenge
+marathon every day
+david goggins challenge
+cold plunge 30 days
+no sugar 30 days results
+100 pushups a day
+calisthenics 30 day challenge
+hyrox first time attempt
+couch to marathon challenge
+
+# --- outdoors and survival ---
+72 hour survival challenge
+solo camping challenge
+wild camping challenge uk
+bushcraft survival challenge
+winter survival challenge
+island survival challenge
+
+# --- food challenges ---
+food challenge restaurant
+eating challenge undefeated
+$1 vs $100 food challenge
+only eating one colour
+street food challenge
+
+# --- money and lifestyle experiments ---
+no spend challenge 30 days
+minimum wage challenge
+living on minimum budget
+24 hours without phone
+digital detox 30 days
+
+# --- general long-form formats ---
+i tried for 30 days
+100 days of
+i lived like for a week
+social experiment video
