@@ -101,22 +101,33 @@ def normalise(url):
     /about tab still attached - so comparing raw strings would let a channel
     through the exclusion simply because it was spelled differently.
     """
-    url = (url or '').strip().lower().rstrip('/')
+    url = (url or '').strip().rstrip('/')
     if not url:
         return ''
     # Some files store only the @handle. Expanding it to the canonical URL
     # lets those files take part in the exclusion rather than matching nothing.
     if url.startswith('@') and ' ' not in url:
         url = 'https://www.youtube.com/' + url
-    if not url.startswith('http'):
+    if not url.lower().startswith('http'):
         return ''
+
+    # Case has to be handled per form, not with one .lower() over the whole
+    # string. A handle is case-insensitive, so @Creator and @creator are one
+    # channel. A channel id is not: UCabc and UCABC are two channels, and
+    # folding them together would let one be excluded by the other.
+    scheme, _, rest = url.partition('://')
+    host, _, path = rest.partition('/')
+    url = scheme.lower() + '://' + host.lower() + ('/' + path if path else '')
+    if not path.lower().startswith('channel/'):
+        url = url.lower()
+    url = url.split('?')[0].rstrip('/')
     for tab in ('/about', '/videos', '/featured', '/streams', '/shorts',
                 '/playlists', '/community'):
-        if url.endswith(tab):
+        if url.lower().endswith(tab):
             url = url[:-len(tab)]
     url = url.replace('://m.youtube.com', '://www.youtube.com')
     url = url.replace('://youtube.com', '://www.youtube.com')
-    return url.split('?')[0].rstrip('/')
+    return url.rstrip('/')
 
 
 def to_int(value):

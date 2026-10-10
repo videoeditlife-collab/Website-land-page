@@ -1,6 +1,8 @@
 # Every channel already scored or reported to the user, across all
 # passes. Fed to pick_sellers.py --exclude so a new pass only ever
 # reports creators that have not been sent before.
+# Keys are normalised: handles folded to lower case, channel ids
+# left as-is because UCabc and UCABC are different channels.
 https://www.youtube.com/@%ec%a3%bc%ec%8b%9d_%ed%8f%ac%ec%bb%a4%ec%8a%a4
 https://www.youtube.com/@10xtravel
 https://www.youtube.com/@12newsaz
@@ -1599,18 +1601,18 @@ https://www.youtube.com/@znsdigital
 https://www.youtube.com/allinclusivereviews
 https://www.youtube.com/c/cheapholidayexpert
 https://www.youtube.com/c/familytravelvlog
-https://www.youtube.com/channel/ucauclr6xoj9epthlsvwa37a
-https://www.youtube.com/channel/ucc-y15ym_qugiyqxw2moiuq
-https://www.youtube.com/channel/ucc4k7baqpdbp8jh1j9xzaww
-https://www.youtube.com/channel/ucd6fz9ch8js7xlnqvw2eqdg
-https://www.youtube.com/channel/uchwu4pbz5szhzzsqe9lpfhw
-https://www.youtube.com/channel/uck-epn3z3xt7dbrjseqmknq
-https://www.youtube.com/channel/uckhvsushkqv1pdwvl7-9bvg
-https://www.youtube.com/channel/ucm-mbexbyivvmgfrt8e2onq
-https://www.youtube.com/channel/ucpnrh1jl_ekovv5vwoyib0a
-https://www.youtube.com/channel/ucuvppxrm2vagph3ktln4hxg
-https://www.youtube.com/channel/ucvxrsj-_jr3jkjjsgczfocw
-https://www.youtube.com/channel/ucy4zdnckpgsljyvyszzrrew
-https://www.youtube.com/channel/uczlokhf0r_n9rannfisv9ag
-https://www.youtube.com/channel/uczol4shrfofhabpxhwsjjcw
-https://www.youtube.com/channel/uczzfokvflkdkyewaz_vc0zg
+https://www.youtube.com/channel/UCC-y15yM_QugIyqxW2mOIUQ
+https://www.youtube.com/channel/UCD6Fz9CH8jS7xlnqvw2Eqdg
+https://www.youtube.com/channel/UCVXrSJ-_jr3jkJjsgcZFocw
+https://www.youtube.com/channel/UCY4ZDNCKpgSlJYvYSZZRRew
+https://www.youtube.com/channel/UCZOL4SHrFofhaBpxhwsJJCw
+https://www.youtube.com/channel/UCZzfOkvfLKdKYEWAZ_Vc0zg
+https://www.youtube.com/channel/UCauClR6XOj9ePThlSVWa37A
+https://www.youtube.com/channel/UCc4K7bAqpdBP8jh1j9XZAww
+https://www.youtube.com/channel/UChwu4PBz5szHzZsQe9lPfHw
+https://www.youtube.com/channel/UCk-EPn3z3XT7DBrJseqMknQ
+https://www.youtube.com/channel/UCkhvsUsHkQv1PDWVl7-9Bvg
+https://www.youtube.com/channel/UCm-MbeXbYivVMGFrT8E2oNQ
+https://www.youtube.com/channel/UCpnRH1jL_EKoVv5VWoyiB0A
+https://www.youtube.com/channel/UCuVPpxrm2VAgpH3Ktln4HXg
+https://www.youtube.com/channel/UCzLOkHF0r_N9RaNNFisv9ag
