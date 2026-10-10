@@ -109,7 +109,35 @@ jobs:
           git add -f scraper/results/ || true
           if git diff --staged --quiet; then
             echo "Nothing to commit"
-          else
-            git commit -m "Lead generator results from run ${{ github.run_id }}"
-            git push origin HEAD:${{ github.ref_name }}
+            exit 0
           fi
+          git commit -m "Lead generator results from run ${{ github.run_id }}"
+          # Rebase and retry: a straight push is rejected as non-fast-forward
+          # whenever anything else commits to the branch during the run, and
+          # this job runs for well over an hour. That rejection already lost
+          # one completed run - the data existed only on the runner.
+          for attempt in 1 2 3 4 5; do
+            if git push origin "HEAD:${{ github.ref_name }}"; then
+              echo "pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "push rejected, rebasing onto the remote (attempt $attempt)"
+            git fetch origin "${{ github.ref_name }}" || true
+            git rebase "origin/${{ github.ref_name }}" || {
+              echo "::error::rebase conflicted - results are in the artifact"
+              git rebase --abort || true
+              exit 1
+            }
+            sleep $((attempt * 5))
+          done
+          echo "::error::could not push after 5 attempts - results are in the artifact"
+          exit 1
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: lead-results
+          path: |
+            scraper/*_leads.csv
+            scraper/*_leads.log
+          if-no-files-found: warn

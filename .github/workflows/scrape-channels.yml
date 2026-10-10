@@ -177,39 +177,64 @@ jobs:
           echo "======================="
 
       - name: Commit results
+        env:
+          SOURCE: ${{ github.event.inputs.source || 'martial' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           mkdir -p scraper/results
-          cp scraper/results.csv scraper/results/holiday_channels.csv 2>/dev/null || true
-          cp scraper/shortlist.csv scraper/results/shortlist.csv 2>/dev/null || true
-          cp scraper/shortlist_100k_200k.csv scraper/results/shortlist_100k_200k.csv 2>/dev/null || true
-          cp scraper/shortlist_unclear.csv scraper/results/shortlist_unclear.csv 2>/dev/null || true
-          cp scraper/run.log scraper/results/run.log 2>/dev/null || true
-          cp scraper/diagnose.log scraper/results/diagnose.log 2>/dev/null || true
-          cp scraper/inspect.json scraper/results/inspect.json 2>/dev/null || true
-          cp scraper/discovered.txt scraper/results/discovered.txt 2>/dev/null || true
-          cp scraper/discovered_agency.txt scraper/results/discovered_agency.txt 2>/dev/null || true
-          cp scraper/discovered_broad.txt scraper/results/discovered_broad.txt 2>/dev/null || true
-          cp scraper/discovered_challenge.txt scraper/results/discovered_challenge.txt 2>/dev/null || true
-          cp scraper/discovered_outdoor.txt scraper/results/discovered_outdoor.txt 2>/dev/null || true
-          cp scraper/discovered_martial.txt scraper/results/discovered_martial.txt 2>/dev/null || true
-          cp scraper/results.csv scraper/results/broad_channels.csv 2>/dev/null || true
-          cp scraper/results.csv scraper/results/agency_channels.csv 2>/dev/null || true
+          # One file per mode. The previous form copied results.csv over
+          # holiday_channels.csv, broad_channels.csv AND agency_channels.csv
+          # on every run whatever the mode, so each pass silently destroyed
+          # the two earlier passes' results - the martial run's commit showed
+          # 5,305 deletions for 3,759 insertions.
+          cp scraper/results.csv "scraper/results/${SOURCE}_channels.csv" 2>/dev/null || true
+          for f in shortlist.csv shortlist_100k_200k.csv shortlist_unclear.csv \
+                   run.log diagnose.log inspect.json; do
+            cp "scraper/$f" "scraper/results/${SOURCE}_$f" 2>/dev/null || true
+          done
+          cp scraper/discovered*.txt scraper/results/ 2>/dev/null || true
           git add -f scraper/results/ || true
           if git diff --staged --quiet; then
             echo "Nothing to commit"
-          else
-            git commit -m "Scrape results from workflow run ${{ github.run_id }}"
-            git push origin HEAD:${{ github.ref_name }}
+            exit 0
           fi
+          git commit -m "Scrape results from workflow run ${{ github.run_id }}"
+          # Rebase and retry. A push straight to the branch is rejected as
+          # non-fast-forward whenever anything else commits to it while the
+          # scrape is running, which is normal here - the scrape takes 15
+          # minutes and development continues meanwhile. That rejection lost
+          # a completed martial arts run: the data only ever existed on the
+          # runner, and the runner is reclaimed.
+          for attempt in 1 2 3 4 5; do
+            if git push origin "HEAD:${{ github.ref_name }}"; then
+              echo "pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "push rejected, rebasing onto the remote (attempt $attempt)"
+            git fetch origin "${{ github.ref_name }}" || true
+            # --no-rebase-merges keeps this a plain linear replay; the results
+            # commit touches only files under scraper/results/.
+            git rebase "origin/${{ github.ref_name }}" || {
+              echo "::error::rebase conflicted - results are in the artifact"
+              git rebase --abort || true
+              exit 1
+            }
+            sleep $((attempt * 5))
+          done
+          echo "::error::could not push after 5 attempts - results are in the artifact"
+          exit 1
 
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: scrape-results
+          # Every discovered list, not just discovered.txt: the artifact is
+          # the only copy if the commit fails, and the mode in use decides
+          # which of these files exists.
           path: |
             scraper/results.csv
             scraper/run.log
-            scraper/discovered.txt
+            scraper/discovered*.txt
+            scraper/shortlist*.csv
           if-no-files-found: warn
