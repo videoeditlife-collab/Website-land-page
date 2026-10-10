@@ -1498,6 +1498,15 @@ async def run(args):
                     handle.write('\n'.join(urls) + '\n')
                 print(f"Saved discovered channel list to {args.save_discovered}")
 
+            if args.discover_only:
+                # Searching takes a few minutes; reading every channel's About
+                # page takes a quarter of an hour. Stopping here lets the
+                # caller bank the channel list before the long part starts -
+                # a preempted runner (exit 143) kills the whole job, so no
+                # later step runs and nothing on its disk is recoverable.
+                print(f"--discover-only: stopping after {len(urls)} channels")
+                return 0
+
         if not urls:
             print("Nothing left to scrape.")
             return 0
@@ -1609,6 +1618,9 @@ def parse_args(argv=None):
     parser.add_argument('--instagram-state', default='instagram_storage_state.json',
                         help='Playwright storage state with Instagram cookies '
                              '(default: instagram_storage_state.json)')
+    parser.add_argument('--discover-only', action='store_true',
+                        help='Stop after saving the discovered channel list, '
+                             'before reading any About pages')
     parser.add_argument('--resume', action='store_true',
                         help='Skip channels already present in the output file')
     return parser.parse_args(argv)

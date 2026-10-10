@@ -126,8 +126,57 @@ jobs:
               ;;
           esac
           printf 'Running: python youtube_scraper.py'; printf ' %q' "${ARGS[@]}"; echo
-          # Keep going on failure so a partial CSV is still published.
-          python youtube_scraper.py "${ARGS[@]}" 2>&1 | tee run.log || true
+          printf '%s\n' "${ARGS[@]}" > .scrape-args
+          # Discovery first, on its own, so the channel list can be banked
+          # before the long part starts. Searching takes a few minutes;
+          # reading 276 About pages takes a quarter of an hour, and a runner
+          # preempted during it (exit 143) terminates the whole job - no
+          # later step runs, not even one marked if: always(), so everything
+          # on the runner's disk is lost. That cost two completed runs.
+          # The seed mode reads a fixed CSV and discovers nothing, so it has
+          # no list to bank and skips straight to the full pass.
+          if grep -q -- '--save-discovered' .scrape-args; then
+            python youtube_scraper.py "${ARGS[@]}" --discover-only \
+              2>&1 | tee discover.log || true
+          fi
+
+      # Separate step, before the slow pass: whatever discovery found is
+      # pushed immediately, so a preemption later costs time but not data.
+      - name: Bank the discovered channel list
+        run: |
+          shopt -s nullglob
+          found=(scraper/discovered*.txt)
+          if [ ${#found[@]} -eq 0 ]; then
+            echo "No discovered list produced - nothing to bank"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          mkdir -p scraper/results
+          cp scraper/discovered*.txt scraper/results/ 2>/dev/null || true
+          cp scraper/discover.log scraper/results/discover.log 2>/dev/null || true
+          git add -f scraper/results/ || true
+          if git diff --staged --quiet; then
+            echo "Nothing new discovered"
+            exit 0
+          fi
+          git commit -m "Discovered channel list from run ${{ github.run_id }}"
+          for attempt in 1 2 3 4 5; do
+            git push origin "HEAD:${{ github.ref_name }}" && exit 0
+            git fetch origin "${{ github.ref_name }}" || true
+            git rebase "origin/${{ github.ref_name }}" || { git rebase --abort || true; exit 1; }
+            sleep $((attempt * 5))
+          done
+          exit 1
+
+      - name: Read every discovered channel
+        working-directory: scraper
+        run: |
+          set -o pipefail
+          mapfile -t ARGS < .scrape-args
+          # --resume so a re-run after a preemption picks up where this left
+          # off rather than starting the 276 channels again.
+          python youtube_scraper.py "${ARGS[@]}" --resume 2>&1 | tee run.log || true
 
       - name: Fail if the scrape produced nothing
         working-directory: scraper
