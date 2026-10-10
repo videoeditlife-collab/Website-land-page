@@ -112,3 +112,40 @@ forage
 prepper
 thru hike
 gear review
+
+# --- martial arts / combat sports ---
+bjj
+jiu jitsu
+jiujitsu
+brazilian jiu
+grappling
+no gi
+nogi
+mma
+muay thai
+boxing
+boxer
+kickboxing
+karate
+judo
+taekwondo
+wing chun
+krav maga
+wrestling
+sparring
+self defence
+self defense
+martial arts
+black belt
+blue belt
+purple belt
+brown belt
+white belt
+fight camp
+combat sports
+submission
+takedown
+guard pass
+dojo
+gym rat
+striking

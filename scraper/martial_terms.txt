@@ -1,0 +1,76 @@
+# Martial arts creators: BJJ, Muay Thai, boxing, MMA, wrestling, traditional
+# arts. This niche has the highest product density of any scraped so far -
+# instructionals, online academies and coaching are the normal way a fighter
+# monetises, so sells_product fires far more often here than in travel.
+#
+# Terms deliberately target the teaching creator, not the promotion: "UFC" or
+# "fight highlights" surfaces media companies with in-house edit teams.
+
+# --- BJJ technique and teaching ---
+bjj technique breakdown
+jiu jitsu for beginners
+bjj white belt tips
+how to escape side control
+bjj guard retention tutorial
+no gi jiu jitsu technique
+bjj leg lock tutorial
+jiu jitsu instructional
+how to roll bjj
+bjj blue belt tips
+bjj black belt advice
+how to start bjj
+
+# --- Muay Thai and kickboxing ---
+muay thai technique
+muay thai for beginners
+muay thai clinch tutorial
+muay thai pad work
+kickboxing combinations
+muay thai training at home
+
+# --- boxing ---
+boxing footwork drills
+boxing training at home
+shadow boxing drills
+boxing defence tutorial
+heavy bag workout
+boxing sparring breakdown
+
+# --- MMA and wrestling ---
+mma training routine
+mma striking breakdown
+wrestling takedown tutorial
+wrestling for mma
+mma gym vlog
+
+# --- traditional arts ---
+karate kata tutorial
+judo throws tutorial
+taekwondo kicks tutorial
+wing chun techniques
+krav maga techniques
+
+# --- self defence ---
+self defence techniques
+self defense for beginners
+street self defence breakdown
+
+# --- the lifestyle and vlog side, where the audience bond is strongest ---
+bjj competition vlog
+fight camp vlog
+bjj lifestyle vlog
+martial arts journey
+bjj gym tour
+my first bjj competition
+
+# --- strength, conditioning and recovery for fighters ---
+strength training for fighters
+fighter conditioning workout
+bjj flexibility routine
+combat sports nutrition
+grappling drills solo
+
+# --- gear, which carries affiliate links and merch ---
+bjj gi review
+boxing gloves review
+mma gear review

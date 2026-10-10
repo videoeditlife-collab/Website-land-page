@@ -307,8 +307,30 @@ NICHE_KEYWORDS = {
                        'apartment', 'morning', 'life update', 'moving'),
     'food': ('cooking', 'recipe', 'bake', 'kitchen', 'restaurant', 'food',
              'eat', 'street food'),
-    'martial_arts': ('bjj', 'jiu jitsu', 'mma', 'boxing', 'muay thai', 'karate',
-                     'judo', 'grappling', 'sparring', 'kickboxing', 'taekwondo'),
+    # Widened for the martial arts pass. The belt colours and the technique
+    # words matter most: a channel's titles are far more often "Escaping side
+    # control" or "Blue belt mistakes" than they are the name of the art, so
+    # the eleven-keyword list left real martial arts channels below the 0.6
+    # consistency gate and out of High.
+    'martial_arts': ('bjj', 'jiu jitsu', 'jiujitsu', 'mma', 'boxing', 'boxer',
+                     'muay thai', 'karate', 'judo', 'grappling', 'grapple',
+                     'sparring', 'spar', 'kickboxing', 'taekwondo', 'wing chun',
+                     'krav maga', 'wrestling', 'takedown', 'submission',
+                     'armbar', 'triangle choke', 'rear naked', 'guard pass',
+                     'side control', 'half guard', 'open guard', 'leg lock',
+                     'heel hook', 'kimura', 'no gi', 'nogi', 'gi review',
+                     'white belt', 'blue belt', 'purple belt', 'brown belt',
+                     'black belt', 'self defence', 'self defense',
+                     'martial arts', 'fight camp', 'combat sports', 'dojo',
+                     'clinch', 'pad work', 'heavy bag', 'shadow boxing',
+                     # Matching is substring, not word, so the obvious BJJ
+                     # vocabulary is unusable: 'roll' is in "Rolling Coasters"
+                     # and "controlling", 'striking' is in "striking views",
+                     # 'drilling' is in oil drilling and 'kata' is in
+                     # Kathmandu - all of which are travel titles, the
+                     # largest niche in the pool. Only the unambiguous
+                     # compounds survive.
+                     'rolling session', 'open mat', 'bjj drilling'),
     'outdoors': ('hiking', 'camping', 'camp', 'van life', 'overland',
                  'fishing', 'bushcraft', 'climbing', 'kayak', 'survival',
                  'backpacking', 'tent', 'wilderness', 'trail', 'hammock',

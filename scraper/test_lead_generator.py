@@ -176,6 +176,26 @@ def test_niche_classification():
     niche, _ = classify_niche(["BJJ rolling session", "Muay Thai sparring"])
     check("martial arts", niche, 'martial_arts')
 
+    # The widened martial arts list, on titles phrased the way the channels
+    # actually phrase them - the art is usually not named.
+    niche, consistency = classify_niche([
+        "How To Escape Side Control Every Time",
+        "5 Mistakes Every Blue Belt Makes",
+        "Heel Hook Entries From Half Guard",
+        "Open Mat Highlights",
+    ])
+    check("technique titles without the art named", niche, 'martial_arts')
+    check("martial consistency", consistency, 1.0)
+
+    # Substring matching means a too-generic keyword steals travel titles,
+    # which are the largest group in the pool. These must NOT read as martial.
+    for title in ("Rolling Coasters At Universal Studios",
+                  "Striking Views From The Amalfi Coast",
+                  "48 Hours In Kathmandu",
+                  "Controlling Your Budget On A Long Trip"):
+        niche, _ = classify_niche([title])
+        check(f"not martial: {title[:34]}", niche != 'martial_arts', True)
+
     # An unlabelled title is uninformative, not off-niche. Counting it against
     # the channel pushed every seller to 0.5 and blocked all 25 from High.
     niche, consistency = classify_niche([
