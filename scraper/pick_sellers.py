@@ -56,6 +56,69 @@ def is_agency(email):
     return any(h in low for h in AGENCY_HINTS)
 
 
+def channel_keys(path):
+    """
+    Every channel this file names, normalised for comparison.
+
+    Handles both shapes in results/: scored CSVs with a Channel Link column,
+    and the plain URL lists the discovery passes save.
+    """
+    keys = set()
+    try:
+        handle = open(path, newline='', encoding='utf-8')
+    except OSError as exc:
+        print(f"exclude: skipped {path}: {exc}", file=sys.stderr)
+        return keys
+
+    with handle:
+        if path.lower().endswith('.csv'):
+            for row in csv.DictReader(handle):
+                # The column has been called four different things across the
+                # passes. Reading only 'Channel Link' silently matched nothing
+                # in every file written before the ROTI work, which is most of
+                # what has already been reported - so an exclusion built from
+                # them would have excluded nobody.
+                for column in ('Channel Link', 'YT Channel', 'channel_url',
+                               'Credited By', 'Handle', 'Channel'):
+                    key = normalise(row.get(column))
+                    if key:
+                        keys.add(key)
+                        break
+        else:
+            for line in handle:
+                key = normalise(line)
+                if key:
+                    keys.add(key)
+    return keys
+
+
+def normalise(url):
+    """
+    A channel URL reduced to something two files can be compared on.
+
+    The same channel is written several ways across these files - with and
+    without www, as /@handle or /channel/UC..., sometimes with a /videos or
+    /about tab still attached - so comparing raw strings would let a channel
+    through the exclusion simply because it was spelled differently.
+    """
+    url = (url or '').strip().lower().rstrip('/')
+    if not url:
+        return ''
+    # Some files store only the @handle. Expanding it to the canonical URL
+    # lets those files take part in the exclusion rather than matching nothing.
+    if url.startswith('@') and ' ' not in url:
+        url = 'https://www.youtube.com/' + url
+    if not url.startswith('http'):
+        return ''
+    for tab in ('/about', '/videos', '/featured', '/streams', '/shorts',
+                '/playlists', '/community'):
+        if url.endswith(tab):
+            url = url[:-len(tab)]
+    url = url.replace('://m.youtube.com', '://www.youtube.com')
+    url = url.replace('://youtube.com', '://www.youtube.com')
+    return url.split('?')[0].rstrip('/')
+
+
 def to_int(value):
     try:
         return int(float(value or 0))
@@ -114,6 +177,9 @@ def main():
                         help='Only rows with a published address')
     parser.add_argument('--direct-only', action='store_true',
                         help='Drop talent-agency and management addresses')
+    parser.add_argument('--exclude', action='append', default=[],
+                        help='CSV or txt of channels to leave out, repeatable '
+                             '(globs ok). Use for creators already reported.')
     parser.add_argument('--output', help='Write the selection to a CSV')
     args = parser.parse_args()
 
@@ -122,8 +188,20 @@ def main():
         print("no rows read", file=sys.stderr)
         return 1
 
+    excluded = set()
+    for pattern in args.exclude:
+        for path in sorted(glob.glob(pattern)):
+            excluded |= channel_keys(path)
+    if args.exclude:
+        print(f"excluding {len(excluded)} channels already reported",
+              file=sys.stderr)
+
     picked = []
+    skipped_seen = 0
     for row in rows:
+        if excluded and normalise(row.get('Channel Link')) in excluded:
+            skipped_seen += 1
+            continue
         if row.get('Value Rating') != 'High':
             continue
         tier = TIERS.get((row.get('Product Type') or '').strip())
@@ -170,7 +248,8 @@ def main():
                   f"niche {row.get('niche_consistency','')}")
             print(f"    {email_or_dash(row)}{flag}")
 
-    print(f"\n{len(picked)} selected from {len(rows)} scored rows")
+    print(f"\n{len(picked)} selected from {len(rows)} scored rows"
+          + (f", {skipped_seen} already reported" if skipped_seen else ""))
 
     if args.output:
         columns = list(picked[0].keys()) if picked else []
