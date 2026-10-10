@@ -55,7 +55,10 @@ jobs:
 
       - name: Self-test
         working-directory: scraper
-        run: python test_scraper.py
+        run: |
+          python test_scraper.py
+          python test_lead_generator.py
+          python test_pick_sellers.py
 
       - name: Confirm YouTube is reachable
         run: |

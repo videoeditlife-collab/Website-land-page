@@ -17,11 +17,17 @@ on:
       limit:
         description: 'Only score the first N (0 = all)'
         required: false
-        default: '3'
+        # 0, not 3. A default of 3 is a test value: a dispatch that accepted
+        # the defaults scored three channels and reported success.
+        default: '0'
       descriptions:
         description: 'Video descriptions to read per channel'
         required: false
-        default: '3'
+        # One, not three. Three watch pages per channel is ~800 page loads
+        # for a list this size and does not finish inside the job timeout,
+        # and the offer links that decide sells_product are on the About
+        # page anyway.
+        default: '1'
   push:
     branches:
       - claude/youtube-scraper-zn66ns
@@ -50,7 +56,9 @@ jobs:
 
       - name: Spec fixtures
         working-directory: scraper
-        run: python test_lead_generator.py
+        run: |
+          python test_lead_generator.py
+          python test_pick_sellers.py
 
       - name: Score leads
         working-directory: scraper
