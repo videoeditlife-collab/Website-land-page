@@ -290,9 +290,30 @@ NICHE_KEYWORDS = {
                'island', 'beach', 'places', 'country', 'countries', 'airline',
                'airbnb', 'hostel', 'expat', 'living in', 'moved to', 'worth it',
                'tourist', 'sightseeing', 'passport', 'luggage', 'packing'),
-    'fitness': ('workout', 'gym', 'fitness', 'training', 'lift', 'muscle',
+    # Strongman and powerlifting vocabulary is folded in here rather than
+    # given a niche of its own. A separate strength_sports label would compete
+    # with fitness on the same channel - a strongman titles videos "Training
+    # Chest" as well as "Atlas Stone PR" - and split the vote, landing the
+    # channel at 0.5 and under the 0.6 clear-niche gate. That is exactly how
+    # the martial arts pass held back Tim Welch at 70,000 median views. A
+    # less precise label that gates correctly beats a precise one that does
+    # not, because the gate is what the shortlist is built on.
+    # Bare 'lift' is gone: substring matching put it inside "Uplifting
+    # Stories From The Road" and inside the British sense of a lift as an
+    # elevator, both of which are travel titles. The specific compounds below
+    # carry the niche without it.
+    'fitness': ('workout', 'gym', 'fitness', 'training', 'muscle',
                 'physique', 'squat', 'bench', 'cardio', 'hyrox', 'crossfit',
-                'calisthenics', 'transformation', 'reps', 'strength'),
+                'calisthenics', 'transformation', 'reps', 'strength',
+                'strongman', 'strongest man', 'powerlifting', 'powerlifter',
+                'deadlift', 'atlas stone', 'log press', 'yoke walk',
+                'farmers walk', 'overhead press', 'tire flip', 'truck pull',
+                'sandbag', 'grip strength', 'barbell', 'dumbbell',
+                'kettlebell', 'hypertrophy', 'bulking', 'one rep max', '1rm',
+                'lifting belt', 'knee sleeves', 'highland games',
+                'arm wrestling', 'personal record', 'weightlifting',
+                'powerlift', 'lifting weights', 'lift heavy', 'heavy lifting',
+                'olympic lifting', 'bodybuilding'),
     'running_endurance': ('marathon', 'running', 'runner', '5k', '10k',
                           'triathlon', 'ironman', 'ultra', 'pace', 'cycling'),
     'nutrition': ('nutrition', 'macros', 'protein', 'diet', 'meal prep',

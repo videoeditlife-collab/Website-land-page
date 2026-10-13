@@ -149,3 +149,28 @@ guard pass
 dojo
 gym rat
 striking
+
+# --- strength sports / strongman ---
+strongman
+strongest man
+powerlifting
+powerlifter
+deadlift
+atlas stone
+log press
+yoke
+farmers walk
+overhead press
+barbell
+dumbbell
+kettlebell
+hypertrophy
+grip strength
+highland games
+arm wrestling
+strength athlete
+strength coach
+lifting
+weightlifting
+olympic lifting
+bodybuilding

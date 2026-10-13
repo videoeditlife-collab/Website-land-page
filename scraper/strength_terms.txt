@@ -1,0 +1,83 @@
+# Strength sports creators: strongman, powerlifting, and the strength-training
+# channels around them. Martins Licis is the reference - a competing athlete
+# who posts training, event prep and coaching content.
+#
+# Product density should be high here. Selling a training program is the
+# standard way a strength athlete monetises, the same way instructionals are
+# for martial arts, so sells_product ought to fire more often than it did in
+# travel.
+#
+# Terms deliberately avoid the competition brands. "World's Strongest Man",
+# "Giants Live" and "Rogue Invitational" surface the promotions and the
+# federations, which have in-house production - the same mistake the generic
+# challenge terms made when they returned MrBeast.
+
+# --- strongman event technique, where the teaching content lives ---
+atlas stone technique
+log press technique
+yoke walk tips
+farmers walk technique
+sandbag training
+tire flip technique
+truck pull training
+strongman event training
+
+# --- the big lifts ---
+how to deadlift more
+deadlift technique breakdown
+squat technique breakdown
+bench press technique
+overhead press technique
+conventional vs sumo deadlift
+building a bigger deadlift
+grip strength training
+
+# --- powerlifting ---
+powerlifting meet vlog
+first powerlifting meet
+peaking for a meet
+powerlifting programming
+1000 pound total
+
+# --- programming and coaching, the content that converts to a product ---
+strength program explained
+programming for strength
+how to get stronger
+novice strength program
+strength training for beginners
+off season strength training
+hypertrophy for strength
+
+# --- competing and training vlogs, where the audience bond forms ---
+strongman competition vlog
+strongman training day
+training log strongman
+strongman gym tour
+road to strongman
+amateur strongman journey
+
+# --- eating and recovery ---
+what i eat strongman
+bulking for strength
+eating to gain mass
+recovery for heavy lifting
+mobility for lifters
+injury prevention lifting
+
+# --- adjacent strength sports ---
+highland games training
+arm wrestling training
+kettlebell strength training
+calisthenics to barbell
+
+# --- gear, which carries affiliate links and merch ---
+lifting belt review
+knee sleeves review
+home gym setup strength
+strongman equipment review
+
+# --- the long tail of strength creators ---
+getting stronger after 40
+natural strength training
+strength athlete diet
+how strong is strong

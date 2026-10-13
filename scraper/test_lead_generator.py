@@ -210,6 +210,31 @@ def test_niche_classification():
     _, consistency = classify_niche(["Full Body Workout", "Best Beaches in Portugal"])
     check("genuinely mixed stays low", consistency, 0.5)
 
+    # Strength sports sit inside fitness on purpose. A separate label would
+    # compete with fitness on the same channel and split the vote to 0.5,
+    # under the clear-niche gate - which is how the martial arts pass lost
+    # Tim Welch at 70,000 median views.
+    for title in ("Atlas Stone PR At 200kg", "How To Deadlift More Weight",
+                  "Log Press Technique Breakdown", "My Strongman Training Day",
+                  "Farmers Walk For Grip Strength", "Olympic Lifting Basics"):
+        niche, _ = classify_niche([title])
+        check(f"fitness: {title[:30]}", niche, 'fitness')
+
+    niche, consistency = classify_niche([
+        "Atlas Stone PR At 200kg", "Training Chest And Triceps",
+        "How To Deadlift More Weight", "My Strongman Training Day"])
+    check("strongman and gym titles agree", niche, 'fitness')
+    check("so consistency clears the gate", consistency >= 0.6, True)
+
+    # Bare 'lift' used to be a fitness keyword and matched inside "Uplifting"
+    # and inside the British sense of a lift as an elevator - both travel.
+    for title in ("Uplifting Stories From The Road",
+                  "Lifting The Lid On Cheap Flights",
+                  "The Lift Was Broken At Our Hotel",
+                  "Shoplifting Caught On Camera"):
+        niche, _ = classify_niche([title])
+        check(f"not fitness: {title[:32]}", niche != 'fitness', True)
+
 
 def test_view_stats():
     print("\nView statistics")
