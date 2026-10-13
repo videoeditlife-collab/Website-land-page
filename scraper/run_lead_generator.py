@@ -26,6 +26,7 @@ from youtube_scraper import (
 from find_editors import description_from_watch
 from lead_generator import (
     ALL_COLUMNS, Config, Creator, classify_niche, detect_monetization,
+    niche_evidence,
     rate_roti, to_row, view_stats,
 )
 
@@ -218,8 +219,13 @@ async def collect(page, channel_url, cfg, read_descriptions):
                         and (v['seconds'] is None
                              or v['seconds'] > cfg.shorts_max_seconds))
 
+    sample_titles = [v['title'] for v in sample]
     c.niche, c.niche_consistency = classify_niche(
-        [v['title'] for v in sample], channel_description)
+        sample_titles, channel_description)
+    # Recorded so a channel held back by the consistency gate can be checked
+    # afterwards. The martial arts pass could not settle whether four such
+    # channels were misclassified, because only the verdict was stored.
+    c.niche_evidence = niche_evidence(sample_titles)
 
     # Monetization: channel description and links first, then a few video
     # descriptions, which is where sponsor reads and offer links usually sit.

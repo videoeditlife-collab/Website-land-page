@@ -141,11 +141,22 @@ jobs:
           echo "::error::could not push after 5 attempts - results are in the artifact"
           exit 1
 
+      # Staged by name rather than matched by glob. The glob assumed every
+      # run is called something_leads, so a run named anything else uploaded
+      # nothing - and because this step is the fallback for a run whose
+      # commit was skipped, that left the failure with no output at all.
+      - name: Stage output for the artifact
+        if: always()
+        run: |
+          NAME=$(cat scraper/.leads-name 2>/dev/null || echo leads)
+          mkdir -p scraper/artifact
+          cp "scraper/$NAME.csv" scraper/artifact/ 2>/dev/null || true
+          cp "scraper/$NAME.log" scraper/artifact/ 2>/dev/null || true
+          ls -la scraper/artifact/ || true
+
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: lead-results
-          path: |
-            scraper/*_leads.csv
-            scraper/*_leads.log
+          path: scraper/artifact/
           if-no-files-found: warn

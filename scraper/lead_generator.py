@@ -70,6 +70,9 @@ class Creator:
     days_since_last_upload: int = None
     views_trend: float = None
     niche_consistency: float = 0.0
+    # The per-title labels behind the verdict, so a borderline consistency
+    # score can be checked against what produced it.
+    niche_evidence: str = ''
     has_monetization: bool = False
     has_sponsors: bool = False
     monetization_signals: list = field(default_factory=list)
@@ -388,6 +391,30 @@ def classify_niche(titles, description=''):
     return winner, round(votes[winner] / labelled, 2)
 
 
+def niche_evidence(titles, limit=10):
+    """
+    Per-title labels behind a niche verdict, for diagnosing one afterwards.
+
+    The martial arts pass held four channels back on niche consistency while
+    they beat most of the ones it passed on measured engagement - Tim Welch
+    at 70,000 median views and 29 uploads per 90 days was rated Mid on a 0.5
+    consistency. Whether that was a misclassification or a fair read of his
+    titles could not be settled, because only the verdict was recorded and
+    not what produced it. This records the working.
+    """
+    out = []
+    for title in [t for t in (titles or []) if t][:limit]:
+        low = title.lower()
+        best, score = None, 0
+        for niche, words in NICHE_KEYWORDS.items():
+            count = sum(1 for w in words if w in low)
+            if count > score:
+                best, score = niche, count
+        hits = [w for w in NICHE_KEYWORDS.get(best, ()) if w in low] if best else []
+        out.append(f"{best or 'none'}[{','.join(hits[:3])}]: {title[:60]}")
+    return ' | '.join(out)
+
+
 # ============================================================================
 # SAMPLE STATISTICS
 # ============================================================================
@@ -443,6 +470,7 @@ def to_row(c, roti, reasons, review, cfg=Config()):
         'monetization_signals': '; '.join(c.monetization_signals),
         'product_price_seen': c.product_price_seen,
         'niche_consistency': c.niche_consistency,
+        'niche_evidence': c.niche_evidence,
         'email_source': c.email_source,
         'latest_video_url': c.latest_video_url,
         'top_video_url': c.top_video_url,
@@ -467,7 +495,7 @@ HELPER_COLUMNS = [
     'channel_id', 'uploads_90d', 'days_since_last_upload', 'median_views',
     'views_trend', 'views_to_subs', 'has_monetization', 'has_sponsors',
     'monetization_signals', 'product_price_seen', 'niche_consistency',
-    'email_source', 'latest_video_url', 'top_video_url', 'roti_reasons',
+    'niche_evidence', 'email_source', 'latest_video_url', 'top_video_url', 'roti_reasons',
     'needs_review', 'sample_size_used', 'views_are_rounded',
     'dates_are_bucketed', 'scraped_at',
 ]
