@@ -1,0 +1,8 @@
+Loaded 2 channels from results/identify_target.txt (1 duplicates dropped)
+[1/2] https://www.youtube.com/@MartinsLicis
+      Martins Licis | Mid | 323,000 subs | med 93,000 views | 6 uploads/90d | fitness (0.93) | sells=False
+[2/2] https://www.youtube.com/@martinslicis321
+      ytInitialData missing, retrying with a longer wait
+      ytInitialData missing, retrying with a longer wait
+
+1 leads -> identify_target.csv  {'Mid': 1}
