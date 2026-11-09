@@ -156,7 +156,12 @@ AFFILIATE_SIGNALS = ('amzn.to', 'amazon.com/shop', 'geni.us', 'affiliate',
 BOOKING_DOMAINS = ('calendly.com', 'cal.com', 'acuityscheduling', 'tidycal')
 OFFER_WORDS = ('course', 'program', 'coaching', 'masterclass', 'accelerator',
                'cohort', 'bootcamp', 'mentorship', 'apply now', 'book a call',
-               'work with me', 'presets', 'template', 'ebook', 'e-book')
+               # Singular forms included: 'presets' alone missed "preset pack".
+               # These are what photography and filmmaking creators sell, and
+               # the pipeline had no term for any of them.
+               'work with me', 'preset', 'template', 'ebook', 'e-book',
+               'lut pack', 'luts', 'lightroom preset', 'brush pack',
+               'sound pack', 'transition pack', 'overlay pack')
 
 SPONSOR_RE = re.compile(
     r'(sponsored by|thanks to [^.\n]{2,40} for sponsoring|this video is '
@@ -168,6 +173,20 @@ LEAD_MAGNET_RE = re.compile(
     r'newsletter|training|workshop|template)\b', re.IGNORECASE)
 
 PRICE_RE = re.compile(r'[$£€]\s?\d[\d,]*(?:\.\d{2})?(?:\s?[kK])?')
+
+# A store path on the creator's own site. Peter McKinnon sells presets and an
+# e-book from petermckinnon.com, and the detector read him as affiliate_only:
+# offer words set has_monetization but never sells_product, which only a
+# checkout DOMAIN could set. That under-counts every creator who sells from
+# their own domain rather than through Gumroad or Stan - most established ones.
+STORE_PATHS = ('/shop', '/store', '/products', '/product/', '/presets',
+               '/collections', '/merch', '/pricing', '/checkout')
+
+# Storefronts on these are other people's products earning a commission, so a
+# store path on one proves nothing about what the creator sells.
+AFFILIATE_HOSTS = ('amazon.', 'amzn.to', 'ebay.', 'aliexpress.', 'rstyle.me',
+                   'shareasale', 'awin1.com', 'impact.com', 'sovrn.com',
+                   'bhphotovideo.com', 'adorama.com')
 
 LINK_HUBS = ('linktr.ee', 'beacons.ai', 'komi.io', 'stan.store', 'linkin.bio',
              'milkshake.app', 'bio.link', 'flowcode', 'linkpop')
@@ -221,10 +240,32 @@ def detect_monetization(text, links):
         sells, monetized = True, True
         product_type = 'coaching_or_program'
 
+    # A store path on a domain that is not an affiliate marketplace.
+    own_store = []
+    for link in (links or []):
+        low_link = link.lower()
+        if any(host in low_link for host in AFFILIATE_HOSTS):
+            continue
+        if any(path in low_link for path in STORE_PATHS):
+            own_store.append(link)
+    if own_store:
+        hit('own storefront')
+        sells, monetized = True, True
+        if product_type == 'none':
+            product_type = 'digital_product'
+
     if offer_words_found:
         for w in offer_words_found:
             hit(w)
         monetized = True
+        # An offer word next to a price is a paid offer, wherever it is sold.
+        # Without the price it stays unproven: "my free presets" is a lead
+        # magnet, and the spec's own Mid example is a free e-book.
+        if PRICE_RE.search(blob) and not sells:
+            sells = True
+            if product_type in ('none', 'affiliate_only', 'sponsors_only',
+                                'lead_magnet_only'):
+                product_type = 'digital_product'
         if sells and product_type in ('none', 'digital_product'):
             if any(w in blob for w in ('course', 'masterclass', 'cohort')):
                 product_type = 'course'
@@ -302,7 +343,7 @@ NICHE_KEYWORDS = {
     # Stories From The Road" and inside the British sense of a lift as an
     # elevator, both of which are travel titles. The specific compounds below
     # carry the niche without it.
-    'fitness': ('workout', 'gym', 'fitness', 'training', 'muscle',
+    'fitness': ('workout', 'gym', 'fitness', 'training', 'muscle', 'lift',
                 'physique', 'squat', 'bench', 'cardio', 'hyrox', 'crossfit',
                 'calisthenics', 'transformation', 'reps', 'strength',
                 'strongman', 'strongest man', 'powerlifting', 'powerlifter',
@@ -317,7 +358,7 @@ NICHE_KEYWORDS = {
     'running_endurance': ('marathon', 'running', 'runner', '5k', '10k',
                           'triathlon', 'ironman', 'ultra', 'pace', 'cycling'),
     'nutrition': ('nutrition', 'macros', 'protein', 'diet', 'meal prep',
-                  'calories', 'recipe', 'eating'),
+                  'calories', 'eating'),
     'finance': ('money', 'budget', 'invest', 'stocks', 'savings', 'debt',
                 'retire', 'income', 'tax', 'wealth'),
     # 'review' and 'setup' were here and are far too generic - every niche
@@ -331,6 +372,23 @@ NICHE_KEYWORDS = {
                        'apartment', 'morning', 'life update', 'moving'),
     'food': ('cooking', 'recipe', 'bake', 'kitchen', 'restaurant', 'food',
              'eat', 'street food'),
+    # Split deliberately into two labels. A stills photographer and a
+    # filmmaker are different prospects for an editing service - the
+    # filmmaker's editing IS their product - so they must not share a label.
+    'photography': ('photography', 'photographer', 'photo', 'portrait',
+                    'lightroom', 'editing photos', 'wedding photography',
+                    'street photography', 'landscape photography', 'headshot',
+                    'studio lighting', 'lighting setup', 'composition',
+                    'prime lens', 'shutter', 'aperture', 'exposure',
+                    'raw file', 'photoshoot', 'shoot with me', 'film stock',
+                    'darkroom', 'medium format', 'client gallery'),
+    'filmmaking': ('filmmaking', 'filmmaker', 'cinematic', 'cinematography',
+                   'b-roll', 'broll', 'colour grading', 'color grading',
+                   'colour grade', 'color grade', 'davinci resolve',
+                   'premiere pro', 'final cut', 'lut', 'short film',
+                   'video editing', 'editing tutorial', 'gimbal', 'drone shot',
+                   'camera movement', 'sound design', 'storyboard',
+                   'documentary style', 'camera rig', 'camera settings'),
     # Widened for the martial arts pass. The belt colours and the technique
     # words matter most: a channel's titles are far more often "Escaping side
     # control" or "Blue belt mistakes" than they are the name of the art, so
@@ -347,13 +405,11 @@ NICHE_KEYWORDS = {
                      'black belt', 'self defence', 'self defense',
                      'martial arts', 'fight camp', 'combat sports', 'dojo',
                      'clinch', 'pad work', 'heavy bag', 'shadow boxing',
-                     # Matching is substring, not word, so the obvious BJJ
-                     # vocabulary is unusable: 'roll' is in "Rolling Coasters"
-                     # and "controlling", 'striking' is in "striking views",
-                     # 'drilling' is in oil drilling and 'kata' is in
-                     # Kathmandu - all of which are travel titles, the
-                     # largest niche in the pool. Only the unambiguous
-                     # compounds survive.
+                     # Kept as compounds rather than bare words. 'roll' and
+                     # 'striking' both match at a word start in travel titles
+                     # ("Rolling Coasters", "striking views"), so anchoring
+                     # does not save them. ('kata' was listed here as being
+                     # inside "Kathmandu" - it is not; that claim was wrong.)
                      'rolling session', 'open mat', 'bjj drilling'),
     'outdoors': ('hiking', 'camping', 'camp', 'van life', 'overland',
                  'fishing', 'bushcraft', 'climbing', 'kayak', 'survival',
@@ -362,6 +418,35 @@ NICHE_KEYWORDS = {
                  'offgrid', 'off grid', 'prepper', 'trek', 'summit',
                  'thru hike', 'thru-hike', 'woodland', 'outdoors'),
 }
+
+
+# Keyword matching is anchored to the start of a word, not a bare substring.
+# Four separate false positives came from plain `keyword in text`: 'eat' inside
+# "greatest", "theatre", "treating" and - worst, because it is in so many
+# creator titles - "creating"; 'lift' inside "uplifting" and "shoplifting";
+# 'roll' inside "controlling"; 'review' inside nothing, but generic enough to
+# steal every niche. Each was patched by deleting the keyword, which lost the
+# real matches with it.
+#
+# Anchoring at a word start fixes the class instead, and keeps the suffixes
+# that matter: 'camp' still matches "camping" and "campfire", 'lift' still
+# matches "lifting", 'eat' still matches "eating", while none of them match
+# mid-word any more.
+_KEYWORD_RE_CACHE = {}
+
+
+def keyword_hits(words, text):
+    """Which of `words` appear in `text`, matched at a word start."""
+    low = text or ''
+    found = []
+    for word in words:
+        pattern = _KEYWORD_RE_CACHE.get(word)
+        if pattern is None:
+            pattern = re.compile(r'\b' + re.escape(word), re.IGNORECASE)
+            _KEYWORD_RE_CACHE[word] = pattern
+        if pattern.search(low):
+            found.append(word)
+    return found
 
 
 def classify_niche(titles, description=''):
@@ -390,7 +475,7 @@ def classify_niche(titles, description=''):
         low = title.lower()
         best, score = None, 0
         for niche, words in NICHE_KEYWORDS.items():
-            count = sum(1 for w in words if w in low)
+            count = len(keyword_hits(words, low))
             if count > score:
                 best, score = niche, count
         if best:
@@ -403,7 +488,7 @@ def classify_niche(titles, description=''):
         low = (description or '').lower()
         best, score = None, 0
         for niche, words in NICHE_KEYWORDS.items():
-            count = sum(1 for w in words if w in low)
+            count = len(keyword_hits(words, low))
             if count > score:
                 best, score = niche, count
         return (best or ''), (0.5 if best else 0.0)
@@ -428,10 +513,10 @@ def niche_evidence(titles, limit=10):
         low = title.lower()
         best, score = None, 0
         for niche, words in NICHE_KEYWORDS.items():
-            count = sum(1 for w in words if w in low)
+            count = len(keyword_hits(words, low))
             if count > score:
                 best, score = niche, count
-        hits = [w for w in NICHE_KEYWORDS.get(best, ()) if w in low] if best else []
+        hits = keyword_hits(NICHE_KEYWORDS.get(best, ()), low) if best else []
         out.append(f"{best or 'none'}[{','.join(hits[:3])}]: {title[:60]}")
     return ' | '.join(out)
 

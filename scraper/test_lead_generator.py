@@ -151,6 +151,35 @@ def test_monetization_detection():
     check("nothing found", r['has_monetization'], False)
     check("type none", r['product_type'], 'none')
 
+    # Offer words used to set has_monetization but never sells_product, which
+    # only a checkout DOMAIN could set. Peter McKinnon sells presets and an
+    # e-book from his own domain and read as affiliate_only, because his
+    # Amazon links were the only thing the detector recognised. That
+    # under-counted every creator selling from their own site.
+    r = detect_monetization("Grab my presets and my ebook",
+                            ["https://petermckinnon.com/shop",
+                             "https://amazon.com/shop/petermckinnon"])
+    check("own storefront sells", r['sells_product'], True)
+    check("own storefront is a digital product", r['product_type'],
+          'digital_product')
+
+    r = detect_monetization("My preset pack is $39", [])
+    check("offer word plus a price sells", r['sells_product'], True)
+    check("price captured from offer", r['product_price_seen'], "$39")
+
+    # Without a price it stays unproven: the spec's own Mid example is a free
+    # e-book, so a free preset pack must not read as a sale.
+    r = detect_monetization("Download my free presets", [])
+    check("free presets do not sell", r['sells_product'], False)
+
+    # A storefront on an affiliate marketplace is other people's products.
+    for link in ("https://amazon.com/shop/someone",
+                 "https://bhphotovideo.com/shop/x",
+                 "https://www.adorama.com/products/y"):
+        r = detect_monetization("Gear I use", [link])
+        check(f"affiliate storefront not a sale: {link[8:28]}",
+              r['sells_product'], False)
+
 
 def test_niche_classification():
     print("\nNiche classification")

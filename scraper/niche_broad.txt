@@ -174,3 +174,39 @@ lifting
 weightlifting
 olympic lifting
 bodybuilding
+
+# --- photography / filmmaking ---
+photography
+photographer
+photo
+portrait
+lightroom
+photoshop
+street photography
+wedding photography
+landscape photography
+headshot
+photoshoot
+filmmaking
+filmmaker
+cinematic
+cinematography
+b-roll
+broll
+colour grading
+color grading
+davinci resolve
+premiere pro
+final cut
+lut
+short film
+video editing
+videographer
+camera
+lens
+drone
+gimbal
+mirrorless
+aperture
+shutter
+exposure

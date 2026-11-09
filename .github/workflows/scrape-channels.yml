@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       source:
-        description: 'strength, martial, outdoor, challenge, broad, agency, search or seed'
+        description: 'photo, strength, martial, outdoor, challenge, broad, agency, search or seed'
         required: false
         default: 'broad'
       min_subscribers:
@@ -71,7 +71,7 @@ jobs:
       - name: Scrape
         working-directory: scraper
         env:
-          SOURCE: ${{ github.event.inputs.source || 'strength' }}
+          SOURCE: ${{ github.event.inputs.source || 'photo' }}
           MIN_SUBS: ${{ github.event.inputs.min_subscribers || '20000' }}
           MAX_SUBS: ${{ github.event.inputs.max_subscribers || '' }}
           CADENCE: ${{ github.event.inputs.require_cadence || 'monthly' }}
@@ -87,6 +87,12 @@ jobs:
           # Josh's brief: target creator-operators who sell travel, which is the
           # inverse of the solo-only filter used on the previous lists.
           case "$SOURCE" in
+            photo)
+              ARGS+=(--require-niche --niche-file niche_broad.txt)
+              ARGS+=(--search-file photo_terms.txt)
+              ARGS+=(--sort-by date --scrolls 3 --per-term 8 --limit 700)
+              ARGS+=(--save-discovered discovered_photo.txt)
+              ;;
             strength)
               ARGS+=(--require-niche --niche-file niche_broad.txt)
               ARGS+=(--search-file strength_terms.txt)
@@ -236,7 +242,7 @@ jobs:
 
       - name: Commit results
         env:
-          SOURCE: ${{ github.event.inputs.source || 'strength' }}
+          SOURCE: ${{ github.event.inputs.source || 'photo' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -1,0 +1,79 @@
+# Photography and filmmaking creators, keyed off the Peter McKinnon probe.
+#
+# Deliberately two halves, and the output is split on the niche label, because
+# they are opposite prospects for an editing service:
+#
+#   photography - stills-first creators. They shoot well and are often slow
+#                 or reluctant at video editing, so the work is real. These
+#                 are the sellable half.
+#   filmmaking  - McKinnon's own half. Their editing IS the product, and
+#                 several already have assistant editors. Worth having as
+#                 market research and for editor-to-editor referrals, not for
+#                 direct pitching.
+#
+# Terms avoid the camera brands. "Sony a7IV", "Canon R5" and "Fujifilm X100"
+# surface manufacturer channels and review farms - the same mistake the
+# generic challenge terms made when they returned MrBeast.
+
+# --- stills: the craft ---
+portrait lighting setup
+studio lighting tutorial
+natural light portraits
+street photography pov
+landscape photography tips
+composition for photographers
+how to use prime lenses
+understanding aperture
+shooting in manual mode
+film photography for beginners
+medium format on a budget
+darkroom developing
+photoshoot behind the scenes
+
+# --- stills: the editing side, where they are weakest ---
+lightroom editing tutorial
+photo editing workflow
+how i edit my photos
+culling photos faster
+colour correcting portraits
+
+# --- stills: the business, which is where the money is ---
+wedding photography workflow
+photography pricing guide
+how to get photography clients
+client gallery delivery
+photography business advice
+second shooting a wedding
+headshot session start to finish
+
+# --- filmmaking: craft ---
+cinematic b-roll
+camera movement tutorial
+colour grading tutorial
+davinci resolve workflow
+premiere pro editing tips
+short film breakdown
+sound design for video
+storyboarding a shoot
+documentary style filming
+gimbal techniques
+drone shots for beginners
+
+# --- filmmaking: the business ---
+freelance videographer advice
+how to price video work
+video client onboarding
+building a video portfolio
+
+# --- gear and setup, which carries affiliate links and presets ---
+camera bag essentials
+budget camera setup
+lens i use most
+desk and studio tour
+camera settings explained
+
+# --- the long tail ---
+one lens for a year
+photography mistakes beginners make
+shoot with me vlog
+a day in the life photographer
