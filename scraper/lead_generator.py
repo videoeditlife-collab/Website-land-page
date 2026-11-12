@@ -188,6 +188,63 @@ AFFILIATE_HOSTS = ('amazon.', 'amzn.to', 'ebay.', 'aliexpress.', 'rstyle.me',
                    'shareasale', 'awin1.com', 'impact.com', 'sovrn.com',
                    'bhphotovideo.com', 'adorama.com')
 
+# Phrases that contain an offer word without being an offer. Travel channels
+# say "loyalty program" and "of course" constantly; stripping these before the
+# offer words are looked for keeps them from counting at all.
+OFFER_DECOYS = (
+    'of course', 'golf course', 'race course', 'racecourse', 'obstacle course',
+    'crash course', 'course of', 'loyalty program', 'rewards program',
+    'points program', 'frequent flyer program', 'frequent flier program',
+    'tv program', 'affiliate program', 'partner program', 'referral program',
+    'travel program', 'exchange program',
+)
+
+# How close a price has to sit to an offer word to be its price.
+OFFER_PRICE_WINDOW = 60
+
+
+def _strip_decoys(blob):
+    for phrase in OFFER_DECOYS:
+        blob = blob.replace(phrase, ' ')
+    return blob
+
+
+def offer_price(blob, words):
+    """
+    A price that belongs to an offer: on the same line as an offer word and
+    within OFFER_PRICE_WINDOW characters of it, or '' if there is none.
+
+    The first version accepted a price anywhere in the text, and re-scoring the
+    channels it was meant to recover showed what that does. Eat Sleep Disney
+    read as selling an e-book at $4,500 - the cost of a Disney trip - and
+    LifeWithUsTV an e-book at $510. Eat Sleep Cruise and Travel Tips by Laurie
+    were credited with a "program" that was a cruise or airline loyalty
+    programme. An offer and its price sit together on one line of a
+    description; a gear list puts each item on a line of its own, so a camera
+    price rarely shares a line with a preset pack.
+
+    Known limit: a gear price and an offer word on the same short line will
+    still match.
+    """
+    for line in (blob or '').split('\n'):
+        word_at = [i for w in words for i in _positions(line, w)]
+        if not word_at:
+            continue
+        for match in PRICE_RE.finditer(line):
+            if min(abs(match.start() - i) for i in word_at) <= OFFER_PRICE_WINDOW:
+                return match.group(0).strip()
+    return ''
+
+
+def _positions(text, word):
+    start, out = 0, []
+    while True:
+        i = text.find(word, start)
+        if i < 0:
+            return out
+        out.append(i)
+        start = i + 1
+
 LINK_HUBS = ('linktr.ee', 'beacons.ai', 'komi.io', 'stan.store', 'linkin.bio',
              'milkshake.app', 'bio.link', 'flowcode', 'linkpop')
 
@@ -231,7 +288,9 @@ def detect_monetization(text, links):
             if product_type == 'none':
                 product_type = 'merch'
 
-    offer_words_found = [w for w in OFFER_WORDS if w in blob]
+    offer_blob = _strip_decoys(blob)
+    offer_words_found = [w for w in OFFER_WORDS if w in offer_blob]
+    nearby_price = offer_price(offer_blob, offer_words_found)
     booking_found = [d for d in BOOKING_DOMAINS if d in blob]
 
     if booking_found:
@@ -261,16 +320,16 @@ def detect_monetization(text, links):
         # An offer word next to a price is a paid offer, wherever it is sold.
         # Without the price it stays unproven: "my free presets" is a lead
         # magnet, and the spec's own Mid example is a free e-book.
-        if PRICE_RE.search(blob) and not sells:
+        if nearby_price and not sells:
             sells = True
             if product_type in ('none', 'affiliate_only', 'sponsors_only',
                                 'lead_magnet_only'):
                 product_type = 'digital_product'
         if sells and product_type in ('none', 'digital_product'):
-            if any(w in blob for w in ('course', 'masterclass', 'cohort')):
+            if any(w in offer_blob for w in ('course', 'masterclass', 'cohort')):
                 product_type = 'course'
-            elif any(w in blob for w in ('coaching', 'program', 'accelerator',
-                                         'mentorship', 'bootcamp')):
+            elif any(w in offer_blob for w in ('coaching', 'program', 'accelerator',
+                                               'mentorship', 'bootcamp')):
                 product_type = 'coaching_or_program'
 
     for signal in AFFILIATE_SIGNALS:
@@ -297,8 +356,12 @@ def detect_monetization(text, links):
     for h in hubs:
         hit(f"link hub: {h}")
 
-    price = ''
-    if sells or offer_words_found:
+    # The offer's own price where one was found. Otherwise, only for a sale
+    # proven some other way, the first price in the text - which is a guess,
+    # and the reason the field must not be read as the product's price
+    # without a look.
+    price = nearby_price
+    if not price and sells:
         found = PRICE_RE.search(text or '')
         if found:
             price = found.group(0).strip()

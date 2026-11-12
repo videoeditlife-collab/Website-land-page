@@ -172,6 +172,24 @@ def test_monetization_detection():
     r = detect_monetization("Download my free presets", [])
     check("free presets do not sell", r['sells_product'], False)
 
+    # The price has to belong to the offer. Accepting a price anywhere in the
+    # text credited Eat Sleep Disney with a $4,500 e-book (a Disney trip) and
+    # read cruise loyalty programmes as coaching programmes.
+    for text, label in (
+            ("Our Disney trip cost $4,500\nCheck out my ebook below", "trip price, other line"),
+            ("Of course the flights were $400", "of course"),
+            ("Join the loyalty program and get $50 credit", "loyalty program"),
+            ("The rewards program gave us $100 onboard credit", "rewards program")):
+        r = detect_monetization(text, [])
+        check(f"not a sale: {label}", r['sells_product'], False)
+
+    r = detect_monetization("My ebook is out now for £2.99", [])
+    check("ebook beside its price sells", r['sells_product'], True)
+    check("the offer's own price is reported", r['product_price_seen'], "£2.99")
+
+    r = detect_monetization("Join my editing masterclass, $2,000", [])
+    check("masterclass beside its price is a course", r['product_type'], 'course')
+
     # A storefront on an affiliate marketplace is other people's products.
     for link in ("https://amazon.com/shop/someone",
                  "https://bhphotovideo.com/shop/x",
