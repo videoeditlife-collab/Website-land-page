@@ -1,13 +1,18 @@
-# Creators actually REPORTED to the user, as distinct from every
-# channel scored. already_reported.txt is the scored pool and is
-# used to avoid re-scraping; this is the much smaller set that has
-# been put in front of the user, and is what 'remove people you
-# already sent me' means.
+# Creators actually REPORTED to the user, as distinct from every channel
+# scored. already_reported.txt is the scored pool, used to avoid
+# re-scraping; this is the smaller set that has been put in front of the
+# user, and is what 'remove people you already sent me' means.
+#
+# It has to be updated in the same step as every report. It was built once
+# and not touched again for three reports, so creators already sent were
+# flagged as new. Rebuild with the REPORTED list in the commit that
+# introduced this note, then add each new report's contents.
 https://www.youtube.com/@2passports1dream
 https://www.youtube.com/@abroadinjapan
 https://www.youtube.com/@acoupletravelers
 https://www.youtube.com/@adamhattan
 https://www.youtube.com/@addictedtothemouse
+https://www.youtube.com/@adriensanguinetti
 https://www.youtube.com/@adventurefreaksss
 https://www.youtube.com/@adventuresofaplusk
 https://www.youtube.com/@adventuresofmattandnat
@@ -28,6 +33,7 @@ https://www.youtube.com/@awalkonthewildsideblackpool
 https://www.youtube.com/@bangpivot
 https://www.youtube.com/@bangtaomuaythaimma
 https://www.youtube.com/@barelycamping
+https://www.youtube.com/@barongg1
 https://www.youtube.com/@barsonlycalisthenics
 https://www.youtube.com/@beachlife-and-beyond
 https://www.youtube.com/@beckymaelee
@@ -65,6 +71,7 @@ https://www.youtube.com/@cruisewith
 https://www.youtube.com/@crystalpark
 https://www.youtube.com/@danaberez
 https://www.youtube.com/@daneandstacey
+https://www.youtube.com/@davidwongmastery
 https://www.youtube.com/@deanalex7
 https://www.youtube.com/@destinationwellknown
 https://www.youtube.com/@dfbguide
@@ -197,6 +204,7 @@ https://www.youtube.com/@pasquinilli
 https://www.youtube.com/@passengerparamvir
 https://www.youtube.com/@passport_pages
 https://www.youtube.com/@peterkhatcherian
+https://www.youtube.com/@petermckinnon
 https://www.youtube.com/@pppeter_official
 https://www.youtube.com/@prestonyt
 https://www.youtube.com/@prostriking
@@ -221,6 +229,7 @@ https://www.youtube.com/@saucyseth
 https://www.youtube.com/@scenicviewstravelgal
 https://www.youtube.com/@scotteats
 https://www.youtube.com/@seerasan
+https://www.youtube.com/@senseiseth
 https://www.youtube.com/@sethalbersworth
 https://www.youtube.com/@shigashi84
 https://www.youtube.com/@sikastrength
@@ -240,6 +249,7 @@ https://www.youtube.com/@tanner_shuck1
 https://www.youtube.com/@tannershuck
 https://www.youtube.com/@taylorbell
 https://www.youtube.com/@taylorwynn
+https://www.youtube.com/@teocrawford
 https://www.youtube.com/@tfft
 https://www.youtube.com/@thatfitfriend
 https://www.youtube.com/@the.bjjproject
