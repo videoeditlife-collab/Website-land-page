@@ -1,0 +1,35 @@
+Loaded 16 channels from results/price_recheck.txt
+[1/16] https://www.youtube.com/@BarelyCamping
+      Barely Camping | Mid | 140,000 subs | med 332,000 views | 12 uploads/90d | outdoors (1.0) | sells=False
+[2/16] https://www.youtube.com/@TravelTipsbyLaurie
+      Travel Tips by Laurie | Mid | 450,000 subs | med 68,000 views | 18 uploads/90d | travel (1.0) | sells=False
+[3/16] https://www.youtube.com/@DanaBerez
+      Dana Berez | Mid | 168,000 subs | med 61,000 views | 27 uploads/90d | travel (1.0) | sells=False
+[4/16] https://www.youtube.com/@RoyalCaribbeanBlog
+      Royal Caribbean Blog | Mid | 409,000 subs | med 53,500 views | 30 uploads/90d | travel (1.0) | sells=False
+[5/16] https://www.youtube.com/@josephvideoediting
+      Joseph | Video Editing | Mid | 206,000 subs | med 38,000 views | 24 uploads/90d | filmmaking (0.67) | sells=False
+[6/16] https://www.youtube.com/@LifeWithUsTV
+      LifeWithUsTV | Mid | 163,000 subs | med 29,000 views | 11 uploads/90d | travel (0.8) | sells=False
+[7/16] https://www.youtube.com/@GarageGymLife
+      Garage Gym Life | Mid | 279,000 subs | med 16,000 views | 19 uploads/90d | fitness (0.88) | sells=False
+[8/16] https://www.youtube.com/@ChewsToExplore
+      Chews to Explore | Mid | 129,000 subs | med 16,000 views | 12 uploads/90d | travel (0.89) | sells=False
+[9/16] https://www.youtube.com/@Eatsleepcruise1
+      Eat Sleep Cruise | Mid | 171,000 subs | med 15,000 views | 25 uploads/90d | travel (1.0) | sells=False
+[10/16] https://www.youtube.com/@JuddLienhard
+      Judd Lienhard | Mid | 102,000 subs | med 14,000 views | 30 uploads/90d | fitness (0.92) | sells=False
+[11/16] https://www.youtube.com/@Imogenhorton.
+      Imogen Horton | Mid | 410,000 subs | med 13,000 views | 14 uploads/90d | travel (0.83) | sells=False
+[12/16] https://www.youtube.com/@eatsleepdisneyparks
+      Eat Sleep Disney | Mid | 37,500 subs | med 11,000 views | 13 uploads/90d | travel (0.8) | sells=False
+[13/16] https://www.youtube.com/@TheWanderlustWayisback
+      The Wanderlust Way | Mid | 44,200 subs | med 10,850 views | 15 uploads/90d | travel (1.0) | sells=False
+[14/16] https://www.youtube.com/@englishwoodsman
+      English Woodsman | Mid | 115,000 subs | med 8,400 views | 15 uploads/90d | outdoors (0.89) | sells=False
+[15/16] https://www.youtube.com/@eliteftsofficial
+      elitefts | Mid | 225,000 subs | med 6,700 views | 30 uploads/90d | fitness (1.0) | sells=False
+[16/16] https://www.youtube.com/@MagicWeddingPhotographer
+      Magic Wedding Photographer | Mid | 51,500 subs | med 4,700 views | 15 uploads/90d | photography (1.0) | sells=False
+
+16 leads -> price_recheck.csv  {'Mid': 16}
