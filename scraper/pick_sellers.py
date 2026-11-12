@@ -40,7 +40,8 @@ TIER_ORDER = ['owned', 'recurring', 'merch']
 AGENCY_HINTS = (
     'talent', 'management', 'mgmt', 'media', 'agency', 'partnerships',
     'inquiries@', 'collab', 'brand', 'wyler', 'undercurrent', 'dovora',
-    'delka', 'ruthless', 'tbnr',
+    'delka', 'ruthless', 'tbnr', 'theblendedgroup', 'brandedindependent',
+    'jmtsquared', 'chosenadvisory', 'prettygoodagents', 'advisory',
 )
 
 
@@ -140,6 +141,16 @@ def to_int(value):
 RATING_RANK = {'High': 3, 'Mid': 2, 'Low': 1, '': 0}
 
 
+def newer_or_better(row, held):
+    """True if `row` should replace `held` for the same channel."""
+    a = (row.get('scraped_at') or '').strip()
+    b = (held.get('scraped_at') or '').strip()
+    if a and b and a != b:
+        return a > b            # ISO timestamps compare correctly as strings
+    return (RATING_RANK.get(row.get('Value Rating'), 0)
+            >= RATING_RANK.get(held.get('Value Rating'), 0))
+
+
 def load(paths):
     """
     Every scored row, one per channel, keeping the strongest rating.
@@ -151,8 +162,14 @@ def load(paths):
     Gear came back Mid in the challenge pass and High in the outdoor pass.
 
     First-wins dedupe therefore threw away the better-informed score, silently.
-    Ranking by rating keeps the High, and a later pass breaks a tie because it
-    ran against the wider keyword lists.
+
+    The most recent scoring wins, by scraped_at, with rating only as the
+    tiebreak when timestamps are missing. Ranking by rating alone - the
+    previous rule - was right while every later pass was also a better one,
+    but it breaks the first time a re-score is stricter: re-checking 16
+    channels under a corrected price rule moved all 16 from High to Mid, and
+    best-rating-wins would have kept the stale High. The detector only ever
+    gets more accurate, so the newest row is the best-informed one.
     """
     rows = {}
     for pattern in paths:
@@ -169,8 +186,7 @@ def load(paths):
                         continue
                     row['source_file'] = path.rsplit('/', 1)[-1]
                     held = rows.get(key)
-                    if held is None or (RATING_RANK.get(row.get('Value Rating'), 0)
-                                        >= RATING_RANK.get(held.get('Value Rating'), 0)):
+                    if held is None or newer_or_better(row, held):
                         rows[key] = row
     return list(rows.values())
 

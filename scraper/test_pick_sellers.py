@@ -138,6 +138,28 @@ def test_best_rating_wins_dedupe():
     check("rank order", RATING_RANK['High'] > RATING_RANK['Mid'] > RATING_RANK['Low'],
           True)
 
+    # A newer, stricter re-score beats an older High. Re-checking 16 channels
+    # under a corrected price rule moved all of them to Mid; best-rating-wins
+    # would have kept the stale High.
+    with tempfile.TemporaryDirectory() as directory:
+        header = ['Creator Name', 'Channel Link', 'Value Rating', 'Product Type',
+                  'Subscriber Count', 'median_views', 'scraped_at']
+        row = {'Creator Name': 'Eat Sleep Disney',
+               'Channel Link': 'https://www.youtube.com/@d',
+               'Product Type': 'digital_product', 'Subscriber Count': '200000',
+               'median_views': '50000'}
+        old = write(directory, 'reflip.csv', header,
+                    [dict(row, **{'Value Rating': 'High',
+                                  'scraped_at': '2026-11-12T22:00:00'})])
+        new = write(directory, 'recheck.csv', header,
+                    [dict(row, **{'Value Rating': 'Mid',
+                                  'Product Type': 'affiliate_only',
+                                  'scraped_at': '2026-11-12T23:30:00'})])
+        for order, label in (([old, new], "older read first"),
+                             ([new, old], "newer read first")):
+            rows = load(order)
+            check(f"newest score wins ({label})", rows[0]['Value Rating'], 'Mid')
+
 
 def test_product_tiers():
     print("\nProduct tiers")
