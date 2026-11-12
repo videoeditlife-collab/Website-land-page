@@ -87,6 +87,13 @@ jobs:
           # Josh's brief: target creator-operators who sell travel, which is the
           # inverse of the solo-only filter used on the previous lists.
           case "$SOURCE" in
+            probe)
+              # Re-read the About page for a fixed list, with no niche, solo
+              # or size filter, so every channel comes back with its country.
+              # The early passes lost theirs: their discovery CSVs were the
+              # ones every later run overwrote, before that was fixed.
+              ARGS+=(--input results/country_probe.txt)
+              ;;
             photo)
               ARGS+=(--require-niche --niche-file niche_broad.txt)
               ARGS+=(--search-file photo_terms.txt)
