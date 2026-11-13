@@ -194,28 +194,8 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
 .line-inner{ display: block; will-change: transform; }
 
 /* ============================================================================
-   3. FILM GRAIN AND VIGNETTE OVERLAYS
+   3. VIGNETTE OVERLAY
    ============================================================================ */
-.grain{
-  position: fixed;
-  inset: -60%;
-  width: 220%;
-  height: 220%;
-  pointer-events: none;
-  z-index: 9990;
-  opacity: 0.05;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-@media (prefers-reduced-motion: no-preference){
-  .grain{ animation: grain-shift 1.2s steps(4) infinite; }
-}
-@keyframes grain-shift{
-  0%{ transform: translate(0, 0); }
-  25%{ transform: translate(-2%, 1.5%); }
-  50%{ transform: translate(1.5%, -2%); }
-  75%{ transform: translate(-1%, -1%); }
-  100%{ transform: translate(0, 0); }
-}
 .vignette{
   position: fixed;
   inset: 0;
@@ -1147,9 +1127,8 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
 <body>
 
 <!-- ==========================================================================
-     FILM OVERLAYS: grain + vignette across the whole page
+     FILM OVERLAY: vignette across the whole page
      ========================================================================== -->
-<div class="grain" aria-hidden="true"></div>
 <div class="vignette" aria-hidden="true"></div>
 
 <!-- ==========================================================================

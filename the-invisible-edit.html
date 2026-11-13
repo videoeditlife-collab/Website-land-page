@@ -113,27 +113,8 @@ h1, h2, h3{
 }
 
 /* ============================================================================
-   2. FILM GRAIN AND VIGNETTE  (same treatment as index.html)
+   2. VIGNETTE  (same treatment as index.html)
    ============================================================================ */
-.grain{
-  position: fixed;
-  inset: -60%;
-  width: 220%; height: 220%;
-  pointer-events: none;
-  z-index: 9990;
-  opacity: 0.05;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-@media (prefers-reduced-motion: no-preference){
-  .grain{ animation: grain-shift 1.2s steps(4) infinite; }
-}
-@keyframes grain-shift{
-  0%{ transform: translate(0, 0); }
-  25%{ transform: translate(-2%, 1.5%); }
-  50%{ transform: translate(1.5%, -2%); }
-  75%{ transform: translate(-1%, -1%); }
-  100%{ transform: translate(0, 0); }
-}
 .vignette{
   position: fixed;
   inset: 0;
@@ -533,7 +514,6 @@ footer .wrap{
 footer p{ font-size: 0.85rem; color: var(--muted); }
 </style>
 
-<div class="grain" aria-hidden="true"></div>
 <div class="vignette" aria-hidden="true"></div>
 
 <header class="topbar">
