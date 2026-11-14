@@ -42,6 +42,9 @@ AGENCY_HINTS = (
     'inquiries@', 'collab', 'brand', 'wyler', 'undercurrent', 'dovora',
     'delka', 'ruthless', 'tbnr', 'theblendedgroup', 'brandedindependent',
     'jmtsquared', 'chosenadvisory', 'prettygoodagents', 'advisory',
+    'night.co', 'influint', 'sociallyelite', 'bossmgmt', 'wmgmt',
+    'smallscreenmarketing', 'sparkmedia', 'digitalstreamers', 'select.co',
+    'komi.group', 'newhousemedia',
 )
 
 
