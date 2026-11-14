@@ -273,6 +273,31 @@ def test_niche_classification():
     check("strongman and gym titles agree", niche, 'fitness')
     check("so consistency clears the gate", consistency >= 0.6, True)
 
+    # Money niches. 'invest', 'tax' and 'budget' were wrong at a word start
+    # too, so anchoring did not save them, and "business class" is a flight.
+    for title in ("Emirates Business Class Review",
+                  "The Investigation Into The Missing Hiker",
+                  "Taxi Scams In Bangkok", "Camping On A Budget",
+                  "Is This Tent Worth The Money",
+                  "Our Travel Agency Ruined The Trip"):
+        niche, _ = classify_niche([title])
+        check(f"not money: {title[:32]}", niche in ('business', 'finance'), False)
+
+    for title, want in (("How I Built A 7 Figure Business", 'business'),
+                        ("Index Funds For Beginners", 'finance'),
+                        ("My Rental Property Portfolio", 'finance'),
+                        ("Tax Strategies For Business Owners", 'finance')):
+        niche, _ = classify_niche([title])
+        check(f"{want}: {title[:30]}", niche, want)
+
+    # Business and finance pool for consistency: a creator who teaches people
+    # to earn splits their titles between the two while staying on one topic.
+    niche, consistency = classify_niche([
+        "How I Built My Agency", "How I Invest My Money",
+        "Getting My First Clients", "My Dividend Income This Month"])
+    check("business and finance pool", consistency, 1.0)
+    check("label is still the winning niche", niche in ('business', 'finance'), True)
+
     # Bare 'lift' used to be a fitness keyword and matched inside "Uplifting"
     # and inside the British sense of a lift as an elevator - both travel.
     for title in ("Uplifting Stories From The Road",

@@ -221,3 +221,35 @@ wild camp
 stealth camp
 backcountry
 solo camping
+
+# --- money niches: business, finance, real estate (the uncapped pass) ---
+business
+entrepreneur
+founder
+agency
+marketing
+sales
+ecommerce
+e-commerce
+dropshipping
+shopify
+amazon fba
+side hustle
+investing
+investor
+investment
+stocks
+stock market
+dividend
+personal finance
+financial
+wealth
+real estate
+rental property
+realtor
+passive income
+make money
+coaching
+consulting
+trading
+crypto

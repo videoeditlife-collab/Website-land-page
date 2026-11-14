@@ -87,6 +87,14 @@ jobs:
           # Josh's brief: target creator-operators who sell travel, which is the
           # inverse of the solo-only filter used on the previous lists.
           case "$SOURCE" in
+            rich)
+              # No subscriber ceiling on this pass, and a wider net per term:
+              # the niches are large and the target is the top of them.
+              ARGS+=(--require-niche --niche-file niche_broad.txt)
+              ARGS+=(--search-file rich_terms.txt)
+              ARGS+=(--sort-by date --scrolls 3 --per-term 12 --limit 900)
+              ARGS+=(--save-discovered discovered_rich.txt)
+              ;;
             solocamp)
               ARGS+=(--require-niche --niche-file niche_broad.txt)
               ARGS+=(--search-file solocamp_terms.txt)

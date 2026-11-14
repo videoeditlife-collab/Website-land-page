@@ -422,15 +422,35 @@ NICHE_KEYWORDS = {
                           'triathlon', 'ironman', 'ultra', 'pace', 'cycling'),
     'nutrition': ('nutrition', 'macros', 'protein', 'diet', 'meal prep',
                   'calories', 'eating'),
-    'finance': ('money', 'budget', 'invest', 'stocks', 'savings', 'debt',
-                'retire', 'income', 'tax', 'wealth'),
+    # Three of the original keywords were wrong at a word start as well as
+    # mid-word, so anchoring did not save them: 'invest' reaches
+    # "investigation", 'tax' reaches "taxi", and 'budget' is in half of all
+    # travel and gear titles ("camping on a budget"). Replaced by the forms
+    # that only finance uses. Real estate sits in here rather than in a niche
+    # of its own, for the same reason strongman sits inside fitness.
+    'finance': ('money', 'budgeting', 'monthly budget', 'investing',
+                'investment', 'investor', 'invested', 'stocks', 'stock market',
+                'savings', 'debt', 'retire', 'income', 'taxes', 'tax strateg',
+                'tax return', 'tax free', 'tax tips', 'wealth', 'dividend',
+                'index fund', 'net worth', 'financial', 'millionaire',
+                'real estate', 'rental property', 'mortgage', 'house flip',
+                'landlord', 'credit score', 'credit card', 'crypto', 'bitcoin',
+                'day trading', 'trading strategy', 'options trading', 'trader',
+                'roth', '401k', 'etf'),
     # 'review' and 'setup' were here and are far too generic - every niche
     # reviews things, so gear-testing outdoors channels classified as tech.
     'tech': ('iphone', 'android', 'smartphone', 'laptop', 'pc build', 'gpu',
              'keyboard', 'headphones', 'gadget', 'software', 'tech review',
              'unboxing tech', 'ai tools'),
-    'business': ('business', 'client', 'freelance', 'agency', 'marketing',
-                 'startup', 'entrepreneur', 'sales'),
+    'business': ('business', 'client', 'freelance', 'freelancing', 'agency',
+                 'marketing', 'startup', 'entrepreneur', 'sales', 'ecommerce',
+                 'e-commerce', 'dropshipping', 'shopify', 'amazon fba', 'etsy',
+                 'print on demand', 'side hustle', 'cold call', 'high ticket',
+                 'copywriting', 'lead generation', 'personal brand',
+                 'consulting', 'founder', 'ceo', 'revenue', 'profit',
+                 '7 figure', '6 figure', 'facebook ads', 'make money online',
+                 'online course', 'newsletter', 'saas', 'quit my job',
+                 'salary', 'career', 'negotiat', 'linkedin'),
     'lifestyle_vlog': ('vlog', 'day in my life', 'week in my life', 'routine',
                        'apartment', 'morning', 'life update', 'moving'),
     'food': ('cooking', 'recipe', 'bake', 'kitchen', 'restaurant', 'food',
@@ -516,6 +536,30 @@ def keyword_hits(words, text):
     return found
 
 
+# Phrases that contain a niche keyword without being about that niche. They
+# are removed from a title before it votes. "Business class" is a flight
+# review, not a business video, and it is one of the largest travel genres.
+NICHE_DECOYS = (
+    'business class', 'travel agency', 'worth the money', 'for the money',
+    'value for money', 'money can buy', 'show business',
+)
+
+# Niches that count as one topic when measuring consistency. A creator who
+# teaches people to earn titles half their videos "how I built my business"
+# and half "how I invest the money", which split the vote between business
+# and finance and would land them at 0.5 - under the clear-niche gate - for
+# sticking to a single subject. The label stays whichever niche won; only the
+# consistency pools. Photography and filmmaking are deliberately not pooled:
+# no case of that split costing a rating has been seen.
+NICHE_FAMILY = {'business': 'money', 'finance': 'money'}
+
+
+def _strip_niche_decoys(low):
+    for phrase in NICHE_DECOYS:
+        low = low.replace(phrase, ' ')
+    return low
+
+
 def classify_niche(titles, description=''):
     """
     Dominant niche, plus how consistently the classifiable titles agree.
@@ -539,7 +583,7 @@ def classify_niche(titles, description=''):
     labelled = 0
 
     for title in titles:
-        low = title.lower()
+        low = _strip_niche_decoys(title.lower())
         best, score = None, 0
         for niche, words in NICHE_KEYWORDS.items():
             count = len(keyword_hits(words, low))
@@ -561,7 +605,12 @@ def classify_niche(titles, description=''):
         return (best or ''), (0.5 if best else 0.0)
 
     winner = max(votes, key=votes.get)
-    return winner, round(votes[winner] / labelled, 2)
+    agreeing = votes[winner]
+    family = NICHE_FAMILY.get(winner)
+    if family:
+        agreeing = sum(count for niche, count in votes.items()
+                       if NICHE_FAMILY.get(niche) == family)
+    return winner, round(agreeing / labelled, 2)
 
 
 def niche_evidence(titles, limit=10):
@@ -577,7 +626,7 @@ def niche_evidence(titles, limit=10):
     """
     out = []
     for title in [t for t in (titles or []) if t][:limit]:
-        low = title.lower()
+        low = _strip_niche_decoys(title.lower())
         best, score = None, 0
         for niche, words in NICHE_KEYWORDS.items():
             count = len(keyword_hits(words, low))
