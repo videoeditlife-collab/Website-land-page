@@ -1,0 +1,79 @@
+# Creators like Katie Roams: solo wild camping, usually in bad weather, often
+# with an overnight-challenge hook ("I slept inside a fallen tree", "16 hours
+# completely alone"). Her titles: solo bivvy wild camp, stealth camp, camping
+# in a tiny raised tent by a river, hammock camping gone wrong, solo wild
+# camping in heavy rain. She sells her own e-book from her own site.
+#
+# The broad outdoors pass already searched the obvious phrases - "wild camping
+# uk", "stealth camping", "tent camping rain", "solo overnight camp",
+# "hammock camping overnight" - and the channels they reach are scored. These
+# are the narrower variants of her format, which reach channels those did not.
+# Sorting by date also means a repeated idea returns this month's uploaders,
+# not the same top channels.
+
+# --- weather, which is most of her hook ---
+solo camping in a storm
+wild camping in heavy snow
+camping in high winds alone
+solo camp in freezing fog
+winter bivvy camp
+camping in a thunderstorm
+wild camp in a heatwave
+cosy camping in the rain
+
+# --- the shelter itself ---
+solo bivvy bag camp
+tarp camping in the rain
+tiny tent wild camp
+raised tent camping
+tree tent overnight
+hot tent winter camping
+one person tent wild camp
+ultralight shelter overnight
+
+# --- "I slept in..." overnight challenge format ---
+i slept in a cave
+i slept in an abandoned building camping
+i slept on a cliff edge
+i slept under the stars alone
+24 hours alone in the woods
+overnight alone on a mountain
+i spent the night in a bothy
+sleeping in a snow shelter
+
+# --- UK regions, where her audience and her peers are ---
+wild camping scotland solo
+dartmoor wild camp
+lake district wild camp
+snowdonia wild camping
+peak district wild camp
+wild camping wales
+highlands solo camp
+bothy night scotland
+
+# --- other countries' equivalents, for English-speaking peers ---
+backcountry camping canada solo
+solo camping new zealand
+bush camping australia solo
+solo camping in norway
+appalachian solo camp overnight
+
+# --- water and terrain variants ---
+solo canoe camping
+kayak wild camp overnight
+beach wild camp
+river wild camp
+summit camp solo
+forest stealth camp
+
+# --- solo women outdoors, a large part of this format ---
+solo female wild camping
+woman camping alone in the woods
+solo female hiking overnight
+girl camping alone in the rain
+
+# --- the relaxing end of the format, rain and fire sounds ---
+relaxing solo camping no talking
+rain on tent overnight camp
+campfire cooking solo overnight
+asmr wild camping

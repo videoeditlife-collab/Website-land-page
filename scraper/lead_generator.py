@@ -479,7 +479,11 @@ NICHE_KEYWORDS = {
                  'backpacking', 'tent', 'wilderness', 'trail', 'hammock',
                  'campfire', 'bivvy', 'shelter', 'forage', 'foraging',
                  'offgrid', 'off grid', 'prepper', 'trek', 'summit',
-                 'thru hike', 'thru-hike', 'woodland', 'outdoors'),
+                 'thru hike', 'thru-hike', 'woodland', 'outdoors',
+                 # Added for the solo wild camping pass. Matching is anchored
+                 # at a word start, so 'tarp' cannot reach "Starpoint".
+                 'tarp', 'bothy', 'canoe', 'backcountry', 'wild camp',
+                 'stealth camp', 'overnight in the woods'),
 }
 
 

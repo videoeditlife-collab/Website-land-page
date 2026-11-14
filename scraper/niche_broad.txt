@@ -210,3 +210,14 @@ mirrorless
 aperture
 shutter
 exposure
+
+# --- solo wild camping (the Katie Roams pass) ---
+bivvy
+tarp
+bothy
+canoe
+kayak
+wild camp
+stealth camp
+backcountry
+solo camping

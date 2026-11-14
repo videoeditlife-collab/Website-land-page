@@ -87,6 +87,12 @@ jobs:
           # Josh's brief: target creator-operators who sell travel, which is the
           # inverse of the solo-only filter used on the previous lists.
           case "$SOURCE" in
+            solocamp)
+              ARGS+=(--require-niche --niche-file niche_broad.txt)
+              ARGS+=(--search-file solocamp_terms.txt)
+              ARGS+=(--sort-by date --scrolls 3 --per-term 8 --limit 700)
+              ARGS+=(--save-discovered discovered_solocamp.txt)
+              ;;
             probe)
               # Re-read the About page for a fixed list, with no niche, solo
               # or size filter, so every channel comes back with its country.
