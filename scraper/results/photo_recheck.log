@@ -1,0 +1,13 @@
+Loaded 5 channels from results/price_recheck.txt
+[1/5] https://www.youtube.com/@Adorama
+      Adorama | Mid | 1,710,000 subs | med 44,000 views | 27 uploads/90d | photography (1.0) | sells=False
+[2/5] https://www.youtube.com/@TaylorJacksonPhoto
+      Taylor Jackson | High | 772,000 subs | med 43,000 views | 30 uploads/90d | photography (0.8) | sells=True
+[3/5] https://www.youtube.com/@TonyAndChelsea
+      Tony & Chelsea Northrup | Mid | 1,660,000 subs | med 35,000 views | 16 uploads/90d | photography (0.67) | sells=False
+[4/5] https://www.youtube.com/@JordanPlatten
+      Jordan Platten | Mid | 399,000 subs | med 12,000 views | 10 uploads/90d | business (0.75) | sells=False
+[5/5] https://www.youtube.com/@vfxmalice
+      Sayeef Ahmed (Malice The Editor) | Mid | 33,300 subs | med 3,300 views | 9 uploads/90d | business (0.86) | sells=False
+
+5 leads -> photo_recheck.csv  {'High': 1, 'Mid': 4}
