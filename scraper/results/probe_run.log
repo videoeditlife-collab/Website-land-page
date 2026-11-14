@@ -1,50 +1,145 @@
-Loaded 6 channels from results/country_probe.txt
+Loaded 20 channels from results/country_probe.txt
    Instagram state file not found: instagram_storage_state.json - Instagram scraping disabled
 Started chromium (headless)
 
-Scraping 6 channels with 3 workers
+Scraping 20 channels with 3 workers
 
-   [w1] (1/6) https://www.youtube.com/@LK_Outdoors
-   [w2] (2/6) https://www.youtube.com/@Mruncuttt
-   [w3] (3/6) https://www.youtube.com/@LostLakes
-         Name: Lorina Outdoors
-         Subscribers: 67.3K subscribers (67300)
+   [w1] (1/20) https://www.youtube.com/@josh_k_fay
+   [w2] (2/20) https://www.youtube.com/@jerryrominestocks
+   [w3] (3/20) https://www.youtube.com/@PassiveIncomeInvesting
+         Name: Passive Income Investing
+         Subscribers: 248K subscribers (248000)
          Email listed: yes
-         Type: solo (Poland)
-         Instagram: https://www.instagram.com/lorina_outdoors1?igsh=b2plNzExdG56d2Y1&utm_source=qr
-         Name: MrUncutt Outdoors
-         Subscribers: 87.2K subscribers (87200)
-         Email listed: yes
-         Type: solo (United States)
-         Instagram: https://www.instagram.com/_mruncutt/
-         Name: Lost Lakes
-         Subscribers: 387K subscribers (387000)
-         Email listed: no
          Type: solo (Canada)
-         Instagram: https://www.instagram.com/lostlakes_youtube
-         Uploads: weekly, last 3d ago, 13 in 90d (sampled 30)
-         Uploads: monthly, last 13d ago, 3 in 90d (sampled 30)
-   [w2] (4/6) https://www.youtube.com/@olliecraig-primalpursuit
-   [w3] (5/6) https://www.youtube.com/@krikkosadventure
-         Uploads: weekly, last 0d ago, 13 in 90d (sampled 30)
-   [w1] (6/6) https://www.youtube.com/@CodyandKellie
-         Name: Ollie Craig - Primal Pursuit
-         Subscribers: 114K subscribers (114000)
+         Instagram: https://www.instagram.com/passive_income_investing/
+         Name: Jerry Romine Stocks
+         Subscribers: 193K subscribers (193000)
+         Email listed: no
+         Type: solo (United States)
+         Name: Josh K. Fay
+         Subscribers: 35.1K subscribers (35100)
          Email listed: yes
-         Type: solo (New Zealand)
-         Instagram: https://www.instagram.com/ollie_craig/
-         Name: Krikkos Adventure
-         Subscribers: 252K subscribers (252000)
+         Type: unclear (United Kingdom)
+         Uploads: weekly, last 2d ago, 30 in 90d (sampled 30)
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+   [w3] (4/20) https://www.youtube.com/@Laraacosta
+         Uploads: weekly, last 5d ago, 30 in 90d (sampled 30)
+   [w1] (5/20) https://www.youtube.com/@itsmegheckman
+   [w2] (6/20) https://www.youtube.com/@DividendBull
+         Name: Lara Acosta
+         Subscribers: 56.3K subscribers (56300)
          Email listed: yes
-         Type: solo (Sweden)
-         Instagram: https://instagram.com/krikkosadventures?igshid=OGQ5ZDc2ODk2ZA==
-         Name: Cody & Kellie
-         Subscribers: 162K subscribers (162000)
+         Type: unclear
+         Name: Meg Heckman
+         Subscribers: 92.3K subscribers (92300)
          Email listed: yes
          Type: solo (United States)
-         Instagram: https://www.instagram.com/codyandkellie/
-         Uploads: biweekly, last 4d ago, 8 in 90d (sampled 30)
-         Uploads: biweekly, last 5d ago, 8 in 90d (sampled 30)
-         Uploads: biweekly, last 5d ago, 7 in 90d (sampled 30)
+         Name: Dividend Bull
+         Subscribers: 212K subscribers (212000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/dividend_bull/
+         Uploads: weekly, last 5d ago, 10 in 90d (sampled 30)
+         Uploads: weekly, last 4d ago, 12 in 90d (sampled 30)
+         Skool: https://www.skool.com/heckman/about
+   [w3] (7/20) https://www.youtube.com/@tanner.chidester
+         Uploads: weekly, last 1d ago, 14 in 90d (sampled 30)
+   [w2] (8/20) https://www.youtube.com/@ArriellJohnson
+         Skool community: WeScale Free Course - 38.4k members
+         Name: Tanner Chidester
+         Subscribers: 45.9K subscribers (45900)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/tanner.chidester
+   [w1] (9/20) https://www.youtube.com/@CTtheDisrupter
+         Name: Arriell Johnson
+         Subscribers: 8.27K subscribers (8270)
+         Email listed: yes
+         Type: solo
+         Name: Professor Charley T
+         Subscribers: 68.6K subscribers (68600)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 3d ago, 22 in 90d (sampled 30)
+   [w3] (10/20) https://www.youtube.com/@maxwellcopy
+         Uploads: weekly, last 1d ago, 26 in 90d (sampled 30)
+         Uploads: weekly, last 1d ago, 10 in 90d (sampled 30)
+   [w2] (11/20) https://www.youtube.com/@leadgenjay
+   [w1] (12/20) https://www.youtube.com/@ecommemily
+         Name: Max Sturtevant
+         Subscribers: 35.4K subscribers (35400)
+         Email listed: no
+         Type: unclear
+         Name: Lead Gen Jay
+         Subscribers: 91.6K subscribers (91600)
+         Email listed: yes
+         Type: business (United States)
+         Instagram: https://Instagram.com/leadgen
+         Name: Emily Odio-Sutton
+         Subscribers: 15.6K subscribers (15600)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/ecommemily
+         Uploads: weekly, last 1d ago, 19 in 90d (sampled 30)
+         Skool: https://www.skool.com/email-marketerz/about
+         Uploads: weekly, last 14d ago, 15 in 90d (sampled 30)
+   [w2] (13/20) https://www.youtube.com/@AccordingToNicole
+         Uploads: weekly, last 4d ago, 13 in 90d (sampled 30)
+         Skool community: Email Marketing Mastery - 425 members
+   [w1] (14/20) https://www.youtube.com/@JdubTrades
+   [w3] (15/20) https://www.youtube.com/@miarosemcgrath
+         Name: According To Nicole
+         Subscribers: 259K subscribers (259000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/according_to_nicole
+         Name: Jdub Trades
+         Subscribers: 264K subscribers (264000)
+         Email listed: no
+         Type: solo
+         Instagram: https://www.instagram.com/jdub_trades/
+         Name: Mia McGrath
+         Subscribers: 103K subscribers (103000)
+         Email listed: no
+         Type: unclear
+         Uploads: weekly, last 6d ago, 12 in 90d (sampled 30)
+   [w2] (16/20) https://www.youtube.com/@LeviCrypto
+         Uploads: weekly, last 6d ago, 12 in 90d (sampled 30)
+         Uploads: weekly, last 13d ago, 11 in 90d (sampled 30)
+   [w3] (17/20) https://www.youtube.com/@PersonalFinancewithLeila
+   [w1] (18/20) https://www.youtube.com/@SunnyLenarduzzi
+         Name: Levi
+         Subscribers: 232K subscribers (232000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/levicryptoinsta/
+         Name: Personal Finance with Leila - Debt Over It
+         Subscribers: 68.6K subscribers (68600)
+         Email listed: yes
+         Type: solo (United States)
+         Name: Sunny Lenarduzzi
+         Subscribers: 801K subscribers (801000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: http://www.instagram.com/sunnylenarduzzi
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Skool: https://www.skool.com/cryptoskool/about
+         Uploads: weekly, last 2d ago, 22 in 90d (sampled 30)
+         Skool: https://www.skool.com/budget-build-1523/about
+         Skool community: Crypto Skool: Learn Trading - 27 members
+         Skool community: Budget & Build - 9 members
+         Uploads: weekly, last 4d ago, 13 in 90d (sampled 30)
+   [w2] (19/20) https://www.youtube.com/@SmartMoneyTactics
+   [w3] (20/20) https://www.youtube.com/@ShopStyleCycle
+         Name: Smart Money Tactics
+         Subscribers: 563K subscribers (563000)
+         Email listed: yes
+         Type: solo (Australia)
+         Name: Alexa | Shop Style Cycle
+         Subscribers: 18.9K subscribers (18900)
+         Email listed: yes
+         Type: unclear
+         Uploads: weekly, last 3d ago, 10 in 90d (sampled 30)
+         Uploads: weekly, last 1d ago, 10 in 90d (sampled 23)
 
-Done. Wrote 6 rows to results.csv
+Done. Wrote 20 rows to results.csv
