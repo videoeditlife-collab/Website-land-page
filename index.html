@@ -41,18 +41,16 @@
 
      COPY (example text you can edit: search for the phrase to find it)
        Price         "Retainers from $1,200/month."
-       Results       one line under each of the three work cards
        About         the paragraph in the About section
-       Testimonials  the two quotes, with names and roles
 
      IMAGE
        About portrait shows a styled frame for now. To use a real photo,
        search for ABOUT_IMAGE and follow the note there.
 
-     STATS (numbers, not tokens: search for data-count and edit the numbers)
-       data-count="150"     videos delivered
-       data-count="2000000" views on work I edited
-       data-count="12"      clients served
+     REMOVED UNTIL REAL ONES EXIST
+       The stats row, the result line under each work card, and the
+       testimonials held example values, so they were taken out rather
+       than published as real. Add them back with genuine numbers and quotes.
      ============================================================================ -->
 
 <!-- Google Fonts: Space Grotesk for headings, Inter for body -->
@@ -1340,7 +1338,6 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
           <div class="work-body">
             <h3>Travel film</h3>
             <p class="work-what">Long form travel edit, cut for rhythm and scored to put you in the place.</p>
-            <p class="work-result"><strong>Result</strong> Stronger retention and comments about the atmosphere.</p>
           </div>
         </article>
 
@@ -1355,7 +1352,6 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
           <div class="work-body">
             <h3>Fitness long form</h3>
             <p class="work-what">A training video edited for momentum, with sound that keeps the energy up.</p>
-            <p class="work-result"><strong>Result</strong> Higher watch time and a clearer through line.</p>
           </div>
         </article>
 
@@ -1370,36 +1366,12 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
           <div class="work-body">
             <h3>Dental clinic story</h3>
             <p class="work-what">A patient journey edited to build trust: calm pacing and warm sound.</p>
-            <p class="work-result"><strong>Result</strong> A video the clinic uses to win new patients.</p>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ========================================================================
-       STATS ROW: numbers count up on scroll.
-       Edit the data-count values (and labels) to your real numbers,
-       or delete this whole section if you prefer.
-       ======================================================================== -->
-  <section id="stats" style="padding-top:0">
-    <div class="wrap">
-      <div class="stats" data-reveal>
-        <div class="stat">
-          <span class="stat-num"><span data-count="150">150</span><em>+</em></span>
-          <span class="stat-label">Videos delivered</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num"><span data-count="2000000">2,000,000</span><em>+</em></span>
-          <span class="stat-label">Views on work I edited</span>
-        </div>
-        <div class="stat">
-          <span class="stat-num"><span data-count="12">12</span></span>
-          <span class="stat-label">Clients served</span>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ========================================================================
        PROCESS: three steps, with a slow wireframe shape floating behind
@@ -1453,28 +1425,6 @@ section{ position: relative; padding: clamp(5rem, 11vh, 9rem) 0; }
     </div>
   </section>
 
-  <!-- ========================================================================
-       TESTIMONIALS
-       ======================================================================== -->
-  <section id="testimonials">
-    <div class="wrap">
-      <div class="label" data-reveal>Kind words</div>
-      <h2 class="section-title reveal-lines">What creators say.</h2>
-
-      <div class="quotes">
-        <figure class="quote" data-reveal>
-          <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-          <blockquote>He restructured my footage into a story I did not know was there, and the sound design carried it. My retention jumped.</blockquote>
-          <figcaption><strong>Sample creator</strong>Travel YouTuber</figcaption>
-        </figure>
-        <figure class="quote" data-reveal>
-          <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-          <blockquote>The edit changed how my video felt. The sound design carried moments I did not know were there, and people stayed to the end.</blockquote>
-          <figcaption><strong>Sample creator</strong>Fitness creator</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
 
   <!-- ========================================================================
        CONTACT
