@@ -179,7 +179,9 @@ def test_agency_detection():
                     'vanessa@undercurrent.net',
                     'rose@wylertravelgroup.com',
                     'partnerships@tbnr.work',
-                    'strictlydumpling@delkatalents.com'):
+                    'strictlydumpling@delkatalents.com',
+                    'teamkylestumpenhorst@gersh.com',
+                    'contact@tablerock.com'):
         check(f"agency: {address}", is_agency(address), True)
 
     # A free mailbox is the creator's own however it is named.

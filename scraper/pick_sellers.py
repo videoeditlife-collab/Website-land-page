@@ -45,6 +45,9 @@ AGENCY_HINTS = (
     'night.co', 'influint', 'sociallyelite', 'bossmgmt', 'wmgmt',
     'smallscreenmarketing', 'sparkmedia', 'digitalstreamers', 'select.co',
     'komi.group', 'newhousemedia',
+    # Gersh is a Hollywood talent agency and Table Rock a creator management
+    # firm; neither name carries a generic hint, so both slipped through.
+    'gersh.com', 'tablerock.com',
 )
 
 
