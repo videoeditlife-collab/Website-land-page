@@ -280,3 +280,24 @@ affiliate marketing
 kdp
 franchise
 millionaire
+
+# --- money niches, third pass: trade owners, asset businesses, reselling ---
+pressure washing
+landscaping
+lawn care
+cleaning business
+vending
+laundromat
+car wash
+self storage
+trucking
+hvac
+plumbing
+roofing
+detailing
+reselling
+flipping
+forex
+prop firm
+ugc
+investment banking

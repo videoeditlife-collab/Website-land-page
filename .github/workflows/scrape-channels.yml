@@ -87,6 +87,12 @@ jobs:
           # Josh's brief: target creator-operators who sell travel, which is the
           # inverse of the solo-only filter used on the previous lists.
           case "$SOURCE" in
+            rich3)
+              ARGS+=(--require-niche --niche-file niche_broad.txt)
+              ARGS+=(--search-file rich3_terms.txt)
+              ARGS+=(--sort-by date --scrolls 4 --per-term 12 --limit 1200)
+              ARGS+=(--save-discovered discovered_rich3.txt)
+              ;;
             rich2)
               # Second money pass, sized for roughly 1,000 new channels: the
               # first pass turned 592 into 30 usable creators.

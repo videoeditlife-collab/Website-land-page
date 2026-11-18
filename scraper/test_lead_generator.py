@@ -304,6 +304,15 @@ def test_niche_classification():
         niche, _ = classify_niche([title])
         check(f"money: {title[:32]}", niche in ('business', 'finance'), True)
 
+    # Third pass. 'car wash' bare took in every car-cleaning vlog.
+    for title in ("I Washed My Car At A Car Wash", "Lawn Care Tips For Spring"):
+        niche, _ = classify_niche([title])
+        check(f"not money: {title[:32]}", niche in ('business', 'finance'), False)
+    for title in ("My Pressure Washing Business Made $40K",
+                  "Vending Machine Route Update", "Prop Firm Challenge Day 3"):
+        niche, _ = classify_niche([title])
+        check(f"money: {title[:32]}", niche in ('business', 'finance'), True)
+
     # Business and finance pool for consistency: a creator who teaches people
     # to earn splits their titles between the two while staying on one topic.
     niche, consistency = classify_niche([

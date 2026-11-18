@@ -448,7 +448,8 @@ NICHE_KEYWORDS = {
                 'short term rental', 'syndication', 'wholesaling', 'cash flow',
                 'home buyer', 'housing market', 'realtor', 'accountant',
                 'accounting', 'bookkeeping', 'covered call', 'value investing',
-                'balance sheet'),
+                'balance sheet', 'prop firm', 'forex', 'futures trading',
+                'silver stack', 'gold and silver', 'investment bank'),
     # 'review' and 'setup' were here and are far too generic - every niche
     # reviews things, so gear-testing outdoors channels classified as tech.
     'tech': ('iphone', 'android', 'smartphone', 'laptop', 'pc build', 'gpu',
@@ -471,7 +472,14 @@ NICHE_KEYWORDS = {
                  'acquisition entrepreneur', 'smma', 'automation agency',
                  'affiliate marketing', 'amazon kdp', 'kdp', 'amazon wholesale',
                  'coaching business', 'b2b', 'cold email', 'appointment setting',
-                 'info product', 'service business'),
+                 'info product', 'service business',
+                 # Third pass: trade and service owners, asset businesses and
+                 # reselling. Most of these titles say "business" already;
+                 # these catch the ones that name only the trade.
+                 'pressure washing', 'lawn care business', 'landscaping business',
+                 'cleaning business', 'vending machine', 'laundromat',
+                 'self storage', 'car wash business', 'reselling', 'resell',
+                 'junk removal', 'ugc', 'digital products', 'paid community'),
     'lifestyle_vlog': ('vlog', 'day in my life', 'week in my life', 'routine',
                        'apartment', 'morning', 'life update', 'moving'),
     'food': ('cooking', 'recipe', 'bake', 'kitchen', 'restaurant', 'food',

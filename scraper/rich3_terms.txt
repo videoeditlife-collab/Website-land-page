@@ -1,0 +1,80 @@
+# Third money pass, run alongside the scoring of the second because the
+# second returned 604 new channels rather than the 1,000 it was sized for:
+# 169 of its 773 had already been found by the first pass.
+#
+# The main new ground is owners of trade and service businesses documenting
+# them - pressure washing, landscaping, cleaning, HVAC, trucking, vending.
+# It is one of the fastest-growing business formats on YouTube, the owners
+# earn well, and they film themselves but rarely edit, which is the gap an
+# editor fills.
+
+# --- trade and service business owners ---
+pressure washing business
+lawn care business owner
+landscaping business day in the life
+cleaning business owner
+window cleaning business
+hvac business owner
+plumbing business owner
+roofing business owner
+construction business owner
+trucking business owner
+car detailing business
+junk removal business
+moving company owner
+painting business owner
+pool cleaning business
+
+# --- small asset businesses ---
+vending machine business
+laundromat business
+car wash investing
+self storage investing
+atm business route
+mobile home park investing
+
+# --- reselling and flipping ---
+car flipping for profit
+reselling business full time
+flipping furniture for profit
+sneaker reselling business
+storage unit auction finds profit
+
+# --- founder stories and interviews ---
+how he built a million dollar business
+business owner interview revenue
+boring businesses that make millions
+businesses you can start with no money
+side hustle that replaced my income
+
+# --- trading beyond stocks ---
+prop firm challenge
+futures trading strategy
+forex trading for beginners honest
+gold and silver investing
+silver stacking
+
+# --- online business models not covered yet ---
+ugc creator business
+faceless youtube channel business
+notion templates business
+canva templates side hustle
+upwork freelancing tips
+selling digital products online
+course creator business
+paid community business
+
+# --- careers that pay ---
+investment banking day in the life
+software engineer salary
+management consulting career
+finance career advice
+sales career six figures
+how to get a high paying job
+
+# --- money for professionals ---
+physician personal finance
+real estate for doctors
+dentist practice owner
+business owner tax strategy
+how to pay yourself as a business owner
