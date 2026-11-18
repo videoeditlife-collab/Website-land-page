@@ -937,7 +937,7 @@ footer p{ font-size: 0.85rem; color: var(--muted); }
       // Fail loudly here rather than silently dropping a real lead.
       if (form.action.indexOf("KIT_FORM_ID") !== -1){
         status.className = "form-status err";
-        status.textContent = "This form is not connected yet. Please email us instead.";
+        status.textContent = "This form is not connected yet. Please email john@jbobby.com instead.";
         button.disabled = false;
         return;
       }
@@ -953,7 +953,7 @@ footer p{ font-size: 0.85rem; color: var(--muted); }
       })
       .catch(function(){
         status.className = "form-status err";
-        status.textContent = "Something went wrong on our end. Please try again in a moment.";
+        status.textContent = "Something went wrong on our end. Please try again in a moment, or email john@jbobby.com.";
         button.disabled = false;
       });
     });
