@@ -1,0 +1,21 @@
+Niche: 325 keywords from niche_broad.txt
+   Instagram state file not found: instagram_storage_state.json - Instagram scraping disabled
+Started chromium (headless)
+Search filter: sp=CAI=
+
+   Searching: hot tent winter camping
+      https://www.youtube.com/results?search_query=hot+tent+winter+camping&sp=CAI%3D
+      Found 12 channels
+
+   Searching: solo truck camping overnight
+      https://www.youtube.com/results?search_query=solo+truck+camping+overnight&sp=CAI%3D
+      Found 12 channels
+
+   Searching: bushcraft shelter build
+      https://www.youtube.com/results?search_query=bushcraft+shelter+build&sp=CAI%3D
+      Found 12 channels
+
+Discovered 35 unique channels across 3 terms
+Limited to first 35 channels
+Saved discovered channel list to discovered_example_terms.txt
+--discover-only: stopping after 35 channels
