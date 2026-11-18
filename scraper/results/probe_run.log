@@ -1,114 +1,182 @@
-Loaded 11 channels from results/country_probe.txt
+Loaded 24 channels from results/country_probe.txt
    Instagram state file not found: instagram_storage_state.json - Instagram scraping disabled
 Started chromium (headless)
 
-Scraping 11 channels with 3 workers
+Scraping 24 channels with 3 workers
 
-   [w2] (1/11) https://www.youtube.com/@SilverSeeker
-   [w1] (2/11) https://www.youtube.com/@KateHayes
-   [w3] (3/11) https://www.youtube.com/@TechJobberPod
-         Name: Chris Schwenk | Tech Jobber
-         Subscribers: 33.6K subscribers (33600)
-         Email listed: yes
-         Type: solo (United States)
-         Name: Silver Seeker
-         Subscribers: 267K subscribers (267000)
-         Email listed: yes
-         Type: solo (United States)
-         Instagram: https://www.instagram.com/coolstax/
-         Name: Kate Hayes
-         Subscribers: 369K subscribers (369000)
-         Email listed: yes
-         Type: solo (United States)
-         Instagram: https://instagram.com/katehayes.co
-         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
-         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
-   [w2] (4/11) https://www.youtube.com/@SniperKicks
-   [w3] (5/11) https://www.youtube.com/@RRBuildings
-         Uploads: weekly, last 1d ago, 11 in 90d (sampled 30)
-         Name: SniperKicks
-         Subscribers: 241K subscribers (241000)
-         Email listed: yes
-         Type: unclear (United States)
-         Instagram: https://www.instagram.com/sniperkicks32/
-   [w1] (6/11) https://www.youtube.com/@baldguymoneyofficial
-         Name: RR Buildings
-         Subscribers: 1.86M subscribers (1860000)
+   [w2] (1/24) https://www.youtube.com/@thelarkdavisshow
+   [w1] (2/24) https://www.youtube.com/@flyingwheels
+   [w3] (3/24) https://www.youtube.com/@romansharf
+         Name: Lark Davis
+         Subscribers: 633K subscribers (633000)
          Email listed: no
-         Type: unclear (United States)
-         Instagram: https://www.instagram.com/RR Buildings Custom Designed Framing Tool Belt Now Available
-https://rrbtools.com/products/rr-tool-belt
-Buy "The FrameRR" Today and let me know what you think 
-
-Custom Post Frame Builder.  I upload 1-2 videos a week and try to show as much of the process as possible.  I also love tools, and have a weekly toolsday video you should check out!
-
-All Business inquiries: 
-teamkylestumpenhorst@gersh.com
-
-RR Post Frame Building Plans available here
-https://rrplans.bigcartel.com/ 
-
-If you'd like to support me, below are various ways to help!
-
-Shirts:
-https://rrbuildings.bigcartel.com/
-
-Hats:
-https://rooster.beachandbarn.com/youtube
-
-patreon:
-www.patreon.com/rrbuildings
-
-Instagram:
-www.instagram.com/rrbuildings
-
-TRY A FREE Trial Pack of SASHCO Sealants
-https://www.sashco.com/rr-buildings/ 
-
-Save on ISOtunes Hearing protection
-https://shop.isotunes.com/rrb
-         Name: Bald Guy Money
-         Subscribers: 141K subscribers (141000)
+         Type: solo (United Arab Emirates)
+         Instagram: https://www.instagram.com/larkdavisofficial
+         Name: Roman Sharf
+         Subscribers: 511K subscribers (511000)
          Email listed: yes
-         Type: unclear (United Arab Emirates)
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/romansharf/?utm_source=YouTube&utm_medium=About_Page&utm_campaign=Links
          Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
-   [w2] (7/11) https://www.youtube.com/@StephentheInvestor
-         Uploads: weekly, last 4d ago, 22 in 90d (sampled 30)
-         Uploads: weekly, last 2d ago, 16 in 90d (sampled 30)
-   [w3] (8/11) https://www.youtube.com/@redasthecolor
-         Name: StephentheInvestor
-         Subscribers: 146K subscribers (146000)
+   [w2] (4/24) https://www.youtube.com/@scottdsteele
+         Uploads: weekly, last 4d ago, 14 in 90d (sampled 30)
+         Name: Flying Wheels
+         Subscribers: 539K subscribers (539000)
          Email listed: yes
          Type: solo (United States)
-         Instagram: https://www.instagram.com/stephengmamula/
-   [w1] (9/11) https://www.youtube.com/@HomeServiceMillionaire
-         Uploads: weekly, last 6d ago, 13 in 90d (sampled 30)
-   [w2] (10/11) https://www.youtube.com/@JackofHaulTrades
-         Name: redasthecolor
-         Subscribers: 25.1K subscribers (25100)
+         Instagram: https://www.instagram.com/Flying_Wheels_
+   [w3] (5/24) https://www.youtube.com/@jakegordoncrypto
+         Name: Scott Steele - Living in Utah
+         Subscribers: 102K subscribers (102000)
          Email listed: yes
          Type: solo (United States)
-         Instagram: https://www.instagram.com/redasthecolor/
-         Name: Home Service Millionaire
-         Subscribers: 19.8K subscribers (19800)
+         Instagram: https://www.instagram.com/scottdsteele/
+         Name: Jake Gordon Crypto
+         Subscribers: 92.2K subscribers (92200)
          Email listed: yes
-         Type: solo (United States)
-         Name: Jack of Haul Trades
-         Subscribers: 71.8K subscribers (71800)
-         Email listed: no
-         Type: solo (United States)
-         Instagram: https://www.instagram.com/topala_industries?igsh=MWJqcGg2eXQ5ZjRrcQ==
-         Uploads: weekly, last 2d ago, 12 in 90d (sampled 30)
-         Skool: https://www.skool.com/carlab/about
+         Type: unclear (United Kingdom)
+         Uploads: weekly, last 1d ago, 24 in 90d (sampled 30)
+   [w1] (6/24) https://www.youtube.com/@thatbackyardpropertypodcast
+         Uploads: weekly, last 1d ago, 28 in 90d (sampled 30)
          Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
-         Skool: https://www.skool.com/boardroom/about
-   [w3] (11/11) https://www.youtube.com/@ReliableHVACR
-         Uploads: weekly, last 12d ago, 10 in 90d (sampled 30)
-         Skool community: Home Service Boardroom - 65 members
-         Name: Adrian Garcia
-         Subscribers: 30.8K subscribers (30800)
+         Skool: https://www.skool.com/10kcryptoincome/about
+   [w2] (7/24) https://www.youtube.com/@thenewhomeexpertslasvegas
+         Skool community: 10k Crypto Income - 107 members
+         Name: That Backyard Property Podcast
+         Subscribers: 23K subscribers (23000)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/mortgageswmichael
+   [w3] (8/24) https://www.youtube.com/@cardboardprofit
+         Name: Living In Las Vegas With Jennifer Graff
+         Subscribers: 20.5K subscribers (20500)
          Email listed: yes
          Type: solo (United States)
-         Uploads: weekly, last 2d ago, 20 in 90d (sampled 30)
+         Instagram: https://www.instagram.com/newhomeexpertslv/
+         Name: Cardboard Profit
+         Subscribers: 13.8K subscribers (13800)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 1d ago, 28 in 90d (sampled 30)
+   [w1] (9/24) https://www.youtube.com/@ethanflynn
+         Uploads: no dated videos found
+   [w2] (10/24) https://www.youtube.com/@livinginlasvegaswithvickyandky
+         Uploads: weekly, last 4d ago, 10 in 90d (sampled 30)
+         Skool: https://www.skool.com/ignite/about
+         Skool community: Cardboard Profit Ignite - 404 members
+         Name: Ethan Flynn
+         Subscribers: 10.1K subscribers (10100)
+         Email listed: yes
+         Type: solo (United States)
+   [w3] (11/24) https://www.youtube.com/@mikeroland-therolandteam
+         Name: Living in Las Vegas With Vicky and Kyle
+         Subscribers: 6.7K subscribers (6700)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 3d ago, 13 in 90d (sampled 30)
+   [w1] (12/24) https://www.youtube.com/@moneywithmak
+         Uploads: weekly, last 4d ago, 11 in 90d (sampled 30)
+   [w2] (13/24) https://www.youtube.com/@SullysAdvice
+         Name: Mike Roland - The Roland Team
+         Subscribers: 1.54K subscribers (1540)
+         Email listed: no
+         Type: solo
+         Name: Money With Mak
+         Subscribers: 246K subscribers (246000)
+         Email listed: yes
+         Type: solo (United States)
+         Name: Sully's Advice
+         Subscribers: 207K subscribers (207000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/sullysadvice
+         Uploads: weekly, last 3d ago, 13 in 90d (sampled 23)
+   [w3] (14/24) https://www.youtube.com/@Romayroh
+         Uploads: biweekly, last 12d ago, 8 in 90d (sampled 30)
+         Uploads: biweekly, last 1d ago, 8 in 90d (sampled 30)
+         Skool: https://www.skool.com/sullysacademy/about
+   [w1] (15/24) https://www.youtube.com/@EverythingDSK
+         Name: Romayroh
+         Subscribers: 188K subscribers (188000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/romayroh/
+         Skool community: Sully's Academy Trading School - 81 members
+   [w2] (16/24) https://www.youtube.com/@BryanInvest
+         Name: Everything DSK
+         Subscribers: 132K subscribers (132000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/dnald14/
+         Uploads: biweekly, last 7d ago, 8 in 90d (sampled 30)
+         Skool: https://www.skool.com/views-for-income-7713/about
+         Name: Bryan Invest
+         Subscribers: 109K subscribers (109000)
+         Email listed: no
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/bryaninvest?igsh=MWYwYmV2aWxzeWpxbQ==&utm_source=qr
+         Skool community: Faceless YouTube HQ - 2.4k members
+   [w3] (17/24) https://www.youtube.com/@ChrisHeckman
+         Uploads: biweekly, last 28d ago, 8 in 90d (sampled 30)
+   [w1] (18/24) https://www.youtube.com/@Glowithgia
+         Uploads: biweekly, last 5d ago, 8 in 90d (sampled 30)
+         Name: Chris Heckman
+         Subscribers: 98.4K subscribers (98400)
+         Email listed: yes
+         Type: unclear (United States)
+   [w2] (19/24) https://www.youtube.com/@Shopify-Success
+         Name: Glowithgia
+         Subscribers: 92.5K subscribers (92500)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://instagram.com/glowithgia
+         Name: Shopify Success
+         Subscribers: 85.8K subscribers (85800)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/shopifysuccessguide
+         Uploads: biweekly, last 6d ago, 9 in 90d (sampled 30)
+         Skool: https://www.skool.com/heckman/about
+         Skool community: WeScale Free Course - 38.5k members
+   [w3] (20/24) https://www.youtube.com/@ZachGinnOfficial
+         Uploads: biweekly, last 14d ago, 8 in 90d (sampled 30)
+         Uploads: biweekly, last 1d ago, 8 in 90d (sampled 30)
+   [w2] (21/24) https://www.youtube.com/@jeredwilliams
+   [w1] (22/24) https://www.youtube.com/@JTJunkSolutions
+         Name: Zach Ginn
+         Subscribers: 73.7K subscribers (73700)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/flipwithzach
+         Name: Jered Williams
+         Subscribers: 38.5K subscribers (38500)
+         Email listed: no
+         Type: unclear (United States)
+         Name: JT Junk Solutions
+         Subscribers: 36.3K subscribers (36300)
+         Email listed: yes
+         Type: unclear
+         Uploads: weekly, last 4d ago, 30 in 90d (sampled 30)
+         Skool: https://www.skool.com/wholesaling/about
+         Uploads: weekly, last 1d ago, 13 in 90d (sampled 30)
+         Skool: https://www.skool.com/jts-inner-circle-7534/about
+         Uploads: weekly, last 5d ago, 24 in 90d (sampled 30)
+         Skool: https://www.skool.com/wealthyplumber/about
+         Skool community: Flip with Rick+ - 1.6k members
+   [w3] (23/24) https://www.youtube.com/@meres_mortgage
+         Skool community: WEALTHY PLUMBER - 792 members
+         Skool community: JT's Inner Circle - 330 members
+   [w2] (24/24) https://www.youtube.com/@erincokeratl
+         Name: Meres Mortgage
+         Subscribers: 11.6K subscribers (11600)
+         Email listed: no
+         Type: unclear
+         Name: Erin Coker - Atlanta Real Estate
+         Subscribers: 6.2K subscribers (6200)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/erincoker/
+         Uploads: weekly, last 1d ago, 14 in 90d (sampled 30)
+         Uploads: weekly, last 1d ago, 25 in 90d (sampled 30)
 
-Done. Wrote 11 rows to results.csv
+Done. Wrote 24 rows to results.csv
