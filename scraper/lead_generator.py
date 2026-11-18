@@ -532,7 +532,21 @@ NICHE_KEYWORDS = {
                  # Added for the solo wild camping pass. Matching is anchored
                  # at a word start, so 'tarp' cannot reach "Starpoint".
                  'tarp', 'bothy', 'canoe', 'backcountry', 'wild camp',
-                 'stealth camp', 'overnight in the woods'),
+                 'stealth camp', 'overnight in the woods',
+                 # Added for the camping and survival pass. Prepping titles
+                 # rarely say "survival" ("72 Hour Bug Out Bag", "Prepper
+                 # Pantry Tour" does, "Grid Down: Week One" does not), and
+                 # 'prepper' does not prefix-match 'prepping'. Cabin is only
+                 # taken as a build, so "cabin crew" and "cabin bag" stay
+                 # with travel.
+                 'prepping', 'preparedness', 'shtf', 'bug out', 'get home bag',
+                 'grid down', 'emergency food', 'food storage', 'freeze dried',
+                 'water filter', 'everyday carry', 'edc', 'ferro rod',
+                 'bow drill', 'fire starting', 'firestarter', 'catch and cook',
+                 'log cabin', 'cabin build', 'off grid cabin', 'homestead',
+                 'self reliance', 'living off the land', 'debris hut',
+                 'lean to', 'hot tent', 'rooftop tent', 'trekking',
+                 'ultralight', 'thru hiker', 'overlanding'),
 }
 
 

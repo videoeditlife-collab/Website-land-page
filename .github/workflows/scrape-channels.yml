@@ -87,6 +87,21 @@ jobs:
           # Josh's brief: target creator-operators who sell travel, which is the
           # inverse of the solo-only filter used on the previous lists.
           case "$SOURCE" in
+            survival)
+              # Camping and survival, half one: survival, bushcraft, prepping.
+              ARGS+=(--require-niche --niche-file niche_broad.txt)
+              ARGS+=(--search-file survival_terms.txt)
+              ARGS+=(--sort-by date --scrolls 4 --per-term 14 --limit 1400)
+              ARGS+=(--save-discovered discovered_survival.txt)
+              ;;
+            camping2)
+              # Camping and survival, half two: camping formats, overlanding,
+              # backpacking, canoe trips, off-grid builds.
+              ARGS+=(--require-niche --niche-file niche_broad.txt)
+              ARGS+=(--search-file camping2_terms.txt)
+              ARGS+=(--sort-by date --scrolls 4 --per-term 14 --limit 1400)
+              ARGS+=(--save-discovered discovered_camping2.txt)
+              ;;
             rich4)
               # Fourth money pass: city-by-city realtors and relocation
               # channels, money professionals, and the NZ/Irish/South

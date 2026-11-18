@@ -1,0 +1,92 @@
+# Camping and survival, half two: camping, overlanding, backpacking and
+# off-grid builds. Run in parallel with survival_terms.txt.
+#
+# These are worded to miss what outdoor_terms.txt and solocamp_terms.txt
+# already found: no generic "camping gear review" or "solo wild camp", which
+# those passes covered, but the formats and sub-niches they did not reach.
+
+# --- camping formats ---
+camping in a truck bed
+suv camping setup
+minivan camping
+camping in my car in the snow
+winter car camping
+hot tent camping in the snow
+camping in extreme cold
+camping in a blizzard
+camping at minus 30
+family camping trip vlog
+couples camping trip
+dog camping trip
+cozy cabin camping
+lean to shelter overnight
+camping with a wood stove
+tipi tent camping
+bell tent setup
+canvas tent camping
+rooftop tent review
+teardrop trailer camping
+camper trailer build
+truck camper tour
+diy camper build
+
+# --- overlanding and vehicle-based ---
+overlanding for beginners
+overland build walkaround
+overlanding trip
+jeep camping trip
+4runner camping build
+tacoma overland build
+land cruiser overland
+off road camping trip
+overland australia
+overlanding canada
+remote camping trip
+
+# --- backpacking and hiking ---
+ultralight backpacking gear list
+backpacking for beginners
+backpacking food ideas
+backpacking meal recipes
+backcountry cooking
+multi day backpacking trip
+hiking alone overnight
+winter backpacking
+thru hike gear list
+continental divide trail
+colorado trail
+john muir trail
+west highland way
+hiking new zealand great walks
+overland track tasmania
+
+# --- canoe, kayak and fishing camps ---
+canoe camping trip
+kayak camping trip
+boundary waters canoe trip
+algonquin canoe trip
+fishing camping trip
+ice fishing overnight
+remote fly in fishing trip
+
+# --- camp cooking and skills ---
+camp cooking recipes
+cast iron camp cooking
+dutch oven camping recipes
+camping meal prep
+how to start a campfire
+camping knots
+camping for beginners guide
+camping checklist
+
+# --- camping gear, specific ---
+best sleeping pad
+tent comparison test
+camping chair review
+camping lantern review
+portable power station camping
+camping cooler review
+backpacking tent review
+down jacket review hiking
+hiking boots review
+trekking poles review

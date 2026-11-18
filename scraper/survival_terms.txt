@@ -1,0 +1,94 @@
+# Camping and survival, half one: survival, bushcraft and prepping.
+#
+# The earlier outdoor and solo-camping passes scored 388 outdoor channels
+# into 35 High, and left 6 unsent. 50 new creators therefore needs roughly
+# 1,000 fresh channels, so this runs in parallel with camping2_terms.txt.
+#
+# Survival and prepping channels are worth weighting: they upload more often
+# than leisure campers (cadence is what sank most outdoor Mids), and they
+# sell - courses, field guides, their own gear lines, Patreon.
+
+# --- survival skills ---
+wilderness survival skills
+how to survive in the wild
+survival skills you need to know
+3 day survival challenge
+7 day survival challenge
+survival with only a knife
+lost in the woods what to do
+survival fishing
+survival trapping
+emergency shelter in the snow
+debris hut overnight
+survival water filter test
+how to find water in the wild
+navigation without a compass
+survival first aid
+cold weather survival skills
+desert survival skills
+jungle survival skills
+
+# --- bushcraft craft ---
+bushcraft camp build
+bushcraft overnight
+bushcraft shelter build
+building a log cabin alone
+long term bushcraft camp
+flint and steel fire
+ferro rod fire starting
+friction fire bow drill
+carving a spoon bushcraft
+tarp shelter setups
+natural cordage
+bushcraft knife review
+best axe for bushcraft
+woodcraft skills
+bushcraft gear loadout
+
+# --- prepping and preparedness ---
+prepping for beginners
+prepper pantry tour
+emergency food storage
+72 hour bug out bag
+get home bag
+bug out bag essentials
+shtf preparedness
+emergency preparedness tips
+grid down preparedness
+off grid power system
+water storage for emergencies
+long term food storage
+freeze dried food review
+mre taste test
+emergency radio review
+home defense preparedness
+urban survival tips
+power outage preparedness
+
+# --- survival gear ---
+survival gear review
+edc survival kit
+everyday carry knife
+fixed blade knife review
+survival kit build
+tactical gear review
+budget survival gear
+survival gear that actually works
+water filter review backpacking
+firestarter test
+
+# --- foraging and wild food ---
+foraging for beginners
+wild edible plants
+mushroom foraging
+catch and cook
+primitive cooking
+wild game cooking over fire
+
+# --- off-grid self reliance ---
+off grid living
+off grid cabin build
+building an off grid homestead
+self reliance skills
+living off the land
+homesteading skills
