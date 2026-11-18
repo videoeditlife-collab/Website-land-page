@@ -1,145 +1,211 @@
-Loaded 20 channels from results/country_probe.txt
+Loaded 30 channels from results/country_probe.txt
    Instagram state file not found: instagram_storage_state.json - Instagram scraping disabled
 Started chromium (headless)
 
-Scraping 20 channels with 3 workers
+Scraping 30 channels with 3 workers
 
-   [w1] (1/20) https://www.youtube.com/@josh_k_fay
-   [w2] (2/20) https://www.youtube.com/@jerryrominestocks
-   [w3] (3/20) https://www.youtube.com/@PassiveIncomeInvesting
-         Name: Passive Income Investing
-         Subscribers: 248K subscribers (248000)
+   [w1] (1/30) https://www.youtube.com/@AsianDadEnergy
+   [w3] (2/30) https://www.youtube.com/@realestatemindset
+   [w2] (3/30) https://www.youtube.com/@mikeynocode
+         Name: Asian Dad Energy
+         Subscribers: 160K subscribers (160000)
          Email listed: yes
-         Type: solo (Canada)
-         Instagram: https://www.instagram.com/passive_income_investing/
-         Name: Jerry Romine Stocks
-         Subscribers: 193K subscribers (193000)
+         Type: solo (United States)
+         Name: Mikey No Code
+         Subscribers: 179K subscribers (179000)
          Email listed: no
          Type: solo (United States)
-         Name: Josh K. Fay
-         Subscribers: 35.1K subscribers (35100)
-         Email listed: yes
-         Type: unclear (United Kingdom)
-         Uploads: weekly, last 2d ago, 30 in 90d (sampled 30)
-         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
-   [w3] (4/20) https://www.youtube.com/@Laraacosta
-         Uploads: weekly, last 5d ago, 30 in 90d (sampled 30)
-   [w1] (5/20) https://www.youtube.com/@itsmegheckman
-   [w2] (6/20) https://www.youtube.com/@DividendBull
-         Name: Lara Acosta
-         Subscribers: 56.3K subscribers (56300)
+         Name: Real Estate Mindset
+         Subscribers: not found
          Email listed: yes
          Type: unclear
-         Name: Meg Heckman
-         Subscribers: 92.3K subscribers (92300)
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Uploads: weekly, last 1d ago, 21 in 90d (sampled 30)
+   [w2] (4/30) https://www.youtube.com/@JavyVidana
+   [w1] (5/30) https://www.youtube.com/@RagonaSistersTv
+         Uploads: no dated videos found
+   [w3] (6/30) https://www.youtube.com/@Value-Investing
+         Name: Javier Vidana
+         Subscribers: 177K subscribers (177000)
          Email listed: yes
          Type: solo (United States)
-         Name: Dividend Bull
-         Subscribers: 212K subscribers (212000)
+         Instagram: https://www.instagram.com/arizonajavy/
+         Name: Ragona Sisters: Canadian Real Estate & Market Talk
+         Subscribers: 39.9K subscribers (39900)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/ragonasistersteam/
+         Name: Value Investing with Sven Carlin, Ph.D.
+         Subscribers: not found
+         Email listed: yes
+         Type: unclear
+         Uploads: weekly, last 8d ago, 10 in 90d (sampled 30)
+         Uploads: no dated videos found
+   [w2] (7/30) https://www.youtube.com/@HappyonMonday
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+   [w3] (8/30) https://www.youtube.com/@JeffSetLife
+   [w1] (9/30) https://www.youtube.com/@AnthonyVenture
+         Name: Happy on Monday
+         Subscribers: 28.7K subscribers (28700)
          Email listed: yes
          Type: solo (United States)
-         Instagram: https://www.instagram.com/dividend_bull/
-         Uploads: weekly, last 5d ago, 10 in 90d (sampled 30)
-         Uploads: weekly, last 4d ago, 12 in 90d (sampled 30)
-         Skool: https://www.skool.com/heckman/about
-   [w3] (7/20) https://www.youtube.com/@tanner.chidester
-         Uploads: weekly, last 1d ago, 14 in 90d (sampled 30)
-   [w2] (8/20) https://www.youtube.com/@ArriellJohnson
-         Skool community: WeScale Free Course - 38.4k members
-         Name: Tanner Chidester
-         Subscribers: 45.9K subscribers (45900)
+         Name: JeffSetLife
+         Subscribers: not found
          Email listed: yes
-         Type: solo (United States)
-         Instagram: https://www.instagram.com/tanner.chidester
-   [w1] (9/20) https://www.youtube.com/@CTtheDisrupter
-         Name: Arriell Johnson
-         Subscribers: 8.27K subscribers (8270)
-         Email listed: yes
-         Type: solo
-         Name: Professor Charley T
-         Subscribers: 68.6K subscribers (68600)
+         Type: unclear
+         Name: Anthony Venture
+         Subscribers: 16K subscribers (16000)
          Email listed: yes
          Type: unclear (United States)
-         Uploads: weekly, last 3d ago, 22 in 90d (sampled 30)
-   [w3] (10/20) https://www.youtube.com/@maxwellcopy
-         Uploads: weekly, last 1d ago, 26 in 90d (sampled 30)
-         Uploads: weekly, last 1d ago, 10 in 90d (sampled 30)
-   [w2] (11/20) https://www.youtube.com/@leadgenjay
-   [w1] (12/20) https://www.youtube.com/@ecommemily
-         Name: Max Sturtevant
-         Subscribers: 35.4K subscribers (35400)
-         Email listed: no
-         Type: unclear
-         Name: Lead Gen Jay
-         Subscribers: 91.6K subscribers (91600)
-         Email listed: yes
-         Type: business (United States)
-         Instagram: https://Instagram.com/leadgen
-         Name: Emily Odio-Sutton
-         Subscribers: 15.6K subscribers (15600)
-         Email listed: yes
-         Type: solo (United States)
-         Instagram: https://instagram.com/ecommemily
-         Uploads: weekly, last 1d ago, 19 in 90d (sampled 30)
-         Skool: https://www.skool.com/email-marketerz/about
-         Uploads: weekly, last 14d ago, 15 in 90d (sampled 30)
-   [w2] (13/20) https://www.youtube.com/@AccordingToNicole
-         Uploads: weekly, last 4d ago, 13 in 90d (sampled 30)
-         Skool community: Email Marketing Mastery - 425 members
-   [w1] (14/20) https://www.youtube.com/@JdubTrades
-   [w3] (15/20) https://www.youtube.com/@miarosemcgrath
-         Name: According To Nicole
-         Subscribers: 259K subscribers (259000)
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Uploads: no dated videos found
+   [w2] (10/30) https://www.youtube.com/@TomStorey
+   [w3] (11/30) https://www.youtube.com/@Income_Architect
+         Uploads: weekly, last 1d ago, 18 in 90d (sampled 30)
+         Skool: https://www.skool.com/anthonyventure/about
+         Name: Tom Storey
+         Subscribers: 23.9K subscribers (23900)
          Email listed: yes
          Type: solo (Canada)
-         Instagram: https://www.instagram.com/according_to_nicole
-         Name: Jdub Trades
-         Subscribers: 264K subscribers (264000)
-         Email listed: no
+         Instagram: https://www.instagram.com/thestoreyteam
+         Skool community: The Points & Miles Experience - 197 members
+   [w1] (12/30) https://www.youtube.com/@australianinvestmenteducation
+         Name: Income Architect
+         Subscribers: not found
+         Email listed: yes
          Type: solo
-         Instagram: https://www.instagram.com/jdub_trades/
-         Name: Mia McGrath
-         Subscribers: 103K subscribers (103000)
-         Email listed: no
-         Type: unclear
-         Uploads: weekly, last 6d ago, 12 in 90d (sampled 30)
-   [w2] (16/20) https://www.youtube.com/@LeviCrypto
-         Uploads: weekly, last 6d ago, 12 in 90d (sampled 30)
-         Uploads: weekly, last 13d ago, 11 in 90d (sampled 30)
-   [w3] (17/20) https://www.youtube.com/@PersonalFinancewithLeila
-   [w1] (18/20) https://www.youtube.com/@SunnyLenarduzzi
-         Name: Levi
-         Subscribers: 232K subscribers (232000)
-         Email listed: yes
-         Type: solo (United States)
-         Instagram: https://www.instagram.com/levicryptoinsta/
-         Name: Personal Finance with Leila - Debt Over It
-         Subscribers: 68.6K subscribers (68600)
-         Email listed: yes
-         Type: solo (United States)
-         Name: Sunny Lenarduzzi
-         Subscribers: 801K subscribers (801000)
-         Email listed: yes
-         Type: solo (Canada)
-         Instagram: http://www.instagram.com/sunnylenarduzzi
-         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
-         Skool: https://www.skool.com/cryptoskool/about
-         Uploads: weekly, last 2d ago, 22 in 90d (sampled 30)
-         Skool: https://www.skool.com/budget-build-1523/about
-         Skool community: Crypto Skool: Learn Trading - 27 members
-         Skool community: Budget & Build - 9 members
-         Uploads: weekly, last 4d ago, 13 in 90d (sampled 30)
-   [w2] (19/20) https://www.youtube.com/@SmartMoneyTactics
-   [w3] (20/20) https://www.youtube.com/@ShopStyleCycle
-         Name: Smart Money Tactics
-         Subscribers: 563K subscribers (563000)
+         Uploads: weekly, last 1d ago, 24 in 90d (sampled 30)
+         Name: Australian Investment Education
+         Subscribers: 42.2K subscribers (42200)
          Email listed: yes
          Type: solo (Australia)
-         Name: Alexa | Shop Style Cycle
-         Subscribers: 18.9K subscribers (18900)
+         Instagram: https://www.instagram.com/moneyandinvesting.com.au/
+   [w2] (13/30) https://www.youtube.com/@noahhauptads
+         Uploads: no dated videos found
+   [w3] (14/30) https://www.youtube.com/@JenniferBeeston
+         Name: Noah Haupt
+         Subscribers: 10.5K subscribers (10500)
+         Email listed: no
+         Type: unclear (United States)
+         Instagram: https://www.instagram.com/noah.haupt
+         Uploads: weekly, last 2d ago, 12 in 90d (sampled 30)
+         Name: Jennifer Beeston
+         Subscribers: not found
          Email listed: yes
          Type: unclear
-         Uploads: weekly, last 3d ago, 10 in 90d (sampled 30)
-         Uploads: weekly, last 1d ago, 10 in 90d (sampled 23)
+         Instagram: https://www.instagram.com/jenbeeston
+   [w1] (15/30) https://www.youtube.com/@TheVancouverLife
+         Uploads: weekly, last 1d ago, 24 in 90d (sampled 30)
+   [w2] (16/30) https://www.youtube.com/@FieldsofProfit
+         Uploads: no dated videos found
+         Name: Living In Vancouver - Vancouver Life Real Estate
+         Subscribers: 8.43K subscribers (8430)
+         Email listed: no
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/thevancouverlife
+   [w3] (17/30) https://www.youtube.com/@NickTheriot
+         Name: Fields of Profit
+         Subscribers: 117K subscribers (117000)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 4d ago, 13 in 90d (sampled 30)
+   [w1] (18/30) https://www.youtube.com/@thebrokenwallet
+         Name: Nick Theriot
+         Subscribers: not found
+         Email listed: yes
+         Type: unclear
+         Uploads: weekly, last 1d ago, 23 in 90d (sampled 30)
+   [w2] (19/30) https://www.youtube.com/@TKKader
+         Name: THE BROKEN WALLET
+         Subscribers: 84.9K subscribers (84900)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/the_brokenwallet/
+         Uploads: no dated videos found
+   [w3] (20/30) https://www.youtube.com/@SocialSymone
+         Name: TK Kader
+         Subscribers: 92K subscribers (92000)
+         Email listed: yes
+         Type: business (United States)
+         Instagram: http://instagram.com/tkkader
+         Uploads: weekly, last 3d ago, 12 in 90d (sampled 30)
+         Name: Social Symone ♡
+         Subscribers: not found
+         Email listed: yes
+         Type: solo
+   [w1] (21/30) https://www.youtube.com/@LiamOttley
+         Uploads: weekly, last 2d ago, 13 in 90d (sampled 30)
+         Uploads: no dated videos found
+   [w2] (22/30) https://www.youtube.com/@AI-GPTWorkshop
+         Name: Liam Ottley
+         Subscribers: 870K subscribers (870000)
+         Email listed: yes
+         Type: solo (New Zealand)
+         Instagram: https://www.instagram.com/liamottley
+   [w3] (23/30) https://www.youtube.com/@TheCreditShifu
+         Name: Zubair Trabzada | AI Workshop
+         Subscribers: 179K subscribers (179000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/zubair_trabzada
+         Name: Ben Hedges
+         Subscribers: not found
+         Email listed: yes
+         Type: solo
+         Uploads: weekly, last 5d ago, 11 in 90d (sampled 30)
+         Skool: https://www.skool.com/learn-ai/about
+         Skool community: AI Automation Agency Hub - 337.8k members
+   [w1] (24/30) https://www.youtube.com/@MikeAndes
+         Uploads: no dated videos found
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Skool: https://www.skool.com/aiworkshop/about
+   [w3] (25/30) https://www.youtube.com/@makefirstmillion-j1
+         Name: Mike Andes
+         Subscribers: 249K subscribers (249000)
+         Email listed: yes
+         Type: unclear (United States)
+         Skool community: AI Workshop - 1.4k members
+   [w2] (26/30) https://www.youtube.com/@LearntoInvest
+         Name: Make First Million - Badar Munir
+         Subscribers: not found
+         Email listed: yes
+         Type: solo
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Skool: https://www.skool.com/boardroom/about
+         Uploads: no dated videos found
+         Name: Learn to Invest - Investors Grow
+         Subscribers: 292K subscribers (292000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/investorsgrow/
+         Skool community: Home Service Boardroom - 65 members
+   [w3] (27/30) https://www.youtube.com/@pathofadoctor
+   [w1] (28/30) https://www.youtube.com/@Jodywithawhy
+         Uploads: weekly, last 0d ago, 15 in 90d (sampled 30)
+         Name: JodywithaWhy
+         Subscribers: 142K subscribers (142000)
+         Email listed: yes
+         Type: unclear (United States)
+   [w2] (29/30) https://www.youtube.com/@jonflynn
+         Name: Path Of A Doctor
+         Subscribers: not found
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/pathofadoctor/
+         Uploads: weekly, last 1d ago, 13 in 90d (sampled 30)
+         Uploads: no dated videos found
+         Skool: https://www.skool.com/path-of-a-doctor-community-2383/about
+   [w1] (30/30) https://www.youtube.com/@DividendStockpile
+         Name: Jon Flynn Real Estate Stats
+         Subscribers: 36.6K subscribers (36600)
+         Email listed: yes
+         Type: solo (Canada)
+         Skool community: Path Of A Doctor-Community - 173 members
+         Name: Dividend Stockpile
+         Subscribers: 11.6K subscribers (11600)
+         Email listed: yes
+         Type: solo (United States)
+         Uploads: weekly, last 1d ago, 16 in 90d (sampled 30)
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
 
-Done. Wrote 20 rows to results.csv
+Done. Wrote 30 rows to results.csv
