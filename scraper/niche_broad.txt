@@ -301,3 +301,33 @@ forex
 prop firm
 ugc
 investment banking
+
+# --- money niches, fourth pass: local realtors, money pros, NZ/IE/ZA ---
+housing market
+homes for sale
+home buyer
+home buying
+relocat
+moving to
+bitcoin
+kiwisaver
+loan officer
+lender
+broker
+financial coach
+money coach
+business coach
+sales coach
+restaurant owner
+gym owner
+dental practice
+dentist
+med spa
+dealership
+sports card
+rolex
+pension
+tax free savings
+shares
+cohost
+property management

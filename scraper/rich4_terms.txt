@@ -1,0 +1,87 @@
+# Fourth money pass, started while the third was still scoring because the
+# second and third together look like landing short of the 50 asked for:
+# the second turned 603 scored channels into 25 usable creators once the
+# companies and off-niche channels were taken out.
+#
+# The strongest vein the second pass found was local real estate: Toronto
+# and Vancouver agents posting weekly market updates, each with a booking
+# link. City-specific market and relocation videos ("living in Austin pros
+# and cons") are almost all made by one agent who films weekly, earns well
+# per client and treats YouTube as their sales pipeline - exactly the
+# client an editor wants. So most of this pass is that, city by city, across
+# the English-speaking countries.
+
+# --- local real estate, US ---
+austin real estate market update
+phoenix housing market update
+dallas real estate market
+tampa real estate market update
+orlando real estate agent
+nashville real estate market
+charlotte real estate market
+atlanta housing market update
+denver real estate market
+las vegas real estate market
+san diego real estate market
+raleigh real estate agent
+boise real estate market
+salt lake city real estate
+
+# --- relocation channels, run by agents ---
+pros and cons of living in florida
+moving to texas what to know
+living in arizona pros and cons
+moving to north carolina
+living in tennessee pros and cons
+best suburbs to live in
+
+# --- local real estate, Canada, UK, Australia, NZ, Ireland ---
+calgary real estate market update
+ottawa real estate market
+edmonton real estate
+london property market update
+manchester property investment
+sydney property market update
+melbourne property market
+brisbane property market
+perth property market
+auckland property market
+dublin property market
+
+# --- English-speaking money systems not yet covered ---
+kiwisaver explained
+new zealand personal finance
+irish personal finance tips
+ireland investing for beginners
+south africa tax free savings account
+jse shares for beginners
+uk side hustles that work
+australian personal finance tips
+
+# --- money professionals who sell a service ---
+loan officer tips
+mortgage loan officer marketing
+insurance agent tips
+life insurance agent income
+financial coach advice
+money coach for women
+business coach advice
+sales coach training
+real estate coach for agents
+
+# --- crypto and alternative assets ---
+bitcoin investing strategy
+crypto portfolio update
+watch investing rolex market
+classic car investing
+sports card investing business
+
+# --- owner-operators not yet covered ---
+gym owner business
+restaurant owner reality
+coffee shop business owner
+dental practice owner advice
+med spa business owner
+car dealership owner
+property management business
+airbnb cohosting business

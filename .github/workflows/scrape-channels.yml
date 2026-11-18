@@ -87,6 +87,15 @@ jobs:
           # Josh's brief: target creator-operators who sell travel, which is the
           # inverse of the solo-only filter used on the previous lists.
           case "$SOURCE" in
+            rich4)
+              # Fourth money pass: city-by-city realtors and relocation
+              # channels, money professionals, and the NZ/Irish/South
+              # African money systems the earlier passes did not reach.
+              ARGS+=(--require-niche --niche-file niche_broad.txt)
+              ARGS+=(--search-file rich4_terms.txt)
+              ARGS+=(--sort-by date --scrolls 4 --per-term 12 --limit 1200)
+              ARGS+=(--save-discovered discovered_rich4.txt)
+              ;;
             rich3)
               ARGS+=(--require-niche --niche-file niche_broad.txt)
               ARGS+=(--search-file rich3_terms.txt)
