@@ -1,154 +1,276 @@
-Loaded 22 channels from results/country_probe.txt
+Loaded 38 channels from results/country_probe.txt
    Instagram state file not found: instagram_storage_state.json - Instagram scraping disabled
 Started chromium (headless)
 
-Scraping 22 channels with 3 workers
+Scraping 38 channels with 3 workers
 
-   [w1] (1/22) https://www.youtube.com/@tugtrashoutdoors
-   [w2] (2/22) https://www.youtube.com/@tinycabinlife
-   [w3] (3/22) https://www.youtube.com/@nextmeridianexpedition
-         Name: Tiny Cabin Life
-         Subscribers: 371K subscribers (371000)
+   [w1] (1/38) https://www.youtube.com/@wranglerstar
+   [w2] (2/38) https://www.youtube.com/@steve1989mre
+   [w3] (3/38) https://www.youtube.com/@donnydustspaleotracks
+         Name: Steve1989MREInfo
+         Subscribers: 2.26M subscribers (2260000)
          Email listed: yes
          Type: solo (United States)
-         Instagram: https://www.instagram.com/jackfsteward
-         Name: Tug Trash Outdoors
-         Subscribers: 217K subscribers (217000)
+         Name: Donny Dust’s Paleo Tracks
+         Subscribers: 1.35M subscribers (1350000)
+         Email listed: yes
+         Type: business (United States)
+         Instagram: https://www.instagram.com/donnydust/
+         Name: Wranglerstar
+         Subscribers: 2.61M subscribers (2610000)
          Email listed: yes
          Type: solo (United States)
-         Name: Nick and Mathilde | Next Meridian Expedition
+         Uploads: weekly, last 14d ago, 12 in 90d (sampled 30)
+   [w2] (4/38) https://www.youtube.com/@survivallilly
+         Uploads: weekly, last 4d ago, 11 in 90d (sampled 30)
+   [w3] (5/38) https://www.youtube.com/@sensibleprepper
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+   [w1] (6/38) https://www.youtube.com/@altordo
+         Name: Survival Lilly
+         Subscribers: 1.17M subscribers (1170000)
+         Email listed: yes
+         Type: solo (Austria)
+         Instagram: https://www.instagram.com/This is a playlist of the category "Survival Food". Here you will learn what plants and animals you can eat in the wild. I get asked by a lot of people what plants are edible and which ones are not. Basically all plants that are not poisonous are edible. However there are only a few plants which have enough nutritional value to pay off being eaten and/or processed. One general rule of survival foods is, that they have to give you more energy than you spend on collecting and processing them.
+
+Lilly´s Amazon Store  ► http://astore.amazon.com/survlill-20
+Website ► www.survivallilly.at
+Facebook ► https://www.facebook.com/pages/Survival-Lilly/810953952332026
+Twitter ► https://twitter.com/SurvivalLilly
+Instagram ► https://instagram.com/survival_lilly/
+Spreadshirt ► https://shop.spreadshirt.com/SurvivalLilly
+
+If you liked this playlist please share it with your friends on social media.
+
+♥ Feel free to subscribe to my channel. ♥
+
+Hello my name is Lilly and I am making videos about primitive living skills, survival, bushcraft, camping gear and prepping. I consider myself being a modern hunter-gatherer who wants to live as close as possible with mother nature and right now I am in the process of learning how to live off the land and thrive in the wilderness. Thanks for watching ~ Survival Lilly
+         Name: SensiblePrepper
+         Subscribers: 896K subscribers (896000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://instagram.com
+         Name: Alt Ordo
+         Subscribers: 564K subscribers (564000)
+         Email listed: yes
+         Type: solo (United States)
+         Uploads: weekly, last 4d ago, 17 in 90d (sampled 30)
+   [w2] (7/38) https://www.youtube.com/@holdfastalaska
+         Uploads: weekly, last 14d ago, 11 in 90d (sampled 30)
+   [w3] (8/38) https://www.youtube.com/@theprovidentprepper
+         Uploads: weekly, last 1d ago, 11 in 90d (sampled 30)
+   [w1] (9/38) https://www.youtube.com/@wildrvlife
+         Name: Holdfast Alaska
+         Subscribers: 302K subscribers (302000)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: The Provident Prepper
+         Subscribers: 300K subscribers (300000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/theprovidentprepper/
+         Name: Wild RV Life
+         Subscribers: 214K subscribers (214000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/wildrvlife/
+         Uploads: weekly, last 3d ago, 13 in 90d (sampled 30)
+   [w2] (10/38) https://www.youtube.com/@thisoffgridlife
+         Uploads: weekly, last 3d ago, 14 in 90d (sampled 30)
+   [w3] (11/38) https://www.youtube.com/@bushcraft__karina
+         Uploads: weekly, last 2d ago, 13 in 90d (sampled 30)
+   [w1] (12/38) https://www.youtube.com/@frugaloffgrid
+         Name: This Off Grid Life
+         Subscribers: 197K subscribers (197000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/this_off_grid_life/
+         Name: KARINA WILD. Bushcraft and Survival
+         Subscribers: 167K subscribers (167000)
+         Email listed: no
+         Type: solo (Norway)
+         Instagram: https://www.instagram.com/karinawildoutdoors/
+         Name: Frugal Off Grid
+         Subscribers: 154K subscribers (154000)
+         Email listed: no
+         Type: unclear (United States)
+         Uploads: weekly, last 1d ago, 23 in 90d (sampled 30)
+   [w2] (13/38) https://www.youtube.com/@junkyardfox
+         Uploads: weekly, last 3d ago, 10 in 90d (sampled 30)
+   [w3] (14/38) https://www.youtube.com/@wickedprepared
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+   [w1] (15/38) https://www.youtube.com/@mushroomwonderland1
+         Name: Junkyard Fox Outdoor Adventures
          Subscribers: 144K subscribers (144000)
          Email listed: yes
-         Type: solo (Estonia)
-         Instagram: https://www.instagram.com/nextmeridian.expedition/
-         Uploads: weekly, last 1d ago, 14 in 90d (sampled 30)
-         Uploads: weekly, last 3d ago, 17 in 90d (sampled 30)
-   [w2] (4/22) https://www.youtube.com/@kbdproductionstv
-   [w3] (5/22) https://www.youtube.com/@jennalexisko
-         Uploads: weekly, last 2d ago, 17 in 90d (sampled 30)
-   [w1] (6/22) https://www.youtube.com/@efrt
-         Name: KBDProductionsTV
-         Subscribers: 671K subscribers (671000)
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/_junkyardfox/
+         Name: Wicked Prepared
+         Subscribers: 140K subscribers (140000)
          Email listed: yes
-         Type: solo (Canada)
-         Instagram: http://instagram.com/kendomik
-         Name: Jenna Alexis
-         Subscribers: 258K subscribers (258000)
+         Type: unclear (United States)
+         Name: Mushroom Wonderland
+         Subscribers: 118K subscribers (118000)
          Email listed: no
-         Type: solo
-         Instagram: https://www.instagram.com/jennakoenig?igshid=ODA1NTc5OTg5Nw==&utm_source=qr
-         Name: Epic Family Road Trip
-         Subscribers: 291K subscribers (291000)
-         Email listed: yes
-         Type: solo (Canada)
-         Instagram: https://www.instagram.com/epicfamilyroadtrip/
-         Uploads: weekly, last 10d ago, 12 in 90d (sampled 30)
-   [w3] (7/22) https://www.youtube.com/@livinglargecamping
-         Uploads: weekly, last 5d ago, 13 in 90d (sampled 30)
-         Uploads: weekly, last 3d ago, 13 in 90d (sampled 30)
-   [w2] (8/22) https://www.youtube.com/@lastlineofdefense
-   [w1] (9/22) https://www.youtube.com/@nowhereboundadventures
-         Name: Living Large Camping
-         Subscribers: 45.6K subscribers (45600)
-         Email listed: yes
-         Type: solo
-         Instagram: https://www.instagram.com/ameliaandconnor
-         Name: Mike Pfeiffer - LLOD
-         Subscribers: 443K subscribers (443000)
-         Email listed: yes
          Type: solo (United States)
-         Instagram: http://www.instagram.com/lastlineofdefense
-         Name: Nowhere Bound
-         Subscribers: 46.1K subscribers (46100)
-         Email listed: yes
-         Type: solo (United States)
-         Instagram: https://www.instagram.com/nowhereboundadventures
          Uploads: weekly, last 6d ago, 10 in 90d (sampled 30)
-   [w3] (10/22) https://www.youtube.com/@hikingdancer
-         Uploads: weekly, last 1d ago, 17 in 90d (sampled 30)
-   [w2] (11/22) https://www.youtube.com/@primaloutdoors
-         Uploads: weekly, last 1d ago, 14 in 90d (sampled 30)
-         Name: HikingDancer
-         Subscribers: 20K subscribers (20000)
+   [w2] (16/38) https://www.youtube.com/@bjornoutdoors
+         Uploads: weekly, last 3d ago, 25 in 90d (sampled 30)
+   [w3] (17/38) https://www.youtube.com/@setapartgardens
+         Uploads: weekly, last 1d ago, 25 in 90d (sampled 30)
+   [w1] (18/38) https://www.youtube.com/@ukurbanprepper
+         Name: Bjorn Outdoors
+         Subscribers: 62.2K subscribers (62200)
+         Email listed: yes
+         Type: solo (Norway)
+         Name: Set Apart Gardens
+         Subscribers: 51.9K subscribers (51900)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/setapartgardens_/
+         Name: UK Urban Prepper
+         Subscribers: 22.5K subscribers (22500)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Uploads: weekly, last 2d ago, 10 in 90d (sampled 30)
+   [w2] (19/38) https://www.youtube.com/@guerrilla_tactical
+         Uploads: weekly, last 14d ago, 25 in 90d (sampled 30)
+         Skool: https://www.skool.com/set-apart-tribe-8066/about
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+   [w1] (20/38) https://www.youtube.com/@rootstofruits7
+         Name: Guerrilla Tactical
+         Subscribers: 21.1K subscribers (21100)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/guerrilla_tactical
+         Skool community: Set Apart Tribe Community - 44 members
+   [w3] (21/38) https://www.youtube.com/@theaveragewoodsman6002
+         Name: Roots To Fruits Off-Grid Homestead
+         Subscribers: 16.9K subscribers (16900)
+         Email listed: yes
+         Type: solo (Portugal)
+         Instagram: https://www.instagram.com/roots_tofruits
+         Uploads: weekly, last 0d ago, 17 in 90d (sampled 30)
+         Name: The Average Woodsman
+         Subscribers: 14.2K subscribers (14200)
          Email listed: yes
          Type: unclear
-   [w1] (12/22) https://www.youtube.com/@lostinwonderr
-         Name: Primal Outdoors - Camping and Overlanding
-         Subscribers: 240K subscribers (240000)
+   [w2] (22/38) https://www.youtube.com/@moesargi
+         Uploads: weekly, last 3d ago, 10 in 90d (sampled 30)
+   [w1] (23/38) https://www.youtube.com/@therealjoerobinet
+         Name: Moe Sargi
+         Subscribers: 2.85M subscribers (2850000)
          Email listed: yes
          Type: solo (United States)
-         Instagram: https://www.instagram.com/primal_outdoors/
-         Name: Lost in Wonder
-         Subscribers: 34.1K subscribers (34100)
+         Instagram: http://www.instagram.com/moesargi
+         Uploads: weekly, last 1d ago, 27 in 90d (sampled 30)
+   [w3] (24/38) https://www.youtube.com/@BestDamnEDC
+         Name: Joe Robinet
+         Subscribers: 1.53M subscribers (1530000)
          Email listed: yes
          Type: solo (Canada)
-         Instagram: https://www.instagram.com/lost_in_wonder_adventures/
-         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
-   [w3] (13/22) https://www.youtube.com/@coddiwompleoverland
-         Uploads: weekly, last 2d ago, 17 in 90d (sampled 30)
-         Uploads: weekly, last 2d ago, 12 in 90d (sampled 30)
-   [w1] (14/22) https://www.youtube.com/@truckhouselife
-   [w2] (15/22) https://www.youtube.com/@beccayaseen
-         Name: Coddiwomple Overland
-         Subscribers: 39.7K subscribers (39700)
+         Instagram: http://instagram.com/joerobinetbushcraft/
+         Uploads: biweekly, last 10d ago, 9 in 90d (sampled 30)
+         Name: Best Damn EDC [Taylor Martin]
+         Subscribers: 456K subscribers (456000)
          Email listed: yes
-         Type: unclear (United States)
-         Name: Truck House Life
-         Subscribers: 794K subscribers (794000)
+         Type: solo (United States)
+         Instagram: http://instagram.com/bestdamnedc
+   [w2] (25/38) https://www.youtube.com/@explorebound
+         Uploads: biweekly, last 4d ago, 9 in 90d (sampled 30)
+   [w1] (26/38) https://www.youtube.com/@wanderoffroad
+         Name: Explore Bound
+         Subscribers: 48.2K subscribers (48200)
          Email listed: yes
-         Type: unclear (United States)
-         Name: Becca Y.
-         Subscribers: 211K subscribers (211000)
+         Type: unclear (Australia)
+         Uploads: biweekly, last 2d ago, 8 in 90d (sampled 30)
+   [w3] (27/38) https://www.youtube.com/@whereswiseman
+         Name: WANDER OFF-ROAD
+         Subscribers: 32.7K subscribers (32700)
          Email listed: yes
-         Type: unclear (United States)
-         Instagram: https://www.instagram.com/skyethegoldenpuppy?igshid=YzVkODRmOTdmMw==
-         Uploads: weekly, last 3d ago, 12 in 90d (sampled 30)
-   [w3] (16/22) https://www.youtube.com/@tabiieasmrcamp
-         Uploads: weekly, last 5d ago, 13 in 90d (sampled 30)
-         Uploads: weekly, last 2d ago, 14 in 90d (sampled 30)
-   [w1] (17/22) https://www.youtube.com/@campinwithchampion
-   [w2] (18/22) https://www.youtube.com/@newjerseyoutdooradventures
-         Name: tabiie ASMR CAMP
-         Subscribers: 495K subscribers (495000)
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/wander_offroad?igsh=NTc4MTIwNjQ2YQ==&utm_source=qr
+         Uploads: biweekly, last 3d ago, 9 in 90d (sampled 30)
+         Name: Where's Wiseman
+         Subscribers: 30.8K subscribers (30800)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/teardroppnw/
+   [w2] (28/38) https://www.youtube.com/@jeremysiers
+         Uploads: biweekly, last 9d ago, 9 in 90d (sampled 30)
+   [w1] (29/38) https://www.youtube.com/@CJFaison
+         Uploads: biweekly, last 2d ago, 9 in 90d (sampled 30)
+         Name: Jeremy Siers
+         Subscribers: 719K subscribers (719000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/jeremysiers/
+   [w3] (30/38) https://www.youtube.com/@revereoverland
+         Name: CJ Faison
+         Subscribers: 659K subscribers (659000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/cjfaison/
+         Name: Revere Overland
+         Subscribers: 150K subscribers (150000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/revereoverland/
+         Uploads: biweekly, last 14d ago, 7 in 90d (sampled 30)
+         Uploads: biweekly, last 1d ago, 9 in 90d (sampled 30)
+   [w1] (31/38) https://www.youtube.com/@wheretonextoverland
+   [w2] (32/38) https://www.youtube.com/@preparedcitizenofficial
+         Uploads: biweekly, last 4d ago, 8 in 90d (sampled 30)
+   [w3] (33/38) https://www.youtube.com/@DanBecker
+         Name: Where to Next Overland
+         Subscribers: 43.3K subscribers (43300)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/wheretonext.overland/reels/
+         Name: Prepared Citizen
+         Subscribers: 89.1K subscribers (89100)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/prepared__citizen
+         Name: Dan Becker
+         Subscribers: 522K subscribers (522000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/danbeckeroutdoors
+         Uploads: biweekly, last 2d ago, 8 in 90d (sampled 30)
+         Uploads: biweekly, last 11d ago, 8 in 90d (sampled 30)
+   [w1] (34/38) https://www.youtube.com/@homemadewanderlust
+   [w2] (35/38) https://www.youtube.com/@lewieandtherover
+         Uploads: biweekly, last 5d ago, 7 in 90d (sampled 30)
+   [w3] (36/38) https://www.youtube.com/@ChuckPorterEverythingOutdoors
+         Name: Lewie and the Rover
+         Subscribers: 96.7K subscribers (96700)
          Email listed: no
-         Type: solo (Japan)
-         Name: Campin' With Champion
-         Subscribers: 34.4K subscribers (34400)
+         Type: solo (Netherlands)
+         Instagram: https://instagram.com/lewieandtherover?igshid=YmMyMTA2M2Y=
+         Name: Homemade Wanderlust
+         Subscribers: 449K subscribers (449000)
          Email listed: yes
          Type: solo (United States)
-         Uploads: weekly, last 5d ago, 13 in 90d (sampled 30)
-         Name: New Jersey Outdoor Adventures
-         Subscribers: 2.08M subscribers (2080000)
-         Email listed: yes
-         Type: solo (United States)
-         Instagram: https://www.instagram.com/patrick_njoa/
-   [w3] (19/22) https://www.youtube.com/@narrowayhomestead
-         Uploads: weekly, last 4d ago, 16 in 90d (sampled 30)
-   [w1] (20/22) https://www.youtube.com/@wedapeoplepodcast
-         Uploads: weekly, last 0d ago, 20 in 90d (sampled 30)
-         Name: Nate Petroski
-         Subscribers: 1.75M subscribers (1750000)
-         Email listed: yes
-         Type: solo (United States)
-   [w2] (21/22) https://www.youtube.com/@overlandtravellers
-         Name: We Da People Podcast
-         Subscribers: 80.1K subscribers (80100)
-         Email listed: yes
-         Type: solo (United States)
-         Instagram: https://www.instagram.com/wedapeopletv/
-         Uploads: weekly, last 1d ago, 13 in 90d (sampled 30)
-         Name: Overland Travellers
-         Subscribers: 60.5K subscribers (60500)
-         Email listed: yes
-         Type: solo (Australia)
-         Instagram: https://www.instagram.com/overlandtravellers/
-   [w3] (22/22) https://www.youtube.com/@Camp-side
-         Uploads: weekly, last 1d ago, 25 in 90d (sampled 30)
-         Name: Camp Side
-         Subscribers: 3.78K subscribers (3780)
+         Instagram: https://www.instagram.com/homemadewanderlust/
+         Name: Chuck Porter - Everything Outdoors
+         Subscribers: 62.8K subscribers (62800)
          Email listed: no
+         Type: unclear (Canada)
+         Uploads: biweekly, last 2d ago, 7 in 90d (sampled 30)
+         Uploads: biweekly, last 5d ago, 7 in 90d (sampled 30)
+   [w2] (37/38) https://www.youtube.com/@eric_hanson
+   [w1] (38/38) https://www.youtube.com/@idahoprepper
+         Uploads: biweekly, last 11d ago, 7 in 90d (sampled 30)
+         Name: Eric Hanson
+         Subscribers: 166K subscribers (166000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://instagram.com/epic_hanson
+         Name: The Idaho Prepper
+         Subscribers: 92.7K subscribers (92700)
+         Email listed: yes
          Type: unclear (United States)
-         Uploads: weekly, last 14d ago, 10 in 90d (sampled 30)
-         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Uploads: biweekly, last 3d ago, 8 in 90d (sampled 30)
+         Uploads: biweekly, last 12d ago, 7 in 90d (sampled 30)
 
-Done. Wrote 22 rows to results.csv
+Done. Wrote 38 rows to results.csv
