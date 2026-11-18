@@ -1,182 +1,154 @@
-Loaded 24 channels from results/country_probe.txt
+Loaded 22 channels from results/country_probe.txt
    Instagram state file not found: instagram_storage_state.json - Instagram scraping disabled
 Started chromium (headless)
 
-Scraping 24 channels with 3 workers
+Scraping 22 channels with 3 workers
 
-   [w2] (1/24) https://www.youtube.com/@thelarkdavisshow
-   [w1] (2/24) https://www.youtube.com/@flyingwheels
-   [w3] (3/24) https://www.youtube.com/@romansharf
-         Name: Lark Davis
-         Subscribers: 633K subscribers (633000)
-         Email listed: no
-         Type: solo (United Arab Emirates)
-         Instagram: https://www.instagram.com/larkdavisofficial
-         Name: Roman Sharf
-         Subscribers: 511K subscribers (511000)
+   [w1] (1/22) https://www.youtube.com/@tugtrashoutdoors
+   [w2] (2/22) https://www.youtube.com/@tinycabinlife
+   [w3] (3/22) https://www.youtube.com/@nextmeridianexpedition
+         Name: Tiny Cabin Life
+         Subscribers: 371K subscribers (371000)
          Email listed: yes
          Type: solo (United States)
-         Instagram: https://www.instagram.com/romansharf/?utm_source=YouTube&utm_medium=About_Page&utm_campaign=Links
-         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
-   [w2] (4/24) https://www.youtube.com/@scottdsteele
-         Uploads: weekly, last 4d ago, 14 in 90d (sampled 30)
-         Name: Flying Wheels
-         Subscribers: 539K subscribers (539000)
+         Instagram: https://www.instagram.com/jackfsteward
+         Name: Tug Trash Outdoors
+         Subscribers: 217K subscribers (217000)
          Email listed: yes
          Type: solo (United States)
-         Instagram: https://www.instagram.com/Flying_Wheels_
-   [w3] (5/24) https://www.youtube.com/@jakegordoncrypto
-         Name: Scott Steele - Living in Utah
-         Subscribers: 102K subscribers (102000)
+         Name: Nick and Mathilde | Next Meridian Expedition
+         Subscribers: 144K subscribers (144000)
          Email listed: yes
-         Type: solo (United States)
-         Instagram: https://www.instagram.com/scottdsteele/
-         Name: Jake Gordon Crypto
-         Subscribers: 92.2K subscribers (92200)
+         Type: solo (Estonia)
+         Instagram: https://www.instagram.com/nextmeridian.expedition/
+         Uploads: weekly, last 1d ago, 14 in 90d (sampled 30)
+         Uploads: weekly, last 3d ago, 17 in 90d (sampled 30)
+   [w2] (4/22) https://www.youtube.com/@kbdproductionstv
+   [w3] (5/22) https://www.youtube.com/@jennalexisko
+         Uploads: weekly, last 2d ago, 17 in 90d (sampled 30)
+   [w1] (6/22) https://www.youtube.com/@efrt
+         Name: KBDProductionsTV
+         Subscribers: 671K subscribers (671000)
          Email listed: yes
-         Type: unclear (United Kingdom)
-         Uploads: weekly, last 1d ago, 24 in 90d (sampled 30)
-   [w1] (6/24) https://www.youtube.com/@thatbackyardpropertypodcast
-         Uploads: weekly, last 1d ago, 28 in 90d (sampled 30)
-         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
-         Skool: https://www.skool.com/10kcryptoincome/about
-   [w2] (7/24) https://www.youtube.com/@thenewhomeexpertslasvegas
-         Skool community: 10k Crypto Income - 107 members
-         Name: That Backyard Property Podcast
-         Subscribers: 23K subscribers (23000)
-         Email listed: yes
-         Type: solo (Australia)
-         Instagram: https://www.instagram.com/mortgageswmichael
-   [w3] (8/24) https://www.youtube.com/@cardboardprofit
-         Name: Living In Las Vegas With Jennifer Graff
-         Subscribers: 20.5K subscribers (20500)
-         Email listed: yes
-         Type: solo (United States)
-         Instagram: https://www.instagram.com/newhomeexpertslv/
-         Name: Cardboard Profit
-         Subscribers: 13.8K subscribers (13800)
-         Email listed: yes
-         Type: unclear (United States)
-         Uploads: weekly, last 1d ago, 28 in 90d (sampled 30)
-   [w1] (9/24) https://www.youtube.com/@ethanflynn
-         Uploads: no dated videos found
-   [w2] (10/24) https://www.youtube.com/@livinginlasvegaswithvickyandky
-         Uploads: weekly, last 4d ago, 10 in 90d (sampled 30)
-         Skool: https://www.skool.com/ignite/about
-         Skool community: Cardboard Profit Ignite - 404 members
-         Name: Ethan Flynn
-         Subscribers: 10.1K subscribers (10100)
-         Email listed: yes
-         Type: solo (United States)
-   [w3] (11/24) https://www.youtube.com/@mikeroland-therolandteam
-         Name: Living in Las Vegas With Vicky and Kyle
-         Subscribers: 6.7K subscribers (6700)
-         Email listed: yes
-         Type: unclear (United States)
-         Uploads: weekly, last 3d ago, 13 in 90d (sampled 30)
-   [w1] (12/24) https://www.youtube.com/@moneywithmak
-         Uploads: weekly, last 4d ago, 11 in 90d (sampled 30)
-   [w2] (13/24) https://www.youtube.com/@SullysAdvice
-         Name: Mike Roland - The Roland Team
-         Subscribers: 1.54K subscribers (1540)
+         Type: solo (Canada)
+         Instagram: http://instagram.com/kendomik
+         Name: Jenna Alexis
+         Subscribers: 258K subscribers (258000)
          Email listed: no
          Type: solo
-         Name: Money With Mak
-         Subscribers: 246K subscribers (246000)
+         Instagram: https://www.instagram.com/jennakoenig?igshid=ODA1NTc5OTg5Nw==&utm_source=qr
+         Name: Epic Family Road Trip
+         Subscribers: 291K subscribers (291000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/epicfamilyroadtrip/
+         Uploads: weekly, last 10d ago, 12 in 90d (sampled 30)
+   [w3] (7/22) https://www.youtube.com/@livinglargecamping
+         Uploads: weekly, last 5d ago, 13 in 90d (sampled 30)
+         Uploads: weekly, last 3d ago, 13 in 90d (sampled 30)
+   [w2] (8/22) https://www.youtube.com/@lastlineofdefense
+   [w1] (9/22) https://www.youtube.com/@nowhereboundadventures
+         Name: Living Large Camping
+         Subscribers: 45.6K subscribers (45600)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/ameliaandconnor
+         Name: Mike Pfeiffer - LLOD
+         Subscribers: 443K subscribers (443000)
          Email listed: yes
          Type: solo (United States)
-         Name: Sully's Advice
-         Subscribers: 207K subscribers (207000)
-         Email listed: yes
-         Type: solo (United Kingdom)
-         Instagram: https://www.instagram.com/sullysadvice
-         Uploads: weekly, last 3d ago, 13 in 90d (sampled 23)
-   [w3] (14/24) https://www.youtube.com/@Romayroh
-         Uploads: biweekly, last 12d ago, 8 in 90d (sampled 30)
-         Uploads: biweekly, last 1d ago, 8 in 90d (sampled 30)
-         Skool: https://www.skool.com/sullysacademy/about
-   [w1] (15/24) https://www.youtube.com/@EverythingDSK
-         Name: Romayroh
-         Subscribers: 188K subscribers (188000)
+         Instagram: http://www.instagram.com/lastlineofdefense
+         Name: Nowhere Bound
+         Subscribers: 46.1K subscribers (46100)
          Email listed: yes
          Type: solo (United States)
-         Instagram: https://www.instagram.com/romayroh/
-         Skool community: Sully's Academy Trading School - 81 members
-   [w2] (16/24) https://www.youtube.com/@BryanInvest
-         Name: Everything DSK
-         Subscribers: 132K subscribers (132000)
-         Email listed: yes
-         Type: solo (United States)
-         Instagram: https://www.instagram.com/dnald14/
-         Uploads: biweekly, last 7d ago, 8 in 90d (sampled 30)
-         Skool: https://www.skool.com/views-for-income-7713/about
-         Name: Bryan Invest
-         Subscribers: 109K subscribers (109000)
-         Email listed: no
-         Type: solo (Australia)
-         Instagram: https://www.instagram.com/bryaninvest?igsh=MWYwYmV2aWxzeWpxbQ==&utm_source=qr
-         Skool community: Faceless YouTube HQ - 2.4k members
-   [w3] (17/24) https://www.youtube.com/@ChrisHeckman
-         Uploads: biweekly, last 28d ago, 8 in 90d (sampled 30)
-   [w1] (18/24) https://www.youtube.com/@Glowithgia
-         Uploads: biweekly, last 5d ago, 8 in 90d (sampled 30)
-         Name: Chris Heckman
-         Subscribers: 98.4K subscribers (98400)
-         Email listed: yes
-         Type: unclear (United States)
-   [w2] (19/24) https://www.youtube.com/@Shopify-Success
-         Name: Glowithgia
-         Subscribers: 92.5K subscribers (92500)
-         Email listed: yes
-         Type: solo (United Kingdom)
-         Instagram: https://instagram.com/glowithgia
-         Name: Shopify Success
-         Subscribers: 85.8K subscribers (85800)
-         Email listed: yes
-         Type: solo (United States)
-         Instagram: https://www.instagram.com/shopifysuccessguide
-         Uploads: biweekly, last 6d ago, 9 in 90d (sampled 30)
-         Skool: https://www.skool.com/heckman/about
-         Skool community: WeScale Free Course - 38.5k members
-   [w3] (20/24) https://www.youtube.com/@ZachGinnOfficial
-         Uploads: biweekly, last 14d ago, 8 in 90d (sampled 30)
-         Uploads: biweekly, last 1d ago, 8 in 90d (sampled 30)
-   [w2] (21/24) https://www.youtube.com/@jeredwilliams
-   [w1] (22/24) https://www.youtube.com/@JTJunkSolutions
-         Name: Zach Ginn
-         Subscribers: 73.7K subscribers (73700)
-         Email listed: yes
-         Type: solo (United States)
-         Instagram: https://www.instagram.com/flipwithzach
-         Name: Jered Williams
-         Subscribers: 38.5K subscribers (38500)
-         Email listed: no
-         Type: unclear (United States)
-         Name: JT Junk Solutions
-         Subscribers: 36.3K subscribers (36300)
-         Email listed: yes
-         Type: unclear
-         Uploads: weekly, last 4d ago, 30 in 90d (sampled 30)
-         Skool: https://www.skool.com/wholesaling/about
-         Uploads: weekly, last 1d ago, 13 in 90d (sampled 30)
-         Skool: https://www.skool.com/jts-inner-circle-7534/about
-         Uploads: weekly, last 5d ago, 24 in 90d (sampled 30)
-         Skool: https://www.skool.com/wealthyplumber/about
-         Skool community: Flip with Rick+ - 1.6k members
-   [w3] (23/24) https://www.youtube.com/@meres_mortgage
-         Skool community: WEALTHY PLUMBER - 792 members
-         Skool community: JT's Inner Circle - 330 members
-   [w2] (24/24) https://www.youtube.com/@erincokeratl
-         Name: Meres Mortgage
-         Subscribers: 11.6K subscribers (11600)
-         Email listed: no
-         Type: unclear
-         Name: Erin Coker - Atlanta Real Estate
-         Subscribers: 6.2K subscribers (6200)
-         Email listed: yes
-         Type: solo (United States)
-         Instagram: https://www.instagram.com/erincoker/
+         Instagram: https://www.instagram.com/nowhereboundadventures
+         Uploads: weekly, last 6d ago, 10 in 90d (sampled 30)
+   [w3] (10/22) https://www.youtube.com/@hikingdancer
+         Uploads: weekly, last 1d ago, 17 in 90d (sampled 30)
+   [w2] (11/22) https://www.youtube.com/@primaloutdoors
          Uploads: weekly, last 1d ago, 14 in 90d (sampled 30)
+         Name: HikingDancer
+         Subscribers: 20K subscribers (20000)
+         Email listed: yes
+         Type: unclear
+   [w1] (12/22) https://www.youtube.com/@lostinwonderr
+         Name: Primal Outdoors - Camping and Overlanding
+         Subscribers: 240K subscribers (240000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/primal_outdoors/
+         Name: Lost in Wonder
+         Subscribers: 34.1K subscribers (34100)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/lost_in_wonder_adventures/
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+   [w3] (13/22) https://www.youtube.com/@coddiwompleoverland
+         Uploads: weekly, last 2d ago, 17 in 90d (sampled 30)
+         Uploads: weekly, last 2d ago, 12 in 90d (sampled 30)
+   [w1] (14/22) https://www.youtube.com/@truckhouselife
+   [w2] (15/22) https://www.youtube.com/@beccayaseen
+         Name: Coddiwomple Overland
+         Subscribers: 39.7K subscribers (39700)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: Truck House Life
+         Subscribers: 794K subscribers (794000)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: Becca Y.
+         Subscribers: 211K subscribers (211000)
+         Email listed: yes
+         Type: unclear (United States)
+         Instagram: https://www.instagram.com/skyethegoldenpuppy?igshid=YzVkODRmOTdmMw==
+         Uploads: weekly, last 3d ago, 12 in 90d (sampled 30)
+   [w3] (16/22) https://www.youtube.com/@tabiieasmrcamp
+         Uploads: weekly, last 5d ago, 13 in 90d (sampled 30)
+         Uploads: weekly, last 2d ago, 14 in 90d (sampled 30)
+   [w1] (17/22) https://www.youtube.com/@campinwithchampion
+   [w2] (18/22) https://www.youtube.com/@newjerseyoutdooradventures
+         Name: tabiie ASMR CAMP
+         Subscribers: 495K subscribers (495000)
+         Email listed: no
+         Type: solo (Japan)
+         Name: Campin' With Champion
+         Subscribers: 34.4K subscribers (34400)
+         Email listed: yes
+         Type: solo (United States)
+         Uploads: weekly, last 5d ago, 13 in 90d (sampled 30)
+         Name: New Jersey Outdoor Adventures
+         Subscribers: 2.08M subscribers (2080000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/patrick_njoa/
+   [w3] (19/22) https://www.youtube.com/@narrowayhomestead
+         Uploads: weekly, last 4d ago, 16 in 90d (sampled 30)
+   [w1] (20/22) https://www.youtube.com/@wedapeoplepodcast
+         Uploads: weekly, last 0d ago, 20 in 90d (sampled 30)
+         Name: Nate Petroski
+         Subscribers: 1.75M subscribers (1750000)
+         Email listed: yes
+         Type: solo (United States)
+   [w2] (21/22) https://www.youtube.com/@overlandtravellers
+         Name: We Da People Podcast
+         Subscribers: 80.1K subscribers (80100)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/wedapeopletv/
+         Uploads: weekly, last 1d ago, 13 in 90d (sampled 30)
+         Name: Overland Travellers
+         Subscribers: 60.5K subscribers (60500)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/overlandtravellers/
+   [w3] (22/22) https://www.youtube.com/@Camp-side
          Uploads: weekly, last 1d ago, 25 in 90d (sampled 30)
+         Name: Camp Side
+         Subscribers: 3.78K subscribers (3780)
+         Email listed: no
+         Type: unclear (United States)
+         Uploads: weekly, last 14d ago, 10 in 90d (sampled 30)
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
 
-Done. Wrote 24 rows to results.csv
+Done. Wrote 22 rows to results.csv
