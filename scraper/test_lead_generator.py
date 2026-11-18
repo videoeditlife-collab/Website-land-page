@@ -290,6 +290,20 @@ def test_niche_classification():
         niche, _ = classify_niche([title])
         check(f"{want}: {title[:30]}", niche, want)
 
+    # Second money pass. Each of these keywords was chosen as a compound
+    # because the bare word misfires.
+    for title in ("Isabella's First Camping Trip",
+                  "The Fast And Furious Franchise Ranked",
+                  "A Closer Look At The Alps",
+                  "Accounting For Every Gram Of Gear"):
+        niche, _ = classify_niche([title])
+        check(f"not money: {title[:32]}", niche in ('business', 'finance'), False)
+    for title in ("Fee Only Financial Advisor Explains Annuities",
+                  "TFSA vs RRSP In 2026", "Stocks And Shares ISA For Beginners",
+                  "How To Set Up An LLC", "Superannuation Explained"):
+        niche, _ = classify_niche([title])
+        check(f"money: {title[:32]}", niche in ('business', 'finance'), True)
+
     # Business and finance pool for consistency: a creator who teaches people
     # to earn splits their titles between the two while staying on one topic.
     niche, consistency = classify_niche([

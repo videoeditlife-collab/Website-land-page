@@ -436,7 +436,19 @@ NICHE_KEYWORDS = {
                 'real estate', 'rental property', 'mortgage', 'house flip',
                 'landlord', 'credit score', 'credit card', 'crypto', 'bitcoin',
                 'day trading', 'trading strategy', 'options trading', 'trader',
-                'roth', '401k', 'etf'),
+                'roth', '401k', 'etf',
+                # Second money pass: professional advice, deeper real estate,
+                # and the UK, Canadian and Australian money systems. 'isa' is
+                # only used in compounds - bare, it reaches "Isabella".
+                'financial advisor', 'financial planner', 'wealth management',
+                'estate planning', 'life insurance', 'annuit', 'pension',
+                'superannuation', 'stocks and shares isa', 'lifetime isa',
+                'tfsa', 'rrsp', 'early retirement', 'financial independence',
+                'passive income', 'house hacking', 'multifamily',
+                'short term rental', 'syndication', 'wholesaling', 'cash flow',
+                'home buyer', 'housing market', 'realtor', 'accountant',
+                'accounting', 'bookkeeping', 'covered call', 'value investing',
+                'balance sheet'),
     # 'review' and 'setup' were here and are far too generic - every niche
     # reviews things, so gear-testing outdoors channels classified as tech.
     'tech': ('iphone', 'android', 'smartphone', 'laptop', 'pc build', 'gpu',
@@ -450,7 +462,16 @@ NICHE_KEYWORDS = {
                  'consulting', 'founder', 'ceo', 'revenue', 'profit',
                  '7 figure', '6 figure', 'facebook ads', 'make money online',
                  'online course', 'newsletter', 'saas', 'quit my job',
-                 'salary', 'career', 'negotiat', 'linkedin'),
+                 'salary', 'career', 'negotiat', 'linkedin',
+                 # 'franchise' is only used in compounds - bare, it is a film
+                 # series. 'closer' is left out entirely: "a closer look" is
+                 # in every niche.
+                 'lawyer', 'attorney', 'llc', 'franchise owner',
+                 'buying a franchise', 'franchising', 'buying a business',
+                 'acquisition entrepreneur', 'smma', 'automation agency',
+                 'affiliate marketing', 'amazon kdp', 'kdp', 'amazon wholesale',
+                 'coaching business', 'b2b', 'cold email', 'appointment setting',
+                 'info product', 'service business'),
     'lifestyle_vlog': ('vlog', 'day in my life', 'week in my life', 'routine',
                        'apartment', 'morning', 'life update', 'moving'),
     'food': ('cooking', 'recipe', 'bake', 'kitchen', 'restaurant', 'food',
@@ -541,7 +562,7 @@ def keyword_hits(words, text):
 # review, not a business video, and it is one of the largest travel genres.
 NICHE_DECOYS = (
     'business class', 'travel agency', 'worth the money', 'for the money',
-    'value for money', 'money can buy', 'show business',
+    'value for money', 'money can buy', 'show business', 'accounting for',
 )
 
 # Niches that count as one topic when measuring consistency. A creator who

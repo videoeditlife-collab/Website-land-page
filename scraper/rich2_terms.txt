@@ -1,0 +1,110 @@
+# Second pass over the money niches. The first (rich_terms.txt) covered
+# building a business, sales and marketing, e-commerce, investing basics,
+# real estate basics and online income, and scored 592 channels into 40
+# High. These reach ground it did not, so the same people are not found
+# twice.
+#
+# The strongest new angle for "sell to the rich" is professionals who use
+# YouTube to win clients: financial advisors, realtors, mortgage brokers, tax
+# professionals, business lawyers. They earn well, already pay for marketing,
+# and treat video as a sales channel rather than a hobby.
+#
+# Country-specific money terms (ISA, TFSA, super) are included on purpose:
+# they return creators from the UK, Canada and Australia, which the English-
+# speaking filter wants and which US-generic terms under-sample.
+
+# --- professionals who use YouTube to get clients ---
+financial advisor explains retirement
+financial planner reacts
+fee only financial advisor
+wealth management advice
+estate planning explained
+life insurance explained honestly
+annuities explained
+realtor tips for buyers
+real estate agent day in the life
+first time home buyer tips
+mortgage broker explains rates
+housing market update
+tax professional explains
+cpa explains taxes
+small business tax deductions
+business lawyer explains
+how to set up an llc
+bookkeeping for small business
+
+# --- deeper investing ---
+early retirement fire journey
+financial independence retire early update
+value investing explained
+stock analysis deep dive
+how to read a balance sheet
+etf portfolio for beginners
+options income strategy
+covered call strategy explained
+dividend growth investing
+long term investing mindset
+my net worth update
+millionaire next door habits
+how rich people invest
+
+# --- deeper real estate ---
+house hacking explained
+multifamily investing
+short term rental business
+real estate syndication explained
+wholesaling real estate step by step
+land investing for beginners
+commercial real estate investing tips
+real estate cash flow analysis
+luxury real estate tour
+buying property in my 20s
+
+# --- business sub-niches ---
+how to start a marketing agency
+smma results honest
+ai automation agency
+saas founder journey
+buying a small business
+acquisition entrepreneurship
+franchise owner honest review
+affiliate marketing tutorial
+amazon kdp low content books
+amazon wholesale business
+coaching business growth
+b2b sales tips
+cold email outreach strategy
+appointment setting remote job
+info product business
+scaling an ecommerce brand
+running a service business
+
+# --- personal finance, by audience ---
+budgeting for couples
+debt free journey update
+frugal living tips that work
+money tips for women
+gen z personal finance
+doctor personal finance
+teacher side income
+military personal finance
+how to build credit fast
+credit card strategy points
+
+# --- English-speaking countries' own money systems ---
+uk stocks and shares isa
+lifetime isa explained
+uk property investing
+uk pension explained
+tfsa explained canada
+rrsp vs tfsa
+canadian real estate market
+australian property investing
+superannuation explained
+australian shares for beginners
+
+# --- the wealth lifestyle end ---
+day in the life of a millionaire
+how i made my first million
+self made millionaire advice
+business owner morning routine

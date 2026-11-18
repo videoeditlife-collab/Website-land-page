@@ -253,3 +253,30 @@ coaching
 consulting
 trading
 crypto
+
+# --- money niches, second pass: professionals and country money systems ---
+financial advisor
+financial planner
+wealth management
+estate planning
+mortgage
+insurance
+accountant
+attorney
+lawyer
+llc
+tfsa
+rrsp
+superannuation
+financial independence
+early retirement
+house hacking
+multifamily
+short term rental
+airbnb host
+wholesaling
+smma
+affiliate marketing
+kdp
+franchise
+millionaire
