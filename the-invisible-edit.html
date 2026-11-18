@@ -841,7 +841,9 @@ footer p{ font-size: 0.85rem; color: var(--muted); }
   /* Where converted visitors go next, and how long they get to read the
      confirmation first. This page is the front door, so the main site is the
      reward for opting in rather than something to navigate to beforehand. */
-  var HOME_URL = "index.html";
+  // Full address, so the handoff works both on the main site and on the
+  // landing page's own site, where index.html is this page itself.
+  var HOME_URL = "https://johnbobbycreative.netlify.app/";
   var REDIRECT_SECONDS = 9;
 
   function showSuccess(form, status, name){
