@@ -1,0 +1,276 @@
+Niche: 325 keywords from niche_broad.txt
+   Instagram state file not found: instagram_storage_state.json - Instagram scraping disabled
+Started chromium (headless)
+Search filter: sp=CAI=
+
+   Searching: hot tent winter camping
+      https://www.youtube.com/results?search_query=hot+tent+winter+camping&sp=CAI%3D
+      Found 12 channels
+
+   Searching: solo truck camping overnight
+      https://www.youtube.com/results?search_query=solo+truck+camping+overnight&sp=CAI%3D
+      Found 12 channels
+
+   Searching: bushcraft shelter build
+      https://www.youtube.com/results?search_query=bushcraft+shelter+build&sp=CAI%3D
+      Found 12 channels
+
+Discovered 36 unique channels across 3 terms
+Limited to first 36 channels
+Saved discovered channel list to discovered_example_terms.txt
+
+Scraping 36 channels with 3 workers
+
+   [w3] (1/36) https://www.youtube.com/@ChuckPorterEverythingOutdoors
+   [w2] (2/36) https://www.youtube.com/@AtlasAdventures
+   [w1] (3/36) https://www.youtube.com/@theoutdoorempire
+         Name: Chuck Porter - Everything Outdoors
+         Subscribers: 62.8K subscribers (62800)
+         Email listed: no
+         Type: unclear (Canada)
+         Name: Atlas Adventures
+         Subscribers: 12.7K subscribers (12700)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/atlasadves/
+         Name: Outdoor Empire
+         Subscribers: 119K subscribers (119000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/outdoorempirecom/
+         Uploads: weekly, last 4d ago, 18 in 90d (sampled 30)
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 30)
+         Below range (12,700 < 20,000)
+   [w1] (4/36) https://www.youtube.com/@AYOFishing
+   [w2] (5/36) https://www.youtube.com/@BagsPackedFamily
+         Uploads: biweekly, last 11d ago, 7 in 90d (sampled 30)
+   [w3] (6/36) https://www.youtube.com/@OCRKings
+         Name: AYO Fishing
+         Subscribers: 815K subscribers (815000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/ayo_fishing
+         Name: Bags Packed Family
+         Subscribers: 342K subscribers (342000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/bagspackedfamily
+         Name: OCR Kings
+         Subscribers: 24.8K subscribers (24800)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://www.instagram.com/ocrkings/
+         Uploads: monthly, last 30d ago, 4 in 90d (sampled 30)
+         Uploads: biweekly, last 2d ago, 6 in 90d (sampled 30)
+   [w2] (7/36) https://www.youtube.com/@Getlivinoutdoors
+   [w1] (8/36) https://www.youtube.com/@Camp-side
+         Uploads: biweekly, last 11d ago, 5 in 90d (sampled 30)
+   [w3] (9/36) https://www.youtube.com/@ABCampingTony
+         Name: Get Livin Outdoors
+         Subscribers: 9.45K subscribers (9450)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: Camp Side
+         Subscribers: 3.78K subscribers (3780)
+         Email listed: no
+         Type: unclear (United States)
+         Name: AB Camping And Outdoors
+         Subscribers: 306K subscribers (306000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/ab_camping_and_outdoors/
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Below range (3,780 < 20,000)
+         Uploads: sporadic, last 21d ago, 1 in 90d (sampled 30)
+         Below range (9,450 < 20,000)
+   [w1] (10/36) https://www.youtube.com/@CampingwithSamBananas
+   [w2] (11/36) https://www.youtube.com/@BaumOutdoors
+         Uploads: weekly, last 14d ago, 10 in 90d (sampled 30)
+   [w3] (12/36) https://www.youtube.com/@LostLakes
+         Name: Camping with Sam Bananas
+         Subscribers: 77.1K subscribers (77100)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/sambananascamping
+         Name: Baum Outdoors
+         Subscribers: 284K subscribers (284000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/baum_outdoors/
+         Name: Lost Lakes
+         Subscribers: 387K subscribers (387000)
+         Email listed: no
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/lostlakes_youtube
+         Uploads: biweekly, last 10d ago, 5 in 90d (sampled 30)
+         Uploads: weekly, last 1d ago, 10 in 90d (sampled 30)
+   [w2] (13/36) https://www.youtube.com/@mav
+   [w1] (14/36) https://www.youtube.com/@RohitHandaOfficial
+         Uploads: monthly, last 14d ago, 3 in 90d (sampled 30)
+   [w3] (15/36) https://www.youtube.com/@levdittioutdoors
+         Name: Mav
+         Subscribers: 2.72M subscribers (2720000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/mavrikjoos/
+         Name: Rohit Handa
+         Subscribers: 99.5K subscribers (99500)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/rohit_handa
+         Name: Levditti Outdoors
+         Subscribers: 65.6K subscribers (65600)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: http://instagram.com/levditti
+         Uploads: biweekly, last 14d ago, 7 in 90d (sampled 30)
+   [w2] (16/36) https://www.youtube.com/@ChildishOutdoors
+         Uploads: weekly, last 10d ago, 11 in 90d (sampled 30)
+         Skool: https://www.skool.com/rohithanda/about
+         Uploads: monthly, last 1d ago, 4 in 90d (sampled 30)
+   [w3] (17/36) https://www.youtube.com/@hunter_pauley
+         Name: Childish Outdoors
+         Subscribers: 55.2K subscribers (55200)
+         Email listed: no
+         Type: solo
+         Instagram: https://www.instagram.com/cementlander?igsh=MXZnemxvOGM3d2JrNA==&utm_source=qr
+         Skool community: Trucking Success Academy - 69 members
+   [w1] (18/36) https://www.youtube.com/@wesventures6426
+         Name: Hunter Pauley
+         Subscribers: 65.5K subscribers (65500)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/hunter_pauley/
+         Uploads: weekly, last 6d ago, 11 in 90d (sampled 30)
+   [w2] (19/36) https://www.youtube.com/@alexnino_
+         Name: WesVentures
+         Subscribers: 33.3K subscribers (33300)
+         Email listed: no
+         Type: solo
+         Instagram: https://www.instagram.com/wes_ventures/
+         Uploads: biweekly, last 9d ago, 8 in 90d (sampled 30)
+   [w3] (20/36) https://www.youtube.com/@TruckHouseLife
+         Uploads: weekly, last 2d ago, 12 in 90d (sampled 30)
+         Name: Alex Nino
+         Subscribers: 2.11M subscribers (2110000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/alexnnino/
+   [w1] (21/36) https://www.youtube.com/@FISH13
+         Name: Truck House Life
+         Subscribers: 794K subscribers (794000)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 2d ago, 11 in 90d (sampled 30)
+         Name: FISH13
+         Subscribers: 3.14M subscribers (3140000)
+         Email listed: yes
+         Type: solo (South Korea)
+         Instagram: https://www.instagram.com/fish13th
+   [w2] (22/36) https://www.youtube.com/@CrazyQuady
+         Uploads: weekly, last 5d ago, 11 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Uploads: weekly, last 5d ago, 13 in 90d (sampled 30)
+   [w1] (23/36) https://www.youtube.com/@rickyricee
+   [w3] (24/36) https://www.youtube.com/@truckingwithrex
+         Name: CrazyQuady
+         Subscribers: 160K subscribers (160000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/crazy_quady/
+         Name: Trucking With Rex
+         Subscribers: 53.2K subscribers (53200)
+         Email listed: yes
+         Type: unclear
+         Instagram: https://instagram.com/truckingwithrex?igshid=NzZlODBkYWE4Ng==&utm_source=qr
+         Name: Ricky Rice
+         Subscribers: 3.49K subscribers (3490)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 21d ago, 11 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (25/36) https://www.youtube.com/@CreativeHUB89
+         Uploads: dormant, last 730d ago, 0 in 90d (sampled 30)
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 17)
+         Below range (3,490 < 20,000)
+   [w3] (26/36) https://www.youtube.com/@PolissyaBushcraft
+   [w1] (27/36) https://www.youtube.com/@Bushcraftimprovisation
+         Name: Creative.HUB89
+         Subscribers: 2.84K subscribers (2840)
+         Email listed: no
+         Type: unclear (United States)
+         Name: Polissya Bushcraft
+         Subscribers: 1.32M subscribers (1320000)
+         Email listed: yes
+         Type: solo (Ukraine)
+         Instagram: https://www.instagram.com/polissya_bushcraft?igsh=MWZoZ2hweGxqMGJodA==&utm_source=qr
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Below range (2,840 < 20,000)
+         Name: Bushcraft improvisation
+         Subscribers: 2.48M subscribers (2480000)
+         Email listed: yes
+         Type: solo (Ukraine)
+   [w2] (28/36) https://www.youtube.com/@MAXBUSHCKRAFT24
+         Uploads: monthly, last 21d ago, 2 in 90d (sampled 30)
+         Uploads: monthly, last 2d ago, 2 in 90d (sampled 30)
+   [w3] (29/36) https://www.youtube.com/@OutdoorBoys
+   [w1] (30/36) https://www.youtube.com/@Benlambie
+         Name: MAX BUSHCRAFT
+         Subscribers: 60.8K subscribers (60800)
+         Email listed: no
+         Type: unclear (United States)
+         Name: Ben Lambie
+         Subscribers: 3.74K subscribers (3740)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://instagram.com/benlambie/
+         Name: Outdoor Boys
+         Subscribers: 21.1M subscribers (21100000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/outdoorboyschannel/
+         Uploads: monthly, last 30d ago, 3 in 90d (sampled 30)
+   [w2] (31/36) https://www.youtube.com/@lesnoy_craft8607
+         Uploads: monthly, last 3d ago, 3 in 90d (sampled 30)
+         Below range (3,740 < 20,000)
+         Uploads: dormant, last 335d ago, 0 in 90d (sampled 30)
+   [w1] (32/36) https://www.youtube.com/@Polissyabushcrafttalk
+   [w3] (33/36) https://www.youtube.com/@Survialskills2
+         Name: Lesnoy_Craft
+         Subscribers: 470K subscribers (470000)
+         Email listed: no
+         Type: solo
+         Instagram: https://instagram.com/lesnoy_craft?utm_medium=copy_link
+         Name: Polissya Bushcraft ENG
+         Subscribers: 31.6K subscribers (31600)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/polissya_bushcraft?igsh=MWxnZG1uaHNhcTh1Yg==
+         Name: SURVIVAL SKILLS 2
+         Subscribers: 68K subscribers (68000)
+         Email listed: no
+         Type: solo (United States)
+         Uploads: biweekly, last 6d ago, 7 in 90d (sampled 30)
+   [w2] (34/36) https://www.youtube.com/@lytungsurvivalbushcraft
+         Uploads: weekly, last 3d ago, 14 in 90d (sampled 30)
+         Uploads: weekly, last 1d ago, 25 in 90d (sampled 30)
+   [w1] (35/36) https://www.youtube.com/@TAOutdoors
+   [w3] (36/36) https://www.youtube.com/@norusarubushcraft
+         Name: Lý Tùng Survival Bushcraft
+         Subscribers: 26.3K subscribers (26300)
+         Email listed: no
+         Type: unclear (United States)
+         Name: Noru Saru Bushcraft
+         Subscribers: 480K subscribers (480000)
+         Email listed: yes
+         Type: solo (United States)
+         Name: TA Outdoors
+         Subscribers: 2.5M subscribers (2500000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/taoutdoorofficial/
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Uploads: monthly, last 9d ago, 4 in 90d (sampled 30)
+         Uploads: biweekly, last 3d ago, 8 in 90d (sampled 30)
+
+Done. Wrote 36 rows to results.csv
