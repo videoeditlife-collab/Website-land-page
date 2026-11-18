@@ -1,0 +1,7 @@
+# Example search-term file. One YouTube search per line; lines starting
+# with # are ignored. Long, specific phrases reach smaller creators than
+# broad ones: "hot tent winter camping" finds channels that "camping" never
+# will, because broad terms return the same famous channels every time.
+hot tent winter camping
+solo truck camping overnight
+bushcraft shelter build

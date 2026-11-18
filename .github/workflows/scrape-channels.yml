@@ -25,6 +25,14 @@ on:
         description: 'weekly, biweekly, monthly, or empty for no check'
         required: false
         default: 'monthly'
+      terms:
+        description: 'source=custom only: search-term file in scraper/, e.g. my_terms.txt'
+        required: false
+        default: ''
+      niche_file:
+        description: 'source=custom only: niche keyword file in scraper/'
+        required: false
+        default: 'niche_broad.txt'
   push:
     branches:
       - claude/youtube-scraper-zn66ns
@@ -75,6 +83,8 @@ jobs:
           MIN_SUBS: ${{ github.event.inputs.min_subscribers || '20000' }}
           MAX_SUBS: ${{ github.event.inputs.max_subscribers || '' }}
           CADENCE: ${{ github.event.inputs.require_cadence || 'monthly' }}
+          TERMS: ${{ github.event.inputs.terms || '' }}
+          NICHE_FILE: ${{ github.event.inputs.niche_file || 'niche_broad.txt' }}
         run: |
           set -o pipefail
           # An array, not a string: a string expanded unquoted word-splits on
@@ -87,6 +97,19 @@ jobs:
           # Josh's brief: target creator-operators who sell travel, which is the
           # inverse of the solo-only filter used on the previous lists.
           case "$SOURCE" in
+            custom)
+              # Any term file, without editing this workflow. Output files
+              # are named after the term file, so two custom runs in
+              # parallel do not overwrite each other.
+              if [ -z "$TERMS" ] || [ ! -f "$TERMS" ]; then
+                echo "::error::source=custom needs terms= naming a file in scraper/ (got '$TERMS')"
+                exit 1
+              fi
+              ARGS+=(--require-niche --niche-file "${NICHE_FILE:-niche_broad.txt}")
+              ARGS+=(--search-file "$TERMS")
+              ARGS+=(--sort-by date --scrolls 4 --per-term 12 --limit 1200)
+              ARGS+=(--save-discovered "discovered_$(basename "$TERMS" .txt).txt")
+              ;;
             survival)
               # Camping and survival, half one: survival, bushcraft, prepping.
               ARGS+=(--require-niche --niche-file niche_broad.txt)
@@ -219,7 +242,11 @@ jobs:
       - name: Bank the discovered channel list
         env:
           SOURCE: ${{ github.event.inputs.source || 'photo' }}
+          TERMS: ${{ github.event.inputs.terms || '' }}
         run: |
+          if [ "$SOURCE" = custom ] && [ -n "$TERMS" ]; then
+            SOURCE=$(basename "$TERMS" .txt)
+          fi
           shopt -s nullglob
           found=(scraper/discovered*.txt)
           if [ ${#found[@]} -eq 0 ]; then
@@ -307,7 +334,11 @@ jobs:
       - name: Commit results
         env:
           SOURCE: ${{ github.event.inputs.source || 'photo' }}
+          TERMS: ${{ github.event.inputs.terms || '' }}
         run: |
+          if [ "$SOURCE" = custom ] && [ -n "$TERMS" ]; then
+            SOURCE=$(basename "$TERMS" .txt)
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           mkdir -p scraper/results

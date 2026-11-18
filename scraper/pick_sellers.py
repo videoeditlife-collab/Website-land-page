@@ -202,6 +202,9 @@ def main():
     parser.add_argument('sources', nargs='+', help='Scored lead CSVs (globs ok)')
     parser.add_argument('--tier', choices=TIER_ORDER,
                         help='Only this product tier (default: all three)')
+    parser.add_argument('--niche', default='',
+                        help='Comma-separated niche labels to keep, e.g. '
+                             'outdoors or finance,business (default: any)')
     parser.add_argument('--min-subs', type=int, default=0)
     parser.add_argument('--max-subs', type=int, default=0)
     parser.add_argument('--limit', type=int, default=0,
@@ -229,9 +232,13 @@ def main():
         print(f"excluding {len(excluded)} channels already reported",
               file=sys.stderr)
 
+    niches = {n.strip() for n in args.niche.split(',') if n.strip()}
+
     picked = []
     skipped_seen = 0
     for row in rows:
+        if niches and (row.get('Niche') or '') not in niches:
+            continue
         if excluded and normalise(row.get('Channel Link')) in excluded:
             skipped_seen += 1
             continue
