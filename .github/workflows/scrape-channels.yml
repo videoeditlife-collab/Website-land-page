@@ -217,6 +217,8 @@ jobs:
       # Separate step, before the slow pass: whatever discovery found is
       # pushed immediately, so a preemption later costs time but not data.
       - name: Bank the discovered channel list
+        env:
+          SOURCE: ${{ github.event.inputs.source || 'photo' }}
         run: |
           shopt -s nullglob
           found=(scraper/discovered*.txt)
@@ -228,7 +230,10 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           mkdir -p scraper/results
           cp scraper/discovered*.txt scraper/results/ 2>/dev/null || true
-          cp scraper/discover.log scraper/results/discover.log 2>/dev/null || true
+          # Per-mode name. One shared discover.log made two discovery runs
+          # in parallel conflict on rebase, and the loser's bank step gave
+          # up - the survival pass's 667 channels never reached the branch.
+          cp scraper/discover.log "scraper/results/discover_${SOURCE}.log" 2>/dev/null || true
           git add -f scraper/results/ || true
           if git diff --staged --quiet; then
             echo "Nothing new discovered"
