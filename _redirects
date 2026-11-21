@@ -1,0 +1,2 @@
+# Old Netlify address forwards to the custom domain, keeping the path.
+https://johnbobbycreative.netlify.app/* https://www.jbobby.com/:splat 301!
