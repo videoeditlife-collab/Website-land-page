@@ -354,3 +354,9 @@ outdoor
 trekking
 ultralight
 canoe
+
+# --- re-edit for X pass: survival challenge channels that do not say camping ---
+challenge
+adventure
+wilderness
+stranded

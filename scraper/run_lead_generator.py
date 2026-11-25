@@ -12,6 +12,7 @@ defines, scores it, and writes the sheet columns followed by the helpers.
 import argparse
 import asyncio
 import csv
+import json
 import os
 import re
 import sys
@@ -249,6 +250,13 @@ async def collect(page, channel_url, cfg, read_descriptions):
     email, source = find_email(blob, channel_description)
     c.email, c.email_source = email, source
 
+    # Kept for --videos-out: the re-edit ranking needs each sampled video,
+    # and the X handle lookup needs the description and links, none of which
+    # the scored sheet carries.
+    c._sample = sample
+    c._links = links
+    c._description = channel_description
+
     return c
 
 
@@ -307,6 +315,11 @@ async def main():
                              'and append, so a long run survives a timeout')
     parser.add_argument('--use-mean', action='store_true',
                         help="Rate on the mean, the lesson's exact rule")
+    parser.add_argument('--videos-out', metavar='PATH',
+                        help='Also append one JSON line per channel with its '
+                             'sampled videos (id, title, views, seconds), '
+                             'links and description. Input for '
+                             'reedit_candidates.py')
     args = parser.parse_args()
 
     cfg = Config(use_median=not args.use_mean)
@@ -356,6 +369,15 @@ async def main():
                   f"({c.niche_consistency}) | sells={c.sells_product}",
                   file=sys.stderr)
             rows.append(to_row(c, roti, reasons, review, cfg))
+            if args.videos_out:
+                with open(args.videos_out, 'a', encoding='utf-8') as handle:
+                    handle.write(json.dumps({
+                        'channel_url': url,
+                        'creator_name': c.creator_name,
+                        'videos': getattr(c, '_sample', []),
+                        'links': getattr(c, '_links', []),
+                        'description': getattr(c, '_description', ''),
+                    }) + '\n')
 
             # Write through periodically so a timeout keeps the work.
             if len(rows) - flushed >= 25:

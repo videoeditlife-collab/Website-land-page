@@ -97,6 +97,19 @@ jobs:
           # Josh's brief: target creator-operators who sell travel, which is the
           # inverse of the solo-only filter used on the previous lists.
           case "$SOURCE" in
+            reedit)
+              # Re-edit-for-X niche: the queries and search settings from
+              # niches/survival_camping_challenges.yaml. Long videos sorted by
+              # views, from the last year (YouTube's closest filter to the
+              # config's 180 days; the 45-day upload filter is applied at
+              # selection). The subscriber band is flagged, not dropped.
+              python reedit_candidates.py terms niches/survival_camping_challenges.yaml > reedit_terms.txt
+              ARGS=(--min-subscribers 10000 --max-subscribers 500000 --output results.csv --concurrency 3 --delay 0.5)
+              ARGS+=(--require-niche --niche-file niche_broad.txt)
+              ARGS+=(--search-file reedit_terms.txt --duration long --sort-by views --upload-date year)
+              ARGS+=(--scrolls 6 --per-term 50 --limit 600)
+              ARGS+=(--save-discovered discovered_reedit.txt)
+              ;;
             custom)
               # Any term file, without editing this workflow. Output files
               # are named after the term file, so two custom runs in

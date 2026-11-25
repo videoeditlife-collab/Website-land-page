@@ -1,0 +1,112 @@
+# Survival, camping and challenge niche config for the YouTube lead scraper
+#
+# Goal: find creators whose raw footage you can re-edit into 60 second
+# clips for X, then tag them. Same tag convention as the scraper spec:
+#   [lesson]  = from the Lead Generator lesson or Editor Josh material
+#   [default] = picked so the rule can run; tune it once you have replies
+
+niche:
+  name: survival_camping_challenges
+
+  # Seed discovery. search.list costs 100 quota units per call, so run
+  # these once to build the seed list, then look channels up by id.
+  search_queries:
+    - solo survival camping
+    - winter camping storm
+    - bushcraft overnight shelter
+    - camping in heavy rain
+    - hammock camping rain
+    - car camping snow
+    - survive 7 days alone
+    - 24 hour survival challenge
+    - stranded survival challenge
+    - primitive shelter build
+    - last to leave challenge
+    - overnight in the wilderness
+  search_params:
+    type: video            # search videos, then collect their channel ids
+    videoDuration: long    # over 20 minutes, the raw long form you re-edit
+    order: viewCount
+    publishedAfter_days: 180   # [default] only channels active recently
+    maxResults: 50
+
+  # Classifier labels. A channel counts as in niche when its most common
+  # label is in in_niche and niche_consistency >= 0.6 [default].
+  classifier_labels:
+    in_niche:
+      - survival
+      - bushcraft
+      - solo_camping
+      - winter_camping
+      - car_camping
+      - wilderness_challenge
+      - outdoor_adventure_irl
+    off_niche:
+      - gear_review_only
+      - hunting_fishing_only
+      - gaming
+      - vlog_general
+      - reaction
+      - other
+
+filters:
+  # Mid size channels are the ones who will actually see and answer a tag.
+  subscriber_min: 10000      # [default]
+  subscriber_max: 500000     # [default] above this, a tag gets lost
+  median_views_min: 3000     # [lesson] High threshold from the Lead Generator
+  min_long_form_in_sample: 4 # [default] need enough raw videos to re-edit
+  max_days_since_upload: 45  # [default]
+
+# Re-edit candidates. For each kept creator, rank their sample videos by
+# how good the raw footage is for a 60 second "open on the worst moment" cut.
+reedit_candidates:
+  per_creator: 3
+  min_duration_seconds: 900  # [default] 15 minutes plus gives room to cut
+  # Title words that suggest a low point or stakes you can open on. [default]
+  stakes_keywords:
+    - storm
+    - rain
+    - snow
+    - freezing
+    - "-20"
+    - flood
+    - wind
+    - lost
+    - stranded
+    - alone
+    - gone wrong
+    - failed
+    - "went wrong"
+    - quit
+    - night
+    - bear
+    - no food
+    - no water
+    - "7 days"
+    - "24 hours"
+    - survive
+  score:
+    # score = views_vs_channel_median * 0.6 + stakes_keyword_hits * 0.4 [default]
+    views_vs_channel_median_weight: 0.6
+    stakes_keyword_weight: 0.4
+  output_fields:
+    - video_id
+    - video_url
+    - title
+    - duration_seconds
+    - view_count
+    - views_vs_channel_median
+    - stakes_keywords_matched
+
+# Extra columns for the X plan. Append after the helper columns.
+extra_columns:
+  x_handle:
+    # Pull from channel description and links. Tag them when you post.
+    patterns:
+      - '(?:twitter\.com|x\.com)/([A-Za-z0-9_]{1,15})'
+    fallback: manual
+  reedit_status:
+    type: enum
+    values: [not_started, cut, posted, tagged, replied]
+  reedit_post_url:
+    type: url

@@ -85,6 +85,8 @@ jobs:
           if [ "$LIMIT" != "0" ]; then
             ARGS+=(--limit "$LIMIT")
           fi
+          # Per-video sample, links and description for reedit_candidates.py.
+          ARGS+=(--videos-out "$NAME.videos.jsonl")
           python run_lead_generator.py "${ARGS[@]}" 2>&1 | tee "$NAME.log"
 
       - name: Fail if nothing was produced
@@ -112,6 +114,7 @@ jobs:
           NAME=$(cat scraper/.leads-name)
           cp "scraper/$NAME.csv" "scraper/results/$NAME.csv" 2>/dev/null || true
           cp "scraper/$NAME.log" "scraper/results/$NAME.log" 2>/dev/null || true
+          cp "scraper/$NAME.videos.jsonl" "scraper/results/$NAME.videos.jsonl" 2>/dev/null || true
           cp scraper/lockup_diag.log scraper/results/lockup_diag.log 2>/dev/null || true
           cp scraper/about_diag.log scraper/results/about_diag.log 2>/dev/null || true
           git add -f scraper/results/ || true

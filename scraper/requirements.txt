@@ -1,1 +1,2 @@
 playwright>=1.40
+pyyaml>=6.0
