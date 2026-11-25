@@ -1,0 +1,57 @@
+Niche: 329 keywords from niche_broad.txt
+   Instagram state file not found: instagram_storage_state.json - Instagram scraping disabled
+Started chromium (headless)
+Search filter: sp=CAMSBAgFGAI=
+
+   Searching: solo survival camping
+      https://www.youtube.com/results?search_query=solo+survival+camping&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+   Searching: winter camping storm
+      https://www.youtube.com/results?search_query=winter+camping+storm&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+   Searching: bushcraft overnight shelter
+      https://www.youtube.com/results?search_query=bushcraft+overnight+shelter&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+   Searching: camping in heavy rain
+      https://www.youtube.com/results?search_query=camping+in+heavy+rain&sp=CAMSBAgFGAI%3D
+      Found 33 channels
+
+   Searching: hammock camping rain
+      https://www.youtube.com/results?search_query=hammock+camping+rain&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+   Searching: car camping snow
+      https://www.youtube.com/results?search_query=car+camping+snow&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+   Searching: survive 7 days alone
+      https://www.youtube.com/results?search_query=survive+7+days+alone&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+   Searching: 24 hour survival challenge
+      https://www.youtube.com/results?search_query=24+hour+survival+challenge&sp=CAMSBAgFGAI%3D
+      Found 34 channels
+
+   Searching: stranded survival challenge
+      https://www.youtube.com/results?search_query=stranded+survival+challenge&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+   Searching: primitive shelter build
+      https://www.youtube.com/results?search_query=primitive+shelter+build&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+   Searching: last to leave challenge
+      https://www.youtube.com/results?search_query=last+to+leave+challenge&sp=CAMSBAgFGAI%3D
+      Found 49 channels
+
+   Searching: overnight in the wilderness
+      https://www.youtube.com/results?search_query=overnight+in+the+wilderness&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+Discovered 367 unique channels across 12 terms
+Limited to first 367 channels
+Saved discovered channel list to discovered_reedit.txt
+--discover-only: stopping after 367 channels
