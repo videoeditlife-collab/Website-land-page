@@ -1,0 +1,2725 @@
+Niche: 329 keywords from niche_broad.txt
+   Instagram state file not found: instagram_storage_state.json - Instagram scraping disabled
+Started chromium (headless)
+Search filter: sp=CAMSBAgFGAI=
+
+   Searching: solo survival camping
+      https://www.youtube.com/results?search_query=solo+survival+camping&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+   Searching: winter camping storm
+      https://www.youtube.com/results?search_query=winter+camping+storm&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+   Searching: bushcraft overnight shelter
+      https://www.youtube.com/results?search_query=bushcraft+overnight+shelter&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+   Searching: camping in heavy rain
+      https://www.youtube.com/results?search_query=camping+in+heavy+rain&sp=CAMSBAgFGAI%3D
+      Found 33 channels
+
+   Searching: hammock camping rain
+      https://www.youtube.com/results?search_query=hammock+camping+rain&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+   Searching: car camping snow
+      https://www.youtube.com/results?search_query=car+camping+snow&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+   Searching: survive 7 days alone
+      https://www.youtube.com/results?search_query=survive+7+days+alone&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+   Searching: 24 hour survival challenge
+      https://www.youtube.com/results?search_query=24+hour+survival+challenge&sp=CAMSBAgFGAI%3D
+      Found 34 channels
+
+   Searching: stranded survival challenge
+      https://www.youtube.com/results?search_query=stranded+survival+challenge&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+   Searching: primitive shelter build
+      https://www.youtube.com/results?search_query=primitive+shelter+build&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+   Searching: last to leave challenge
+      https://www.youtube.com/results?search_query=last+to+leave+challenge&sp=CAMSBAgFGAI%3D
+      Found 49 channels
+
+   Searching: overnight in the wilderness
+      https://www.youtube.com/results?search_query=overnight+in+the+wilderness&sp=CAMSBAgFGAI%3D
+      Found 50 channels
+
+Discovered 366 unique channels across 12 terms
+Limited to first 366 channels
+Saved discovered channel list to discovered_reedit.txt
+
+Scraping 366 channels with 3 workers
+
+   [w1] (1/366) https://www.youtube.com/@MyLifeOutdoors
+   [w2] (2/366) https://www.youtube.com/@go4x4media
+   [w3] (3/366) https://www.youtube.com/@AdventureViper
+         Name: MyLifeOutdoors
+         Subscribers: 1.26M subscribers (1260000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/mylifeoutdoors
+         Name: Adventure of The Viper
+         Subscribers: 548K subscribers (548000)
+         Email listed: yes
+         Type: solo (United States)
+         Name: Go4x4
+         Subscribers: 1.95M subscribers (1950000)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/go4x4media
+         Uploads: biweekly, last 10d ago, 5 in 90d (sampled 30)
+         Above range (1,260,000 > 500,000)
+   [w1] (4/366) https://www.youtube.com/@MattSpears
+         Uploads: biweekly, last 4d ago, 5 in 90d (sampled 30)
+         Above range (548,000 > 500,000)
+         Name: Matt Spears
+         Subscribers: 990K subscribers (990000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/mattspearss/
+   [w3] (5/366) https://www.youtube.com/@Pamanbara
+         Uploads: biweekly, last 11d ago, 6 in 90d (sampled 30)
+         Above range (1,950,000 > 500,000)
+   [w2] (6/366) https://www.youtube.com/@Nick_Kratka
+         Uploads: monthly, last 10d ago, 3 in 90d (sampled 30)
+         Above range (990,000 > 500,000)
+         Name: Paman Bara
+         Subscribers: 744K subscribers (744000)
+         Email listed: no
+         Type: unclear
+   [w1] (7/366) https://www.youtube.com/@FISH13
+         Name: Nick Kratka
+         Subscribers: 7M subscribers (7000000)
+         Email listed: yes
+         Type: unclear
+         Instagram: https://www.instagram.com/nick_kratka/?hl=en
+         Name: FISH13
+         Subscribers: 3.17M subscribers (3170000)
+         Email listed: yes
+         Type: solo (South Korea)
+         Instagram: https://www.instagram.com/fish13th
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 10)
+         Above range (744,000 > 500,000)
+         Uploads: weekly, last 5d ago, 11 in 90d (sampled 30)
+         Above range (3,170,000 > 500,000)
+   [w3] (8/366) https://www.youtube.com/@RYUCAMP
+   [w1] (9/366) https://www.youtube.com/@PolissyaBushcraft
+         Uploads: weekly, last 0d ago, 14 in 90d (sampled 30)
+         Above range (7,000,000 > 500,000)
+   [w2] (10/366) https://www.youtube.com/@DaraTah
+         Name: Polissya Bushcraft
+         Subscribers: 1.32M subscribers (1320000)
+         Email listed: yes
+         Type: solo (Ukraine)
+         Instagram: https://www.instagram.com/polissya_bushcraft?igsh=MWZoZ2hweGxqMGJodA==&utm_source=qr
+         Name: RYUCAMP
+         Subscribers: 1.42M subscribers (1420000)
+         Email listed: yes
+         Type: solo (South Korea)
+         Instagram: https://www.instagram.com/ryu__camp/
+         Uploads: monthly, last 30d ago, 2 in 90d (sampled 30)
+         Above range (1,320,000 > 500,000)
+         Name: Dara Tah
+         Subscribers: 1.62M subscribers (1620000)
+         Email listed: yes
+         Type: solo (Ireland)
+         Instagram: https://www.instagram.com/daratah
+   [w1] (11/366) https://www.youtube.com/@MRINDIANHACKER
+         Uploads: weekly, last 5d ago, 11 in 90d (sampled 30)
+         Above range (1,420,000 > 500,000)
+   [w3] (12/366) https://www.youtube.com/@BROTHER_WOOD_08
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 30)
+         Above range (1,620,000 > 500,000)
+         Name: MR. INDIAN HACKER
+         Subscribers: 54.2M subscribers (54200000)
+         Email listed: yes
+         Type: solo (India)
+         Instagram: https://www.instagram.com/dilraj_singh_rawat/
+   [w2] (13/366) https://www.youtube.com/@KirinCamp
+         Uploads: weekly, last 4d ago, 30 in 90d (sampled 30)
+         Above range (54,200,000 > 500,000)
+         Name: BROTHER WOOD
+         Subscribers: 92.3K subscribers (92300)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/brotherwood.tr?igsh=YmJqY2JjYTg0M3Jv
+   [w1] (14/366) https://www.youtube.com/@davidmrule
+         Name: David Rule
+         Subscribers: 907K subscribers (907000)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/davidmrule
+         Name: Kirin Camp
+         Subscribers: 2.96M subscribers (2960000)
+         Email listed: yes
+         Type: solo (South Korea)
+         Instagram: https://www.instagram.com/kirin_camp_/
+         Uploads: sporadic, last 3d ago, 1 in 90d (sampled 12)
+   [w3] (15/366) https://www.youtube.com/@botanik6140
+         Uploads: sporadic, last 21d ago, 1 in 90d (sampled 30)
+         Above range (907,000 > 500,000)
+         Uploads: biweekly, last 4d ago, 9 in 90d (sampled 30)
+         Above range (2,960,000 > 500,000)
+   [w1] (16/366) https://www.youtube.com/@XanderBudnick
+   [w2] (17/366) https://www.youtube.com/@WildcraftedVeronika
+         Name: Botanik Bushcraft Survival
+         Subscribers: 717K subscribers (717000)
+         Email listed: yes
+         Type: solo (United States)
+         Name: Xander Budnick
+         Subscribers: 2.02M subscribers (2020000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/xanderbudnick/?hl=en
+         Name: Wildcrafted Veronika
+         Subscribers: 251K subscribers (251000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/wildcrafted_veronika/
+         Uploads: biweekly, last 9d ago, 6 in 90d (sampled 30)
+         Above range (717,000 > 500,000)
+   [w3] (18/366) https://www.youtube.com/@primitivevilla1930
+         Uploads: monthly, last 14d ago, 3 in 90d (sampled 30)
+         Above range (2,020,000 > 500,000)
+   [w1] (19/366) https://www.youtube.com/@ybsyoungbloods
+         Uploads: weekly, last 4d ago, 11 in 90d (sampled 30)
+         Name: Primitive Villa
+         Subscribers: 264K subscribers (264000)
+         Email listed: yes
+         Type: unclear (United States)
+   [w2] (20/366) https://www.youtube.com/@WildernessSurvivalMan
+         Name: YBS Youngbloods
+         Subscribers: 8.78M subscribers (8780000)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/brodiemoss/
+         Name: Wilderness Survival Man
+         Subscribers: 244K subscribers (244000)
+         Email listed: yes
+         Type: solo (Ukraine)
+         Uploads: monthly, last 14d ago, 3 in 90d (sampled 30)
+         Uploads: monthly, last 10d ago, 3 in 90d (sampled 30)
+         Above range (8,780,000 > 500,000)
+   [w3] (21/366) https://www.youtube.com/@Bushcraftinthewildforest
+   [w1] (22/366) https://www.youtube.com/@Epic-Forest13
+         Uploads: sporadic, last 30d ago, 1 in 90d (sampled 30)
+   [w2] (23/366) https://www.youtube.com/@alaskacabinadventures
+         Name: Alone with the Forest
+         Subscribers: 41K subscribers (41000)
+         Email listed: yes
+         Type: unclear (Ukraine)
+         Name: Epic Forest
+         Subscribers: 31.7K subscribers (31700)
+         Email listed: no
+         Type: unclear (United States)
+         Name: Alaska Cabin Adventures
+         Subscribers: 496K subscribers (496000)
+         Email listed: yes
+         Type: unclear
+         Uploads: weekly, last 10d ago, 11 in 90d (sampled 30)
+         Uploads: sporadic, last 28d ago, 1 in 90d (sampled 30)
+   [w3] (24/366) https://www.youtube.com/@HariKristiyanto
+   [w1] (25/366) https://www.youtube.com/@outdoortom9675
+         Uploads: monthly, last 2d ago, 3 in 90d (sampled 30)
+         Name: Outdoor Tom
+         Subscribers: 2.31M subscribers (2310000)
+         Email listed: no
+         Type: solo (United States)
+         Name: Hari Kristiyanto
+         Subscribers: 255K subscribers (255000)
+         Email listed: no
+         Type: solo (Indonesia)
+         Instagram: https://www.instagram.com/hari_kristiyanto/
+   [w2] (26/366) https://www.youtube.com/@WildCompanionsSurvival
+         Uploads: monthly, last 11d ago, 3 in 90d (sampled 25)
+         Above range (2,310,000 > 500,000)
+   [w1] (27/366) https://www.youtube.com/@magmidt
+         Uploads: biweekly, last 11d ago, 6 in 90d (sampled 30)
+         Name: Wild Companions Survival
+         Subscribers: 37.4K subscribers (37400)
+         Email listed: no
+         Type: unclear
+   [w3] (28/366) https://www.youtube.com/@rccreloaded369
+         Name: Magnus Midtbø
+         Subscribers: 3.74M subscribers (3740000)
+         Email listed: yes
+         Type: solo (Norway)
+         Instagram: https://www.instagram.com/magmidt
+         Uploads: weekly, last 30d ago, 12 in 90d (sampled 30)
+         Name: RCC:Reloaded
+         Subscribers: 521K subscribers (521000)
+         Email listed: yes
+         Type: solo (Japan)
+         Instagram: https://www.instagram.com/rilo_rcc
+   [w2] (29/366) https://www.youtube.com/@NoahKane
+         Uploads: biweekly, last 4d ago, 7 in 90d (sampled 30)
+         Above range (3,740,000 > 500,000)
+   [w1] (30/366) https://www.youtube.com/@TanSoLoSurvival
+         Uploads: monthly, last 10d ago, 4 in 90d (sampled 30)
+         Above range (521,000 > 500,000)
+   [w3] (31/366) https://www.youtube.com/@BushcraftHakankarahan
+         Name: Noah Kane
+         Subscribers: 778K subscribers (778000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/noah__kane/
+         Name: Tan SoLo Survival
+         Subscribers: 64.1K subscribers (64099)
+         Email listed: no
+         Type: solo (United States)
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Name: Hakan Karahan Doğada
+         Subscribers: 917K subscribers (917000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/bushcraft_hakan_karahan/
+   [w1] (32/366) https://www.youtube.com/@AbelandVictoria
+         Uploads: monthly, last 21d ago, 4 in 90d (sampled 29)
+         Above range (778,000 > 500,000)
+         Name: Abel & Victoria
+         Subscribers: 232K subscribers (232000)
+         Email listed: yes
+         Type: solo (New Zealand)
+         Instagram: https://www.instagram.com/abel_and_victoria/
+   [w2] (33/366) https://www.youtube.com/@MadisonClysdalee
+         Uploads: weekly, last 3d ago, 13 in 90d (sampled 30)
+         Above range (917,000 > 500,000)
+   [w3] (34/366) https://www.youtube.com/@CalinaCamp
+         Uploads: biweekly, last 5d ago, 9 in 90d (sampled 30)
+   [w1] (35/366) https://www.youtube.com/@Wadepapenfus
+         Name: Madison Clysdale
+         Subscribers: 923K subscribers (923000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://instagram.com/madisonclysdale
+         Name: Calina Camp
+         Subscribers: 63.7K subscribers (63700)
+         Email listed: no
+         Type: unclear (United States)
+         Name: Wade Papenfus - Offshore Tales
+         Subscribers: 1.33M subscribers (1330000)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/wadepapenfus
+         Uploads: weekly, last 4d ago, 12 in 90d (sampled 30)
+         Above range (923,000 > 500,000)
+   [w2] (36/366) https://www.youtube.com/@VictoriaOutside
+         Uploads: dormant, last 183d ago, 0 in 90d (sampled 30)
+   [w3] (37/366) https://www.youtube.com/@strickandfran
+         Uploads: biweekly, last 1d ago, 5 in 90d (sampled 30)
+         Above range (1,330,000 > 500,000)
+   [w1] (38/366) https://www.youtube.com/@tomoutdoor2
+         Name: Victoria Outside
+         Subscribers: 607K subscribers (607000)
+         Email listed: yes
+         Type: solo (Ukraine)
+         Instagram: https://instagram.com/victoria.outside?igshid=YmMyMTA2M2Y=
+         Name: Tom Outdoor2
+         Subscribers: 32.7K subscribers (32700)
+         Email listed: yes
+         Type: solo (Netherlands)
+         Instagram: https://www.instagram.com/tomoutdoor/
+         Name: B2B Castaways (Strick and Fran)
+         Subscribers: 1.98M subscribers (1980000)
+         Email listed: yes
+         Type: business
+         Instagram: https://instagram.com/strick.and.fran
+         Uploads: monthly, last 3d ago, 3 in 90d (sampled 30)
+         Above range (607,000 > 500,000)
+         Uploads: monthly, last 30d ago, 2 in 90d (sampled 9)
+   [w2] (39/366) https://www.youtube.com/@TonioGuajardo
+         Uploads: biweekly, last 3d ago, 6 in 90d (sampled 30)
+         Above range (1,980,000 > 500,000)
+   [w1] (40/366) https://www.youtube.com/@BushcraftIdeas-e9q
+   [w3] (41/366) https://www.youtube.com/@indocamping
+         Name: Bushcraft Ideas
+         Subscribers: 189K subscribers (189000)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: Tonio Guajardo
+         Subscribers: 966K subscribers (966000)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/tonioguajardo
+         Name: Indo Camping
+         Subscribers: 57.6K subscribers (57600)
+         Email listed: yes
+         Type: solo (India)
+         Instagram: https://instagram.com/indocamping0942?igshid=ZDdkNTZiNTM=
+         Uploads: monthly, last 13d ago, 4 in 90d (sampled 30)
+         Uploads: monthly, last 30d ago, 3 in 90d (sampled 30)
+         Above range (966,000 > 500,000)
+   [w1] (42/366) https://www.youtube.com/@AntonioOff-Grid
+   [w2] (43/366) https://www.youtube.com/@sangalas3080
+         Uploads: weekly, last 1d ago, 22 in 90d (sampled 30)
+   [w3] (44/366) https://www.youtube.com/@BacktoBasics
+         Name: Antonio Off-Grid
+         Subscribers: 366K subscribers (366000)
+         Email listed: no
+         Type: solo (Switzerland)
+         Name: Sang alas
+         Subscribers: 263K subscribers (263000)
+         Email listed: no
+         Type: unclear (Indonesia)
+         Uploads: monthly, last 6d ago, 3 in 90d (sampled 30)
+   [w1] (45/366) https://www.youtube.com/@helenoutdoorss
+         Name: Back 2 Basics Adventures
+         Subscribers: 1.5M subscribers (1500000)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: http://instagram.com/b2badventures
+         Uploads: biweekly, last 13d ago, 5 in 90d (sampled 30)
+   [w2] (46/366) https://www.youtube.com/@nazaricamping
+         Name: Helen Outdoors
+         Subscribers: 61.8K subscribers (61800)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: biweekly, last 1d ago, 6 in 90d (sampled 30)
+         Above range (1,500,000 > 500,000)
+         Uploads: weekly, last 4d ago, 13 in 90d (sampled 30)
+   [w3] (47/366) https://www.youtube.com/@CampVibes13
+   [w1] (48/366) https://www.youtube.com/@NikkiDelventhal
+         Name: Nazari Camping
+         Subscribers: 9.35K subscribers (9350)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/nazaricamping?igsh=MW14eWt2eDk2NmptMg==
+         Name: Camp Vibes 13
+         Subscribers: 17.7K subscribers (17700)
+         Email listed: no
+         Type: unclear (United States)
+         Name: Nikki Delventhal
+         Subscribers: 1.03M subscribers (1030000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/nikkidelventhal/?hl=en
+         Uploads: weekly, last 3d ago, 12 in 90d (sampled 30)
+         Below range (9,350 < 10,000)
+         Uploads: weekly, last 5d ago, 14 in 90d (sampled 30)
+         Above range (1,030,000 > 500,000)
+   [w2] (49/366) https://www.youtube.com/@clayhayeshunter
+         Uploads: sporadic, last 12d ago, 1 in 90d (sampled 30)
+   [w1] (50/366) https://www.youtube.com/@KangAnua
+   [w3] (51/366) https://www.youtube.com/@Bushcraftimprovisation
+         Name: kang anuak
+         Subscribers: 72.1K subscribers (72100)
+         Email listed: yes
+         Type: unclear (Indonesia)
+         Name: Clay Hayes
+         Subscribers: 1.02M subscribers (1020000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/clayhayeshunter/
+         Name: Bushcraft improvisation
+         Subscribers: 2.48M subscribers (2480000)
+         Email listed: yes
+         Type: solo (Ukraine)
+         Uploads: weekly, last 5d ago, 14 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Uploads: biweekly, last 12d ago, 5 in 90d (sampled 30)
+         Above range (1,020,000 > 500,000)
+   [w1] (52/366) https://www.youtube.com/@AtikAilesi
+   [w2] (53/366) https://www.youtube.com/@ZoefontheMove
+         Name: Atik Family
+         Subscribers: 4.83M subscribers (4830000)
+         Email listed: yes
+         Type: solo (Türkiye)
+         Instagram: https://www.instagram.com/atikailesi/
+         Uploads: monthly, last 9d ago, 2 in 90d (sampled 30)
+         Above range (2,480,000 > 500,000)
+   [w3] (54/366) https://www.youtube.com/@yoyocamp
+         Name: Zoef on the Move
+         Subscribers: 336K subscribers (336000)
+         Email listed: yes
+         Type: solo (Netherlands)
+         Instagram: https://www.instagram.com/zoef_onthe_move/
+         Uploads: weekly, last 12d ago, 10 in 90d (sampled 30)
+         Above range (4,830,000 > 500,000)
+         Name: yoyocamp
+         Subscribers: 1.09M subscribers (1090000)
+         Email listed: yes
+         Type: solo (South Korea)
+         Instagram: https://www.instagram.com/_yo_yo_camp_
+   [w1] (55/366) https://www.youtube.com/@WildScites
+         Name: Wild Scites
+         Subscribers: 275K subscribers (275000)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/andrewscites
+         Uploads: biweekly, last 7d ago, 8 in 90d (sampled 30)
+   [w2] (56/366) https://www.youtube.com/@MountainLifeaholic
+         Uploads: monthly, last 10d ago, 3 in 90d (sampled 30)
+         Above range (1,090,000 > 500,000)
+   [w3] (57/366) https://www.youtube.com/@oldsouthernpine
+         Uploads: biweekly, last 4d ago, 5 in 90d (sampled 30)
+         Name: Mountain Lifeaholic
+         Subscribers: 60.7K subscribers (60700)
+         Email listed: yes
+         Type: unclear (United States)
+   [w1] (58/366) https://www.youtube.com/@andrazegart
+         Name: Andraz Egart
+         Subscribers: 235K subscribers (235000)
+         Email listed: yes
+         Type: solo (Slovenia)
+         Name: Old Southern Pine
+         Subscribers: 121K subscribers (121000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/oldsouthernpine
+         Uploads: weekly, last 5d ago, 13 in 90d (sampled 30)
+   [w2] (59/366) https://www.youtube.com/@LoneSurvival258
+         Uploads: weekly, last 3d ago, 13 in 90d (sampled 30)
+   [w3] (60/366) https://www.youtube.com/@family_travel_story
+         Uploads: monthly, last 30d ago, 2 in 90d (sampled 30)
+   [w1] (61/366) https://www.youtube.com/@aquavanlife
+         Name: Lone Survival 258
+         Subscribers: 6.73K subscribers (6730)
+         Email listed: yes
+         Type: solo (Norway)
+         Name: aquavanlife
+         Subscribers: 120K subscribers (120000)
+         Email listed: yes
+         Type: solo (Türkiye)
+         Instagram: https://instagram.com/aquavanlife
+         Name: Family Travel Story
+         Subscribers: 61K subscribers (61000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/family_travel_story
+         Uploads: monthly, last 14d ago, 4 in 90d (sampled 30)
+         Uploads: weekly, last 0d ago, 15 in 90d (sampled 15)
+         Below range (6,730 < 10,000)
+   [w1] (62/366) https://www.youtube.com/@the_humancraft
+   [w2] (63/366) https://www.youtube.com/@volynbushcraft
+         Uploads: biweekly, last 12d ago, 7 in 90d (sampled 30)
+         Name: The Human Craft
+         Subscribers: 15K subscribers (15000)
+         Email listed: yes
+         Type: unclear (United States)
+   [w3] (64/366) https://www.youtube.com/@TrentTheTraveler
+         Name: Volyn Bushcraft
+         Subscribers: 75.9K subscribers (75900)
+         Email listed: yes
+         Type: unclear (Ukraine)
+         Uploads: weekly, last 11d ago, 23 in 90d (sampled 30)
+   [w1] (65/366) https://www.youtube.com/@HarshSURVIVAL88-i3p
+         Name: Trent The Traveler
+         Subscribers: 1.36M subscribers (1360000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/ttthefineprinttt
+         Uploads: weekly, last 4d ago, 15 in 90d (sampled 30)
+   [w2] (66/366) https://www.youtube.com/@LostinMountainsCarpathians
+         Name: Harsh  SURVIVAL88
+         Subscribers: 8.57K subscribers (8570)
+         Email listed: no
+         Type: unclear (United States)
+         Uploads: biweekly, last 28d ago, 6 in 90d (sampled 30)
+         Above range (1,360,000 > 500,000)
+   [w3] (67/366) https://www.youtube.com/@OffGridSolutionsTV
+         Name: Lost in Mountains: Carpathians
+         Subscribers: 68.2K subscribers (68200)
+         Email listed: yes
+         Type: solo (Ukraine)
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Below range (8,570 < 10,000)
+   [w1] (68/366) https://www.youtube.com/@mav
+         Name: Off Grid Solutions
+         Subscribers: 32.7K subscribers (32700)
+         Email listed: yes
+         Type: unclear
+         Uploads: biweekly, last 4d ago, 5 in 90d (sampled 30)
+         Name: Mav
+         Subscribers: 2.72M subscribers (2720000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/mavrikjoos/
+   [w2] (69/366) https://www.youtube.com/@Erwincampp
+         Uploads: monthly, last 12d ago, 4 in 90d (sampled 30)
+         Uploads: biweekly, last 21d ago, 6 in 90d (sampled 30)
+         Above range (2,720,000 > 500,000)
+   [w3] (70/366) https://www.youtube.com/@CeciliaBlomdahl
+   [w1] (71/366) https://www.youtube.com/@wesventures6426
+         Name: Erwin campp
+         Subscribers: 32.1K subscribers (32100)
+         Email listed: no
+         Type: solo (South Korea)
+         Instagram: https://www.instagram.com/erwin_campp
+         Name: WesVentures
+         Subscribers: 33.5K subscribers (33500)
+         Email listed: no
+         Type: solo
+         Instagram: https://www.instagram.com/wes_ventures/
+         Name: Cecilia Blomdahl
+         Subscribers: 1.18M subscribers (1180000)
+         Email listed: yes
+         Type: solo (Norway)
+         Instagram: http://instagram.com/sejsejlija
+         Uploads: biweekly, last 3d ago, 8 in 90d (sampled 30)
+   [w2] (72/366) https://www.youtube.com/@dudelifeofficial
+         Uploads: weekly, last 10d ago, 11 in 90d (sampled 30)
+   [w1] (73/366) https://www.youtube.com/@NorwegianXplorer
+         Uploads: weekly, last 8d ago, 12 in 90d (sampled 30)
+         Above range (1,180,000 > 500,000)
+   [w3] (74/366) https://www.youtube.com/@herodw
+         Name: Dude Life
+         Subscribers: 1.31M subscribers (1310000)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: Norwegian Xplorer
+         Subscribers: 232K subscribers (232000)
+         Email listed: yes
+         Type: solo (Norway)
+         Instagram: https://www.instagram.com/norwegianxplorer
+         Uploads: weekly, last 4d ago, 13 in 90d (sampled 30)
+         Above range (1,310,000 > 500,000)
+         Name: Hero DW
+         Subscribers: 7.85M subscribers (7850000)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 4d ago, 19 in 90d (sampled 30)
+   [w2] (75/366) https://www.youtube.com/@WoodsboundOutdoors
+   [w1] (76/366) https://www.youtube.com/@Uni_Camp
+         Name: Woodsbound Outdoors
+         Subscribers: 3.04M subscribers (3040000)
+         Email listed: no
+         Type: unclear
+         Uploads: biweekly, last 9d ago, 5 in 90d (sampled 30)
+         Above range (7,850,000 > 500,000)
+         Name: UNI CAMP
+         Subscribers: 773K subscribers (773000)
+         Email listed: yes
+         Type: solo (South Korea)
+         Instagram: https://www.instagram.com/uni_camp_/
+   [w3] (77/366) https://www.youtube.com/@TruckHouseLife
+         Uploads: biweekly, last 4d ago, 9 in 90d (sampled 30)
+         Above range (773,000 > 500,000)
+   [w1] (78/366) https://www.youtube.com/@Rainsounds_1
+         Uploads: monthly, last 30d ago, 3 in 90d (sampled 30)
+         Above range (3,040,000 > 500,000)
+         Name: Truck House Life
+         Subscribers: 795K subscribers (795000)
+         Email listed: yes
+         Type: unclear (United States)
+   [w2] (79/366) https://www.youtube.com/@ramblesoul
+         Uploads: weekly, last 5d ago, 13 in 90d (sampled 29)
+         Above range (795,000 > 500,000)
+         Name: Ramble Soul
+         Subscribers: 510K subscribers (510000)
+         Email listed: yes
+         Type: solo (Türkiye)
+         Instagram: https://www.instagram.com/ramblesoul/?hl=tr
+   [w3] (80/366) https://www.youtube.com/@fvsoutherngirl
+         Name: Rain sounds
+         Subscribers: 13K subscribers (13000)
+         Email listed: no
+         Type: solo (United States)
+         Name: Luke McFadden
+         Subscribers: 1M subscribers (1000000)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: monthly, last 14d ago, 3 in 90d (sampled 30)
+         Above range (510,000 > 500,000)
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (81/366) https://www.youtube.com/@Quietadventures_08
+   [w1] (82/366) https://www.youtube.com/@AYOFishing
+         Name: AYO Fishing
+         Subscribers: 815K subscribers (815000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/ayo_fishing
+         Uploads: weekly, last 5d ago, 13 in 90d (sampled 30)
+         Above range (1,000,000 > 500,000)
+         Name: Quiet Rain Adventures
+         Subscribers: 16.4K subscribers (16400)
+         Email listed: yes
+         Type: solo (Indonesia)
+         Instagram: https://www.instagram.com/quietadv?igsh=MWdnNXNtbmNsbzV5bQ==
+   [w3] (83/366) https://www.youtube.com/@BrothersofWhitewood
+         Uploads: biweekly, last 5d ago, 7 in 90d (sampled 30)
+         Above range (815,000 > 500,000)
+         Uploads: weekly, last 4d ago, 26 in 90d (sampled 30)
+   [w1] (84/366) https://www.youtube.com/@realnomadvibes
+   [w2] (85/366) https://www.youtube.com/@BushcraftSurvivalSkills
+         Name: Brothers Of Whitewood
+         Subscribers: 41.6K subscribers (41600)
+         Email listed: no
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/brothersofwhitewood/
+         Name: nomad vibes
+         Subscribers: 99.9K subscribers (99900)
+         Email listed: no
+         Type: unclear (United States)
+         Name: Bushcraft Survival Skills
+         Subscribers: 61.1K subscribers (61100)
+         Email listed: no
+         Type: solo
+         Uploads: inactive, last 122d ago, 0 in 90d (sampled 16)
+         Uploads: monthly, last 1d ago, 2 in 90d (sampled 30)
+   [w3] (86/366) https://www.youtube.com/@AsbjornOlsenBergBushcraft
+   [w1] (87/366) https://www.youtube.com/@GOseeOUTSIDE
+         Uploads: biweekly, last 21d ago, 5 in 90d (sampled 30)
+   [w2] (88/366) https://www.youtube.com/@WildSoloSurvival
+         Name: Asbjorn Olsen-Berg Bushcraft
+         Subscribers: 757K subscribers (757000)
+         Email listed: yes
+         Type: solo (Norway)
+         Instagram: https://instagram.com/asbjorn.olsen.berg
+         Name: GOseeOUTSIDE
+         Subscribers: 381 subscribers (381)
+         Email listed: yes
+         Type: unclear (Canada)
+         Uploads: inactive, last 91d ago, 0 in 90d (sampled 21)
+         Below range (381 < 10,000)
+         Name: Wild Solo Survival
+         Subscribers: 102K subscribers (102000)
+         Email listed: no
+         Type: unclear (United States)
+   [w1] (89/366) https://www.youtube.com/@norusarubushcraft
+         Uploads: dormant, last 183d ago, 0 in 90d (sampled 30)
+         Above range (757,000 > 500,000)
+   [w3] (90/366) https://www.youtube.com/@A1ADVENTURE
+         Uploads: weekly, last 1d ago, 29 in 90d (sampled 30)
+         Name: Noru Saru Bushcraft
+         Subscribers: 481K subscribers (481000)
+         Email listed: yes
+         Type: solo (United States)
+   [w2] (91/366) https://www.youtube.com/@Life-in-Wild1
+         Name: A1 ADVENTURE
+         Subscribers: 7.01M subscribers (7010000)
+         Email listed: yes
+         Type: solo (India)
+         Instagram: https://www.instagram.com/mr.a1adventure/?hl=hi
+         Uploads: biweekly, last 6d ago, 5 in 90d (sampled 30)
+         Name: Life in the Wild: bushcraft and outdoors
+         Subscribers: 602K subscribers (602000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/simple_live_optimist
+   [w1] (92/366) https://www.youtube.com/@jarrettrobinson1
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Above range (7,010,000 > 500,000)
+         Name: Jarrett Robinson
+         Subscribers: 62K subscribers (62000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/jarrettrobinson2/
+   [w3] (93/366) https://www.youtube.com/@wildcampp
+         Uploads: monthly, last 30d ago, 2 in 90d (sampled 15)
+         Above range (602,000 > 500,000)
+   [w2] (94/366) https://www.youtube.com/@v%C4%83npham-e5zdefew
+         Uploads: biweekly, last 4d ago, 6 in 90d (sampled 30)
+   [w1] (95/366) https://www.youtube.com/@TAOutdoors
+         Name: wild camp
+         Subscribers: 124K subscribers (124000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://instagram.com/taha.yaghooti?igshid=MzRlODBiNWFlZA==
+         Name: Triệu Thị Phượng
+         Subscribers: 6.03K subscribers (6030)
+         Email listed: no
+         Type: unclear (United States)
+         Name: TA Outdoors
+         Subscribers: 2.5M subscribers (2500000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/taoutdoorofficial/
+         Uploads: weekly, last 0d ago, 28 in 90d (sampled 30)
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Below range (6,030 < 10,000)
+         Uploads: biweekly, last 10d ago, 7 in 90d (sampled 30)
+         Above range (2,500,000 > 500,000)
+   [w3] (96/366) https://www.youtube.com/@survivalliar
+   [w2] (97/366) https://www.youtube.com/@serkanbilginbushcraft
+   [w1] (98/366) https://www.youtube.com/@AdamStew
+         Name: Adam Stew
+         Subscribers: 258K subscribers (258000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/adamstew_/
+         Name: Survival Liar
+         Subscribers: 225K subscribers (225000)
+         Email listed: no
+         Type: solo (Indonesia)
+         Instagram: https://www.instagram.com/survivalliarig?igsh=MWRlaGc5eWNvbHJwMQ==
+         Name: Serkan Bilgin Bushcraft
+         Subscribers: 144K subscribers (144000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/serkanbilgindogada
+         Uploads: biweekly, last 4d ago, 7 in 90d (sampled 30)
+         Uploads: weekly, last 3d ago, 10 in 90d (sampled 30)
+   [w1] (99/366) https://www.youtube.com/@TheBearEssentials
+         Uploads: weekly, last 5d ago, 11 in 90d (sampled 30)
+   [w3] (100/366) https://www.youtube.com/@TheWoodedBeardsman
+   [w2] (101/366) https://www.youtube.com/@Wildcamp.adventure
+         Name: The Bear Essentials
+         Subscribers: 1.52M subscribers (1520000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/bear.essentials.outdrs/
+         Name: The Wooded Beardsman
+         Subscribers: 1.64M subscribers (1640000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/the_wooded_beardsman/
+         Uploads: monthly, last 14d ago, 2 in 90d (sampled 30)
+         Above range (1,520,000 > 500,000)
+         Name: Wild Camp Adventure
+         Subscribers: 31.6K subscribers (31600)
+         Email listed: no
+         Type: unclear (United States)
+   [w1] (102/366) https://www.youtube.com/@rambleoncharlie
+         Name: Ramble On
+         Subscribers: 90.3K subscribers (90300)
+         Email listed: yes
+         Type: solo (New Zealand)
+         Instagram: https://www.instagram.com/charlieruck__
+         Uploads: monthly, last 14d ago, 3 in 90d (sampled 30)
+         Above range (1,640,000 > 500,000)
+         Uploads: monthly, last 30d ago, 3 in 90d (sampled 30)
+   [w3] (103/366) https://www.youtube.com/@arman_bushcraftt
+   [w2] (104/366) https://www.youtube.com/@BushcraftandWildCamping
+         Uploads: monthly, last 21d ago, 3 in 90d (sampled 27)
+   [w1] (105/366) https://www.youtube.com/@Bushcraftinthewilds
+         Name: Arman Bushcraftt
+         Subscribers: 12.2K subscribers (12200)
+         Email listed: no
+         Type: solo (United States)
+         Name: Bushcraft and Wild Camping
+         Subscribers: 21.4K subscribers (21400)
+         Email listed: yes
+         Type: solo (India)
+         Name: Bushcraft in the wilds
+         Subscribers: 15.5K subscribers (15500)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: inactive, last 91d ago, 0 in 90d (sampled 30)
+   [w3] (106/366) https://www.youtube.com/@denmashengki
+         Uploads: biweekly, last 2d ago, 5 in 90d (sampled 30)
+         Uploads: monthly, last 9d ago, 2 in 90d (sampled 23)
+   [w2] (107/366) https://www.youtube.com/@BarelyCamping
+   [w1] (108/366) https://www.youtube.com/@FieldDays
+         Name: Field Days
+         Subscribers: 2.01M subscribers (2009999)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/field__days
+         Name: DenMas Hengki
+         Subscribers: 296K subscribers (296000)
+         Email listed: yes
+         Type: unclear (Indonesia)
+         Name: Barely Camping
+         Subscribers: 148K subscribers (148000)
+         Email listed: yes
+         Type: unclear (United States)
+         Instagram: https://www.instagram.com/barelycampin
+         Uploads: biweekly, last 3d ago, 7 in 90d (sampled 30)
+         Above range (2,009,999 > 500,000)
+   [w1] (109/366) https://www.youtube.com/@DenMas_Hengki_ADV
+         Uploads: biweekly, last 8d ago, 6 in 90d (sampled 30)
+         Uploads: weekly, last 1d ago, 14 in 90d (sampled 30)
+         Name: My Adventure DenMas Hengki
+         Subscribers: 23K subscribers (23000)
+         Email listed: yes
+         Type: unclear (Indonesia)
+   [w3] (110/366) https://www.youtube.com/@joshdubdaddy
+   [w2] (111/366) https://www.youtube.com/@Minsi_Outdoors
+         Name: Minsi Outdoors
+         Subscribers: 835K subscribers (835000)
+         Email listed: no
+         Type: unclear (Australia)
+         Uploads: weekly, last 4d ago, 12 in 90d (sampled 30)
+         Name: DubDaddy
+         Subscribers: 1.43M subscribers (1430000)
+         Email listed: yes
+         Type: unclear (Australia)
+   [w1] (112/366) https://www.youtube.com/@BUSHCRAFT72H
+         Uploads: weekly, last 4d ago, 12 in 90d (sampled 30)
+         Above range (1,430,000 > 500,000)
+         Name: BUSHCRAFT 72H
+         Subscribers: 5.48K subscribers (5480)
+         Email listed: no
+         Type: solo (United States)
+   [w3] (113/366) https://www.youtube.com/@Nordic_Ventures
+         Uploads: biweekly, last 4d ago, 7 in 90d (sampled 30)
+         Above range (835,000 > 500,000)
+   [w2] (114/366) https://www.youtube.com/@OvensRockyMountainBushcraft
+         Uploads: weekly, last 5d ago, 21 in 90d (sampled 30)
+         Below range (5,480 < 10,000)
+   [w1] (115/366) https://www.youtube.com/@kohrag1
+         Name: Nordic Ventures
+         Subscribers: 31.6K subscribers (31600)
+         Email listed: yes
+         Type: solo (Finland)
+         Name: kohrag
+         Subscribers: 11.7K subscribers (11700)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Name: Ovens Rocky Mountain Bushcraft
+         Subscribers: 1.11M subscribers (1110000)
+         Email listed: yes
+         Type: solo (United States)
+         Uploads: weekly, last 61d ago, 11 in 90d (sampled 30)
+   [w1] (116/366) https://www.youtube.com/@yeonyoo401
+         Uploads: inactive, last 91d ago, 0 in 90d (sampled 30)
+   [w3] (117/366) https://www.youtube.com/@RainyCarCamp
+         Uploads: biweekly, last 4d ago, 6 in 90d (sampled 30)
+         Above range (1,110,000 > 500,000)
+   [w2] (118/366) https://www.youtube.com/@DrBro
+         Name: [그리는연유]Drawing YeonYoo
+         Subscribers: 192K subscribers (192000)
+         Email listed: no
+         Type: solo (South Korea)
+         Instagram: https://www.instagram.com/yeonhee867/
+         Name: RainyCarCamping
+         Subscribers: 36.4K subscribers (36400)
+         Email listed: no
+         Type: solo (Japan)
+         Uploads: weekly, last 3d ago, 10 in 90d (sampled 30)
+   [w1] (119/366) https://www.youtube.com/@RafasyaCampBushcarft
+         Name: Dr Bro
+         Subscribers: 3.12M subscribers (3120000)
+         Email listed: yes
+         Type: solo (India)
+         Instagram: https://www.instagram.com/drbrokannada/
+         Uploads: monthly, last 2d ago, 4 in 90d (sampled 22)
+   [w3] (120/366) https://www.youtube.com/@ssoberrycamping
+         Name: Rafasya Camp Bushcarft
+         Subscribers: 52.8K subscribers (52800)
+         Email listed: no
+         Type: unclear (United States)
+         Uploads: biweekly, last 12d ago, 5 in 90d (sampled 30)
+         Above range (3,120,000 > 500,000)
+   [w2] (121/366) https://www.youtube.com/@Campbushcraft1
+         Uploads: weekly, last 3d ago, 13 in 90d (sampled 30)
+   [w1] (122/366) https://www.youtube.com/@keibanseikatsu
+         Name: 쏘베리 Ssoberry
+         Subscribers: 1.33M subscribers (1330000)
+         Email listed: yes
+         Type: solo (South Korea)
+         Instagram: https://www.instagram.com/ssoberry_/
+         Name: Camp bushcraft
+         Subscribers: 32.4K subscribers (32400)
+         Email listed: no
+         Type: unclear (United States)
+         Name: MinivanLife
+         Subscribers: 584K subscribers (584000)
+         Email listed: yes
+         Type: solo (Japan)
+         Instagram: https://www.instagram.com/keiban_seikatsu/
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 30)
+         Above range (1,330,000 > 500,000)
+   [w3] (123/366) https://www.youtube.com/@VisionbyS
+         Uploads: weekly, last 3d ago, 11 in 90d (sampled 30)
+   [w2] (124/366) https://www.youtube.com/@Katieroams
+         Uploads: biweekly, last 0d ago, 7 in 90d (sampled 30)
+         Above range (584,000 > 500,000)
+   [w1] (125/366) https://www.youtube.com/@KentSurvival
+         Name: Vision by S
+         Subscribers: 19.3K subscribers (19300)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/vision.by.s/reels/
+         Name: Katie Roams
+         Subscribers: 309K subscribers (309000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/katiieroams
+         Name: Kent Survival
+         Subscribers: 894K subscribers (894000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/kentsurvival/
+         Uploads: biweekly, last 9d ago, 8 in 90d (sampled 27)
+         No travel/holiday wording - off niche
+         Uploads: weekly, last 0d ago, 26 in 90d (sampled 30)
+   [w3] (126/366) https://www.youtube.com/@UnknownDreamer
+         Uploads: weekly, last 0d ago, 15 in 90d (sampled 30)
+         Above range (894,000 > 500,000)
+   [w2] (127/366) https://www.youtube.com/@smallplots
+   [w1] (128/366) https://www.youtube.com/@eastern.forester
+         Name: Unknown Dreamer
+         Subscribers: 394K subscribers (394000)
+         Email listed: yes
+         Type: solo (India)
+         Instagram: http://Instagram.com/unknowndreamer0
+         Name: Small Plots
+         Subscribers: 38.4K subscribers (38400)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/smallplots/
+         Name: Eastern Forester
+         Subscribers: 42.9K subscribers (42900)
+         Email listed: yes
+         Type: solo (Indonesia)
+         Instagram: https://www.instagram.com/andika.travelindo
+         Uploads: weekly, last 5d ago, 10 in 90d (sampled 30)
+   [w1] (129/366) https://www.youtube.com/@Forestcampp
+         Uploads: weekly, last 2d ago, 22 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (130/366) https://www.youtube.com/@sophiacamping99
+         Uploads: weekly, last 7d ago, 10 in 90d (sampled 30)
+   [w2] (131/366) https://www.youtube.com/@J4TravelAdventures
+         Name: Forest camp
+         Subscribers: 12.5K subscribers (12500)
+         Email listed: yes
+         Type: solo (United States)
+         Name: sophiacamping
+         Subscribers: 113K subscribers (113000)
+         Email listed: yes
+         Type: solo (United States)
+         Uploads: weekly, last 1d ago, 26 in 90d (sampled 30)
+         Name: J4
+         Subscribers: 366K subscribers (366000)
+         Email listed: yes
+         Type: solo (Philippines)
+         Instagram: https://www.instagram.com/j4traveladventures/
+   [w1] (132/366) https://www.youtube.com/@DianaOutdoor
+         Name: Diana Outdoors
+         Subscribers: 12.5K subscribers (12500)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: inactive, last 91d ago, 0 in 90d (sampled 30)
+   [w3] (133/366) https://www.youtube.com/@ArtRif-camp
+         Uploads: weekly, last 1d ago, 16 in 90d (sampled 30)
+   [w2] (134/366) https://www.youtube.com/@LunainNature
+         Uploads: biweekly, last 12d ago, 6 in 90d (sampled 12)
+   [w1] (135/366) https://www.youtube.com/@foood46
+         Name: Art Rif
+         Subscribers: 28.3K subscribers (28300)
+         Email listed: yes
+         Type: solo (Indonesia)
+         Name: Luna in Nature
+         Subscribers: 4.33K subscribers (4330)
+         Email listed: no
+         Type: solo (Vietnam)
+         Instagram: https://www.instagram.com/luna.in.nature.02?igsh=bmQzd2RlYnExOTV6&utm_source=qr
+         Name: Food 46
+         Subscribers: 937K subscribers (937000)
+         Email listed: no
+         Type: solo (India)
+         Uploads: weekly, last 1d ago, 21 in 90d (sampled 30)
+   [w3] (136/366) https://www.youtube.com/@TRIPTHEWILD
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Below range (4,330 < 10,000)
+   [w2] (137/366) https://www.youtube.com/@Swedwoods
+         Uploads: weekly, last 5d ago, 12 in 90d (sampled 30)
+         Above range (937,000 > 500,000)
+   [w1] (138/366) https://www.youtube.com/@KurniaCampBushcraft-m2j
+         Name: TRIP THE WILD
+         Subscribers: 335K subscribers (335000)
+         Email listed: yes
+         Type: solo (India)
+         Instagram: https://www.instagram.com/tripthe_wild/
+         Name: Kurnia Camp Bushcraft
+         Subscribers: 1.57K subscribers (1570)
+         Email listed: no
+         Type: solo (United States)
+         Name: Swedwoods
+         Subscribers: 656K subscribers (656000)
+         Email listed: no
+         Type: solo (Sweden)
+         Instagram: https://www.instagram.com/swedwoodsofficial/
+         Uploads: weekly, last 6d ago, 13 in 90d (sampled 30)
+         Below range (1,570 < 10,000)
+         Uploads: weekly, last 4d ago, 13 in 90d (sampled 30)
+   [w1] (139/366) https://www.youtube.com/@FolkersHerholdt-Outdoors
+   [w3] (140/366) https://www.youtube.com/@BushcraftGirlASMR
+         Uploads: monthly, last 11d ago, 3 in 90d (sampled 30)
+         Above range (656,000 > 500,000)
+   [w2] (141/366) https://www.youtube.com/@wombat.b
+         Name: Folkers Herholdt
+         Subscribers: 8.5K subscribers (8500)
+         Email listed: no
+         Type: solo (South Africa)
+         Name: Bushcraft Girl ASMR
+         Subscribers: 1.69K subscribers (1690)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/campinggirl30/
+         Uploads: biweekly, last 8d ago, 5 in 90d (sampled 24)
+         Below range (8,500 < 10,000)
+         Name: WOMBAT
+         Subscribers: 13.2K subscribers (13200)
+         Email listed: yes
+         Type: solo (United States)
+   [w1] (142/366) https://www.youtube.com/@tripsense
+         Uploads: weekly, last 0d ago, 23 in 90d (sampled 30)
+         Below range (1,690 < 10,000)
+   [w3] (143/366) https://www.youtube.com/@MirandaGoesOutside
+         Uploads: weekly, last 3d ago, 11 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Name: Trip Sense
+         Subscribers: 291K subscribers (291000)
+         Email listed: yes
+         Type: solo (India)
+         Instagram: https://instagram.com/trip__sense?igshid=YmMyMTA2M2Y=
+   [w2] (144/366) https://www.youtube.com/@CampinWithChampion
+         Name: Miranda Goes Outside!!
+         Subscribers: 202K subscribers (202000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/mirandagoesoutside/
+         Name: Campin' With Champion
+         Subscribers: 34.9K subscribers (34900)
+         Email listed: yes
+         Type: solo (United States)
+         Uploads: weekly, last 1d ago, 13 in 90d (sampled 30)
+   [w1] (145/366) https://www.youtube.com/@englishwoodsman
+         Uploads: monthly, last 21d ago, 3 in 90d (sampled 30)
+         Uploads: weekly, last 1d ago, 16 in 90d (sampled 30)
+   [w3] (146/366) https://www.youtube.com/@JUNTravel2000
+         Name: English Woodsman
+         Subscribers: 115K subscribers (115000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+   [w2] (147/366) https://www.youtube.com/@MyBold-Yt
+         Name: JUN Travel
+         Subscribers: 16.7K subscribers (16700)
+         Email listed: no
+         Type: unclear (South Korea)
+         Uploads: weekly, last 3d ago, 16 in 90d (sampled 30)
+         Name: MyBold
+         Subscribers: 2.97K subscribers (2970)
+         Email listed: no
+         Type: unclear (United States)
+   [w1] (148/366) https://www.youtube.com/@raincampstories
+         Uploads: dormant, last 244d ago, 0 in 90d (sampled 29)
+   [w3] (149/366) https://www.youtube.com/@ZonaDenMas
+         Uploads: weekly, last 1d ago, 29 in 90d (sampled 30)
+         Below range (2,970 < 10,000)
+   [w2] (150/366) https://www.youtube.com/@weekendsidequest
+         Name: Rain Camp Stories
+         Subscribers: 1.97K subscribers (1970)
+         Email listed: no
+         Type: solo (Indonesia)
+         Uploads: weekly, last 1d ago, 22 in 90d (sampled 30)
+         Below range (1,970 < 10,000)
+         Name: Zona DenMas
+         Subscribers: 12.7K subscribers (12700)
+         Email listed: no
+         Type: unclear (Indonesia)
+   [w1] (151/366) https://www.youtube.com/@Wochenende6969
+         Name: Weekend Sidequest
+         Subscribers: 15.8K subscribers (15800)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/weekendsidequest/
+         Name: Wochenende
+         Subscribers: 28.1K subscribers (28100)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/camping_outdoors_travel
+         Uploads: weekly, last 3d ago, 11 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (152/366) https://www.youtube.com/@appalachianadventurista
+         Uploads: weekly, last 4d ago, 12 in 90d (sampled 30)
+         Uploads: biweekly, last 28d ago, 8 in 90d (sampled 30)
+   [w2] (153/366) https://www.youtube.com/@PouringCalm
+   [w1] (154/366) https://www.youtube.com/@NurCahyanto-k7x
+         Name: Appalachian Adventurista
+         Subscribers: 9.99K subscribers (9990)
+         Email listed: no
+         Type: unclear
+         Name: DEEP RAIN CAMP
+         Subscribers: 3.56K subscribers (3560)
+         Email listed: no
+         Type: unclear (Indonesia)
+         Name: Pouring Calm
+         Subscribers: 1.75K subscribers (1750)
+         Email listed: no
+         Type: unclear (Japan)
+         Uploads: weekly, last 1d ago, 27 in 90d (sampled 30)
+         Below range (3,560 < 10,000)
+   [w1] (155/366) https://www.youtube.com/@northerndirtbag
+         Uploads: biweekly, last 30d ago, 9 in 90d (sampled 30)
+         Below range (9,990 < 10,000)
+   [w3] (156/366) https://www.youtube.com/@pacificcamp
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Below range (1,750 < 10,000)
+   [w2] (157/366) https://www.youtube.com/@ZieLCamping
+         Name: Northern Dirtbag
+         Subscribers: 421 subscribers (421)
+         Email listed: yes
+         Type: solo (Canada)
+         Name: pacific camp
+         Subscribers: 2.35K subscribers (2350)
+         Email listed: no
+         Type: solo (Indonesia)
+         Name: ZieL Camping
+         Subscribers: 6.15K subscribers (6150)
+         Email listed: yes
+         Type: solo (Indonesia)
+         Uploads: inactive, last 91d ago, 0 in 90d (sampled 11)
+         Below range (421 < 10,000)
+         Uploads: weekly, last 1d ago, 25 in 90d (sampled 30)
+         Below range (2,350 < 10,000)
+   [w1] (158/366) https://www.youtube.com/@TwoTubesMTC
+   [w3] (159/366) https://www.youtube.com/@AQuietPlaceAdventures
+         Uploads: weekly, last 2d ago, 30 in 90d (sampled 30)
+         Below range (6,150 < 10,000)
+         Name: TwoTubes Motocamping
+         Subscribers: 5.24K subscribers (5240)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/twotubesmtc/
+   [w2] (160/366) https://www.youtube.com/@sintax77
+         Name: A Quiet Place Adventures
+         Subscribers: 60.8K subscribers (60800)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/theoutdoorgearreview/
+         Uploads: monthly, last 21d ago, 3 in 90d (sampled 30)
+         Below range (5,240 < 10,000)
+   [w1] (161/366) https://www.youtube.com/@woodsyrae
+         Name: sintax77
+         Subscribers: 134K subscribers (134000)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: Woodsy Rae
+         Subscribers: 2.87K subscribers (2870)
+         Email listed: yes
+         Type: solo
+         Instagram: https://Www.instagram.com/woodsyrae
+         Uploads: weekly, last 2d ago, 13 in 90d (sampled 30)
+   [w3] (162/366) https://www.youtube.com/@riza_nature
+         Uploads: monthly, last 4d ago, 2 in 90d (sampled 30)
+   [w2] (163/366) https://www.youtube.com/@randomadventures2.0
+         Uploads: weekly, last 2d ago, 13 in 90d (sampled 13)
+         Below range (2,870 < 10,000)
+         Name: Riza Nature
+         Subscribers: 3.24K subscribers (3240)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/riza_nature
+   [w1] (164/366) https://www.youtube.com/@TravelersTale
+         Name: Traveler's Tale
+         Subscribers: 243K subscribers (243000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/everestmaher/?hl=en
+         Name: Random Adventures 2.0
+         Subscribers: 53.4K subscribers (53400)
+         Email listed: yes
+         Type: solo (United States)
+         Uploads: weekly, last 0d ago, 27 in 90d (sampled 30)
+         Below range (3,240 < 10,000)
+         Uploads: monthly, last 4d ago, 4 in 90d (sampled 30)
+   [w3] (165/366) https://www.youtube.com/@KombiFamilyGhibli
+   [w1] (166/366) https://www.youtube.com/@IsaIsarb
+         Uploads: weekly, last 5d ago, 15 in 90d (sampled 30)
+   [w2] (167/366) https://www.youtube.com/@tabi-ie
+         Name: Kombi Family Ghibli
+         Subscribers: 39.1K subscribers (39100)
+         Email listed: no
+         Type: unclear (United States)
+         Name: Isa Isarb
+         Subscribers: 3.4M subscribers (3400000)
+         Email listed: yes
+         Type: solo (Malaysia)
+         Instagram: https://www.instagram.com/isaisarb/
+         Uploads: weekly, last 2d ago, 19 in 90d (sampled 30)
+         Above range (3,400,000 > 500,000)
+         Name: TABI-IE
+         Subscribers: 1.34M subscribers (1340000)
+         Email listed: yes
+         Type: solo (Japan)
+         Instagram: https://www.instagram.com/tabisuru.ie/
+   [w1] (168/366) https://www.youtube.com/@kupiochannel
+         Uploads: weekly, last 3d ago, 22 in 90d (sampled 30)
+   [w3] (169/366) https://www.youtube.com/@LeavesDiary88
+         Name: Kupio lives in his car
+         Subscribers: 829K subscribers (829000)
+         Email listed: yes
+         Type: solo (Japan)
+         Instagram: https://www.instagram.com/kupiochannel/
+         Uploads: weekly, last 1d ago, 24 in 90d (sampled 30)
+         Above range (1,340,000 > 500,000)
+   [w2] (170/366) https://www.youtube.com/@Komusubi_Channel
+         Uploads: weekly, last 4d ago, 12 in 90d (sampled 30)
+         Above range (829,000 > 500,000)
+   [w1] (171/366) https://www.youtube.com/@ShidoLab
+         Name: Leaves Diary
+         Subscribers: 436K subscribers (436000)
+         Email listed: yes
+         Type: solo (Japan)
+         Instagram: https://www.instagram.com/leaves_diary88/
+         Name: Komusubi Channel
+         Subscribers: 258K subscribers (258000)
+         Email listed: no
+         Type: solo (Japan)
+         Instagram: https://www.instagram.com/komusubi_girl
+         Uploads: weekly, last 4d ago, 15 in 90d (sampled 30)
+         Name: ShidoLab
+         Subscribers: 130K subscribers (130000)
+         Email listed: yes
+         Type: solo (Japan)
+         Instagram: https://www.instagram.com/shido_lab/
+   [w3] (172/366) https://www.youtube.com/@RainyGuy
+         Uploads: weekly, last 3d ago, 11 in 90d (sampled 30)
+         Uploads: monthly, last 3d ago, 4 in 90d (sampled 30)
+   [w2] (173/366) https://www.youtube.com/@KevinWaldsAdventures
+   [w1] (174/366) https://www.youtube.com/@kupiocinema
+         Name: Rainy Guy
+         Subscribers: 286K subscribers (286000)
+         Email listed: yes
+         Type: solo (Ukraine)
+         Name: Kupio Cinema
+         Subscribers: 30.5K subscribers (30500)
+         Email listed: no
+         Type: unclear (United States)
+         Name: kevin wald
+         Subscribers: 72.3K subscribers (72300)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/thewaldoslife/
+         Uploads: biweekly, last 7d ago, 7 in 90d (sampled 29)
+         No travel/holiday wording - off niche
+         Uploads: weekly, last 2d ago, 30 in 90d (sampled 30)
+   [w1] (175/366) https://www.youtube.com/@MobydickCamper
+   [w3] (176/366) https://www.youtube.com/@jattprabhjot
+         Name: MOBYDICK CAMPER
+         Subscribers: 26.4K subscribers (26400)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/mobydickcamper
+         Uploads: weekly, last 0d ago, 26 in 90d (sampled 30)
+   [w2] (177/366) https://www.youtube.com/@ro.somewhere
+         Name: Jatt Prabhjot
+         Subscribers: 4.65M subscribers (4650000)
+         Email listed: yes
+         Type: solo (India)
+         Instagram: https://www.instagram.com/jatt_prabhjot/
+         Uploads: weekly, last 4d ago, 12 in 90d (sampled 30)
+         Name: ro.somewhere
+         Subscribers: 19.6K subscribers (19600)
+         Email listed: yes
+         Type: unclear (Japan)
+   [w1] (178/366) https://www.youtube.com/@MastParindey-Rps
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Above range (4,650,000 > 500,000)
+         Name: Mast Parindey
+         Subscribers: 114K subscribers (114000)
+         Email listed: yes
+         Type: solo (India)
+         Instagram: https://instagram.com/mastparindey_rps
+   [w3] (179/366) https://www.youtube.com/@brenpgrace
+         Uploads: biweekly, last 0d ago, 8 in 90d (sampled 24)
+   [w2] (180/366) https://www.youtube.com/@CarCampLife-x3z
+         Name: Bren P Grace
+         Subscribers: 96.9K subscribers (96900)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/brenpgrace/
+         Uploads: weekly, last 21d ago, 19 in 90d (sampled 30)
+   [w1] (181/366) https://www.youtube.com/@NowhereBoundAdventures
+         Name: Life Camper Truck
+         Subscribers: 11.6K subscribers (11600)
+         Email listed: yes
+         Type: solo (United States)
+         Name: Nowhere Bound
+         Subscribers: 46.2K subscribers (46200)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/nowhereboundadventures
+         Uploads: weekly, last 1d ago, 13 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (182/366) https://www.youtube.com/@jack_clawson
+         Uploads: weekly, last 1d ago, 13 in 90d (sampled 30)
+         Uploads: weekly, last 4d ago, 12 in 90d (sampled 29)
+   [w1] (183/366) https://www.youtube.com/@thelonewolf7800
+   [w2] (184/366) https://www.youtube.com/@MrBeast
+         Name: Jack Clawson
+         Subscribers: 26.6K subscribers (26600)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/jackclawson_cooks
+         Name: The Lone Wolf 7800
+         Subscribers: 24.6K subscribers (24600)
+         Email listed: yes
+         Type: solo (India)
+         Instagram: https://www.instagram.com/thelonewolf7800
+         Name: MrBeast
+         Subscribers: 528M subscribers (528000000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/mrbeast/
+         Uploads: biweekly, last 1d ago, 9 in 90d (sampled 30)
+         Uploads: biweekly, last 9d ago, 7 in 90d (sampled 30)
+   [w1] (185/366) https://www.youtube.com/@MrBeastGaming
+   [w3] (186/366) https://www.youtube.com/@ryan
+         Uploads: biweekly, last 11d ago, 6 in 90d (sampled 30)
+         Above range (528,000,000 > 500,000)
+   [w2] (187/366) https://www.youtube.com/@JoeHattab
+         Name: MrBeast Gaming
+         Subscribers: 62.9M subscribers (62900000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/mrbeast/
+         Name: Ryan Trahan
+         Subscribers: 24.2M subscribers (24200000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://www.instagram.com/ryantrahan
+         Uploads: biweekly, last 3d ago, 8 in 90d (sampled 30)
+         Above range (62,900,000 > 500,000)
+         Name: Joe HaTTab
+         Subscribers: 21.4M subscribers (21400000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/joe_hattab/
+   [w1] (188/366) https://www.youtube.com/@Karl
+         Name: Karl
+         Subscribers: 7.21M subscribers (7210000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/karljacobs/
+         Uploads: monthly, last 14d ago, 2 in 90d (sampled 30)
+         Above range (24,200,000 > 500,000)
+   [w3] (189/366) https://www.youtube.com/@MackHopkins
+         Uploads: biweekly, last 11d ago, 6 in 90d (sampled 30)
+         Above range (7,210,000 > 500,000)
+         Uploads: monthly, last 0d ago, 2 in 90d (sampled 30)
+         Above range (21,400,000 > 500,000)
+   [w1] (190/366) https://www.youtube.com/@Niko
+   [w2] (191/366) https://www.youtube.com/@Back2Adventures
+         Name: Mack
+         Subscribers: 1.5M subscribers (1500000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://instagram.com/mack
+         Name: Niko Omilana
+         Subscribers: 9.03M subscribers (9030000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: http://instagram.com/niko
+         Name: Back 2 Adventures
+         Subscribers: 187K subscribers (187000)
+         Email listed: yes
+         Type: solo (Mexico)
+         Instagram: https://www.instagram.com/back2adventures/
+         Uploads: sporadic, last 30d ago, 1 in 90d (sampled 30)
+         Above range (9,030,000 > 500,000)
+   [w1] (192/366) https://www.youtube.com/@realaddiebowley
+         Uploads: monthly, last 11d ago, 2 in 90d (sampled 8)
+         Above range (1,500,000 > 500,000)
+   [w3] (193/366) https://www.youtube.com/@ErikGrankvist
+         Name: Addie Bowley
+         Subscribers: 4.91M subscribers (4910000)
+         Email listed: yes
+         Type: unclear
+         Instagram: https://www.instagram.com/addiebowley/
+         Uploads: dormant, last 183d ago, 0 in 90d (sampled 30)
+   [w2] (194/366) https://www.youtube.com/@frankvandam2003
+         Name: Erik Grankvist
+         Subscribers: 1.68M subscribers (1680000)
+         Email listed: yes
+         Type: solo (Sweden)
+         Instagram: https://www.instagram.com/erikgrankvist_/
+         Uploads: biweekly, last 3d ago, 5 in 90d (sampled 30)
+         Above range (4,910,000 > 500,000)
+   [w1] (195/366) https://www.youtube.com/@thewildtalesinc
+         Name: Frank van Dam
+         Subscribers: 175K subscribers (175000)
+         Email listed: yes
+         Type: solo (Netherlands)
+         Instagram: https://www.instagram.com/frankvd/
+         Uploads: monthly, last 5d ago, 2 in 90d (sampled 30)
+         Above range (1,680,000 > 500,000)
+   [w3] (196/366) https://www.youtube.com/@SurvivalTales-QKA
+         Name: The Wild Tales
+         Subscribers: 5.52K subscribers (5520)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/thewildtalesinc/
+         Uploads: monthly, last 13d ago, 3 in 90d (sampled 9)
+   [w2] (197/366) https://www.youtube.com/@Willjum
+         Uploads: sporadic, last 14d ago, 1 in 90d (sampled 5)
+         Below range (5,520 < 10,000)
+         Name: Survival Tales
+         Subscribers: 9.62K subscribers (9620)
+         Email listed: no
+         Type: unclear (United States)
+   [w1] (198/366) https://www.youtube.com/@indo1team
+         Name: Willjum
+         Subscribers: 2.02M subscribers (2020000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/will_j_27/?hl=en
+         Uploads: dormant, last 213d ago, 0 in 90d (sampled 11)
+         Below range (9,620 < 10,000)
+         Name: INDO1TEAM
+         Subscribers: 1.76M subscribers (1760000)
+         Email listed: no
+         Type: unclear
+   [w3] (199/366) https://www.youtube.com/@simplesurvival6
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 19)
+         Above range (1,760,000 > 500,000)
+         Uploads: weekly, last 3d ago, 13 in 90d (sampled 30)
+         Above range (2,020,000 > 500,000)
+   [w1] (200/366) https://www.youtube.com/@capfacose
+   [w2] (201/366) https://www.youtube.com/@nolanwildinstinct
+         Name: Simple survival
+         Subscribers: 24.5K subscribers (24500)
+         Email listed: no
+         Type: unclear (United States)
+         Name: Cap
+         Subscribers: 1.08M subscribers (1080000)
+         Email listed: yes
+         Type: solo (Italy)
+         Instagram: https://www.instagram.com/captainblazerofficial/
+         Name: Nolan | Wild Instinct
+         Subscribers: 36.7K subscribers (36700)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: dormant, last 183d ago, 0 in 90d (sampled 20)
+   [w3] (202/366) https://www.youtube.com/@Kocabogaoutdoor
+         Uploads: weekly, last 1d ago, 17 in 90d (sampled 30)
+         Above range (1,080,000 > 500,000)
+   [w1] (203/366) https://www.youtube.com/@bang_umarch
+         Uploads: weekly, last 2d ago, 27 in 90d (sampled 29)
+         Name: Umar
+         Subscribers: 15.5K subscribers (15500)
+         Email listed: no
+         Type: unclear (United States)
+   [w2] (204/366) https://www.youtube.com/@LukeJtv
+         Name: Kocaboğa Outdoor
+         Subscribers: 10.3K subscribers (10300)
+         Email listed: yes
+         Type: solo (Türkiye)
+         Instagram: https://www.instagram.com/kocabogaoutdoor/
+         Uploads: biweekly, last 4d ago, 6 in 90d (sampled 21)
+         No travel/holiday wording - off niche
+   [w1] (205/366) https://www.youtube.com/@Unboundedmc
+         Name: LukeJ
+         Subscribers: 127K subscribers (127000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/lukeabjohnson/
+         Uploads: weekly, last 3d ago, 12 in 90d (sampled 30)
+         Name: Unbounded
+         Subscribers: 28.5K subscribers (28500)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/unboundedbuilds/
+   [w3] (206/366) https://www.youtube.com/@OttoBulletproof
+         Uploads: monthly, last 14d ago, 3 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Uploads: inactive, last 91d ago, 0 in 90d (sampled 12)
+   [w2] (207/366) https://www.youtube.com/@legopeaceez
+         Name: OttoBulletproof
+         Subscribers: 828K subscribers (828000)
+         Email listed: yes
+         Type: solo (Germany)
+         Instagram: https://www.instagram.com/ottobulletproof/
+   [w1] (208/366) https://www.youtube.com/@EzeAdventurer
+         Name: LegoPeaceEz
+         Subscribers: 223K subscribers (223000)
+         Email listed: yes
+         Type: unclear (Switzerland)
+         Name: Eze Adventurer
+         Subscribers: 78.3K subscribers (78300)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: http://instagram.com/eze_adventurer
+         Uploads: weekly, last 0d ago, 12 in 90d (sampled 30)
+         Above range (828,000 > 500,000)
+   [w3] (209/366) https://www.youtube.com/@HaYoGo
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 30)
+   [w2] (210/366) https://www.youtube.com/@MrSurvival530
+         Name: HaYoGo
+         Subscribers: 3.44M subscribers (3440000)
+         Email listed: yes
+         Type: solo (Indonesia)
+         Instagram: https://www.instagram.com/hayogogaming
+   [w1] (211/366) https://www.youtube.com/@Ruftickle
+         Name: MrSurvival
+         Subscribers: 34.6K subscribers (34600)
+         Email listed: no
+         Type: solo (United States)
+         Name: Ruftickle
+         Subscribers: 22.6K subscribers (22600)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Above range (3,440,000 > 500,000)
+   [w3] (212/366) https://www.youtube.com/@HarmenHoek
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 22)
+   [w1] (213/366) https://www.youtube.com/@MillerWilson
+         Uploads: weekly, last 0d ago, 27 in 90d (sampled 30)
+         Name: Miller Wilson
+         Subscribers: 1.62M subscribers (1620000)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/millerwilson/
+   [w2] (214/366) https://www.youtube.com/@tooleko
+         Name: Harmen Hoek
+         Subscribers: 504K subscribers (504000)
+         Email listed: yes
+         Type: solo (Netherlands)
+         Instagram: https://www.instagram.com/harmenhoek/
+         Uploads: biweekly, last 2d ago, 7 in 90d (sampled 30)
+         Above range (1,620,000 > 500,000)
+         Name: Tooleko
+         Subscribers: 486K subscribers (486000)
+         Email listed: yes
+         Type: unclear
+         Instagram: https://www.instagram.com/tooleko_/
+   [w1] (215/366) https://www.youtube.com/@North_Star_Fishing
+         Uploads: monthly, last 12d ago, 2 in 90d (sampled 30)
+         Above range (504,000 > 500,000)
+   [w3] (216/366) https://www.youtube.com/@Iamkhaleel2
+         Name: North Star Fishing
+         Subscribers: 225K subscribers (225000)
+         Email listed: yes
+         Type: unclear
+         Name: I am Khaleel 2
+         Subscribers: 235K subscribers (235000)
+         Email listed: yes
+         Type: solo (India)
+         Instagram: https://www.instagram.com/iamkhaleelyt
+         Uploads: sporadic, last 30d ago, 1 in 90d (sampled 23)
+   [w2] (217/366) https://www.youtube.com/@IShouldntBeAliveChannel
+         Uploads: weekly, last 12d ago, 12 in 90d (sampled 30)
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (218/366) https://www.youtube.com/@airrack
+   [w3] (219/366) https://www.youtube.com/@jordanmatter
+         Name: Airrack
+         Subscribers: 19.7M subscribers (19700000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/airrack/
+         Name: I Shouldn't Be Alive
+         Subscribers: 206K subscribers (206000)
+         Email listed: no
+         Type: unclear (United States)
+         Name: Jordan Matter
+         Subscribers: 38.7M subscribers (38700000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/salishmatter/
+         Uploads: biweekly, last 21d ago, 7 in 90d (sampled 30)
+         Above range (19,700,000 > 500,000)
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+   [w1] (220/366) https://www.youtube.com/@StayWild-
+   [w2] (221/366) https://www.youtube.com/@SurRonster
+         Uploads: weekly, last 4d ago, 13 in 90d (sampled 30)
+         Above range (38,700,000 > 500,000)
+   [w3] (222/366) https://www.youtube.com/@Browney
+         Name: Stay Wild
+         Subscribers: 26.4M subscribers (26400000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/westaywild
+         Name: Sur Ronster
+         Subscribers: 4.72M subscribers (4720000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/surronster/
+         Uploads: weekly, last 2d ago, 12 in 90d (sampled 30)
+         Above range (26,400,000 > 500,000)
+         Name: Browney
+         Subscribers: 12.5M subscribers (12500000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/stanbrowney/
+   [w1] (223/366) https://www.youtube.com/@Vlad_Teen
+         Uploads: weekly, last 14d ago, 11 in 90d (sampled 30)
+         Above range (4,720,000 > 500,000)
+   [w2] (224/366) https://www.youtube.com/@ForgeLabs
+         Name: Vlad
+         Subscribers: 6.66M subscribers (6660000)
+         Email listed: no
+         Type: business (United States)
+         Uploads: biweekly, last 11d ago, 5 in 90d (sampled 30)
+         Above range (12,500,000 > 500,000)
+   [w3] (225/366) https://www.youtube.com/@rug
+         Uploads: weekly, last 4d ago, 12 in 90d (sampled 30)
+         Above range (6,660,000 > 500,000)
+   [w1] (226/366) https://www.youtube.com/@Sidemen
+         Name: Forge Labs
+         Subscribers: 6.29M subscribers (6290000)
+         Email listed: yes
+         Type: solo (United States)
+         Name: FaZe Rug
+         Subscribers: 30.1M subscribers (30100000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/fazerug/
+         Name: Sidemen
+         Subscribers: 23.4M subscribers (23400000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: http://www.instagram.com/Sidemen
+         Uploads: monthly, last 3d ago, 4 in 90d (sampled 30)
+         Above range (6,290,000 > 500,000)
+   [w2] (227/366) https://www.youtube.com/@Infamous_wu13
+         Uploads: weekly, last 3d ago, 13 in 90d (sampled 30)
+         Above range (23,400,000 > 500,000)
+         Uploads: weekly, last 3d ago, 26 in 90d (sampled 30)
+         Above range (30,100,000 > 500,000)
+   [w1] (228/366) https://www.youtube.com/@AlanChikinChow
+   [w3] (229/366) https://www.youtube.com/@BetaSquad
+         Name: Alan's Universe
+         Subscribers: 104M subscribers (104000000)
+         Email listed: yes
+         Type: unclear (United States)
+         Name: Wu’s World
+         Subscribers: 5.79M subscribers (5790000)
+         Email listed: yes
+         Type: business (United States)
+         Instagram: https://www.instagram.com/infamous_wu13
+         Name: Beta Squad
+         Subscribers: 12.2M subscribers (12200000)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Instagram: https://www.instagram.com/betasquad5
+         Uploads: monthly, last 11d ago, 4 in 90d (sampled 30)
+         Above range (104,000,000 > 500,000)
+         Uploads: weekly, last 3d ago, 11 in 90d (sampled 30)
+         Above range (5,790,000 > 500,000)
+   [w1] (230/366) https://www.youtube.com/@UnspeakableStudios
+   [w2] (231/366) https://www.youtube.com/@CrazyXYZ
+         Name: Unspeakable Studios
+         Subscribers: 4.67M subscribers (4670000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/unspeakablestudios/
+         Uploads: biweekly, last 4d ago, 7 in 90d (sampled 30)
+         Above range (12,200,000 > 500,000)
+   [w3] (232/366) https://www.youtube.com/@jackpembrook
+         Name: Crazy XYZ
+         Subscribers: 37.2M subscribers (37200000)
+         Email listed: yes
+         Type: solo (India)
+         Instagram: https://www.instagram.com/amit.yt/
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Above range (4,670,000 > 500,000)
+         Name: Jack Pembrook
+         Subscribers: 2.44M subscribers (2440000)
+         Email listed: yes
+         Type: unclear
+   [w1] (233/366) https://www.youtube.com/@VonOrdonaVlogs
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Above range (37,200,000 > 500,000)
+   [w2] (234/366) https://www.youtube.com/@YesTheory
+         Uploads: monthly, last 21d ago, 4 in 90d (sampled 30)
+         Above range (2,440,000 > 500,000)
+         Name: Von Ordona
+         Subscribers: 8.15M subscribers (8150000)
+         Email listed: yes
+         Type: solo (Philippines)
+         Instagram: https://www.instagram.com/vonordona/
+   [w3] (235/366) https://www.youtube.com/@AforAdley
+         Uploads: biweekly, last 12d ago, 9 in 90d (sampled 30)
+         Above range (8,150,000 > 500,000)
+         Name: Yes Theory
+         Subscribers: 10.3M subscribers (10300000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://instagram.com/yestheory
+   [w1] (236/366) https://www.youtube.com/@Nastya
+         Name: A for Adley - Learning & Fun
+         Subscribers: 8.77M subscribers (8770000)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: biweekly, last 3d ago, 7 in 90d (sampled 30)
+         Above range (10,300,000 > 500,000)
+         Name: Nastya
+         Subscribers: 2.73M subscribers (2730000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/likenastya?igsh=OGN4OGJhaGk2cWM4&utm_source=qr
+   [w2] (237/366) https://www.youtube.com/@ZalmiPlays
+         Uploads: biweekly, last 11d ago, 6 in 90d (sampled 30)
+         Above range (2,730,000 > 500,000)
+         Uploads: weekly, last 0d ago, 20 in 90d (sampled 30)
+         Above range (8,770,000 > 500,000)
+   [w1] (238/366) https://www.youtube.com/@shilohandbros
+   [w3] (239/366) https://www.youtube.com/@AnshuBisht
+         Name: Zalmi
+         Subscribers: 4.3M subscribers (4300000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/little_zalmi?igshid=YmMyMTA2M2Y=
+         Name: Anshu Bisht
+         Subscribers: 8.12M subscribers (8119999)
+         Email listed: yes
+         Type: solo (India)
+         Instagram: https://www.instagram.com/gamerfleetog/
+         Name: Shiloh & Bros
+         Subscribers: 11.7M subscribers (11700000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/iamelijahnelson/
+         Uploads: monthly, last 21d ago, 4 in 90d (sampled 30)
+         Above range (4,300,000 > 500,000)
+   [w2] (240/366) https://www.youtube.com/@mikevallasvlogs
+         Uploads: weekly, last 1d ago, 14 in 90d (sampled 28)
+         Above range (11,700,000 > 500,000)
+         Uploads: weekly, last 13d ago, 12 in 90d (sampled 30)
+         Above range (8,119,999 > 500,000)
+   [w1] (241/366) https://www.youtube.com/@TylerBlanchard
+   [w3] (242/366) https://www.youtube.com/@ItsFunneh
+         Name: Mike Vallas
+         Subscribers: 366K subscribers (366000)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/mikevallas
+         Name: Tyler Blanchard
+         Subscribers: 5.14M subscribers (5140000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/_tylerblanchard_/
+         Name: ItsFunneh
+         Subscribers: 12.2M subscribers (12200000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/itsfunneh/
+         Uploads: biweekly, last 11d ago, 9 in 90d (sampled 30)
+         Above range (5,140,000 > 500,000)
+         Uploads: sporadic, last 10d ago, 1 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (243/366) https://www.youtube.com/@BowsMC
+   [w2] (244/366) https://www.youtube.com/@iceicenicky
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Above range (12,200,000 > 500,000)
+         Name: BowsMC
+         Subscribers: 197K subscribers (197000)
+         Email listed: no
+         Type: unclear
+   [w3] (245/366) https://www.youtube.com/@Strange-XxX
+         Name: Nick Styles
+         Subscribers: 71.8K subscribers (71800)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/iceicenicky/
+         Uploads: sporadic, last 30d ago, 1 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Name: StrangeX
+         Subscribers: 70.6K subscribers (70600)
+         Email listed: no
+         Type: solo (Singapore)
+   [w1] (246/366) https://www.youtube.com/@FDAdventure
+         Uploads: weekly, last 1d ago, 11 in 90d (sampled 30)
+         Uploads: weekly, last 4d ago, 17 in 90d (sampled 30)
+         Name: FD Adventure
+         Subscribers: 175K subscribers (175000)
+         Email listed: yes
+         Type: unclear (Germany)
+   [w2] (247/366) https://www.youtube.com/@cash
+   [w3] (248/366) https://www.youtube.com/@PrestonYT
+         Uploads: weekly, last 5d ago, 13 in 90d (sampled 30)
+         Name: Preston
+         Subscribers: 32.5M subscribers (32500000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/prestonplayz/
+         Name: Cash
+         Subscribers: 11.8M subscribers (11800000)
+         Email listed: yes
+         Type: unclear (United States)
+   [w1] (249/366) https://www.youtube.com/@BloohYT
+         Name: Blooh
+         Subscribers: 543K subscribers (543000)
+         Email listed: yes
+         Type: solo (Australia)
+         Uploads: weekly, last 9d ago, 30 in 90d (sampled 30)
+         Above range (11,800,000 > 500,000)
+         Uploads: weekly, last 4d ago, 10 in 90d (sampled 30)
+         Above range (32,500,000 > 500,000)
+   [w2] (250/366) https://www.youtube.com/@BigJim713
+   [w3] (251/366) https://www.youtube.com/@Mogswamp
+         Uploads: monthly, last 10d ago, 2 in 90d (sampled 30)
+         Above range (543,000 > 500,000)
+   [w1] (252/366) https://www.youtube.com/@yeptheboys
+         Name: Big Jim
+         Subscribers: 86.9K subscribers (86900)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Name: Mogswamp
+         Subscribers: 3.26M subscribers (3260000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/mogswamp/
+         Name: The Boys
+         Subscribers: 6.58M subscribers (6580000)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: biweekly, last 2d ago, 9 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Uploads: monthly, last 21d ago, 2 in 90d (sampled 30)
+         Above range (3,260,000 > 500,000)
+   [w2] (253/366) https://www.youtube.com/@TGFbro
+         Uploads: weekly, last 4d ago, 30 in 90d (sampled 30)
+         Above range (6,580,000 > 500,000)
+   [w3] (254/366) https://www.youtube.com/@OfflineTV
+   [w1] (255/366) https://www.youtube.com/@UgomekiMushi
+         Name: うごめ紀
+         Subscribers: 794K subscribers (794000)
+         Email listed: yes
+         Type: unclear (Japan)
+         Name: TGFbro
+         Subscribers: 6.16M subscribers (6160000)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Instagram: https://www.instagram.com/uncleromell/?hl=en
+         Name: OfflineTV
+         Subscribers: 3.28M subscribers (3280000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/offlinetv/
+         Uploads: sporadic, last 5d ago, 1 in 90d (sampled 30)
+         Above range (794,000 > 500,000)
+   [w1] (256/366) https://www.youtube.com/@Blooprint
+         Uploads: monthly, last 21d ago, 3 in 90d (sampled 30)
+         Above range (3,280,000 > 500,000)
+         Name: Blooprint
+         Subscribers: 2.51M subscribers (2510000)
+         Email listed: yes
+         Type: solo (United States)
+   [w3] (257/366) https://www.youtube.com/@RisibleTwins
+         Uploads: monthly, last 30d ago, 3 in 90d (sampled 30)
+         Above range (6,160,000 > 500,000)
+   [w2] (258/366) https://www.youtube.com/@JasonTheWeenie
+         Uploads: monthly, last 1d ago, 4 in 90d (sampled 30)
+         Above range (2,510,000 > 500,000)
+   [w1] (259/366) https://www.youtube.com/@HisYTStory
+         Name: Risible Twins
+         Subscribers: 1.2M subscribers (1200000)
+         Email listed: yes
+         Type: solo (India)
+         Instagram: https://www.instagram.com/risibletwins/
+         Name: JasonTheWeen
+         Subscribers: 1.29M subscribers (1290000)
+         Email listed: yes
+         Type: business (United States)
+         Instagram: https://www.instagram.com/jasontheween
+         Name: His Story
+         Subscribers: 7.72M subscribers (7720000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/hisytstory
+         Uploads: monthly, last 13d ago, 2 in 90d (sampled 30)
+         Above range (1,200,000 > 500,000)
+         Uploads: weekly, last 3d ago, 30 in 90d (sampled 30)
+         Above range (7,720,000 > 500,000)
+   [w3] (260/366) https://www.youtube.com/@Agent00
+         Uploads: weekly, last 1d ago, 13 in 90d (sampled 30)
+         Above range (1,290,000 > 500,000)
+   [w1] (261/366) https://www.youtube.com/@ambiguousamphibian
+   [w2] (262/366) https://www.youtube.com/@Mr_No_Face
+         Name: Agent 00
+         Subscribers: 1.42M subscribers (1420000)
+         Email listed: yes
+         Type: solo
+         Instagram: https://instagram.com/callmeagentzero
+         Name: ambiguousamphibian
+         Subscribers: 1.69M subscribers (1690000)
+         Email listed: yes
+         Type: unclear (United States)
+         Instagram: https://www.instagram.com/Just a normal amphibian. Nothing to see here - move along.
+
+
+Name's Rob - but will respond to AA, Ambi, etc. etc.
+
+Channel Emoji by the amazingly artistic DistantCacophony:
+Twitter: https://twitter.com/DistntCacophony
+YT: https://www.youtube.com/@distantcacophony
+
+Other Art Featured by Artist Y4 (Twitter): https://x.com/y4chnyy
+
+Art by https://www.instagram.com/haleyjain.art/
+
+ALSO: If you are a game developer or publisher and receive any emails from addresses requesting game keys, PLEASE check that it is my actual email address, and not an alternate spelling from a fake account impersonating me.
+         Name: Mr. No Face
+         Subscribers: 1.2M subscribers (1200000)
+         Email listed: yes
+         Type: solo (Bangladesh)
+         Instagram: https://instagram.com/mr.triple.r.official
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Above range (1,420,000 > 500,000)
+         Uploads: weekly, last 13d ago, 10 in 90d (sampled 30)
+         Above range (1,690,000 > 500,000)
+   [w3] (263/366) https://www.youtube.com/@Cryptozoology
+   [w1] (264/366) https://www.youtube.com/@%E6%80%80%E7%AE%80%E5%89%A7%E5%9C%BAshortTV
+         Uploads: weekly, last 1d ago, 14 in 90d (sampled 30)
+         Above range (1,200,000 > 500,000)
+   [w2] (265/366) https://www.youtube.com/@TwoMoonsDrama
+         Name: 怀简剧场shortTV
+         Subscribers: 120K subscribers (120000)
+         Email listed: no
+         Type: unclear (United States)
+         Name: Cryptozoology
+         Subscribers: 575K subscribers (575000)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/cryptozoology.yt/
+         Name: TwoMoons Drama
+         Subscribers: 23.9K subscribers (23900)
+         Email listed: no
+         Type: unclear (United States)
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w1] (266/366) https://www.youtube.com/@yoyoCamping-g9d
+         Uploads: weekly, last 3d ago, 13 in 90d (sampled 30)
+         Above range (575,000 > 500,000)
+         Uploads: weekly, last 0d ago, 28 in 90d (sampled 28)
+   [w3] (267/366) https://www.youtube.com/@Roxy_Outdoor
+   [w2] (268/366) https://www.youtube.com/@QuantumMakers
+         Name: Trần Thị Thu Dương Camping
+         Subscribers: 183K subscribers (183000)
+         Email listed: no
+         Type: solo (United States)
+         Name: Outdoors Solo Mountain
+         Subscribers: 37.4K subscribers (37400)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 0d ago, 21 in 90d (sampled 30)
+         Name: Quantum Makers
+         Subscribers: 19.3M subscribers (19300000)
+         Email listed: yes
+         Type: solo (Spain)
+         Instagram: https://www.instagram.com/quantummakers_yt/
+   [w1] (269/366) https://www.youtube.com/@LivingIdeas-t6e
+         Uploads: inactive, last 152d ago, 0 in 90d (sampled 8)
+   [w3] (270/366) https://www.youtube.com/@SurvivalBuilder
+         Name: Living Ideas
+         Subscribers: 276K subscribers (276000)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 2d ago, 23 in 90d (sampled 30)
+         Above range (19,300,000 > 500,000)
+         Name: Survival Builder
+         Subscribers: 12M subscribers (12000000)
+         Email listed: yes
+         Type: solo (Singapore)
+         Instagram: https://www.instagram.com/survivalbuilderviral
+   [w2] (271/366) https://www.youtube.com/@TheSurvival
+         Uploads: weekly, last 3d ago, 16 in 90d (sampled 30)
+   [w1] (272/366) https://www.youtube.com/@WildBushDrive
+         Name: Wild Bush Drive
+         Subscribers: 71.3K subscribers (71300)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/wildbushdrive/
+         Uploads: biweekly, last 4d ago, 7 in 90d (sampled 30)
+         Above range (12,000,000 > 500,000)
+         Name: The Survival
+         Subscribers: 2.63M subscribers (2630000)
+         Email listed: yes
+         Type: solo (Singapore)
+         Instagram: https://www.instagram.com/survivalbuilderviral
+   [w3] (273/366) https://www.youtube.com/@LesnoySpeed
+         Uploads: monthly, last 14d ago, 2 in 90d (sampled 13)
+   [w1] (274/366) https://www.youtube.com/@karakum_outdoors
+         Uploads: biweekly, last 1d ago, 8 in 90d (sampled 30)
+         Above range (2,630,000 > 500,000)
+         Name: Lesnoy Speed
+         Subscribers: 226K subscribers (226000)
+         Email listed: yes
+         Type: unclear (United States)
+   [w2] (275/366) https://www.youtube.com/@PrimitiveWildBuild
+         Name: Karakum Outdoors
+         Subscribers: 314K subscribers (314000)
+         Email listed: yes
+         Type: solo (United States)
+         Uploads: weekly, last 4d ago, 16 in 90d (sampled 30)
+         Uploads: biweekly, last 1d ago, 6 in 90d (sampled 30)
+   [w3] (276/366) https://www.youtube.com/@BeautySurvivalSkills
+         Name: Primitive Wild Build
+         Subscribers: 295K subscribers (295000)
+         Email listed: yes
+         Type: unclear (United States)
+   [w1] (277/366) https://www.youtube.com/@lesnoy
+         Name: Survival Skills
+         Subscribers: 40.9K subscribers (40900)
+         Email listed: yes
+         Type: solo (United States)
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Name: Lesnoy
+         Subscribers: 896K subscribers (896000)
+         Email listed: yes
+         Type: unclear (United States)
+   [w2] (278/366) https://www.youtube.com/@BushcraftFarm1
+         Uploads: weekly, last 1d ago, 19 in 90d (sampled 30)
+         Above range (896,000 > 500,000)
+         Uploads: biweekly, last 14d ago, 9 in 90d (sampled 30)
+         Name: Bushcraft Farm
+         Subscribers: 205K subscribers (205000)
+         Email listed: yes
+         Type: unclear (United States)
+   [w1] (279/366) https://www.youtube.com/@TheQuietSurvivalist
+   [w3] (280/366) https://www.youtube.com/@ChadZuberAdventures
+         Name: The Quiet Survivalist
+         Subscribers: 21.5K subscribers (21500)
+         Email listed: no
+         Type: unclear
+         Name: Chad Zuber
+         Subscribers: 2.43M subscribers (2430000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/chadzuberofficial/
+         Uploads: weekly, last 1d ago, 24 in 90d (sampled 30)
+   [w2] (281/366) https://www.youtube.com/@dudeperfectoutdoors
+         Uploads: weekly, last 0d ago, 16 in 90d (sampled 30)
+   [w1] (282/366) https://www.youtube.com/@ben-kilner
+         Uploads: biweekly, last 7d ago, 5 in 90d (sampled 30)
+         Above range (2,430,000 > 500,000)
+         Name: Ben Kilner
+         Subscribers: 517K subscribers (517000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: https://www.instagram.com/ben.kilner
+   [w3] (283/366) https://www.youtube.com/@GreenbrierBushcraft-4k
+         Name: Dude Perfect Outdoors
+         Subscribers: 530K subscribers (530000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/dudeperfect_outdoors/
+         Name: Greenbrier Bushcraft
+         Subscribers: 41.8K subscribers (41800)
+         Email listed: no
+         Type: unclear (United Kingdom)
+         Uploads: monthly, last 21d ago, 2 in 90d (sampled 30)
+         Above range (517,000 > 500,000)
+         Uploads: monthly, last 11d ago, 3 in 90d (sampled 12)
+         Above range (530,000 > 500,000)
+   [w1] (284/366) https://www.youtube.com/@lesnoy_craft8607
+   [w2] (285/366) https://www.youtube.com/@lesnoy_offline3431
+         Name: Lesnoy_Craft
+         Subscribers: 470K subscribers (470000)
+         Email listed: no
+         Type: solo
+         Instagram: https://instagram.com/lesnoy_craft?utm_medium=copy_link
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+   [w3] (286/366) https://www.youtube.com/@danghuetv
+         Name: Lesnoy_Offline
+         Subscribers: 201K subscribers (201000)
+         Email listed: no
+         Type: solo
+         Instagram: https://instagram.com/lesnoy_ofline?u...
+         Uploads: biweekly, last 7d ago, 8 in 90d (sampled 30)
+   [w1] (287/366) https://www.youtube.com/@VladandChrisReacts
+         Uploads: monthly, last 30d ago, 2 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Name: Đặng Huê
+         Subscribers: 25.5K subscribers (25500)
+         Email listed: yes
+         Type: solo (United States)
+   [w2] (288/366) https://www.youtube.com/@WildBeautyLife1
+         Name: Vlad and Chris Reacts
+         Subscribers: 425K subscribers (425000)
+         Email listed: no
+         Type: unclear (United States)
+         Name: Wild Beauty
+         Subscribers: 70.1K subscribers (70100)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: inactive, last 122d ago, 0 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (289/366) https://www.youtube.com/@JungleSurvival
+   [w1] (290/366) https://www.youtube.com/@MAXBUSHCKRAFT24
+         Uploads: weekly, last 30d ago, 20 in 90d (sampled 30)
+         Name: Jungle Survival
+         Subscribers: 7.14M subscribers (7140000)
+         Email listed: no
+         Type: unclear (Singapore)
+   [w2] (291/366) https://www.youtube.com/@AlexanderBushcraft776
+         Name: MAX BUSHCRAFT
+         Subscribers: 61.4K subscribers (61400)
+         Email listed: no
+         Type: unclear (United States)
+         Uploads: monthly, last 30d ago, 2 in 90d (sampled 30)
+         Uploads: weekly, last 7d ago, 11 in 90d (sampled 30)
+         Above range (7,140,000 > 500,000)
+         Name: Alexander Bushcraft
+         Subscribers: 47.5K subscribers (47500)
+         Email listed: no
+         Type: unclear (United States)
+   [w1] (292/366) https://www.youtube.com/@Buildeveryday-b2p
+   [w3] (293/366) https://www.youtube.com/@Woodsimprovisation
+         Name: Build every day
+         Subscribers: 9.07K subscribers (9070)
+         Email listed: yes
+         Type: unclear (Vietnam)
+         Uploads: monthly, last 0d ago, 2 in 90d (sampled 30)
+   [w2] (294/366) https://www.youtube.com/@lytungsurvivalbushcraft
+         Name: Woods improvisation
+         Subscribers: 16.2K subscribers (16200)
+         Email listed: no
+         Type: solo (United States)
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Below range (9,070 < 10,000)
+   [w1] (295/366) https://www.youtube.com/@AnazalaFamily
+         Name: Lý Tùng Survival Bushcraft
+         Subscribers: 26.3K subscribers (26300)
+         Email listed: no
+         Type: unclear (United States)
+         Uploads: monthly, last 5d ago, 3 in 90d (sampled 21)
+         Name: The Anazala Family
+         Subscribers: 14.4M subscribers (14400000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://instagram.com/anazalafamily
+   [w3] (296/366) https://www.youtube.com/@topperguild
+         Uploads: weekly, last 4d ago, 13 in 90d (sampled 30)
+         Above range (14,400,000 > 500,000)
+   [w1] (297/366) https://www.youtube.com/@FastGoodCuisine
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Name: Topper Guild
+         Subscribers: 96.2M subscribers (96200000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/topperguild/?hl=en
+   [w2] (298/366) https://www.youtube.com/@TheFunSquad
+         Name: FastGoodCuisine
+         Subscribers: 9.15M subscribers (9150000)
+         Email listed: yes
+         Type: solo (France)
+         Instagram: https://www.instagram.com/pepechickenbyfgc/
+         Uploads: weekly, last 4d ago, 21 in 90d (sampled 30)
+         Above range (96,200,000 > 500,000)
+   [w3] (299/366) https://www.youtube.com/@vladandchris1
+         Name: The Fun Squad
+         Subscribers: 13.5M subscribers (13500000)
+         Email listed: yes
+         Type: unclear (United States)
+         Instagram: https://www.instagram.com/Superhero's are amazing!  The kids and family at Kids Fun TV (the Fun Squad) loves superhero movies and we love making these fun superhero videos for all of you.  Whether it is a video about the Incredible Hulk, or Captain Marvel, or Spiderman, or Superman, or The Flash, or Wonder Woman or Captain Marvel, we always have fun making these fun videos for kids and adults.  Watch as each superhero goes against the villain to save the world or the city.  The Fun Squad loves DC comics and Marvel comics.  Whether its the Avengers with Marvel or the Justice League with DC, the Fun Squad loves all of the fun superhero movies that are out now.  We also love making these fun super hero videos.
+
+Check out one of our awesome videos here:
+https://www.youtube.com/watch?v=k-PsgVqDBKA&list=PL9bCxUcHuVU3ob4GCE986ulbu6vrLvEFT&index=2
+
+Subscribe to our awesome channel:
+https://www.youtube.com/c/KidsFunTVEpic
+
+Check out our Kids Fun TV social media pages:
+Instagram: https://www.instagram.com/kidsfuntv321/
+Facebook: https://www.facebook.com/kidsfuntv321/
+
+Kids Fun TV:
+Kids Fun TV, also known as the Fun Squad, is a fun family friendly channel created by the Skye family. Whether it’s challenges or fun action skits, the kids and their parents love to have fun and play. We have lots of boys vs girls challenge videos as well as twin vs twin challenges. We love box forts, toys and playing fun and exciting games. Whether it’s playing jokes on their dad with a toy, having an amazing birthday party, singing cover songs, creating movie remakes or having a fun superhero adventure, these funny kids love to have fun and play. Sneaky as a spy and skilled as a ninja, the Fun Squad members team up and work together to solve a mystery in each skit adventure. The children (Jack Skye, Jazzy Skye, Kade Skye, Kalia Skye and Kyler Skye) love to have lots of family fun in their skits and challenges. 
+The Kids Fun TV channel loves making fun videos for kids and fun videos for ages 13 and older. 
+This video is only for entertainment purposes. Do not attempt to recreate any of the acts in this video, as they may be dangerous if not done correctly, and could result in injury. If you rely on the information portrayed in this video, you assume the responsibility for the results. Have fun and remember that every project you try is at YOUR OWN RISK. 
+This footage is the property of Kids Fun TV and is not allowed to be repurposed without written consent from Kids Fun TV. 
+For any media or business inquiries, contact us at kidsfuntv55@gmail.com .
+         Uploads: weekly, last 0d ago, 23 in 90d (sampled 30)
+         Above range (13,500,000 > 500,000)
+         Name: Vlad and Chris
+         Subscribers: 3.76M subscribers (3760000)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: monthly, last 12d ago, 4 in 90d (sampled 30)
+         Above range (9,150,000 > 500,000)
+   [w2] (300/366) https://www.youtube.com/@FamiliaDiamond
+   [w1] (301/366) https://www.youtube.com/@TheRoamerAmit
+         Uploads: weekly, last 1d ago, 13 in 90d (sampled 30)
+         Above range (3,760,000 > 500,000)
+         Name: Familia Diamond
+         Subscribers: 12.2M subscribers (12200000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/Sdiezzel
+         Name: The Roamer Amit
+         Subscribers: 15M subscribers (15000000)
+         Email listed: yes
+         Type: solo (India)
+         Instagram: https://www.instagram.com/theroameramitt/?hl=en
+   [w3] (302/366) https://www.youtube.com/@MashaBearEN
+         Uploads: weekly, last 1d ago, 15 in 90d (sampled 30)
+         Above range (15,000,000 > 500,000)
+   [w1] (303/366) https://www.youtube.com/@tasibwaleed0786
+         Uploads: biweekly, last 3d ago, 6 in 90d (sampled 30)
+         Above range (12,200,000 > 500,000)
+         Name: Masha and The Bear
+         Subscribers: 55.7M subscribers (55700000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/mashaandthebear
+   [w2] (304/366) https://www.youtube.com/@BenAzelartTopVids
+         Name: Tasib Waleed
+         Subscribers: 1.24M subscribers (1240000)
+         Email listed: no
+         Type: solo
+         Instagram: https://www.instagram.com/tasibwaleedoffical?utm_source=qr&igsh=Z3IweGw4OXJxbWZy
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Above range (55,700,000 > 500,000)
+         Name: Ben Azelart Top Videos
+         Subscribers: 2.01M subscribers (2009999)
+         Email listed: yes
+         Type: unclear (United States)
+         Instagram: https://www.instagram.com/benazelart/
+   [w3] (305/366) https://www.youtube.com/@rebeccazamolo
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Above range (1,240,000 > 500,000)
+   [w1] (306/366) https://www.youtube.com/@royaltyfam
+         Name: Rebecca Zamolo
+         Subscribers: 23.7M subscribers (23700000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: http://instagram.com/rebeccazamolo
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Above range (2,009,999 > 500,000)
+         Name: The Royalty Family
+         Subscribers: 36.3M subscribers (36300000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/andreaespadatv
+   [w2] (307/366) https://www.youtube.com/@Unspeakable
+         Uploads: biweekly, last 10d ago, 5 in 90d (sampled 30)
+         Above range (36,300,000 > 500,000)
+   [w1] (308/366) https://www.youtube.com/@FamilyFriendly
+         Uploads: weekly, last 3d ago, 19 in 90d (sampled 30)
+         Above range (23,700,000 > 500,000)
+         Name: Unspeakable
+         Subscribers: 20.2M subscribers (20200000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/unspeakablestudios/
+   [w3] (309/366) https://www.youtube.com/@ayayayVlog
+         Name: Family Friendly
+         Subscribers: 4.25M subscribers (4250000)
+         Email listed: yes
+         Type: unclear (United States)
+         Instagram: https://instagram.com/familyfriendlyog
+         Uploads: biweekly, last 4d ago, 9 in 90d (sampled 30)
+         Above range (20,200,000 > 500,000)
+         Name: Aya Yay Familyay
+         Subscribers: 1.72M subscribers (1720000)
+         Email listed: no
+         Type: unclear
+   [w2] (310/366) https://www.youtube.com/@AMPEXCLUSIVE
+         Uploads: biweekly, last 4d ago, 6 in 90d (sampled 30)
+         Above range (4,250,000 > 500,000)
+   [w1] (311/366) https://www.youtube.com/@sabbyandsophia
+         Uploads: weekly, last 0d ago, 30 in 90d (sampled 30)
+         Above range (1,720,000 > 500,000)
+         Name: AMP
+         Subscribers: 8.27M subscribers (8270000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/ampexclusive/
+   [w3] (312/366) https://www.youtube.com/@TheOfficialPrinceFamily
+         Name: Sabby and Sophia
+         Subscribers: 8.13M subscribers (8130000)
+         Email listed: yes
+         Type: solo
+         Uploads: weekly, last 1d ago, 16 in 90d (sampled 30)
+         Above range (8,130,000 > 500,000)
+   [w1] (313/366) https://www.youtube.com/@zhong
+         Uploads: biweekly, last 13d ago, 9 in 90d (sampled 29)
+         Above range (8,270,000 > 500,000)
+         Name: The Prince Family
+         Subscribers: 13.9M subscribers (13900000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/aylafaithprince/
+   [w2] (314/366) https://www.youtube.com/@MoreSidemen
+         Name: Zhong
+         Subscribers: 81.6M subscribers (81600000)
+         Email listed: yes
+         Type: solo (United States)
+         Uploads: monthly, last 21d ago, 3 in 90d (sampled 30)
+         Above range (13,900,000 > 500,000)
+   [w3] (315/366) https://www.youtube.com/@IvanaAlawi
+         Name: MoreSidemen
+         Subscribers: 9.76M subscribers (9760000)
+         Email listed: yes
+         Type: unclear (United Kingdom)
+         Instagram: http://www.instagram.com/Miniminter
+         Uploads: weekly, last 0d ago, 20 in 90d (sampled 30)
+         Above range (81,600,000 > 500,000)
+   [w1] (316/366) https://www.youtube.com/@ossymarwah
+         Name: Ivana Alawi
+         Subscribers: 21.3M subscribers (21300000)
+         Email listed: yes
+         Type: unclear (Philippines)
+         Instagram: https://www.instagram.com/ivanaalawi
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Above range (9,760,000 > 500,000)
+   [w2] (317/366) https://www.youtube.com/@riri.navarro
+         Name: Ossy Marwah I اوسي مروة
+         Subscribers: 12.6M subscribers (12600000)
+         Email listed: yes
+         Type: solo (Saudi Arabia)
+         Instagram: https://www.instagram.com/ossymarwah/
+         Name: Riri Navarro
+         Subscribers: 2.13M subscribers (2130000)
+         Email listed: yes
+         Type: unclear
+         Uploads: monthly, last 12d ago, 4 in 90d (sampled 30)
+         Above range (21,300,000 > 500,000)
+         Uploads: monthly, last 3d ago, 3 in 90d (sampled 30)
+         Above range (12,600,000 > 500,000)
+   [w3] (318/366) https://www.youtube.com/@VladTV-SHOW
+   [w1] (319/366) https://www.youtube.com/@KaiCenatLive
+         Uploads: weekly, last 1d ago, 24 in 90d (sampled 30)
+         Above range (2,130,000 > 500,000)
+   [w2] (320/366) https://www.youtube.com/@chrismd10
+         Name: Kai Cenat Live
+         Subscribers: 16.9M subscribers (16900000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/kaicenat
+         Name: Vlad TV
+         Subscribers: 281K subscribers (281000)
+         Email listed: no
+         Type: unclear (United States)
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Above range (16,900,000 > 500,000)
+   [w1] (321/366) https://www.youtube.com/@MattSlays
+         Name: ChrisMD
+         Subscribers: 6.35M subscribers (6350000)
+         Email listed: yes
+         Type: solo (United Kingdom)
+         Instagram: http://instagram.com/chrismd10
+         Uploads: weekly, last 5d ago, 13 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (322/366) https://www.youtube.com/@TheJohnsonBrothers
+         Name: Matt Slays
+         Subscribers: 8.96M subscribers (8960000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/rebeccazamolo
+         Uploads: sporadic, last 28d ago, 1 in 90d (sampled 30)
+         Above range (6,350,000 > 500,000)
+   [w2] (323/366) https://www.youtube.com/@ThePrincessClubhouse
+         Name: The Johnson Brothers
+         Subscribers: 7.57M subscribers (7570000)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: weekly, last 4d ago, 11 in 90d (sampled 30)
+         Above range (8,960,000 > 500,000)
+   [w1] (324/366) https://www.youtube.com/@TheMirFam
+         Name: The Princess Clubhouse
+         Subscribers: 797K subscribers (797000)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: monthly, last 4d ago, 4 in 90d (sampled 29)
+         Above range (7,570,000 > 500,000)
+   [w3] (325/366) https://www.youtube.com/@PULLOTHI
+         Name: The Mir Fam
+         Subscribers: 3.43M subscribers (3430000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/themirfamofficial/
+         Uploads: biweekly, last 8d ago, 5 in 90d (sampled 30)
+         Above range (797,000 > 500,000)
+         Name: PULLOTHI
+         Subscribers: 2.62M subscribers (2620000)
+         Email listed: yes
+         Type: unclear
+         Instagram: https://instagram.com/anjitha_a_n_j_i?igshid=OGQ5ZDc2ODk2ZA==
+   [w2] (326/366) https://www.youtube.com/@Doveclubb
+         Uploads: weekly, last 3d ago, 11 in 90d (sampled 30)
+         Above range (3,430,000 > 500,000)
+   [w1] (327/366) https://www.youtube.com/@Lulutho_Sinxoto
+         Name: Lulutho Peanuts
+         Subscribers: 967K subscribers (967000)
+         Email listed: no
+         Type: solo
+         Instagram: https://www.instagram.com/lulutho_sinxoto?igsh=NWppYWY4Zzc0N3N1&utm_source=qr
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Above range (2,620,000 > 500,000)
+         Name: DOVE CLUBB
+         Subscribers: 4.68M subscribers (4680000)
+         Email listed: yes
+         Type: unclear
+   [w3] (328/366) https://www.youtube.com/@TheTrenchFamily
+         Uploads: weekly, last 5d ago, 20 in 90d (sampled 30)
+         Above range (967,000 > 500,000)
+   [w1] (329/366) https://www.youtube.com/@ApolloNelmida
+         Name: Apollo Nelmida
+         Subscribers: 512K subscribers (512000)
+         Email listed: no
+         Type: solo
+         Uploads: biweekly, last 9d ago, 8 in 90d (sampled 30)
+         Above range (4,680,000 > 500,000)
+         Name: The Trench Family
+         Subscribers: 12.8M subscribers (12800000)
+         Email listed: yes
+         Type: solo (United States)
+   [w2] (330/366) https://www.youtube.com/@TheBovBoys
+         Uploads: weekly, last 2d ago, 27 in 90d (sampled 30)
+         Above range (512,000 > 500,000)
+   [w1] (331/366) https://www.youtube.com/@ShevaBushcraft
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Above range (12,800,000 > 500,000)
+         Name: The Bov Boys
+         Subscribers: 662K subscribers (662000)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/thebovboys/
+   [w3] (332/366) https://www.youtube.com/@MuffinJuice
+         Name: Life and Craft in wilderess
+         Subscribers: 429K subscribers (429000)
+         Email listed: yes
+         Type: solo (Ukraine)
+         Uploads: weekly, last 14d ago, 11 in 90d (sampled 30)
+         Above range (662,000 > 500,000)
+         Name: MuffinJuice
+         Subscribers: 1.47M subscribers (1470000)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/muffinjuic/
+         Uploads: biweekly, last 3d ago, 8 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w2] (333/366) https://www.youtube.com/@VictorDustin
+   [w1] (334/366) https://www.youtube.com/@TheOuterRange
+         Name: VictorDustin
+         Subscribers: 88.3K subscribers (88300)
+         Email listed: yes
+         Type: unclear (United States)
+         Uploads: biweekly, last 5d ago, 5 in 90d (sampled 30)
+         Above range (1,470,000 > 500,000)
+         Name: Outer Range
+         Subscribers: 129K subscribers (129000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/officialouterrange
+   [w3] (335/366) https://www.youtube.com/@WildlensbyAbrar
+         Uploads: biweekly, last 4d ago, 7 in 90d (sampled 30)
+         Uploads: weekly, last 4d ago, 13 in 90d (sampled 30)
+   [w1] (336/366) https://www.youtube.com/@mypersonaljournal
+         Name: WildLens by Abrar
+         Subscribers: 2.32M subscribers (2320000)
+         Email listed: yes
+         Type: solo (Germany)
+         Instagram: https://www.instagram.com/wildlensbyabrar/
+   [w2] (337/366) https://www.youtube.com/@Tri%E1%BB%87u%C4%90%C6%B0%E1%BB%9DngBushcraft
+         Uploads: weekly, last 3d ago, 25 in 90d (sampled 30)
+         Above range (2,320,000 > 500,000)
+   [w3] (338/366) https://www.youtube.com/@outwithafinn
+         Name: My personal journal outdoor
+         Subscribers: 158K subscribers (158000)
+         Email listed: yes
+         Type: solo (Ukraine)
+         Instagram: https://www.instagram.com/mypersjournal/
+         Name: Triệu Đường Bushcraft
+         Subscribers: 266 subscribers (266)
+         Email listed: no
+         Type: unclear
+         Uploads: weekly, last 3d ago, 12 in 90d (sampled 30)
+   [w1] (339/366) https://www.youtube.com/@mikewanders
+         Name: Out With A Finn
+         Subscribers: 87.7K subscribers (87700)
+         Email listed: yes
+         Type: solo (Finland)
+         Instagram: https://www.instagram.com/outwithafinn/
+         Uploads: inactive, last 122d ago, 0 in 90d (sampled 15)
+         Below range (266 < 10,000)
+   [w2] (340/366) https://www.youtube.com/@WargehBushcraft
+         Name: Mike Wanders
+         Subscribers: 73K subscribers (73000)
+         Email listed: yes
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/mikeswanders/
+         Uploads: weekly, last 1d ago, 13 in 90d (sampled 30)
+         Name: Wargeh Bushcraft
+         Subscribers: 822K subscribers (822000)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/wargeh_bushcraft
+   [w3] (341/366) https://www.youtube.com/@Apeaceofthewoods
+         Uploads: biweekly, last 3d ago, 8 in 90d (sampled 30)
+   [w1] (342/366) https://www.youtube.com/@Wild_Anne
+         Name: Wild Anne
+         Subscribers: 41.1K subscribers (41100)
+         Email listed: no
+         Type: solo (United States)
+         Instagram: https://www.instagram.com/anne.vn2002?igsh=MWNnNHBhd2lpNmY3cQ==
+         Name: Woodsy
+         Subscribers: 79.3K subscribers (79300)
+         Email listed: no
+         Type: unclear
+         Uploads: biweekly, last 4d ago, 8 in 90d (sampled 30)
+         Above range (822,000 > 500,000)
+   [w2] (343/366) https://www.youtube.com/@vadiminthewild
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+   [w1] (344/366) https://www.youtube.com/@TheHikeStory
+         Uploads: monthly, last 2d ago, 3 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Name: Vadim in the WILD
+         Subscribers: 718K subscribers (718000)
+         Email listed: yes
+         Type: solo (Ukraine)
+         Instagram: https://www.instagram.com/vadim_in_the_wild
+   [w3] (345/366) https://www.youtube.com/@Survivor-lily
+         Name: The Hike Story
+         Subscribers: 365 subscribers (365)
+         Email listed: no
+         Type: unclear (Finland)
+         Uploads: monthly, last 11d ago, 3 in 90d (sampled 30)
+         Above range (718,000 > 500,000)
+         Uploads: inactive, last 152d ago, 0 in 90d (sampled 16)
+         Below range (365 < 10,000)
+         Name: Survivor-lily
+         Subscribers: 327 subscribers (327)
+         Email listed: no
+         Type: solo (United States)
+   [w2] (346/366) https://www.youtube.com/@eetunvoljyssa
+   [w1] (347/366) https://www.youtube.com/@BeyondTheNorthstar
+         Name: BeyondTheNorthStar
+         Subscribers: 5.28K subscribers (5280)
+         Email listed: no
+         Type: unclear
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 21)
+         Below range (327 < 10,000)
+         Name: Eetun Völjyssä
+         Subscribers: 43.4K subscribers (43400)
+         Email listed: yes
+         Type: unclear (Finland)
+   [w3] (348/366) https://www.youtube.com/@trieutonlu9424
+         Uploads: weekly, last 12d ago, 13 in 90d (sampled 30)
+         Below range (5,280 < 10,000)
+         Name: Triệu Tòn Lụ
+         Subscribers: 24.5K subscribers (24500)
+         Email listed: no
+         Type: unclear (United States)
+   [w1] (349/366) https://www.youtube.com/@ChaoThiSinh
+         Uploads: biweekly, last 30d ago, 5 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Name: Lý Tiểu Nhi
+         Subscribers: 10.5K subscribers (10500)
+         Email listed: no
+         Type: solo (United States)
+   [w2] (350/366) https://www.youtube.com/@broomstickfishing
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+         Uploads: weekly, last 1d ago, 12 in 90d (sampled 30)
+         No travel/holiday wording - off niche
+   [w3] (351/366) https://www.youtube.com/@offgridadventures1
+         Name: BROOMSTICK
+         Subscribers: 10.2K subscribers (10200)
+         Email listed: no
+         Type: unclear (Australia)
+   [w1] (352/366) https://www.youtube.com/@AriaOff-GridCamp
+         Name: Aria Off-Grid Camp
+         Subscribers: 377 subscribers (377)
+         Email listed: no
+         Type: solo (United States)
+         Name: Off grid adventures
+         Subscribers: 7.69K subscribers (7690)
+         Email listed: yes
+         Type: unclear (Canada)
+         Uploads: biweekly, last 3d ago, 5 in 90d (sampled 30)
+   [w2] (353/366) https://www.youtube.com/@lyngocthien123
+         Uploads: weekly, last 12d ago, 13 in 90d (sampled 15)
+         Below range (377 < 10,000)
+         Uploads: weekly, last 3d ago, 20 in 90d (sampled 30)
+         Below range (7,690 < 10,000)
+   [w1] (354/366) https://www.youtube.com/@clearlycoastal2102
+   [w3] (355/366) https://www.youtube.com/@gopureoutdoors
+         Name: Lý Ngọc Thiện
+         Subscribers: 46K subscribers (46000)
+         Email listed: yes
+         Type: solo (United States)
+         Name: Clearly Coastal Fishing
+         Subscribers: 7.36K subscribers (7360)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/clearly_coastal/
+         Name: Go Pure Outdoors
+         Subscribers: 62.4K subscribers (62400)
+         Email listed: yes
+         Type: solo (India)
+         Instagram: https://www.instagram.com/campingwithsantanu
+         Uploads: weekly, last 2d ago, 22 in 90d (sampled 30)
+   [w2] (356/366) https://www.youtube.com/@MuaThiMaiDailyLife
+         Uploads: biweekly, last 1d ago, 8 in 90d (sampled 30)
+         Below range (7,360 < 10,000)
+   [w1] (357/366) https://www.youtube.com/@phuongpu1994
+         Uploads: weekly, last 5d ago, 12 in 90d (sampled 30)
+   [w3] (358/366) https://www.youtube.com/@NewfoundlandOuttadoors
+         Name: phượng pú
+         Subscribers: 155K subscribers (155000)
+         Email listed: yes
+         Type: solo (United States)
+         Name: Mùa Thị Mai Daily Life
+         Subscribers: 4.74K subscribers (4740)
+         Email listed: no
+         Type: solo (United States)
+         Name: Newfoundland Outtadoors
+         Subscribers: 512 subscribers (512)
+         Email listed: yes
+         Type: unclear (Canada)
+         Uploads: inactive, last 122d ago, 0 in 90d (sampled 30)
+         Uploads: weekly, last 14d ago, 30 in 90d (sampled 30)
+         Below range (4,740 < 10,000)
+   [w1] (359/366) https://www.youtube.com/@VinaForestDiaries
+   [w2] (360/366) https://www.youtube.com/@EmberwildOutdoor
+         Name: Vina Forest Diaries
+         Subscribers: 1.11K subscribers (1110)
+         Email listed: yes
+         Type: unclear (Cambodia)
+         Uploads: biweekly, last 4d ago, 8 in 90d (sampled 23)
+         Below range (512 < 10,000)
+   [w3] (361/366) https://www.youtube.com/@Wooshdog2000
+         Name: Emberwild Outdoor
+         Subscribers: 1.55K subscribers (1550)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/emberwildoutdoor
+         Uploads: biweekly, last 28d ago, 6 in 90d (sampled 14)
+         Below range (1,110 < 10,000)
+   [w1] (362/366) https://www.youtube.com/@avid.venture
+         Name: Chris Wucher
+         Subscribers: 31.1K subscribers (31100)
+         Email listed: yes
+         Type: solo
+         Instagram: https://www.instagram.com/wooshdog2000/
+         Uploads: monthly, last 3d ago, 4 in 90d (sampled 4)
+         Below range (1,550 < 10,000)
+   [w2] (363/366) https://www.youtube.com/@YatpoolYowies
+         Name: Landon Outdoors
+         Subscribers: 2.84K subscribers (2840)
+         Email listed: yes
+         Type: solo (Canada)
+         Instagram: https://www.instagram.com/avid_venture/
+         Uploads: monthly, last 4d ago, 4 in 90d (sampled 23)
+         Uploads: sporadic, last 1d ago, 1 in 90d (sampled 30)
+         Below range (2,840 < 10,000)
+   [w3] (364/366) https://www.youtube.com/@CliffHollisRanger
+   [w1] (365/366) https://www.youtube.com/@laurasoule2771
+         Name: Yatpool Yowies - Aussie Outdoor Adventures
+         Subscribers: 4.6K subscribers (4600)
+         Email listed: yes
+         Type: solo (Australia)
+         Instagram: https://www.instagram.com/yatpoolyowies
+         Name: Laura Soule
+         Subscribers: 987 subscribers (987)
+         Email listed: no
+         Type: unclear
+         Name: Cliff Hollis
+         Subscribers: 8.87K subscribers (8870)
+         Email listed: yes
+         Type: solo (United States)
+         Uploads: weekly, last 1d ago, 11 in 90d (sampled 30)
+         Below range (4,600 < 10,000)
+   [w2] (366/366) https://www.youtube.com/@PhungThanhFunny
+         Uploads: weekly, last 1d ago, 27 in 90d (sampled 30)
+         Below range (987 < 10,000)
+         Uploads: weekly, last 1d ago, 30 in 90d (sampled 30)
+         Below range (8,870 < 10,000)
+         Name: Phung Thanh Funny
+         Subscribers: 185 subscribers (185)
+         Email listed: no
+         Type: solo (United States)
+         Uploads: sporadic, last 61d ago, 1 in 90d (sampled 9)
+         Below range (185 < 10,000)
+
+Done. Wrote 366 rows to results.csv
